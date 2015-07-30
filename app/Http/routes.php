@@ -63,3 +63,9 @@ Route::post("veritabani/duzenle/{id}", "veritabaniController@duzenleForm");
 Route::get('admin', 'admin\AdminUyeGirisController@giris');
 Route::post('admin','admin\AdminUyeGirisController@girisKontrol');
 // Admin Bitiş
+
+
+
+
+// admin panel boş sayfa başlıyor
+Route::get('admin/bos', 'admin\bosController@index');
