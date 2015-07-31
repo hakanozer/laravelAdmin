@@ -1,5 +1,16 @@
 ## Laravel PHP Framework
 
+Kurallar:
+
+ekleme işlermlerinde  -------> succes (yeşil)
+sil işlemlerinde ----------------> danger (kırmızı)
+düzenleme işlemlerinde ----> primary (mavi)
+bilgi amaçlı işlemler ----------> info (açık mavi) 
+kullanıcı eklemelerde --------> text input
+
+Her ekle buttonu listede sağ üst köşede olacak.
+
+
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
 [![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
 [![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
