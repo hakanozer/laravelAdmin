@@ -5,10 +5,10 @@ Kurallar:
 ekleme işlermlerinde  -------> succes (yeşil)
 sil işlemlerinde ----------------> danger (kırmızı)
 düzenleme işlemlerinde ----> primary (mavi)
-bilgi amaçlı işlemler ----------> info (açık mavi) 
+bilgi amaçlı işlemler ----------> info (açık mavi)
 kullanıcı eklemelerde --------> text input
-
 Her ekle buttonu listede sağ üst köşede olacak.
+
 
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
