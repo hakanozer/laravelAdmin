@@ -69,3 +69,7 @@ Route::post('admin','admin\AdminUyeGirisController@girisKontrol');
 
 // admin panel boş sayfa başlıyor
 Route::get('admin/bos', 'admin\bosController@index');
+
+
+// ürün yorumları
+Route::get('admin/urunYorum', 'admin\urunYorumController@listele');
