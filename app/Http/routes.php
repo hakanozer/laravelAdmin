@@ -73,3 +73,12 @@ Route::get('admin/bos', 'admin\bosController@index');
 
 // ürün yorumları
 Route::get('admin/urunYorum', 'admin\urunYorumController@listele');
+
+// ürün silme
+Route::get('admin/urunYorum/sil/{id}', 'admin\urunYorumController@yorumSil');
+
+
+// ürün durum değiştirme
+Route::get('admin/urunYorum/durumAktif/{id}', 'admin\urunYorumController@durumAktif');
+
+Route::get('admin/urunYorum/durumPasif/{id}', 'admin\urunYorumController@durumPasif');

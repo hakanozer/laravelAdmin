@@ -26,6 +26,22 @@ class urunYorumController extends Controller {
         return view('admin/urunYorumlar',array('data'=>$data));
     }
 
+    function yorumSil($sil)
+    {
+        $yorumSil = DB::delete("delete from yorumlar where id = ?", array($sil));
+        if($yorumSil > 0)
+            return Redirect::to('admin/urunYorum');
+    }
 
+    function durumAktif($degistir)
+    {
+        $durum = DB::update('update yorumlar set durum=0 where id = ?', array($degistir));
+        return Redirect::to('admin/urunYorum');
+    }
 
+    function durumPasif($degistir)
+    {
+        $durum = DB::update('update yorumlar set durum=1 where id = ?', array($degistir));
+        return Redirect::to('admin/urunYorum');
+    }
 }

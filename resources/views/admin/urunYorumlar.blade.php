@@ -80,10 +80,19 @@
                                       <td>{{ $yorum->puan }}</td>
                                       <td>{{ $yorum->tarih }}</td>
                                       <td>
-                                          <button type="button" class="btn btn-info btn-circle"><i class="fa fa-check"></i>
-                                          </button>
-                                          <button type="button" class="btn btn-danger btn-circle"><i class="fa fa-times"></i>
-                                          </button>
+
+
+                                      @if($yorum->durum==0)
+
+                                      <a href="{{url("admin/urunYorum/durumPasif/$yorum->id")}}"><button type="button" class="btn btn-info btn-circle"><i class="fa fa-check"></i></button></a>
+
+                                      @else
+
+                                      <a href="{{url("admin/urunYorum/durumAktif/$yorum->id")}}"><button type="button" class="btn btn-default btn-circle"><i class="fa fa-check"></i></button></a>
+
+                                      @endif
+
+                                      <a href="{{url("admin/urunYorum/sil/$yorum->id")}}"><button type="button" class="btn btn-danger btn-circle"><i class="fa fa-times"></i></button></a>
 
                                       </td>
 
