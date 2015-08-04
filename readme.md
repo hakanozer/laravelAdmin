@@ -1,3 +1,11 @@
+Sevgili Arkadaslar ,
+
+Degisiklik yaptiginiz routers.php dosyasini github'a yüklerken dogrudan koplayamayip , yazmis oldugunuz tüm routers kodlarini diger arkadaslarimizin yazmis oldugu dosya içerisine ekleyerek yüklemeniz gerekmektedir .
+
+
+İyi Çalışmalar
+
+
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
