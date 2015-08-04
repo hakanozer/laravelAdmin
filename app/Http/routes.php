@@ -69,29 +69,3 @@ Route::post('admin','admin\AdminUyeGirisController@girisKontrol');
 
 // admin panel boş sayfa başlıyor
 Route::get('admin/bos', 'admin\bosController@index');
-// Admin Başlangıç
-Route::get('admin', 'admin\AdminUyeGirisController@giris');
-Route::post('admin','admin\AdminUyeGirisController@girisKontrol');
-
-// Admin Anasayfa Yönlendirme
-Route::get('admin/anasayfa', 'admin\anasayfaController@index');
-
-// Admin Çıkış
-Route::get('admin/cikis', 'admin\cikisController@cikisYap');
-
-
-// admin panel boş sayfa başlıyor
-Route::get('admin/bos', 'admin\bosController@index');
-
-
-// ürün yorumları
-Route::get('admin/urunYorum', 'admin\urunYorumController@listele');
-
-// ürün silme
-Route::get('admin/urunYorum/sil/{id}', 'admin\urunYorumController@yorumSil');
-
-
-// ürün durum değiştirme
-Route::get('admin/urunYorum/durumAktif/{id}', 'admin\urunYorumController@durumAktif');
-
-Route::get('admin/urunYorum/durumPasif/{id}', 'admin\urunYorumController@durumPasif');
