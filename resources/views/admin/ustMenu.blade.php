@@ -54,7 +54,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ url('admin/bos')  }}">Laravel Admin Panel</a>
+            <a class="navbar-brand" href="{{ url('admin/anasayfa')  }}">Laravel Admin Panel</a>
         </div>
         <!-- /.navbar-header -->
 
@@ -259,7 +259,7 @@
                     <li><a href="#"><i class="fa fa-gear fa-fw"></i> Ayarlar</a>
                     </li>
                     <li class="divider"></li>
-                    <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Çıkış Yap</a>
+                    <li><a href="{{url('admin/cikis')}}"><i class="fa fa-sign-out fa-fw"></i> Çıkış Yap</a>
                     </li>
                 </ul>
                 <!-- /.dropdown-user -->
@@ -283,7 +283,7 @@
                         <!-- /input-group -->
                     </li>
                     <li>
-                        <a href="{{ url('admin/bos')  }}"><i class="fa fa-dashboard fa-fw"></i> Admin Panel</a>
+                        <a href="{{ url('admin/anasayfa')  }}"><i class="fa fa-dashboard fa-fw"></i> Admin Panel</a>
                     </li>
 
 
@@ -310,7 +310,7 @@
                                 <a href="flot.html">İçerikler</a>
                             </li>
                             <li>
-                                <a href="morris.html">Ürün Yorumları</a>
+                                <a href="{{url('admin/urunYorum')}}">Ürün Yorumları</a>
                             </li>
                             <li>
                                 <a href="morris.html">Ürün Puanları</a>
