@@ -82,3 +82,31 @@ Route::post('admin/kullanicilar/ekle', 'admin\kullanicilarController@ekleForm');
 Route::get('admin/kullanicilar/sil/{id}', 'admin\kullanicilarController@sil');
 Route::get('admin/kullanicilar/duzenle/{id}', 'admin\kullanicilarController@duzenle');
 Route::post('admin/kullanicilar/duzenle/{id}', 'admin\kullanicilarController@duzenleForm');
+
+// ürün yorumları
+
+Route::get('admin/urunYorum', 'admin\urunYorumController@listele');
+
+
+
+
+// yorum ekle
+
+
+Route::post('urunYorum/yorumEkle','admin\urunYorumController@yorumEkle');
+
+
+
+// ürün silme
+
+Route::get('admin/urunYorum/sil/{id}', 'admin\urunYorumController@yorumSil');
+
+
+
+
+// ürün durum degistirme
+
+Route::get('admin/urunYorum/durumAktif/{id}', 'admin\urunYorumController@durumAktif');
+
+
+Route::get('admin/urunYorum/durumPasif/{id}', 'admin\urunYorumController@durumPasif');
