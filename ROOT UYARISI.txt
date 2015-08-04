@@ -1,0 +1,3 @@
+Sevgili Arkadaslar ,
+
+Degisiklik yaptiginiz routers.php dosyasini github'a yüklerken dogrudan koplayamayip , yazmis oldugunuz tüm routers kodlarini diger arkadaslarimizin yazmis oldugu dosya içerisine ekleyerek yüklemeniz gerekmektedir .
