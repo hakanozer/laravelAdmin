@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 /*
 |--------------------------------------------------------------------------
@@ -59,12 +59,18 @@ Route::get("veritabani/sil/{id}","veritabaniController@silData");
 Route::get("veritabani/duzenle/{id}", "veritabaniController@duzenle");
 Route::post("veritabani/duzenle/{id}", "veritabaniController@duzenleForm");
 
+
+
+
 // Admin Başlangıç
 Route::get('admin', 'admin\AdminUyeGirisController@giris');
 Route::post('admin','admin\AdminUyeGirisController@girisKontrol');
-// Admin Bitiş
 
+// Admin Anasayfa Yönlendirme
+Route::get('admin/anasayfa', 'admin\anasayfaController@index');
 
+// Admin Çıkış
+Route::get('admin/cikis', 'admin\cikisController@cikisYap');
 
 
 // admin panel boş sayfa başlıyor
