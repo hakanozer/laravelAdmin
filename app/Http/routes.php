@@ -105,14 +105,18 @@ Route::post('admin/sifreDegistir','admin\sifreDegistirController@sifreDegistirVT
 //icerik
 Route::get('admin/icerik', 'admin\icerikController@listele');
 
-//içerikekle
+//içerik ekle
 Route::get('admin/icerikEkle', 'admin\icerikEkleController@index');
 Route::post('admin/icerikEkle', 'admin\icerikEkleController@ekle');
 
-//içerik sill
+//içerik sil
 Route::get('admin/icerik/sil/{id}', 'admin\icerikController@icerikSil');
 
 //içerik düzenle
 Route::get('admin/icerikDuzenle/{id}', 'admin\icerikDuzenleController@icerikDuzenleAc');
 Route::post('admin/icerikDuzenle/{id}', 'admin\icerikDuzenleController@duzenleForm');
 
+
+//site ayarları
+Route::get("admin/siteAyarlar","admin\ayarlarController@liste");
+Route::post("admin/siteAyarlar", "admin\ayarlarController@duzenle");

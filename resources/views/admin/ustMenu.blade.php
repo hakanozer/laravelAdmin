@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html>
 <html lang="en">
 
@@ -256,7 +256,7 @@
                 <ul class="dropdown-menu dropdown-user">
                     <li><a href="#"><i class="fa fa-user fa-fw"></i> Admin Profil</a>
                     </li>
-                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> Ayarlar</a>
+                    <li><a href="{{url ('admin/siteAyarlar')}}"><i class="fa fa-gear fa-fw"></i> Ayarlar</a>
                     </li>
                     <li class="divider"></li>
                     <li><a href="{{url('admin/cikis')}}"><i class="fa fa-sign-out fa-fw"></i> Çıkış Yap</a>
