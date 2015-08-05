@@ -120,3 +120,6 @@ Route::post('admin/icerikDuzenle/{id}', 'admin\icerikDuzenleController@duzenleFo
 //site ayarları
 Route::get("admin/siteAyarlar","admin\ayarlarController@liste");
 Route::post("admin/siteAyarlar", "admin\ayarlarController@duzenle");
+
+//ürün puanlari
+Route::get('admin/urunPuan', 'admin\urunPuanController@urunPuanlari');
