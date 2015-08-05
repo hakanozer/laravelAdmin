@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 05 Ağu 2015, 13:26:09
+-- Üretim Zamanı: 05 Ağu 2015, 14:08:53
 -- Sunucu sürümü: 5.6.21
 -- PHP Sürümü: 5.6.3
 
@@ -35,7 +35,14 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `mail` varchar(500) COLLATE utf8_turkish_ci NOT NULL,
   `durum` tinyint(1) NOT NULL,
   `tarih` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+
+--
+-- Tablo döküm verisi `admin`
+--
+
+INSERT INTO `admin` (`id`, `kul_adi`, `sifre`, `adi`, `soyadi`, `mail`, `durum`, `tarih`) VALUES
+(1, 'admin', '827ccb0eea8a706c4c34a16891f84e7b', 'Ali', 'Bilmem', 'ali@mail.com', 0, '2015-07-16 10:12:39');
 
 -- --------------------------------------------------------
 
@@ -363,7 +370,7 @@ ALTER TABLE `yorumlar`
 -- Tablo için AUTO_INCREMENT değeri `admin`
 --
 ALTER TABLE `admin`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- Tablo için AUTO_INCREMENT değeri `ayarlar`
 --
