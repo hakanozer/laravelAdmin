@@ -110,3 +110,10 @@ Route::get('admin/urunYorum/durumAktif/{id}', 'admin\urunYorumController@durumAk
 
 
 Route::get('admin/urunYorum/durumPasif/{id}', 'admin\urunYorumController@durumPasif');
+
+
+//admin düzenleme
+Route::get('admin/adminDuzenle','admin\adminDuzenleController@liste');
+Route::post('admin/adminDuzenle', 'admin\adminDuzenleController@guncelle');
+Route::get('admin/sifreDegistir','admin\sifreDegistirController@sifreDegistir');
+Route::post('admin/sifreDegistir','admin\sifreDegistirController@sifreDegistirVT');
