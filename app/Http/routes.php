@@ -123,3 +123,7 @@ Route::post("admin/siteAyarlar", "admin\ayarlarController@duzenle");
 
 //ürün puanlari
 Route::get('admin/urunPuan', 'admin\urunPuanController@urunPuanlari');
+
+//sosyal Medya
+Route::get('admin/sosyalMedya','admin\sosyalMedyaController@sosyalMedya');
+Route::post('admin/sosyalMedya','admin\sosyalMedyaController@ekle');
