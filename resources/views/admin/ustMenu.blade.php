@@ -32,9 +32,6 @@
     <!-- Custom Fonts -->
     <link href="{{ asset('/bower_components/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
 
-    <!-- ckeditor !-->
-    <script src="{{ asset('/bower_components/ckeditor/ckeditor.js')}}"></script>
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -57,7 +54,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ url('admin/anasayfa')  }}">Laravel Admin Panel</a>
+            <p>HOŞGELDİNİZ
+
+        @if (Session::get('adi'))
+           <a href="{{ url('admin/adminDuzenle')  }}">
+            {{ Session::get('adi')  }}
+            {{ Session::get('soyadi')  }}
+            </a>
+        @endif
+
+
+        </p>
         </div>
         <!-- /.navbar-header -->
 

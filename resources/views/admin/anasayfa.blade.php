@@ -9,17 +9,6 @@
         <!-- /.col-lg-12 -->
     </div>
      <!-- /.row -->
-    <div class="row">
-
-        @if(isset($bilgi))
-           <p>HOŞGELDİNİZ,
-           <a href="{{ url('/admin/anasayfa#') }}">
-           {{ $bilgi->adi." ".$bilgi->soyadi }}
-           </a>
-           </p>
-        @endif
-
-    </div>
 
 
 @include('admin/alt')
