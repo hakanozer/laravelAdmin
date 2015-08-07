@@ -123,3 +123,6 @@ Route::post("admin/siteAyarlar", "admin\ayarlarController@duzenle");
 
 //ürün puanlari
 Route::get('admin/urunPuan', 'admin\urunPuanController@urunPuanlari');
+
+// dosya işlemleri
+Route::get('admin/dosyaYonetimi', 'admin\dosyaYonetimiController@index');
