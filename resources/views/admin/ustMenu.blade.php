@@ -60,7 +60,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ url('admin/anasayfa')  }}">Laravel Admin Panel</a>
+            <p>HOŞGELDİNİZ
+
+        @if (Session::get('adi'))
+           <a href="{{ url('admin/adminDuzenle')  }}">
+            {{ Session::get('adi')  }}
+            {{ Session::get('soyadi')  }}
+            </a>
+        @endif
+
+
+        </p>
         </div>
         <!-- /.navbar-header -->
 
@@ -373,7 +383,9 @@
                         <a href="tables.html"><i class="fa fa-table fa-fw"></i> Banner Yönetimi</a>
                     </li>
 
-
+ <li>
+                        <a href="{{url('admin/sosyalMedya')}}"><i class="fa fa-table fa-fw"></i> Sosyal Medya</a>
+                    </li>
 
                     <li>
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>

@@ -124,5 +124,11 @@ Route::post("admin/siteAyarlar", "admin\ayarlarController@duzenle");
 //ürün puanlari
 Route::get('admin/urunPuan', 'admin\urunPuanController@urunPuanlari');
 
+<<<<<<< HEAD
 // dosya işlemleri
 Route::get('admin/dosyaYonetimi', 'admin\dosyaYonetimiController@index');
+=======
+//sosyal Medya
+Route::get('admin/sosyalMedya','admin\sosyalMedyaController@sosyalMedya');
+Route::post('admin/sosyalMedya','admin\sosyalMedyaController@ekle');
+>>>>>>> origin/master

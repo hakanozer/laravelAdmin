@@ -34,6 +34,8 @@ class sessionController
         if(!empty($SessionValue)){
             $gelen = DB::select('select * from admin where id=?', array(Session::get('id')));
             $bilgi = $gelen[0];
+            Session::put('adi', $bilgi->adi);
+            Session::put('soyadi', $bilgi->soyadi);
             return view('admin/anasayfa')->with('bilgi', $bilgi);
         }
         else if(!empty($CookieValue)){
@@ -43,6 +45,9 @@ class sessionController
 
             $gelen = DB::select('select * from admin where id=?', array(Session::get('id')));
             $bilgi = $gelen[0];
+
+            Session::put('adi', $bilgi->adi);
+            Session::put('soyadi', $bilgi->soyadi);
             return view('admin/anasayfa')->with('bilgi', $bilgi);
         }
         else{
