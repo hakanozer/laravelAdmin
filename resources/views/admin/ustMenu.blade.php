@@ -307,7 +307,7 @@
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> İçerik Yönetimi<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="flot.html">İçerikler</a>
+                                <a href="{{url('admin/icerik')}}">İçerikler</a>
                             </li>
                             <li>
                                 <a href="{{url('admin/urunYorum')}}">Ürün Yorumları</a>
