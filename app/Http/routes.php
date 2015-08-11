@@ -84,36 +84,35 @@ Route::get('admin/kullanicilar/duzenle/{id}', 'admin\kullanicilarController@duze
 Route::post('admin/kullanicilar/duzenle/{id}', 'admin\kullanicilarController@duzenleForm');
 
 // ürün yorumları
-
 Route::get('admin/urunYorum', 'admin\urunYorumController@listele');
 
-
-
-
 // yorum ekle
-
-
 Route::post('urunYorum/yorumEkle','admin\urunYorumController@yorumEkle');
 
-
-
 // ürün silme
-
 Route::get('admin/urunYorum/sil/{id}', 'admin\urunYorumController@yorumSil');
 
-
-
-
 // ürün durum degistirme
-
 Route::get('admin/urunYorum/durumAktif/{id}', 'admin\urunYorumController@durumAktif');
-
-
 Route::get('admin/urunYorum/durumPasif/{id}', 'admin\urunYorumController@durumPasif');
-
 
 //admin düzenleme
 Route::get('admin/adminDuzenle','admin\adminDuzenleController@liste');
 Route::post('admin/adminDuzenle', 'admin\adminDuzenleController@guncelle');
 Route::get('admin/sifreDegistir','admin\sifreDegistirController@sifreDegistir');
 Route::post('admin/sifreDegistir','admin\sifreDegistirController@sifreDegistirVT');
+
+//icerik
+Route::get('admin/icerik', 'admin\icerikController@listele');
+
+//içerikekle
+Route::get('admin/icerikEkle', 'admin\icerikEkleController@index');
+Route::post('admin/icerikEkle', 'admin\icerikEkleController@ekle');
+
+//içerik sill
+Route::get('admin/icerik/sil/{id}', 'admin\icerikController@icerikSil');
+
+//içerik düzenle
+Route::get('admin/icerikDuzenle/{id}', 'admin\icerikDuzenleController@icerikDuzenleAc');
+Route::post('admin/icerikDuzenle/{id}', 'admin\icerikDuzenleController@duzenleForm');
+
