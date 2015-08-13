@@ -91,6 +91,7 @@
                      <div class="col-lg-6">
                         <h3>Google Maps Koordinatları</h3>
                         <br>
+                        
                         <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
                         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
                         <script type="text/javascript">
@@ -123,7 +124,7 @@
                                                                                 }
                            
                                                                                 function initialize() {
-                                                                                    var latLng = new google.maps.LatLng(41.022047852139394, 28.93318226272340);
+                                                                                    var latLng = new google.maps.LatLng( document.getElementById('lat').value , document.getElementById('lng').value);
                                                                                     var map = new google.maps.Map(document.getElementById('mapCanvas'), {
                                                                                         zoom: 8,
                                                                                         center: latLng,
