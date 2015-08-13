@@ -341,14 +341,14 @@
 
 
 
-                    <li>
+                   <li>
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Galeri Yönetimi<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="flot.html">Kategoriler</a>
+                                <a href="{{url('admin/galerikategori')}}">Kategoriler</a>
                             </li>
                             <li>
-                                <a href="morris.html">Galeriler</a>
+                                <a href="{{url('admin/galeriler')}}">Galeriler</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->

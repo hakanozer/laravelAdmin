@@ -124,11 +124,24 @@ Route::post("admin/siteAyarlar", "admin\ayarlarController@duzenle");
 //ürün puanlari
 Route::get('admin/urunPuan', 'admin\urunPuanController@urunPuanlari');
 
-<<<<<<< HEAD
+
 // dosya işlemleri
 Route::get('admin/dosyaYonetimi', 'admin\dosyaYonetimiController@index');
-=======
+
 //sosyal Medya
 Route::get('admin/sosyalMedya','admin\sosyalMedyaController@sosyalMedya');
 Route::post('admin/sosyalMedya','admin\sosyalMedyaController@ekle');
->>>>>>> origin/master
+
+
+//admin panel galeriler için yazılmış rotalar
+Route::get('admin/galeriler', 'admin\galerilerController@index');
+Route::get('admin/galeriler/duzenle/{id}', 'admin\galerilerController@duzenle');
+Route::post('admin/galeriler/duzenle/{id}', 'admin\galerilerController@duzenleForm');
+Route::get('admin/galeriler/sil/{id}', 'admin\galerilerController@sil');
+
+
+//admin panel galeri kategorileri için yazılmış rotalar
+Route::get('admin/galerikategori', 'admin\galerilerKategoriController@index');
+Route::get('admin/galerikategori/sil/{id}', 'admin\galerilerKategoriController@sil');
+Route::post('admin/galerikategori/ekle', 'admin\galerilerKategoriController@ekle');
+
