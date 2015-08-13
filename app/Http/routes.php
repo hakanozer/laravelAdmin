@@ -159,3 +159,11 @@ Route::get('admin/mesajlar/oku/{id}','admin\mesajlarController@mesajOku');
 // mesaj gönderme
 Route::get('admin/mesajlar/gonder','admin\mesajlarController@gonder');
 Route::post('admin/mesajlar/gonder','admin\mesajlarController@gonderForm');
+
+//Linkler
+Route::get('admin/linkler','admin\linklerController@link');
+Route::post('admin/linkler','admin\linklerController@ekle');
+Route::get('admin/linkler','admin\linklerController@listele');
+Route::get('admin/linkler/sil/{id}','admin\linklerController@sil');
+Route::get('admin/linklerDuzenle/{id}','admin\linklerDuzenleController@duzenleAc');
+Route::post('admin/linklerDuzenle/{id}','admin\linklerDuzenleController@duzenle');

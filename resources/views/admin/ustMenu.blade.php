@@ -387,6 +387,11 @@
                         <a href="{{url('admin/sosyalMedya')}}"><i class="fa fa-table fa-fw"></i> Sosyal Medya</a>
                     </li>
 
+
+<li>
+                         <a href="{{url('admin/linkler')}}"><i class="fa fa-table fa-fw"></i> Linkler</a>
+                                        </li>
+
                     <li>
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
