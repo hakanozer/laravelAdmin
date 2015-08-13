@@ -145,3 +145,17 @@ Route::get('admin/galerikategori', 'admin\galerilerKategoriController@index');
 Route::get('admin/galerikategori/sil/{id}', 'admin\galerilerKategoriController@sil');
 Route::post('admin/galerikategori/ekle', 'admin\galerilerKategoriController@ekle');
 
+
+//mesajlar
+//mesaj liste
+Route::get('admin/mesajlar','admin\mesajlarController@mesajlarliste');
+
+//mesaj sil
+Route::get('admin/mesajlar/sil/{id}','admin\mesajlarController@mesajSil');
+
+//mesaj oku
+Route::get('admin/mesajlar/oku/{id}','admin\mesajlarController@mesajOku');
+
+// mesaj gönderme
+Route::get('admin/mesajlar/gonder','admin\mesajlarController@gonder');
+Route::post('admin/mesajlar/gonder','admin\mesajlarController@gonderForm');
