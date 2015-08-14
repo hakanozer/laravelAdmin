@@ -314,22 +314,22 @@
 
 
                     <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Ürün Yönetimi<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="flot.html">Kategoriler</a>
-                            </li>
-                            <li>
-                                <a href="morris.html">Ürünler</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
+                      <a href="#"><i class="fa fa-th-large fa-fw"></i> Ürün Yönetimi<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                               <li>
+                                                   <a href="{{url('admin/kategori')}}">Kategoriler</a>
+                                               </li>
+                                               <li>
+                                                   <a href="{{url('admin/urun')}}">Ürünler</a>
+                                               </li>
+                                           </ul>
+                                           <!-- /.nav-second-level -->
+                                       </li>
 
 
 
                     <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> İçerik Yönetimi<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-list-alt fa-fw"></i> İçerik Yönetimi<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="{{url('admin/icerik')}}">İçerikler</a>
@@ -338,10 +338,10 @@
                                 <a href="{{url('admin/urunYorum')}}">Ürün Yorumları</a>
                             </li>
                             <li>
-                                <a href="morris.html">Ürün Puanları</a>
+                                <a href="#">Ürün Puanları</a>
                             </li>
                             <li>
-                                <a href="morris.html">Mesajlar</a>
+                                <a href="{{url('admin/mesajlar')}}">Mesajlar</a>
                             </li>
 
                         </ul>
@@ -351,7 +351,7 @@
 
 
                    <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Galeri Yönetimi<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-camera-retro fa-fw"></i> Galeri Yönetimi<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="{{url('admin/galerikategori')}}">Kategoriler</a>
@@ -365,126 +365,50 @@
 
 
                     <li>
-                        <a href="tables.html"><i class="fa fa-table fa-fw"></i> Slider Yönetimi</a>
+                        <a href="{{url('admin/sliderYonetimi')}}"><i class="fa fa-photo fa-fw"></i> Slider Yönetimi</a>
                     </li>
 
 
                     <li>
-                        <a href="{{ url('admin/kullanicilar')  }}"><i class="fa fa-table fa-fw"></i> Kullanıcı Yönetimi</a>
+                        <a href="{{ url('admin/kullanicilar')  }}"><i class="fa fa-users fa-fw"></i> Kullanıcı Yönetimi</a>
                     </li>
 
 
                     <li>
-                        <a href="{{ url('admin/dosyaYonetimi')  }}"><i class="fa fa-table fa-fw"></i> Dosya İşlemleri</a>
+                        <a href="{{ url('admin/dosyaYonetimi')  }}"><i class="fa fa-files-o fa-fw"></i> Dosya İşlemleri</a>
                     </li>
 
 
                     <li>
-                        <a href="tables.html"><i class="fa fa-table fa-fw"></i> Sipariş İşlemleri</a>
+                        <a href="#"><i class="fa fa-bars fa-fw"></i> Sipariş İşlemleri</a>
                     </li>
 
                     <li>
-                        <a href="tables.html"><i class="fa fa-table fa-fw"></i> Raporlar</a>
+                        <a href="#"><i class="fa fa-file-text fa-fw"></i> Raporlar</a>
                     </li>
 
 
                     <li>
-                        <a href="{{url('admin/bannerListele')}}"><i class="fa fa-table fa-fw"></i> Banner Yönetimi</a>
+                        <a href="{{url('admin/bannerListele')}}"><i class="fa fa-file-picture-o fa-fw"></i> Banner Yönetimi</a>
                     </li>
 
  <li>
-                        <a href="{{url('admin/sosyalMedya')}}"><i class="fa fa-table fa-fw"></i> Sosyal Medya</a>
+                        <a href="{{url('admin/sosyalMedya')}}"><i class="fa fa-facebook-square fa-fw"></i> Sosyal Medya</a>
                     </li>
+                    <li>
+                                            <a href="{{url('admin/bulten')}}"><i class="fa fa-edit fa-fw"></i>E-Bülten Yönetimi</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="{{url('admin/anket')}}"><i class="fa fa-edit fa-fw"></i>Anket Yönetimi</a>
+                                        </li>
 
 
 <li>
-                         <a href="{{url('admin/linkler')}}"><i class="fa fa-table fa-fw"></i> Linkler</a>
+                         <a href="{{url('admin/linkler')}}"><i class="fa glyphicon-link fa-fw"></i> Linkler</a>
                                         </li>
 
-                    <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="flot.html">Flot Charts</a>
-                            </li>
-                            <li>
-                                <a href="morris.html">Morris.js Charts</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-                    <li>
-                        <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
-                    </li>
-                    <li>
-                        <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="panels-wells.html">Panels and Wells</a>
-                            </li>
-                            <li>
-                                <a href="buttons.html">Buttons</a>
-                            </li>
-                            <li>
-                                <a href="notifications.html">Notifications</a>
-                            </li>
-                            <li>
-                                <a href="typography.html">Typography</a>
-                            </li>
-                            <li>
-                                <a href="icons.html"> Icons</a>
-                            </li>
-                            <li>
-                                <a href="grid.html">Grid</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Second Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Third Level <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                </ul>
-                                <!-- /.nav-third-level -->
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="blank.html">Blank Page</a>
-                            </li>
-                            <li>
-                                <a href="login.html">Login Page</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
+
                 </ul>
             </div>
             <!-- /.sidebar-collapse -->
