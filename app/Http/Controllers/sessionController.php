@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Created by PhpStorm.
  * User: Fatih
@@ -26,6 +26,7 @@ class sessionController
      * else komutu ile izinsiz erişimin önüne geçilerek giriş sayfasına yönlendirme yapılmaktadır.
      * */
 
+    //Sadece anasayfada session+cookie kontrolüdür.
     public static function kontrol()
     {
         $SessionValue = session('email');
@@ -53,6 +54,68 @@ class sessionController
         else{
             echo "<script>window.location.href = 'http://localhost:8080/laravelAdmin/admin';</script>";
         }
+    }
+
+//Tüm sayfalarda session+cookie kontrolü içindir.
+    public static function genelkontrol()
+    {
+        $SessionValue = session('email');
+        $CookieValue = Cookie::get('user');
+
+        if(!empty($SessionValue)){
+            session()->regenerate();
+            $gelen = DB::select('select * from admin where id=?', array(Session::get('id')));
+            $bilgi = $gelen[0];
+            Session::put('adi', $bilgi->adi);
+            Session::put('soyadi', $bilgi->soyadi);
+
+        }
+        else if(Cookie::get('user')){
+            session()->regenerate();
+            Session::put('id', $CookieValue["id"]);
+            Session::put('email', $CookieValue["email"]);
+            Session::put('password', $CookieValue["password"]);
+
+            $gelen = DB::select('select * from admin where id=?', array(Session::get('id')));
+            $bilgi = $gelen[0];
+
+            Session::put('adi', $bilgi->adi);
+            Session::put('soyadi', $bilgi->soyadi);
+
+        }
+        else {
+            return "<script>window.location.href = 'http://localhost:8080/laravelAdmin/admin';</script>";
+        }
+
+    }
+
+    // Admin giriş sayfası için session+cookie kontrolüdür
+    public static function giriskontrol()
+    {
+        // TODO: giriş paneli ve anasayfa geçişkenliğine dair özelleştirmeye ihtiyaç duyulmaktadır.
+        $SessionValue = session('email');
+        $CookieValue = Cookie::get('user');
+
+        if(!empty($SessionValue)) {
+            return "<script>window.location.href = 'http://localhost:8080/laravelAdmin/admin/anasayfa';</script>";
+        }
+        else if(Cookie::get('user')){
+            session()->regenerate();
+            Session::put('id', $CookieValue["id"]);
+            Session::put('email', $CookieValue["email"]);
+            Session::put('password', $CookieValue["password"]);
+
+            $gelen = DB::select('select * from admin where id=?', array(Session::get('id')));
+            $bilgi = $gelen[0];
+
+            Session::put('adi', $bilgi->adi);
+            Session::put('soyadi', $bilgi->soyadi);
+            return "<script>window.location.href = 'http://localhost:8080/laravelAdmin/admin/anasayfa';</script>";
+        }
+        else {
+            return "<script>window.location.href = 'http://localhost:8080/laravelAdmin/admin';</script>";
+        }
+
     }
 
 
