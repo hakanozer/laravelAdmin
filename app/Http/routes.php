@@ -176,21 +176,3 @@ Route::post('admin/bannerListele', 'admin\bannerListeleController@listele');
 //bannerEkle
 Route::get('admin/bannerEkle','admin\bannerEkleController@index');
 Route::post('admin/bannerEkle','admin\bannerEkleController@ekle');
-
-// Bülten Sayfası
-Route::get('admin/bulten', 'admin\bultenController@index');
-
-// Bülten Oluştur
-Route::get('admin/bulten/yeni', 'admin\bultenController@bultenOlustur');
-
-// Bültene Abone Ekle
-Route::get('admin/bulten/aboneEkle', 'admin\bultenController@aboneEkleIndex');
-Route::post('admin/bulten/aboneEkle', 'admin\bultenController@aboneEkle');
-
-// Abone Sil (Tekil[1] ve Çoğul[2])
-Route::get('admin/bulten/aboneSil/{id}', 'admin\bultenController@aboneSil');
-Route::post('admin/bulten/aboneSil', 'admin\bultenController@aboneCokluSil');
-
-// Abone Düzenle
-Route::get('admin/aboneDuzenle/{id}', 'admin\bultenController@aboneDuzenleAc');
-Route::post('admin/aboneDuzenle/{id}', 'admin\bultenController@aboneDuzenle');

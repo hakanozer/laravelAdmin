@@ -1,5 +1,3 @@
-﻿<?php /*echo \App\Http\Controllers\sessionController::giriskontrol();*/ ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

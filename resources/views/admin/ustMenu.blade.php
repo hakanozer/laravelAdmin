@@ -1,5 +1,4 @@
-﻿<?php echo \App\Http\Controllers\sessionController::genelkontrol(); ?>
-
+﻿
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,9 +11,6 @@
     <meta name="author" content="">
 
     <title>Laravel Admin Panel</title>
-
-    <!-- Admin.css -->
-    <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
 
     <!-- Bootstrap Core CSS -->
     <!-- <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> -->
@@ -64,18 +60,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ url('admin/anasayfa')  }}">Laravel Admin Panel</a>
-        </div>
-        <div>
-            <p class="prg">// Hoşgeldiniz,
+            <p>HOŞGELDİNİZ
 
         @if (Session::get('adi'))
-
            <a href="{{ url('admin/adminDuzenle')  }}">
             {{ Session::get('adi')  }}
             {{ Session::get('soyadi')  }}
             </a>
-
         @endif
 
 
