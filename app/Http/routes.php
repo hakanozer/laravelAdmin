@@ -167,3 +167,12 @@ Route::get('admin/linkler','admin\linklerController@listele');
 Route::get('admin/linkler/sil/{id}','admin\linklerController@sil');
 Route::get('admin/linklerDuzenle/{id}','admin\linklerDuzenleController@duzenleAc');
 Route::post('admin/linklerDuzenle/{id}','admin\linklerDuzenleController@duzenle');
+
+//banner Yönetimi-bannerEkle/bannerListele
+//banner listele
+Route::get('admin/bannerListele','admin\bannerListeleController@index');
+Route::post('admin/bannerListele', 'admin\bannerListeleController@listele');
+
+//bannerEkle
+Route::get('admin/bannerEkle','admin\bannerEkleController@index');
+Route::post('admin/bannerEkle','admin\bannerEkleController@ekle');

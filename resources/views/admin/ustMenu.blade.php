@@ -380,7 +380,7 @@
 
 
                     <li>
-                        <a href="tables.html"><i class="fa fa-table fa-fw"></i> Banner Yönetimi</a>
+                        <a href="{{url('admin/bannerListele')}}"><i class="fa fa-table fa-fw"></i> Banner Yönetimi</a>
                     </li>
 
  <li>
