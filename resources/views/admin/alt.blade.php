@@ -23,7 +23,35 @@
 <!-- Custom Theme JavaScript -->
 <script src="{{ asset('/dist/js/sb-admin-2.js')}}"></script>
 
+<script>
+        $(document).ready(function() {
+            if ($('#dataTables-example').length){
+                $('#dataTables-example').DataTable({
+                    responsive: true,
 
+                    "language": {
+                        "sProcessing":   "İşleniyor...",
+                        "sLengthMenu":   "Sayfada _MENU_ Kayıt Göster",
+                        "sZeroRecords":  "Eşleşen Kayıt Bulunmadı",
+                        "sInfo":         "  _TOTAL_ Kayıttan _START_ - _END_ Arası Kayıtlar",
+                        "sInfoEmpty":    "Kayıt Yok",
+                        "sInfoFiltered": "( _MAX_ Kayıt İçerisinden Bulunan)",
+                        "sInfoPostFix":  "",
+                        "sSearch":       "Bul:",
+                        "sUrl":          "",
+                        "oPaginate": {
+                            "sFirst":    "İlk",
+                            "sPrevious": "Önceki",
+                            "sNext":     "Sonraki",
+                            "sLast":     "Son"
+                    }
+                  }
+                });
+            }
+        });
+
+
+</script>
 
 
 </body>
