@@ -209,3 +209,16 @@ Route::get('admin/sliderYonetimi/sil/{id}', 'admin\sliderController@sliderSil');
 // slider düzenle
 Route::get('admin/sliderDuzenle/{id}', 'admin\sliderController@sliderDuzenle');
 Route::post('admin/sliderDuzenle/{id}', 'admin\sliderController@sliderDuzenleForm');
+
+//kategori işlemleri yaıpılıyor
+Route::get('admin/kategori','admin\kategoriController@liste');
+
+//kategori sil işlemi yapılıyor
+Route::post('admin/kategoriSil','admin\kategoriController@olay');
+
+//kategori update işlemi yapılıyor
+Route::post('admin/kategoriAc','admin\kategoriController@duzenleAc');
+Route::post('admin/kategoriEkle','admin\kategoriController@duzenleKaydet');
+
+//kategori ekle işlemi yapılıyor
+Route::post('admin/kategori','admin\kategoriController@ekle');
