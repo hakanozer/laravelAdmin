@@ -23,8 +23,6 @@ class galerilerController extends Controller
 
 
         return view('admin/galeriler', array('data'=>$data, 'resimler'=>$resimler));
-        //return view('admin/galeriler');
-
     }
 
 
@@ -36,8 +34,7 @@ class galerilerController extends Controller
         return view('admin/galerilerDuzenle', array('modalNumber' => $modalNumber, 'galeriId'=> $id, 'resimler' => $query ));
 
     }
-
-
+    
     public function duzenleForm($id){
 
         $data = Input::all();
@@ -55,9 +52,15 @@ class galerilerController extends Controller
 
                 $dosya=Input::file('resim');
 
-
                 $uzanti = $dosya->getClientOriginalExtension();
-                $dosyaAdi=date('YmdHis').'.'.$uzanti;
+
+                if (strlen($uzanti) == 3)
+                    $dosyaAdi = (substr($dosya->getClientOriginalName(),0,-4));
+                else if (strlen($uzanti) == 4)
+                    $dosyaAdi = (substr($dosya->getClientOriginalName(),0,-5));
+
+
+                $dosyaAdi = $dosyaAdi ."_".date('YmdHis').'.'.$uzanti;
                 $path = base_path('galeriResimler/600x450/'.$dosyaAdi);
                 Image::make($dosya->getRealPath())->resize(600,450)->save($path);
                 $path = base_path('galeriResimler/defaultSize/'.$dosyaAdi);

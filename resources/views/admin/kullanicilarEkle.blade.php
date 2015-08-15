@@ -8,8 +8,7 @@
         <!-- /.col-lg-12 -->
     </div>
     <!-- /.row -->
-<a  href="{{ url('admin/kullanicilar')  }}" style="float: left; margin-bottom: 15px; "class="btn btn-primary"><i class="glyphicon glyphicon-backward"> </i> Geri Dön</a>
-    <div style="clear: both"></div>
+
     <div class="row">
         <div class="col-lg-6">
             <div class="panel panel-default">
@@ -20,7 +19,7 @@
                     <div class="row">
                         @if (count($errors) > 0)
                             <div class="alert alert-danger">
-                                <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                                <strong>Uyarı!</strong> Form girişlerinde bazı problemler var. <br><br>
                                 <ul>
                                     @foreach ($errors->all() as $error)
                                         <li>{{ $error }}</li>
@@ -29,13 +28,24 @@
                             </div>
                         @endif
 
-                        @if (isset($result))
-                            @if ($result)
-                                <div class="alert alert-success"> Kullanıcı Başarıyla Eklendi. </div>
+
+                        @if(isset($emailControl))
+                            @if ($emailControl)
+                                <div class="alert alert-danger">Bu e-mail adresine kayıtlı kullanıcı mevcut.</div>
                             @else
-                                <div class="alert alert-danger">Kullanıcı Eklenirken Hata Oluştu.</div>
+                                @if (isset($result))
+                                    @if ($result)
+                                        <div class="alert alert-success"> Kullanıcı Başarıyla Eklendi. </div>
+                                    @else
+                                        <div class="alert alert-danger">Kullanıcı Eklenirken Hata Oluştu.</div>
+                                    @endif
+                                @endif
                             @endif
                         @endif
+
+
+
+
                         <div class="col-lg-6">
                             <form role="form" method="post" action="{{ url('admin/kullanicilar/ekle') }}">
                                 <input type="hidden" name="_token" value="{{csrf_token()}}"/>
