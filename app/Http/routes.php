@@ -176,17 +176,3 @@ Route::post('admin/bannerListele', 'admin\bannerListeleController@listele');
 //bannerEkle
 Route::get('admin/bannerEkle','admin\bannerEkleController@index');
 Route::post('admin/bannerEkle','admin\bannerEkleController@ekle');
-
-// slider listesi
-Route::get('admin/sliderYonetimi', 'admin\sliderController@sliderListele');
-
-// slider ekle
-Route::get('admin/sliderEkle', 'admin\sliderController@sliderEkle');
-Route::post('admin/sliderEkle', 'admin\sliderController@yeniSlider');
-
-// slider silme
-Route::get('admin/sliderYonetimi/sil/{id}', 'admin\sliderController@sliderSil');
-
-// slider düzenle
-Route::get('admin/sliderDuzenle/{id}', 'admin\sliderController@sliderDuzenle');
-Route::post('admin/sliderDuzenle/{id}', 'admin\sliderController@sliderDuzenleForm');
