@@ -226,3 +226,17 @@ Route::post('admin/kategori','admin\kategoriController@ekle');
 //siparişler
 Route::get('admin/siparisler', 'admin\siparislerController@siparisler');
 Route::get('admin/siparisDetay/{id}', 'admin\siparislerController@siparislerDetay');
+
+// ürün listele
+Route::get('admin/urun', 'admin\urunController@listele');
+
+// ürün ekle
+Route::get('admin/urunEkle', 'admin\urunController@index');
+Route::post('admin/urunEkle', 'admin\urunController@ekle');
+
+// ürün sil
+Route::get('admin/urun/sil/{id}', 'admin\urunController@urunSil');
+
+//ürün düzenlemöe
+Route::get("admin/urunDuzenle/{id}", "admin\urunController@urunDuzenleAc");
+Route::post("admin/urunDuzenle/{id}", "admin\urunController@duzenleUrun");
