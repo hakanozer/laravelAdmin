@@ -24,131 +24,135 @@
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-
+<style>
+   table {border-collapse:collapse; table-layout:fixed; width:310px;}
+   table td {border:solid 1px #fab; width:100px; word-wrap:break-word;}
+    .img-responsive{
+          width: 100%;
+          height: 60px;
+     }
+   </style>
 
 <div id="page-wrapper">
-
-    <content style="padding: 40px 0px">
-
-        <div class="text-right" style="margin-bottom: 25px">
-            <a href="{{url('admin/bos')}}" class="btn btn-primary"><i class="glyphicon glyphicon-backward"> </i> Geri Dön</a>
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Banner Yönetimi</h1>
         </div>
-            <section>
-        <h2>Reklamlar</h2>
-        <hr>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
 
-        <a class="btn btn-primary" href="{{url ('admin/bannerEkle')}}" style="margin-bottom: 25px">Reklam Ekle</a>
+    <button style="float: right; margin-bottom: 15px; " type="button" class="btn btn-primary" color="blue" onclick="window.location.href='bannerEkle'">Banner Ekle</button>
+    <div class="row">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    
+                    <div class="panel-body">
+                        <div class="dataTable_wrapper">
+                            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                <thead>
+                                <tr>
 
-      <!-- dataTable.js işlemleri -->
-        <link rel="stylesheet" href="static/css/jquery.dataTables.css">
+                                          <th>Adı<br></th>
+                                          <th>Gösterim</th>
+                                          <th>Tıklanma</th>
+                                          <th>Başlangıç</th>
+                                          <th>Bitiş<br></th>
+                                          <th>Resim<br></th>
+                                          <th>Genişlik</th>
+                                          <th>Yükseklik</th>
+                                          <th>Link<br></th>
+                                          <th>Durum<br></th>
 
-        <table class="table display table-hover table-condensed table-responsive dataTable no-footer" id="dataTables-example" role="grid" aria-describedby="reklamlar_info">
-
-            <thead>
-            <tr role="row"><th class="text-center sorting_asc" tabindex="0" aria-controls="reklamlar" rowspan="1" colspan="1" aria-sort="ascending" aria-label="
-                    Adı
-                : activate to sort column descending" style="width: 43px;">
-                    Adı
-                </th><th class="text-center sorting" tabindex="0" aria-controls="reklamlar" rowspan="1" colspan="1" aria-label="
-                    Gösterim
-                : activate to sort column ascending" style="width: 91px;">
-                    Gösterim
-                </th><th class="text-center sorting" tabindex="0" aria-controls="reklamlar" rowspan="1" colspan="1" aria-label="
-                    Tıklanma
-                : activate to sort column ascending" style="width: 91px;">
-                    Tıklanma
-                </th><th class="text-center sorting" tabindex="0" aria-controls="reklamlar" rowspan="1" colspan="1" aria-label="
-                    Başlangıç
-                : activate to sort column ascending" style="width: 99px;">
-                    Başlangıç
-                </th><th class="text-center sorting" tabindex="0" aria-controls="reklamlar" rowspan="1" colspan="1" aria-label="
-                    Bitiş
-                : activate to sort column ascending" style="width: 53px;">
-                    Bitiş
-                </th><th class="text-center sorting" tabindex="0" aria-controls="reklamlar" rowspan="1" colspan="1" aria-label="
-                    Resim
-                : activate to sort column ascending" style="width: 66px;">
-                    Resim
-                </th><th class="text-center sorting" tabindex="0" aria-controls="reklamlar" rowspan="1" colspan="1" aria-label="
-                    Genişlik
-                : activate to sort column ascending" style="width: 84px;">
-                    Genişlik
-                </th><th class="text-center sorting" tabindex="0" aria-controls="reklamlar" rowspan="1" colspan="1" aria-label="
-                    Yükselik
-                : activate to sort column ascending" style="width: 87px;">
-                    Yükselik
-                </th><th class="text-center sorting" tabindex="0" aria-controls="reklamlar" rowspan="1" colspan="1" aria-label="
-                    Link
-                : activate to sort column ascending" style="width: 52px;">
-                    Link
-                </th><th class="text-center sorting" tabindex="0" aria-controls="reklamlar" rowspan="1" colspan="1" aria-label="
-                    Durum
-                : activate to sort column ascending" style="width: 71px;">
-                    Durum
-                </th></tr>
-            </thead>
-              <tbody>
-
-                                      @if(isset($data))
-                                          @foreach( $data as $ban)
-
-                                              <tr class="odd gradeX">
-                                                  <td>{{ $ban->ad }}</td>
-                                                  <td>{{ $ban->gosterim }}</td>
-                                                  <td>{{ $ban->tiklanma }}</td>
-                                                  <td>{{ $ban->baslangic_tarih }}</td>
-                                                  <td>{{ $ban->bitis_tarih }}</td>
-                                                  <td><img style="border: double" src="{{asset($ban->yol)}}" width="150px" height="150px"></td>
-                                                  <td>{{ $ban->genislik }}</td>
-
-                                                  <td>{{ $ban->yukseklik }}</td>
-                                                  <td>{{ $ban->url }}</td>
-
-                                                  <td>{{ $ban->url }}</td>
+                                    <th style="width: 100px;">İşlem<br></th>
+                                </tr>
+                                </thead>
+                                <tbody>
 
 
+                                @if(isset($data))
+                                                                         @foreach( $data as $ban)
 
+                                                                             <tr class="odd gradeX">
+                                                                                 <td>{{ $ban->ad }}</td>
+                                                                                 <td>{{ $ban->gosterim }}</td>
+                                                                                 <td>{{ $ban->tiklanma }}</td>
+                                                                                 <td>{{ $ban->baslangic_tarih }}</td>
+                                                                                 <td>{{ $ban->bitis_tarih }}</td>
+                                                                                 <td><img class="img-responsive" style="border: double" src="{{asset("resimler/".$ban->yol)}}" width="150px" height="150px"></td>
+                                                                                 <td>{{ $ban->genislik }}</td>
+
+                                                                                 <td>{{ $ban->yukseklik }}</td>
+                                                                                 <td>{{ $ban->url }}</td>
+
+                                                                                 <td>{{ $ban->durum }}</td>
+
+                                                                                 <td><a href="{{url("admin/bannerDuzenle/$ban->id")}}" class="btn btn-primary"> <i class="fa fa-pencil" name="duzenle"></i></a>
+                                                                                 <input type="button" class="btn btn-danger" value="Sil" data-toggle="modal"  data-target="#myModal{{$modalID += 1}}"></td>
+                             <!-- Modal -->
+                             <div class="modal fade" id="myModal{{$modalID}}" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                 <div class="modal-dialog">
+                                     <div class="modal-content">
+                                         <div class="modal-header">
+                                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                             <h4 class="modal-title" id="myModalLabel">Uyarı!</h4>
+                                         </div>
+                                         <div class="modal-body">
+                                             Silmek istediğinizden emin misiniz?
+                                         </div>
+                                         <div class="modal-footer">
+                                             <button type="button" class="btn btn-primary" data-dismiss="modal">Hayır</button>
+                                            <a href="{{url("admin/bannerListele/$ban->id")}}"> <button type="button" class="btn btn-danger">Tabi ki</button></a>
+                                         </div>
+                                     </div>
+                                     <!-- /.modal-content -->
+                                 </div>
+                                 <!-- /.modal-dialog -->
+                             </div>
+                             <!-- /.modal -->
 
 
 
 
-                                              </tr>
-
-                                            @endforeach
-                                      @endif
-
-                                  </tbody>
-    </table>
- </div></div>
- <div class="row"><div class="col-sm-5"><div class="dataTables_info" id="reklamlar_info" role="status" aria-live="polite">Kayıt bulunamadı.</div></div>
-
- <div class="col-sm-7"><div class="dataTables_paginate paging_full" id="reklamlar_paginate"><ul class="pagination"><li class="paginate_button first disabled" aria-controls="reklamlar" tabindex="0" id="reklamlar_first"><a href="#">İlk</a></li><li class="paginate_button previous disabled" aria-controls="reklamlar" tabindex="0" id="reklamlar_previous"><a href="#">&lt;&lt;&lt;</a></li><li class="paginate_button next disabled" aria-controls="reklamlar" tabindex="0" id="reklamlar_next"><a href="#">&gt;&gt;&gt;</a></li><li class="paginate_button last disabled" aria-controls="reklamlar" tabindex="0" id="reklamlar_last"><a href="#">Son</a></li></ul></div></div></div></div>
-
-    </section>
-    </content>
 
 
-</div>
 
 
-<div class="panel-body">
+                                                                             </tr>
+
+                                                                           @endforeach
+                                                                     @endif
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.table-responsive -->
+
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
 
 
-                          <!-- /.table-responsive -->
+    </div>
 
-                      </div>
-                      <!-- /.panel-body -->
+    @include('admin/alt')
 
 
-              </div>
-              <!-- /.col-lg-12 -->
-          </div>
-<footer class="text-center">
-</footer>
+    <!-- jQuery -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
 
-@include('admin/alt')
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-<!-- DataTables JavaScript -->
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+    <!-- DataTables JavaScript -->
     <script src="../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
     <script src="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
 
@@ -156,7 +160,10 @@
     <script src="../dist/js/sb-admin-2.js"></script>
 
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
-
-
-
-
+    <script>
+        $(document).ready(function() {
+            $('#dataTables-example').DataTable({
+                responsive: true
+            });
+        });
+    </script>

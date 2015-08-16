@@ -177,6 +177,13 @@ Route::post('admin/bannerListele', 'admin\bannerListeleController@listele');
 Route::get('admin/bannerEkle','admin\bannerEkleController@index');
 Route::post('admin/bannerEkle','admin\bannerEkleController@ekle');
 
+//bannerSil
+Route::get('admin/bannerListele/{sil}','admin\bannerListeleController@bannerSil');
+
+//banner Düzenle
+Route::post('admin/bannerDuzenle/{duzenle}','admin\bannerDuzenleController@bannerDuzenleKaydet');
+Route::get('admin/bannerDuzenle/{duzenle}','admin\bannerListeleController@bannerDuzenle');
+
 // Bülten Sayfası
 Route::get('admin/bulten', 'admin\bultenController@index');
 
