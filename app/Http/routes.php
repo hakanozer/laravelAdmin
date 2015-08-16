@@ -222,3 +222,7 @@ Route::post('admin/kategoriEkle','admin\kategoriController@duzenleKaydet');
 
 //kategori ekle işlemi yapılıyor
 Route::post('admin/kategori','admin\kategoriController@ekle');
+
+//siparişler
+Route::get('admin/siparisler', 'admin\siparislerController@siparisler');
+Route::get('admin/siparisDetay/{id}', 'admin\siparislerController@siparislerDetay');
