@@ -1,0 +1,18 @@
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  div.sp-slider .vp {
+    border: 1px solid #ddd;
+    position: relative;
+    box-shadow: none !important; }
+    div.sp-slider .vp:after {
+      width: 2px;
+      background: #FFF;
+      position: absolute;
+      z-index: 999;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      content: ""; }
+    div.sp-slider .vp:hover:after {
+      display: none; } }
+
+/*# sourceMappingURL=ie11.css.map */
