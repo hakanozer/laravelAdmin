@@ -260,3 +260,15 @@ Route::post('admin/haberDuzenle/{id}', 'admin\haberDuzenleController@haberDuzenl
 //haber ekle
 Route::get('admin/haberEkle', 'admin\haberEkleController@index');
 Route::post('admin/haberEkle', 'admin\haberEkleController@haberEkle');
+
+// Anket Sayfası
+Route::get('admin/anket','admin\anketController@anketListe');
+Route::get('admin/anketEkle', 'admin\anketController@anketEkle');
+Route::post('admin/anketEkle', 'admin\anketController@anketEkleVT');
+Route::get('admin/anketSil/{id}','admin\anketController@sil');
+Route::get('admin/anketDuzenle/{id}','admin\anketController@duzenleAc');
+Route::post('admin/anketDuzenle/{id}','admin\anketController@duzenle');
+Route::get('admin/anketSoruDuzenle/{id}','admin\anketController@soruDuzenleAc');
+Route::post('admin/anketSoruDuzenle/{id}','admin\anketController@soruDuzenle');
+Route::get('admin/anketSoruEkle','admin\anketController@soruEkleAc');
+Route::post('admin/anketSoruEkle','admin\anketController@soruEkle');
