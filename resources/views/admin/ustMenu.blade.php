@@ -1,4 +1,6 @@
-﻿
+﻿<?php $x = \App\Http\Controllers\sessionController::genelkontrol(); if ($x) {  echo $x; exit(); } else{} ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -278,7 +280,7 @@
                     <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
-                    <li><a href="#"><i class="fa fa-user fa-fw"></i> Admin Profil</a>
+                    <li><a href="{{url ('admin/adminDuzenle')}}"><i class="fa fa-user fa-fw"></i> Admin Profil</a>
                     </li>
                     <li><a href="{{url ('admin/siteAyarlar')}}"><i class="fa fa-gear fa-fw"></i> Ayarlar</a>
                     </li>

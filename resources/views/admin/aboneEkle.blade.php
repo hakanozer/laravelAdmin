@@ -105,10 +105,12 @@ document.getElementById('abone').value="";
                         @if (isset($bilgi["hata"]))
                             <div class="alert alert-danger alert-dismissable">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>{{$bilgi["hata"]}}</div>
-                            @if(isset($bilgi['hataliEposta']))
+                        @endif
+
+                        @if (isset($hataliEpostalar) && !empty($hataliEpostalar))
                             <div class="alert alert-danger alert-dismissable">
-                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>{{$bilgi["hataliEposta"]}}</div>
-                            @endif
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                            {{$bilgi["sayac"]}} adet hatalı e-posta tespit edildi. Lütfen düzelterek tekrar deneyin.</div>
                         @endif
                     @endif
 
