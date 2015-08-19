@@ -1,5 +1,3 @@
-﻿<?php $x = \App\Http\Controllers\sessionController::giriskontrol(); if ($x) {  echo $x; exit(); } else{} ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

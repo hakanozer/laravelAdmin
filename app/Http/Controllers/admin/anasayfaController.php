@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Created by PhpStorm.
  * User: Fatih
@@ -16,6 +16,7 @@ class anasayfaController extends Controller {
     /* sessionController ile mail ve şifresiz giriş engellenmiştir. */
 
     public function index(){
-        return view('admin/anasayfa');
+        $gelen = sessionController::kontrol();
+        return $gelen;
     }
 } 

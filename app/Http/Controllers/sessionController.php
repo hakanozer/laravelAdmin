@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
 
 
 class sessionController
@@ -25,22 +26,19 @@ class sessionController
      * else komutu ile izinsiz erişimin önüne geçilerek giriş sayfasına yönlendirme yapılmaktadır.
      * */
 
-    //Tüm sayfalarda session+cookie kontrolü içindir.
-    public static function genelkontrol()
+    public static function kontrol()
     {
-        $SessionValue = Session::get('email');
+        $SessionValue = session('email');
         $CookieValue = Cookie::get('user');
 
-        if($SessionValue != null){
-            session()->regenerate();
+        if(!empty($SessionValue)){
             $gelen = DB::select('select * from admin where id=?', array(Session::get('id')));
             $bilgi = $gelen[0];
             Session::put('adi', $bilgi->adi);
             Session::put('soyadi', $bilgi->soyadi);
-
+            return view('admin/anasayfa')->with('bilgi', $bilgi);
         }
-        else if($CookieValue != null){
-            session()->regenerate();
+        else if(!empty($CookieValue)){
             Session::put('id', $CookieValue["id"]);
             Session::put('email', $CookieValue["email"]);
             Session::put('password', $CookieValue["password"]);
@@ -50,39 +48,11 @@ class sessionController
 
             Session::put('adi', $bilgi->adi);
             Session::put('soyadi', $bilgi->soyadi);
-
+            return view('admin/anasayfa')->with('bilgi', $bilgi);
         }
-        else {
-            return "<script>window.location.href = 'http://localhost:8080/laravelAdmin/admin';</script>";
+        else{
+            echo "<script>window.location.href = 'http://localhost:8080/laravelAdmin/admin';</script>";
         }
-
-    }
-
-    // Admin giriş sayfası için session+cookie kontrolüdür
-    public static function giriskontrol()
-    {
-        // TODO: giriş paneli ve anasayfa geçişkenliğine dair özelleştirmeye ihtiyaç duyulmaktadır.
-        $SessionValue = Session::get('email');
-        $CookieValue = Cookie::get('user');
-
-        if(Session::has('email')) {
-            return "<script>window.location.href = 'http://localhost:8080/laravelAdmin/admin/anasayfa';</script>";
-        }
-        else if(Cookie::get('user')){
-            session()->regenerate();
-            Session::put('id', $CookieValue["id"]);
-            Session::put('email', $CookieValue["email"]);
-            Session::put('password', $CookieValue["password"]);
-
-            $gelen = DB::select('select * from admin where id=?', array(Session::get('id')));
-            $bilgi = $gelen[0];
-
-            Session::put('adi', $bilgi->adi);
-            Session::put('soyadi', $bilgi->soyadi);
-            return "<script>window.location.href = 'http://localhost:8080/laravelAdmin/admin/anasayfa';</script>";
-        }
-        else {  }
-
     }
 
 
