@@ -348,9 +348,6 @@
                     </li>
 
 
-<li>
-                        <a href="{{ url('admin/haberler')  }}"><i class="fa fa-table fa-fw"></i>Haberler</a>
-                    </li>
 
                    <li>
                         <a href="#"><i class="fa fa-camera-retro fa-fw"></i> Galeri Yönetimi<span class="fa arrow"></span></a>
@@ -382,8 +379,8 @@
 
 
                     <li>
-                                            <a href="{{url('admin/siparisler')}}"><i class="fa fa-table fa-fw"></i> Sipariş İşlemleri</a>
-                                        </li>
+                        <a href="#"><i class="fa fa-bars fa-fw"></i> Sipariş İşlemleri</a>
+                    </li>
 
                     <li>
                         <a href="#"><i class="fa fa-file-text fa-fw"></i> Raporlar</a>

@@ -1,10 +1,11 @@
  @include('admin/ustMenu')
-
-
-
  <div id="page-wrapper">
 
      <content style="padding: 40px 0px">
+
+         <div class="text-right" style="margin-bottom: 25px">
+             <a href="{{url('admin/bannerListele')}}" class="btn btn-primary"><i class="glyphicon glyphicon-backward"> </i> Geri Dön</a>
+         </div>
 
      <script type="text/javascript" src="static/tinymce/tinymce.min.js"></script>
      <script type="text/javascript">
@@ -20,6 +21,21 @@
      </script>
 
      <section>
+         <!-- İŞLEM MESAJ -->
+         <!-- İŞLEM MESAJ -->
+ <script>
+     function yonlendirBasarili() {
+         var page_url = window.location.href;
+         page_url = page_url.replace("&sonuc=basarili", "");
+         window.location.href = page_url;
+     };
+
+     function yonlendirBasarisiz() {
+         var page_url = window.location.href;
+         page_url = page_url.replace("&sonuc=basarisiz", "");
+         window.location.href = page_url;
+     };
+ </script>
 
 
          <div class="panel panel-primary" style="width: 75%; margin: 0 auto; margin-bottom: 50px">
@@ -119,23 +135,6 @@
                              </div>
                          </div>
                      </div>
-                     <!-- Reklam Durum -->
-                     <div class="form-group">
-                        <div class="row">
-                             <div class="col-md-3">
-
-                                    <label for="baslik">Reklam Durumu</label>
-                             </div>
-                             <div class="col-md-9">
-                                    <select class="form-control" name="durum" id="durum">
-                                         <option value="0">Pasif</option>
-                                         <option value="1" selected>Aktif</option>
-
-                                     </select>
-                             </div>
-                        </div>
-                     </div>
-
                      <input value="11" name="sid" type="hidden">
                      <!-- Buton -->
                      <div class="form-group">
@@ -143,7 +142,7 @@
                              <div class="col-md-3"> </div>
                              <div class="col-md-9 text-right">
                                  <input type="submit" value="Ekle" name="ekle" class="btn btn-primary">
-                                 <a class="btn btn-danger" href="{{url("admin/bannerListele")}}">İptal</a>
+                                 <a class="btn btn-danger" href="?link=reklam">İptal</a>
                              </div>
                          </div>
                      </div>
