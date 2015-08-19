@@ -209,3 +209,59 @@ Route::get('admin/sliderYonetimi/sil/{id}', 'admin\sliderController@sliderSil');
 // slider düzenle
 Route::get('admin/sliderDuzenle/{id}', 'admin\sliderController@sliderDuzenle');
 Route::post('admin/sliderDuzenle/{id}', 'admin\sliderController@sliderDuzenleForm');
+
+//kategori işlemleri yaıpılıyor
+Route::get('admin/kategori','admin\kategoriController@liste');
+
+//kategori sil işlemi yapılıyor
+Route::post('admin/kategoriSil','admin\kategoriController@olay');
+
+//kategori update işlemi yapılıyor
+Route::post('admin/kategoriAc','admin\kategoriController@duzenleAc');
+Route::post('admin/kategoriEkle','admin\kategoriController@duzenleKaydet');
+
+//kategori ekle işlemi yapılıyor
+Route::post('admin/kategori','admin\kategoriController@ekle');
+
+//siparişler
+Route::get('admin/siparisler', 'admin\siparislerController@siparisler');
+Route::get('admin/siparisDetay/{id}', 'admin\siparislerController@siparislerDetay');
+
+// ürün listele
+Route::get('admin/urun', 'admin\urunController@listele');
+
+// ürün ekle
+Route::get('admin/urunEkle', 'admin\urunController@index');
+Route::post('admin/urunEkle', 'admin\urunController@ekle');
+
+// ürün sil
+Route::get('admin/urun/sil/{id}', 'admin\urunController@urunSil');
+
+//ürün düzenlemöe
+Route::get("admin/urunDuzenle/{id}", "admin\urunController@urunDuzenleAc");
+Route::post("admin/urunDuzenle/{id}", "admin\urunController@duzenleUrun");
+
+//haberler
+Route::get('admin/haberler', 'admin\haberlerController@listele');
+Route::post('admin/haberler', 'admin\haberlerController@durumPasifAktif');
+Route::get('admin/haberler/sil/{id}', 'admin\haberlerController@haberSil') ;
+
+//haberduzenle
+Route::get('admin/haberDuzenle/{id}', 'admin\haberDuzenleController@haberDuzenleAc');
+Route::post('admin/haberDuzenle/{id}', 'admin\haberDuzenleController@haberDuzenle');
+
+//haber ekle
+Route::get('admin/haberEkle', 'admin\haberEkleController@index');
+Route::post('admin/haberEkle', 'admin\haberEkleController@haberEkle');
+
+// Anket Sayfası
+Route::get('admin/anket','admin\anketController@anketListe');
+Route::get('admin/anketEkle', 'admin\anketController@anketEkle');
+Route::post('admin/anketEkle', 'admin\anketController@anketEkleVT');
+Route::get('admin/anketSil/{id}','admin\anketController@sil');
+Route::get('admin/anketDuzenle/{id}','admin\anketController@duzenleAc');
+Route::post('admin/anketDuzenle/{id}','admin\anketController@duzenle');
+Route::get('admin/anketSoruDuzenle/{id}','admin\anketController@soruDuzenleAc');
+Route::post('admin/anketSoruDuzenle/{id}','admin\anketController@soruDuzenle');
+Route::get('admin/anketSoruEkle','admin\anketController@soruEkleAc');
+Route::post('admin/anketSoruEkle','admin\anketController@soruEkle');
