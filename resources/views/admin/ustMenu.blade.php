@@ -1,4 +1,5 @@
-﻿
+﻿<?php $x = \App\Http\Controllers\sessionController::genelkontrol(); if ($x) {  echo $x; exit(); } else{} ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
