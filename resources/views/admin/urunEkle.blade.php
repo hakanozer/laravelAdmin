@@ -57,8 +57,7 @@
                                          <input type="hidden" name="kategori_id" value="{{$veri2->
                                id}}"/>
                                          --}}
-                                         <option value="{{$veri2->
-                               id}}">
+                                         <option value="{{$veri2->id}}">
                                  {{$veri2->
                                  baslik}}
                                          </option>
@@ -163,6 +162,38 @@
                                     <input type="text" name="piyasa_fiyati" id="piyasa_fiyati" placeholder="Ürün Piyasa Fiyati " class="form-control">
                                      </div>
                                  </div>
+                               </div>
+                                <!-- Özel Ürün Seçimi -->
+                               <div class="form-group">
+                                   <div class="row">
+                                       <div class="col-md-3">
+                                           <label for="fiyat">Özel Ürün mü?</label>
+                                       </div>
+                                       <div class="col-md-9">
+                                         <div class="checkbox">
+                                             <label>
+                                               <input type="checkbox" name="onecikan"  >Öne Çıkan
+                                             </label>
+                                         </div>
+                                         <div class="checkbox">
+                                             <label>
+                                               <input type="checkbox" name="indirimliurun"  >İndirimli Ürün
+                                             </label>
+                                         </div>
+                                         <div class="checkbox">
+                                             <label>
+                                               <input type="checkbox" name="coksatan"  >Çok Satan
+                                             </label>
+                                         </div>
+                                         <div class="checkbox">
+                                             <label>
+                                               <input type="checkbox" name="kargobedava"  >Kargo Bedava
+                                             </label>
+                                         </div>                                                                                                                           <div class="checkbox">                                                                                                              <label>                                                                                                                               <input type="checkbox" name="bugunteslimat" >Bugün Teslimat
+                                              </label>                                                                                                                   </div>
+
+                                       </div>
+                                   </div>
                                </div>
                                <!-- Buton -->
                                <div class="form-group">

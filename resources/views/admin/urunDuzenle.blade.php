@@ -214,6 +214,58 @@ piyasa_fiyati}}" class="form-control">
       </div>
     </div>
   </div>
+  <!-- Özel Ürün Seçimi -->
+                                 <div class="form-group">
+                                     <div class="row">
+                                         <div class="col-md-3">
+                                             <label for="fiyat">Özel Ürün mü?</label>
+                                         </div>
+                                         <div class="col-md-9">
+                                           <div class="checkbox">
+                                               <label>
+                                                 @if ($veri->one_cikan == 1)
+                                                 <input type="checkbox" name="onecikan" checked >Öne Çıkan
+                                                 @else
+                                                 <input type="checkbox" name="onecikan" >Öne Çıkan
+                                                 @endif
+                                               </label>
+                                           </div>
+                                           <div class="checkbox">
+                                               <label>
+                                                 @if ($veri->indirimli_urun == 1)
+                                                 <input type="checkbox" name="indirimliurun" checked>İndirimli Ürün
+                                                 @else
+                                                 <input type="checkbox" name="indirimliurun">İndirimli Ürün
+                                                 @endif
+                                               </label>
+                                           </div>
+                                           <div class="checkbox">
+                                               <label>
+                                                 @if ($veri->cok_satan == 1)
+                                                 <input type="checkbox" name="coksatan" checked>Çok Satan
+                                                 @else
+                                                 <input type="checkbox" name="coksatan">Çok Satan
+                                                 @endif
+                                               </label>
+                                           </div>
+                                           <div class="checkbox">
+                                               <label>
+                                                 @if ($veri->kargo_bedava == 1)
+                                                 <input type="checkbox" name="kargobedava" checked>Kargo Bedava
+                                                 @else
+                                                 <input type="checkbox" name="kargobedava">Kargo Bedava
+                                                 @endif
+                                               </label>
+                                           </div>                                                                                                                           <div class="checkbox">                                                                                                              <label>
+                                                 @if ($veri->bugun_teslimat == 1)                                                                                                   <input type="checkbox" name="bugunteslimat" checked>Bugün Teslimat
+                                                 @else
+                                                 <input type="checkbox" name="bugunteslimat">Bugün Teslimat
+                                                 @endif
+                                                </label>                                                                                                                   </div>
+
+                                         </div>
+                                     </div>
+                                 </div>
   <!-- Buton -->
   <div class="form-group">
     <div class="row">
