@@ -64,8 +64,8 @@ class bannerDuzenleController extends Controller{
         $dosya=Input::file('dosya');
         $uzanti = $dosya->getClientOriginalExtension();
         $dosyaAdi=date('YmdHis')."_b.".$uzanti;
-        $path = base_path('resimler/'.$dosyaAdi);
-        $imagePath = 'resimler/'.$dosyaAdi;
+        $path = base_path('bannerResimler/'.$dosyaAdi);
+        $imagePath = 'bannerResimler/'.$dosyaAdi;
         Image::make($dosya->getRealPath())->save($path);
             $sorgu="UPDATE banner SET ad=?,yol=?, genislik=?, yukseklik=?, url=?, durum=? WHERE id=?";
             $islem=DB::update($sorgu,array($form["ad"],$dosyaAdi,$form["genislik"],$form["yukseklik"],$form["url"],$form["durum"], $duzenle));

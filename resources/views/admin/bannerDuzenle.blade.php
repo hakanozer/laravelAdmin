@@ -57,7 +57,7 @@
                                 <div class="col-md-3">
                                 </div>
                                  <div class="col-md-6">
-                                      <img style="border: double" src="{{asset("resimler/".$veri->yol)}}" width="200/" >
+                                      <img style="border: double" src="{{asset("bannerResimler/".$veri->yol)}}" width="200/" >
                                  </div>
 
                         </div>
