@@ -344,11 +344,11 @@
                             <li>
                                 <a href="{{url('admin/mesajlar')}}">Mesajlar</a>
                             </li>
-
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
-
+                    <li><a href="{{url ('admin/haberler')}}"><i class="fa fa-camera-retro fa-fw"></i> Haberler</a>
+                    </li>
 
 
                    <li>
