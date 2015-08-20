@@ -1,3 +1,8 @@
+<?php
+$dil = Session::get('dil');
+App::setLocale($dil);
+?>
+
 @include('admin/ustMenu')
 
 <!-- Bootstrap Core CSS -->
@@ -32,7 +37,7 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header"> Ürün Yorumları</h1>
+            <h1 class="page-header"> {{ trans('adminDil.urunYorumlari') }}</h1>
         </div>
         <!-- /.col-lg-12 -->
     </div>
@@ -44,7 +49,7 @@
 
    <div class="row">
 
-   <label>Ürün seçiniz</label>
+   <label>{{ trans('adminDil.urunSecin') }}</label>
    @if (count($data) > 0)
         <select name="urun">
             @foreach($urunler as $val)
@@ -59,7 +64,7 @@
 
    <div class="row">
 
-    <label>Kullanici seçiniz</label>
+    <label>{{ trans('adminDil.kullaniciSecin') }}</label>
     @if (count($data) > 0)
         <select name="kullanici">
             @foreach($kullanici as $val)
@@ -73,7 +78,7 @@
 
    <div class="row">
 
-   <label>Başlık</label>
+   <label>{{ trans('adminDil.baslik') }}</label>
    <input type="text" name="yorumBaslik" class="form-control" id="inputSuccess" placeholder="Başlık ekle...">
 
    </div>
@@ -82,13 +87,13 @@
 
    <div class="row">
 
-   <label>Yeni Yorum Ekle</label>
+   <label>{{ trans('adminDil.yorumEkle') }}</label>
    <input type="text" name="yorumIcerik" class="form-control" id="inputSuccess" placeholder="Yorum ekle...">
 
    </div>
 
    <div class="row">
-<label>Puan veriniz</label>
+<label>{{ trans('adminDil.puanVer') }}</label>
        <select class="form-control" name="puan" >
            <option>1</option>
            <option>2</option>
@@ -103,7 +108,7 @@
    <div class="row">
 
 
-   <input type="submit" value="Gönder" class="btn btn-success"/>
+   <input type="submit" value="{{ trans('adminDil.gonder') }}" class="btn btn-success"/>
 
 
    </div>
@@ -130,7 +135,7 @@
               <div class="col-lg-12">
                   <div class="panel panel-default">
                       <div class="panel-heading">
-                          Tüm Ürün Yorumları
+                          {{ trans('adminDil.tumUrunYorum') }}
                       </div>
                       <!-- /.panel-heading -->
                       <div class="panel-body">
@@ -139,13 +144,13 @@
                                   <thead>
                                   <tr>
                                       <th>ID</th>
-                                      <th>Kullanici Adı Soyadı</th>
-                                      <th>Ürün Adı</th>
-                                      <th>Yorum Başlık</th>
-                                      <th>Yorum</th>
-                                      <th>Puan</th>
-                                      <th>Tarih</th>
-                                      <th style="width: 48px;">İşlem</th>
+                                      <th>{{ trans('adminDil.kulAdiSoyadi') }}</th>
+                                      <th>{{ trans('adminDil.urunAdi') }}</th>
+                                      <th>{{ trans('adminDil.yorumBaslik') }}</th>
+                                      <th>{{ trans('adminDil.yorum') }}</th>
+                                      <th>{{ trans('adminDil.puan') }}</th>
+                                      <th>{{ trans('adminDil.tarih') }}</th>
+                                      <th style="width: 48px;">{{ trans('adminDil.islem') }}</th>
                                   </tr>
                                   </thead>
                                   <tbody>

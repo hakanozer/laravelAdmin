@@ -1,4 +1,7 @@
-﻿<?php $x = \App\Http\Controllers\sessionController::genelkontrol(); if ($x) {  echo $x; exit(); } else{} ?>
+﻿<?php
+$dil = Session::get('dil');
+App::setLocale($dil);
+?>
 
 
 <!DOCTYPE html>
@@ -68,7 +71,7 @@
             <a class="navbar-brand" href="{{ url('admin/anasayfa')  }}">Laravel Admin Panel</a>
         </div>
         <div>
-            <p class="prg">// Hoşgeldiniz,
+            <p class="prg">// {{ trans('adminDil.hosgeldinz') }}
 
         @if (Session::get('adi'))
 
@@ -79,6 +82,8 @@
 
         @endif
 
+        <a href="{{url("admin/tr")}}"><button type="button" name="tr" class="btn btn-link">Tr</button></a>
+        <a href="{{url("admin/en")}}"><button type="button" name="en" class="btn btn-link">En</button></a>
 
         </p>
         </div>
@@ -280,12 +285,12 @@
                     <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
-                    <li><a href="{{url ('admin/adminDuzenle')}}"><i class="fa fa-user fa-fw"></i> Admin Profil</a>
+                    <li><a href="#"><i class="fa fa-user fa-fw"></i> {{ trans('adminDil.adminProfil') }}</a>
                     </li>
-                    <li><a href="{{url ('admin/siteAyarlar')}}"><i class="fa fa-gear fa-fw"></i> Ayarlar</a>
+                    <li><a href="{{url ('admin/siteAyarlar')}}"><i class="fa fa-gear fa-fw"></i> {{ trans('adminDil.ayarlar') }}</a>
                     </li>
                     <li class="divider"></li>
-                    <li><a href="{{url('admin/cikis')}}"><i class="fa fa-sign-out fa-fw"></i> Çıkış Yap</a>
+                    <li><a href="{{url('admin/cikis')}}"><i class="fa fa-sign-out fa-fw"></i> {{ trans('adminDil.cıkısYap') }}</a>
                     </li>
                 </ul>
                 <!-- /.dropdown-user -->
@@ -308,105 +313,110 @@
                         </div>
                         <!-- /input-group -->
                     </li>
-                    <li>
-                        <a href="{{ url('admin/anasayfa')  }}"><i class="fa fa-dashboard fa-fw"></i> Admin Panel</a>
-                    </li>
-
-
-
-                    <li>
-                      <a href="#"><i class="fa fa-th-large fa-fw"></i> Ürün Yönetimi<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                               <li>
-                                                   <a href="{{url('admin/kategori')}}">Kategoriler</a>
-                                               </li>
-                                               <li>
-                                                   <a href="{{url('admin/urun')}}">Ürünler</a>
-                                               </li>
-                                           </ul>
-                                           <!-- /.nav-second-level -->
-                                       </li>
-
-
-
-                    <li>
-                        <a href="#"><i class="fa fa-list-alt fa-fw"></i> İçerik Yönetimi<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="{{url('admin/icerik')}}">İçerikler</a>
-                            </li>
-                            <li>
-                                <a href="{{url('admin/urunYorum')}}">Ürün Yorumları</a>
-                            </li>
-                            <li>
-                                <a href="#">Ürün Puanları</a>
-                            </li>
-                            <li>
-                                <a href="{{url('admin/mesajlar')}}">Mesajlar</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-                    <li><a href="{{url ('admin/haberler')}}"><i class="fa fa-camera-retro fa-fw"></i> Haberler</a>
-                    </li>
-
 
                    <li>
-                        <a href="#"><i class="fa fa-camera-retro fa-fw"></i> Galeri Yönetimi<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="{{url('admin/galerikategori')}}">Kategoriler</a>
-                            </li>
-                            <li>
-                                <a href="{{url('admin/galeriler')}}">Galeriler</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
+                                          <a href="{{ url('admin/anasayfa')  }}"><i class="fa fa-dashboard fa-fw"></i> Admin Panel</a>
+                                      </li>
 
+
+
+                                      <li>
+                                          <a href="#"><i class="fa fa-th-large fa-fw"></i> {{ trans('adminDil.urunYonetimi') }}<span class="fa arrow"></span></a>
+                                          <ul class="nav nav-second-level">
+                                              <li>
+                                                  <a href="{{url('admin/kategori')}}">{{ trans('adminDil.kategoriler') }}</a>
+                                              </li>
+                                              <li>
+                                                  <a href="{{url('admin/urun')}}">{{ trans('adminDil.urunler') }}</a>
+                                              </li>
+                                          </ul>
+                                          <!-- /.nav-second-level -->
+                                      </li>
+
+
+
+                                      <li>
+                                          <a href="#"><i class="ffa fa-list-alt fa-fw"></i> {{ trans('adminDil.icerikYonetimi') }}<span class="fa arrow"></span></a>
+                                          <ul class="nav nav-second-level">
+                                              <li>
+                                                  <a href="{{url('admin/icerik')}}">{{ trans('adminDil.icerikler') }}</a>
+                                              </li>
+                                              <li>
+                                                  <a href="{{url('admin/urunYorum')}}">{{ trans('adminDil.urunYorumlari') }}</a>
+                                              </li>
+                                              <li>
+                                                  <a href="{{url('admin/urunPuan')}}">{{ trans('adminDil.urunPuanlari') }}</a>
+                                              </li>
+                                              <li>
+                                                  <a href="{{url('admin/mesajlar')}}">{{ trans('adminDil.mesajlar') }}</a>
+                                              </li>
+
+                                          </ul>
+                                          <!-- /.nav-second-level -->
+                                      </li>
+
+                  <li>
+                                          <a href="{{ url('admin/haberler')  }}"><i class="fa fa-camera-retro fa-fw"></i>{{ trans('adminDil.haberler') }}</a>
+                                      </li>
+
+
+                                      <li>
+                                          <a href="#"><i class="fa fa-camera-retro fa-fw"></i> {{ trans('adminDil.galeriYonetimi') }}<span class="fa arrow"></span></a>
+                                          <ul class="nav nav-second-level">
+                                              <li>
+                                                  <a href="{{url('admin/galerilerKategori')}}">{{ trans('adminDil.kategori') }}</a>
+                                              </li>
+                                              <li>
+                                                  <a href="{{url('admin/galeriler')}}">{{ trans('adminDil.galeriler') }}</a>
+                                              </li>
+                                          </ul>
+                                          <!-- /.nav-second-level -->
+                                      </li>
+
+
+                                      <li>
+                                          <a href="{{ url('admin/sliderYonetimi')  }}"><i class="fa fa-photo fa-fw"></i> {{ trans('adminDil.sliderYonetimi') }}</a>
+                                      </li>
+
+
+                                      <li>
+                                          <a href="{{ url('admin/kullanicilar')  }}"><i class="fa fa-users fa-fw"></i> {{ trans('adminDil.kullaniciYonetimi') }}</a>
+                                      </li>
+
+
+                                      <li>
+                                          <a href="{{ url('admin/dosyaYonetimi')  }}"><i class="fa fa-files-o fa-fw"></i> {{ trans('adminDil.dosyaIslemleri') }}</a>
+                                      </li>
+
+
+                                      <li>
+                                          <a href="{{ url('admin/siparisler')  }}"><i class="fa fa-bars fa-fw"></i> {{ trans('adminDil.siparisIslemleri') }}</a>
+                                      </li>
+
+                                      <li>
+                                          <a href="tables.html"><i class="fa fa-file-text fa-fw"></i> {{ trans('adminDil.raporlar') }}</a>
+                                      </li>
+
+
+                                      <li>
+                                          <a href="{{url('admin/bannerListele')}}"><i class="fa fa-file-picture-o fa-fw"></i>{{ trans('adminDil.bannerYonetimi') }}</a>
+                                      </li>
+
+                   <li>
+                                          <a href="{{url('admin/sosyalMedya')}}"><i class="fa fa-facebook-square fa-fw"></i> {{ trans('adminDil.sosyalMedya') }}</a>
+                                      </li>
 
                     <li>
-                        <a href="{{url('admin/sliderYonetimi')}}"><i class="fa fa-photo fa-fw"></i> Slider Yönetimi</a>
-                    </li>
-
-
-                    <li>
-                        <a href="{{ url('admin/kullanicilar')  }}"><i class="fa fa-users fa-fw"></i> Kullanıcı Yönetimi</a>
-                    </li>
-
-
-                    <li>
-                        <a href="{{ url('admin/dosyaYonetimi')  }}"><i class="fa fa-files-o fa-fw"></i> Dosya İşlemleri</a>
-                    </li>
-
-
-                    <li>
-                        <a href="#"><i class="fa fa-bars fa-fw"></i> Sipariş İşlemleri</a>
-                    </li>
-
-                    <li>
-                        <a href="#"><i class="fa fa-file-text fa-fw"></i> Raporlar</a>
-                    </li>
-
-
-                    <li>
-                        <a href="{{url('admin/bannerListele')}}"><i class="fa fa-file-picture-o fa-fw"></i> Banner Yönetimi</a>
-                    </li>
-
- <li>
-                        <a href="{{url('admin/sosyalMedya')}}"><i class="fa fa-facebook-square fa-fw"></i> Sosyal Medya</a>
-                    </li>
-                    <li>
-                                            <a href="{{url('admin/bulten')}}"><i class="fa fa-edit fa-fw"></i>E-Bülten Yönetimi</a>
+                                            <a href="{{url('admin/bulten')}}"><i class="fa fa-edit fa-fw"></i>{{ trans('adminDil.eBulteNyONETİMİ') }}</a>
                                         </li>
 
                                         <li>
-                                            <a href="{{url('admin/anket')}}"><i class="fa fa-edit fa-fw"></i>Anket Yönetimi</a>
+                                            <a href="{{url('admin/anket')}}"><i class="fa fa-edit fa-fw"></i>{{ trans('adminDil.anketYonetim') }}</a>
                                         </li>
 
 
 <li>
-                         <a href="{{url('admin/linkler')}}"><i class="fa glyphicon-link fa-fw"></i> Linkler</a>
+                         <a href="{{url('admin/linkler')}}"><i class="fa glyphicon-link fa-fw"></i>{{ trans('adminDil.linkler') }}</a>
                                         </li>
 
 

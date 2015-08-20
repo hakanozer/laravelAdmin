@@ -1,3 +1,9 @@
+<?php
+$dil = Session::get('dil');
+App::setLocale($dil);
+?>
+
+
 @include('admin/ustMenu')
 <!-- Bootstrap Core CSS -->
 <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -27,14 +33,14 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Mesajlar</h1>
+            <h1 class="page-header">{{ trans('adminDil.mesajlar') }}</h1>
         </div>
         <!-- /.col-lg-12 -->
     </div>
     <!-- /.row -->
     <div class="row">
         <div class="col-lg-12">
-<button style="float: left; margin-bottom: 15px; " type="button" class="btn btn-success" onclick="window.location.href='mesajlar/gonder'" >Yeni Mesaj Gönder</button>
+<button style="float: left; margin-bottom: 15px; " type="button" class="btn btn-success" onclick="window.location.href='mesajlar/gonder'" >{{ trans('adminDil.yeniMesaj') }}</button>
 </div>
 </div>
 <div class="row">
@@ -42,7 +48,7 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Tüm Mesajlar
+                        {{ trans('adminDil.tumMesaj') }}
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -51,12 +57,12 @@
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Gönderen</th>
-                                    <th>Alıcı</th>
-                                    <th>Mesaj</th>
-                                    <th>Durum</th>
-                                    <th>Tarih</th>
-                                    <th style="width: 48px;">İşlem</th>
+                                    <th>{{ trans('adminDil.gonderen') }}</th>
+                                    <th>{{ trans('adminDil.alici') }}</th>
+                                    <th>{{ trans('adminDil.mesaj') }}</th>
+                                    <th>{{ trans('adminDil.durum') }}</th>
+                                    <th>{{ trans('adminDil.tarih') }}</th>
+                                    <th style="width: 48px;">{{ trans('adminDil.islem') }}</th>
                                 </tr>
                                 </thead>
                                 <tbody>

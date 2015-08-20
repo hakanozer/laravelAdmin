@@ -1,10 +1,15 @@
+
+<?php
+$dil = Session::get('dil');
+App::setLocale($dil);
+?>
 @include('admin/ustMenu')
 
 
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Sipariş İşlemleri</h1>
+            <h1 class="page-header">{{ trans('adminDil.siparisIslemleri') }}</h1>
         </div>
         <!-- /.col-lg-12 -->
     </div>
@@ -12,7 +17,7 @@
     <div class="row">
 <div class="panel panel-default">
                       <div class="panel-heading">
-                          Tüm İçerikler
+                          {{ trans('adminDil.tümIcerikler') }}
                           <div class="col-md-5" style="float: right; width: 106px; margin-top: -7px;">
 
                                        </div>
@@ -23,7 +28,26 @@
 
                               <div id="dataTables-example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="dataTables-example_length"><label>Show <select name="dataTables-example_length" aria-controls="dataTables-example" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-6"><div id="dataTables-example_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="dataTables-example"></label></div></div></div><div class="row"><div class="col-sm-12"><table class="table table-striped table-bordered table-hover dataTable no-footer" id="dataTables-example" role="grid" aria-describedby="dataTables-example_info">
                                   <thead>
-                                  <tr role="row"><th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="ID: activate to sort column ascending" style="width: 29px;">Sipariş ID</th><th class="sorting_asc" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Başlık: activate to sort column descending" style="width: 62px;" aria-sort="ascending">Müşteri</th><th class="sorting_asc" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Başlık: activate to sort column descending" style="width: 62px;" aria-sort="ascending">Ürün Adı</th><th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Kısa Açıklama: activate to sort column ascending" style="width: 127px;">Durumu</th><th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Detay: activate to sort column ascending" style="width: 58px;">Ekleme Tarihi</th><th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Tarih: activate to sort column ascending" style="width: 140px;">Toplam</th><th style="width: 55px;" class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="İşlem: activate to sort column ascending">Aksiyon</th></tr>
+                                  <tr role="row"><th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                  rowspan="1" colspan="1" aria-label="ID: activate to sort column ascending"
+                                   style="width: 29px;">{{ trans('adminDil.sipID') }}</th><th class="sorting_asc" tabindex="0"
+                                   aria-controls="dataTables-example" rowspan="1" colspan="1"
+                                   aria-label="Başlık: activate to sort column descending"
+                                   style="width: 62px;" aria-sort="ascending">{{ trans('adminDil.MUSTERİ') }}</th><th class="sorting_asc"
+                                   tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1"
+                                    aria-label="Başlık: activate to sort column descending" style="width: 62px;"
+                                    aria-sort="ascending">{{ trans('adminDil.urunAdi') }}</th><th class="sorting" tabindex="0"
+                                    aria-controls="dataTables-example" rowspan="1" colspan="1"
+                                     aria-label="Kısa Açıklama: activate to sort column ascending"
+                                     style="width: 127px;">{{ trans('adminDil.durum') }}</th><th class="sorting" tabindex="0"
+                                     aria-controls="dataTables-example" rowspan="1" colspan="1"
+                                     aria-label="Detay: activate to sort column ascending"
+                                     style="width: 58px;">{{ trans('adminDil.eklemeTarih') }}</th><th class="sorting" tabindex="0"
+                                     aria-controls="dataTables-example" rowspan="1" colspan="1"
+                                     aria-label="Tarih: activate to sort column ascending"
+                                     style="width: 140px;">{{ trans('adminDil.toplam') }}</th><th style="width: 55px;" class="sorting"
+                                     tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1"
+                                      aria-label="İşlem: activate to sort column ascending">{{ trans('adminDil.aksiyon') }}</th></tr>
                                   </thead>
                                   <tbody>
                               @if(isset($data))

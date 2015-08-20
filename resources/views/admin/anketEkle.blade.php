@@ -1,18 +1,23 @@
+<?php
+$dil = Session::get('dil');
+App::setLocale($dil);
+?>
+
 @include('admin/ustMenu')
 
 <div id="page-wrapper">
 
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Anket Ekle</h1>
-            <a href="{{url ('admin/anket')}}" style="float: left; margin-bottom: 15px; " class="btn btn-primary"><i class="glyphicon glyphicon-backward"> </i> Geri Dön</a>
+            <h1 class="page-header">{{ trans('adminDil.anketEkle') }}</h1>
+            <a href="{{url ('admin/anket')}}" style="float: left; margin-bottom: 15px; " class="btn btn-primary"><i class="glyphicon glyphicon-backward"> </i> {{ trans('adminDil.geriDon') }}</a>
 
             <div class="col-md-12" style="float: right; width: 106px; margin-top: -7px;">
-                <a href="{{url ('admin/anketEkle')}}" class="btn btn-primary">Anket Ekle</a>
+                <a href="{{url ('admin/anketEkle')}}" class="btn btn-primary">{{ trans('adminDil.anketEkle') }}</a>
             </div>
 
             <div class="col-md-12" style="float: right; width: 106px; margin-top: -7px;">
-                <a href="{{url ('admin/anketSoruEkle')}}" class="btn btn-primary">Soru Ekle</a>
+                <a href="{{url ('admin/anketSoruEkle')}}" class="btn btn-primary">{{ trans('adminDil.soruEkle') }}</a>
             </div>
 
 
@@ -26,7 +31,7 @@
             <div class="panel panel-primary">
 
                 <div class="panel-heading text-center">
-                    <h3>Yeni Anket</h3>
+                    <h3>{{ trans('adminDil.yenAnket') }}</h3>
                 </div>
 
                 @if (count($errors) > 0)
@@ -62,7 +67,7 @@
                                 <div class="col-md-3">
 
 
-                                    <label for="fSifre">Anket Başlığı</label>
+                                    <label for="fSifre">{{ trans('adminDil.anketBaslik') }}</label>
                                 </div>
                                 <div class="col-md-9">
                                     <input type="text" id="baslik" name="baslik"  class="form-control">
@@ -78,9 +83,9 @@
                             <div class="row">
                                 <div class="col-md-9 col-md-offset-3">
 
-                                    <input class="btn btn-default btn-sm btn-primary" name="anketEkleButton" value="Kaydet" type="submit">
+                                    <input class="btn btn-default btn-sm btn-primary" name="anketEkleButton" value="{{ trans('adminDil.kaydet') }}" type="submit">
 
-                                    <a href="{{url('admin/anket')}}" class="btn btn-sm btn-danger">İptal</a>
+                                    <a href="{{url('admin/anket')}}" class="btn btn-sm btn-danger">{{ trans('adminDil.iptal') }}</a>
                                 </div>
 
                             </div>

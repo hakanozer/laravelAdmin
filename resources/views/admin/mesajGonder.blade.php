@@ -1,3 +1,9 @@
+<?php
+$dil = Session::get('dil');
+App::setLocale($dil);
+?>
+
+
 @include('admin/ustMenu')
 <!-- Bootstrap Core CSS -->
 <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -27,18 +33,18 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Mesaj Gönderme</h1>
+            <h1 class="page-header">{{ trans('adminDil.yeniMesaj') }}</h1>
         </div>
         <!-- /.col-lg-12 -->
     </div>
     <!-- /.row -->
-<a  href="{{ url('admin/mesajlar')  }}" style="float: left; margin-bottom: 15px; "class="btn btn-primary"><i class="glyphicon glyphicon-backward"> </i> Geri Dön</a>
+<a  href="{{ url('admin/mesajlar')  }}" style="float: left; margin-bottom: 15px; "class="btn btn-primary"><i class="glyphicon glyphicon-backward"> </i> {{ trans('adminDil.geriDon') }}</a>
     <div style="clear: both"></div>
 <div class="row">
         <div class="col-lg-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Mesaj Bilgilerini Giriniz:
+                   {{ trans('adminDil.mesajBilgi') }}
                 </div>
 @if (count($errors) > 0)
                             <div class="alert alert-danger">
@@ -56,9 +62,9 @@
         <form role="form" method="post" action="{{url('admin/mesajlar/gonder')}}">
                                     <input type="hidden" name="_token" value="{{csrf_token()}}"/>
 <div class="form-group">
-                                    <label>Kişi Seçiniz:</label></br>
+                                    <label> {{ trans('adminDil.kisiSec') }}</label></br>
                                      <select name="kisiler">
-                                     <option>Seçiniz:</option>
+                                     <option>{{ trans('adminDil.seciniz') }}</option>
                                      @foreach($kisiler as $val)
                                         <option value="{{$val->id}}">{{$val->adi.' '.$val->soyadi}}</option>
                                      @endforeach
@@ -66,12 +72,12 @@
                                      </div>
 
                                     <div class="form-group">
-                                    <label>Mesaj</label>
-                                     <textarea name="mesaj" class="form-control" placeholder="Mesaj giriniz:"></textarea>
+                                    <label>{{ trans('adminDil.mesaj') }}</label>
+                                     <textarea name="mesaj" class="form-control" placeholder="{{ trans('adminDil.mesajGir') }}"></textarea>
                                      </div>
 
 
-                                    <input type="submit" class="btn btn-success" value="Gönder"/>
+                                    <input type="submit" class="btn btn-success" value="{{ trans('adminDil.gonder') }}"/>
 
                                 </form>
                             </div>
@@ -80,17 +86,7 @@
         </div></div></div></div>
 @include('admin/alt')
 
-
-    <!-- jQuery -->
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
-
-    <!-- DataTables JavaScript -->
+<!-- DataTables JavaScript -->
     <script src="../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
     <script src="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
 

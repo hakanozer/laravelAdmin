@@ -1,3 +1,8 @@
+<?php
+$dil = Session::get('dil');
+App::setLocale($dil);
+?>
+
 @include('admin/ustMenu')
 
 <!-- Bootstrap Core CSS -->
@@ -32,7 +37,7 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header"> İçerikler</h1>
+            <h1 class="page-header"> {{ trans('adminDil.icerikler') }}</h1>
 
         </div>
         <!-- /.col-lg-12 -->
@@ -48,9 +53,9 @@
               <div class="col-lg-12">
                   <div class="panel panel-default">
                       <div class="panel-heading">
-                          Tüm İçerikler
+                          {{ trans('adminDil.tümIcerikler') }}
                           <div class="col-md-5" style="float: right; width: 106px; margin-top: -7px;">
-                                                      <a href="{{url ('admin/icerikEkle')}}" class="btn btn-primary">İcerik Ekle</a>
+                                                      <a href="{{url ('admin/icerikEkle')}}" class="btn btn-primary"> {{ trans('adminDil.icerikEkle') }}</a>
                                        </div>
                       </div>
                       <!-- /.panel-heading -->
@@ -61,11 +66,11 @@
                                   <thead>
                                   <tr>
                                       <th>ID</th>
-                                      <th>Başlık</th>
-                                      <th>Kısa Açıklama</th>
-                                      <th>Detay</th>
-                                      <th>Tarih</th>
-                                      <th style="width: 48px;">İşlem</th>
+                                      <th>{{ trans('adminDil.baslik') }}</th>
+                                      <th>{{ trans('adminDil.kisaAciklama') }}</th>
+                                      <th>{{ trans('adminDil.detay') }}</th>
+                                      <th>{{ trans('adminDil.tarih') }}</th>
+                                      <th style="width: 48px;">{{ trans('adminDil.islem') }}</th>
                                   </tr>
                                   </thead>
                                   <tbody>
@@ -157,3 +162,4 @@
             });
         });
     </script>
+</div>

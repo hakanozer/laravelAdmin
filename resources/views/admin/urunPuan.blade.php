@@ -1,3 +1,9 @@
+<?php
+$dil = Session::get('dil');
+App::setLocale($dil);
+?>
+
+
 @include('admin/ustMenu')
 
 <!-- Bootstrap Core CSS -->
@@ -32,7 +38,7 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header"> Ürün Puanları</h1>
+            <h1 class="page-header"> {{ trans('adminDil.urunPuanlari') }}</h1>
         </div>
         <!-- /.col-lg-12 -->
     </div>
@@ -59,7 +65,7 @@
               <div class="col-lg-12">
                   <div class="panel panel-default">
                       <div class="panel-heading">
-                          Tüm Ürün Puanları
+                         {{ trans('adminDil.tumUrunPuanlari') }}
                       </div>
                       <!-- /.panel-heading -->
                       <div class="panel-body">
@@ -68,10 +74,10 @@
                                   <thead>
                                   <tr>
                                       <th>ID</th>
-                                      <th>Ürün Adı</th>
-                                      <th>Puan</th>
+                                      <th>{{ trans('adminDil.urunAdi') }}</th>
+                                      <th>{{ trans('adminDil.puan') }}</th>
                                       <th>IP NO</th>
-                                      <th>Tarih</th>
+                                      <th>{{ trans('adminDil.tarih') }}</th>
                                   </tr>
                                   </thead>
                                   <tbody>

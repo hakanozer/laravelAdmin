@@ -266,3 +266,14 @@ Route::get('admin/anketSoruDuzenle/{id}','admin\anketController@soruDuzenleAc');
 Route::post('admin/anketSoruDuzenle/{id}','admin\anketController@soruDuzenle');
 Route::get('admin/anketSoruEkle','admin\anketController@soruEkleAc');
 Route::post('admin/anketSoruEkle','admin\anketController@soruEkle');
+
+
+Route::get('admin/{locale}', function ($locale) {
+    $dil = substr($locale,0,2);
+    //$url = "http://".$_SERVER['HTTP_HOST']."".$_SERVER['REQUEST_URI']."";
+    Session::put('dil', $dil);
+    App::setLocale(Session::get('dil'));
+    return Redirect::to('admin/bos');
+    //echo "<script> window.history.go(-1);</script>";
+    //echo "<meta http-equiv=\"refresh\" content=\"0;url=javascript:history.back()\">";
+});

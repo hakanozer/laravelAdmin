@@ -1,3 +1,9 @@
+<?php
+$dil = Session::get('dil');
+App::setLocale($dil);
+?>
+
+
 @include('admin/ustMenu')
 
 <!-- Bootstrap Core CSS -->
@@ -29,19 +35,19 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Kullanıcılar</h1>
+            <h1 class="page-header">{{ trans('adminDil.kullanicilar') }}</h1>
         </div>
         <!-- /.col-lg-12 -->
     </div>
     <!-- /.row -->
 
-    <button style="float: right; margin-bottom: 15px; " type="button" class="btn btn-success" onclick="window.location.href='kullanicilar/ekle'" >Yeni Kullanıcı Ekle</button>
+    <button style="float: right; margin-bottom: 15px; " type="button" class="btn btn-success" onclick="window.location.href='kullanicilar/ekle'" >{{ trans('adminDil.kulEkle') }}</button>
     <div class="row">
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Tüm Kullanıcılar
+                  {{ trans('adminDil.tüm') }}
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -50,12 +56,12 @@
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Adı</th>
-                                    <th>Soyadı</th>
+                                    <th> {{ trans('adminDil.adi') }}</th>
+                                    <th> {{ trans('adminDil.soyadi') }}</th>
                                     <th>E-mail</th>
-                                    <th>Tarih</th>
-                                    <th>Durum</th>
-                                    <th style="width: 48px;">İşlem</th>
+                                    <th>{{ trans('adminDil.tarih') }}</th>
+                                    <th>{{ trans('adminDil.durum') }}</th>
+                                    <th style="width: 48px;">{{ trans('adminDil.islem') }}</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -125,4 +131,10 @@
     <script src="../dist/js/sb-admin-2.js"></script>
 
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
-
+    <script>
+        $(document).ready(function() {
+            $('#dataTables-example').DataTable({
+                responsive: true
+            });
+        });
+    </script>

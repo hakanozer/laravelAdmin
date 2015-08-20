@@ -1,3 +1,9 @@
+<?php
+$dil = Session::get('dil');
+App::setLocale($dil);
+?>
+
+
 <!-- Bootstrap Core CSS -->
 <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -31,15 +37,15 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Anket Yönetimi</h1>
-            <a href="{{url ('admin/anasayfa')}}" style="float: left; margin-bottom: 15px; " class="btn btn-primary"><i class="glyphicon glyphicon-backward"> </i> Geri Dön</a>
+            <h1 class="page-header">{{ trans('adminDil.anketYonetim') }}</h1>
+            <a href="{{url ('admin/anasayfa')}}" style="float: left; margin-bottom: 15px; " class="btn btn-primary"><i class="glyphicon glyphicon-backward"> </i> {{ trans('adminDil.geriDon') }}</a>
 
             <div class="col-md-12" style="float: right; width: 106px; margin-top: -7px;">
-                <a href="{{url ('admin/anketEkle')}}" class="btn btn-primary">Anket Ekle</a>
+                <a href="{{url ('admin/anketEkle')}}" class="btn btn-primary">{{ trans('adminDil.anketEkle') }}</a>
             </div>
 
             <div class="col-md-12" style="float: right; width: 106px; margin-top: -7px;">
-                <a href="{{url ('admin/anketSoruEkle')}}" class="btn btn-primary">Soru Ekle</a>
+                <a href="{{url ('admin/anketSoruEkle')}}" class="btn btn-primary">{{ trans('adminDil.soruEkle') }}</a>
             </div>
 
 
@@ -67,9 +73,9 @@
                                       <!-- DAHA SONRA BURAYA BİR ŞEYLER GELEBİLİR -->
 
                                       <th>ID</th>
-                                      <th>Anket Başlığı</th>
-                                      <th>Kayıt Tarihi</th>
-                                      <th style="width: 48px;">İşlem</th>
+                                      <th>{{ trans('adminDil.anketBaslik') }}</th>
+                                      <th>{{ trans('adminDil.kayıtTarih') }}</th>
+                                      <th style="width: 48px;">{{ trans('adminDil.islem') }}</th>
                                   </tr>
                                   </thead>
                                   <tbody>
