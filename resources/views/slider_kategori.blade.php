@@ -8,28 +8,23 @@
         <div id="yt_header_right" class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
             <div class="row">
 
-                <!-- Module HomeSlider -->
-                <div id="homepage-slider" class="col-lg-8 col-sm-12 col-md-12 col-xs-12">
-                    <ul id="homeslider" style="max-height:370px;">
-                        <li class="homeslider-container">
-                            <a href="#" title="sample-1">
-                                <img src="http://prestashop.magentech.com/sp_shoppystore/modules/sphomeslider/images/slider-1.png" width="612" height="370" alt="sample-1" />
 
-                            </a>
-                        </li>
-                        <li class="homeslider-container">
-                            <a href="#" title="sample-2">
-                                <img src="http://prestashop.magentech.com/sp_shoppystore/modules/sphomeslider/images/slider-2.png" width="612" height="370" alt="sample-2" />
 
-                            </a>
-                        </li>
-                        <li class="homeslider-container">
-                            <a href="#" title="sample-3">
-                                <img src="http://prestashop.magentech.com/sp_shoppystore/modules/sphomeslider/images/slider-3.png" width="612" height="370" alt="sample-3" />
 
-                            </a>
-                        </li>
-                    </ul>
+            <!-- Module HomeSlider -->
+            <div id="homepage-slider" class="col-lg-8 col-sm-12 col-md-12 col-xs-12">
+                <ul id="homeslider" style="max-height:370px;">
+                @if(isset($data))
+                @foreach( $data as $slider)
+                    <li class="homeslider-container">
+                        <a href="{{$slider->url}}" target="_blank">
+                            <img src="{{ url("slider/".$slider->yol) }}" width="612" height="370" alt="sample-1" />
+
+                        </a>
+                    </li>
+                @endforeach
+                @endif
+                </ul>
 
 
                 </div>

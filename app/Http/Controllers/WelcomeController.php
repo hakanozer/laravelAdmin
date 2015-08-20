@@ -1,5 +1,13 @@
 <?php namespace App\Http\Controllers;
 
+use \Illuminate\Redis\Database;
+use \Illuminate\Support\Facades\DB;
+use \Illuminate\Support\Facades\Input;
+use \Illuminate\Support\Facades\Redirect;
+use \Illuminate\Support\Facades\View;
+use Image;
+use File;
+
 class WelcomeController extends Controller {
 
 	/*
@@ -30,7 +38,13 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('site');
+       return $this->sliderGoster();
 	}
+
+    public function sliderGoster()
+    {
+        $data = DB::select('select yol, url from slider order by id desc');
+        return view('site',array('data'=>$data));
+    }
 
 }
