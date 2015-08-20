@@ -26,75 +26,24 @@
 @include('admin/ustMenu')
 
 <div id="page-wrapper">
-
+<form name="myform" action="{{url ('admin/bulten/yeni')}}" method="post">
+<input type="hidden" name="_token" value="{{csrf_token()}}"/>
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">E - Bülten Yönetim Sayfası</h1>
             <a href="{{url ('admin/anasayfa')}}" style="float: left; margin-bottom: 15px; " class="btn btn-primary">
             <i class="glyphicon glyphicon-backward"> </i> Geri Dön</a>
 
-            <a id="sil"  href="{{url ('admin/bulten/aboneSil')}}" style="float: left; margin-bottom: 15px; "
-            class="btn btn-danger pull-right hidden" >
-            <i class="glyphicon glyphicon-remove"> </i> Alayını Sil</a>
+            <div class="col-md-18" style="float: right; width: 106px; margin-top: -7px;">
+                <input type="submit" id="sil" name="sil" class="btn btn-danger" value="Seçimleri Sil" />
+            </div>
 
+            <!--<a id="sil"  href="{{url ('admin/bulten/aboneSil')}}" class="btn btn-danger pull-right" >
+            <i class="glyphicon glyphicon-remove"> </i> Alayını Sil</a>-->
 
         </div>
         <!-- /.col-lg-12 -->
     </div>
-
-<script language="javascript">
-    function checkAll(field)
-    {
-        for (i = 0; i < field.length; i++)
-            field[i].checked = true ;
-    }
-
-    function uncheckAll(field)
-    {
-        for (i = 0; i < field.length; i++)
-            field[i].checked = false ;
-    }
-</script>
-
-<script type="text/javascript">
-
-var formblock;
-var forminputs;
-
-function prepare() {
-    formblock= document.getElementById('form_id');
-    forminputs = formblock.getElementsByTagName('input');
-}
-
-
-function select_all(name, value) {
-
-if (value==1) {
-$("#sil").removeClass("hidden");
-} else {
-$("#sil").addClass("hidden");
-}
-    for (i = 0; i < forminputs.length; i++) {
-        // regex here to check name attribute
-        var regex = new RegExp(name, "i");
-        if (regex.test(forminputs[i].getAttribute('name'))) {
-            if (value == '1') {
-                forminputs[i].checked = true;
-            } else {
-                forminputs[i].checked = false;
-            }
-        }
-    }
-}
-
-if (window.addEventListener) {
-    window.addEventListener("load", prepare, false);
-} else if (window.attachEvent) {
-    window.attachEvent("onload", prepare)
-} else if (document.getElementById) {
-    window.onload = prepare;
-}
-</script>
 
     <div class="row">
           <div class="row">
@@ -103,11 +52,13 @@ if (window.addEventListener) {
                       <div class="panel-heading">
                           Kayıtlı E-Bülten Aboneleri
 
+
+
                           <div class="col-md-18" style="float: right; width: 106px; margin-top: -7px;">
-                          <a href="{{url ('admin/bulten/yeni')}}" class="btn btn-primary">Bülten Gönder</a>
+                            <input type="submit" name="gonder" class="btn btn-primary" value="Bülten Gönder"/>
                           </div>
                           <div class="col-md-20" style="float: right; width: 106px; margin-top: -7px;">
-                               <a href="{{url ('admin/bulten/aboneEkle')}}" class="btn btn-primary">Abone Ekle</a>
+                            <a href="{{url ('admin/bulten/aboneEkle')}}" class="btn btn-primary">Abone Ekle</a>
                           </div>
                       </div>
                       <!-- /.panel-heading -->
@@ -119,7 +70,7 @@ if (window.addEventListener) {
                                   <tr >
                                       <th>
                                       <!-- TODO: bütün checkbox ların seçimi script ile sağlanacak. -->
-                                      <input name="tümü" type="checkbox" id="check-all">
+                                        <input type="checkbox" id="tumsecim" /> <b>Check All</b>
                                       </th>
                                       <th>ID</th>
                                       <th>E-Posta</th>
@@ -135,11 +86,9 @@ if (window.addEventListener) {
 
                                   <tr class="odd gradeX">
                                       <th>
-                                      <form id="form_id" name="myform" action="" method="post">
-                                          <input name="secim" id="checkbox[]" type="checkbox">
-                                      </form>
+                                          <input name="secim[]"  type="checkbox" value="{{ $bulten->id }}"/>{{ $bulten->id }}
                                       </th>
-                                      <td id="idbox[]">{{ $bulten->id }}</td>
+                                      <td>{{ $bulten->id }}</td>
                                       <td>{{ $bulten->email }}</td>
                                       <td>{{ $bulten->tarih }}</td>
                                       <td>
@@ -162,6 +111,8 @@ if (window.addEventListener) {
                   </div>
                   <!-- /.panel -->
               </div>
+
+</form>
               <!-- /.col-lg-12 -->
           </div>
     </div>
@@ -175,64 +126,33 @@ if (window.addEventListener) {
     <!-- Bootstrap Core JavaScript -->
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <!-- Metis Menu Plugin JavaScript -->
+    <!-- Metis Menu Plugin JavaScript-->
     <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
-    <!-- DataTables JavaScript -->
+    <!-- DataTables JavaScript
     <script src="../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
     <script src="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
-
+-->
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
 
-    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
-    <script>
-        $(document).ready(function() {
-            $('#dataTables-example').DataTable({
-                responsive: true
-            });
-        });
-    </script>
 
     <script type="text/javascript">
-    $(document).ready(function() {
-    var i=0;
-      $('#check-all').click(function(){
 
-        if (i==0) {
-         $("#sil").removeClass("hidden");
-         $("input:checkbox").attr('checked', true);
-         i=1;
-        }else if (i==1) {
-         $("#sil").addClass("hidden");
-                $("input:checkbox").attr('checked', false);
-                i=0;
-        }
+
+var jk = jQuery.noConflict();
+jk(document).ready(function(){
+    jk('#sil').hide();
+    jk("#tumsecim").on("click", function() {
+      var all = jk(this);
+      jk('input:checkbox').each(function() {
+           jk(this).prop("checked", all.prop("checked"));
       });
+      jk('#sil').slideToggle();
     });
-    </script>
 
-      <script type="text/javascript">
-        $(document).ready(function() {
-        for (i=0 ; i < checkbox.length ; i++) {
-         if (checkbox[i].value=checked) {
+});
 
-         }
 
-        }
-
-          $('#bultenid-').click(function(){
-
-            if (i==0) {
-             $("#sil").removeClass("hidden");
-             $("input:checkbox").attr('checked', true);
-
-            }else if (i==1) {
-             $("#sil").addClass("hidden");
-                    $("input:checkbox").attr('checked', false);
-                    i=0;
-            }
-          });
-        });
         </script>
 

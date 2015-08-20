@@ -136,12 +136,6 @@ class bultenController extends Controller {
         else{}
     }
 
-    // Çoklu Abone Sil İşlemi todo:çoklu silme işlemi yapılacaktır.
-    public function aboneCokluSil(){
-        $gelenInput = Input::all();
-        var_dump($gelenInput);
-    }
-
     // Abone Düzenleme Sayfası
     public function aboneDuzenleAc($id){
         $gelen = DB::select('select * from bulten_abone where id=?', array($id));
@@ -164,11 +158,42 @@ class bultenController extends Controller {
 
     // Bülten Sayfası
     public function bultenAc(){
-        return view('admin/bultenOlustur');
+
+        if (isset($_POST['gonder'])) {
+            $data = Input::all();
+            $dizi = $data['secim'];
+            var_dump($dizi);
+            return view('admin/bultenOlustur');
+        }
+
+        if (isset($_POST['sil'])) {
+            $data = Input::all();
+            $dizi = $data['secim'];
+            foreach ($dizi as $item) {
+                DB::table('bulten_abone')->where('id', $item)->delete();
+            }
+            return Redirect::to('admin/bulten');
+        }
+
     }
 
-    // Bülten Gönder todo: çoklu gönderme yapılacaktır.
+    // Bülten Gönder
     public function bultenGonder(){
+        $aboneler = array();
+        $gelen = Input::all();
+        $aboneTablo = DB::select('select * from bulten_abone');
+        foreach ($aboneTablo as $item) {
+            $aboneler = $item->email;
+        }
+
+        // TODO: BURADA ABONELERE MAİL ÇAK, abone mailleri de yukarıda mevcuttur.
+
+        $sonuc = DB::table('bulten')->insert(['baslik'=>$gelen['baslik'], 'metin'=>$gelen['detay'], 'tarih' => date('Y-m-d H:i:s')]);
+        if ($sonuc) {
+            return Redirect::to('admin/bulten');
+        } else{
+
+        }
 
     }
 }

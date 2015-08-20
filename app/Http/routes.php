@@ -180,8 +180,9 @@ Route::post('admin/bannerEkle','admin\bannerEkleController@ekle');
 // Bülten Sayfası
 Route::get('admin/bulten', 'admin\bultenController@index');
 
-// Bülten Oluştur
-Route::get('admin/bulten/yeni', 'admin\bultenController@bultenAc');
+// Bülten Oluştur - Gönder
+Route::post('admin/bulten/yeni', 'admin\bultenController@bultenAc');
+Route::post('admin/bulten/bultenGonder', 'admin\bultenController@bultenGonder');
 
 // Bültene Abone Ekle
 Route::get('admin/bulten/aboneEkle', 'admin\bultenController@aboneEkleIndex');
