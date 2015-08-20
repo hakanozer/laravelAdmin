@@ -168,14 +168,21 @@ Route::get('admin/linkler/sil/{id}','admin\linklerController@sil');
 Route::get('admin/linklerDuzenle/{id}','admin\linklerDuzenleController@duzenleAc');
 Route::post('admin/linklerDuzenle/{id}','admin\linklerDuzenleController@duzenle');
 
-//banner Yönetimi-bannerEkle/bannerListele
-//banner listele
+
+/banner listele
 Route::get('admin/bannerListele','admin\bannerListeleController@index');
-Route::post('admin/bannerListele', 'admin\bannerListeleController@listele');
+Route::post('admin/bannerListele','admin\bannerListeleController@listele');
+
+//banner Sil
+Route::get('admin/bannerListele/{sil}','admin\bannerListeleController@bannerSil');
 
 //bannerEkle
 Route::get('admin/bannerEkle','admin\bannerEkleController@index');
 Route::post('admin/bannerEkle','admin\bannerEkleController@ekle');
+
+//banner Düzenle
+Route::post('admin/bannerDuzenle/{duzenle}','admin\bannerDuzenleController@bannerDuzenleKaydet');
+Route::get('admin/bannerDuzenle/{duzenle}','admin\bannerListeleController@bannerDuzenle');
 
 // Bülten Sayfası
 Route::get('admin/bulten', 'admin\bultenController@index');
