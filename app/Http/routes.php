@@ -277,3 +277,7 @@ Route::get('admin/{locale}', function ($locale) {
     //echo "<script> window.history.go(-1);</script>";
     //echo "<meta http-equiv=\"refresh\" content=\"0;url=javascript:history.back()\">";
 });
+
+//excel işlemleri için gerekli rotalar
+Route::get('admin/excel','admin\excelController@liste');
+Route::get('admin/excel/{tableName}','admin\excelController@dosyaOlustur');

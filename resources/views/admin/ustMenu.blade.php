@@ -387,6 +387,10 @@ App::setLocale($dil);
                                       <li>
                                           <a href="{{ url('admin/dosyaYonetimi')  }}"><i class="fa fa-files-o fa-fw"></i> {{ trans('adminDil.dosyaIslemleri') }}</a>
                                       </li>
+									  
+										<li>
+											<a href="{{ url('admin/excel')  }}"><i class="fa fa-files-o fa-fw"></i>Veri Tabanı Excel Çıktısı Alma</a>
+										</li>
 
 
                                       <li>
