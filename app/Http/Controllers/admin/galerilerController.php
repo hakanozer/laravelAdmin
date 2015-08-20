@@ -23,8 +23,6 @@ class galerilerController extends Controller
 
 
         return view('admin/galeriler', array('data'=>$data, 'resimler'=>$resimler));
-        //return view('admin/galeriler');
-
     }
 
 
@@ -36,8 +34,7 @@ class galerilerController extends Controller
         return view('admin/galerilerDuzenle', array('modalNumber' => $modalNumber, 'galeriId'=> $id, 'resimler' => $query ));
 
     }
-
-
+    
     public function duzenleForm($id){
 
         $data = Input::all();
@@ -55,9 +52,15 @@ class galerilerController extends Controller
 
                 $dosya=Input::file('resim');
 
-
                 $uzanti = $dosya->getClientOriginalExtension();
-                $dosyaAdi=date('YmdHis').'.'.$uzanti;
+
+                if (strlen($uzanti) == 3)
+                    $dosyaAdi = (substr($dosya->getClientOriginalName(),0,-4));
+                else if (strlen($uzanti) == 4)
+                    $dosyaAdi = (substr($dosya->getClientOriginalName(),0,-5));
+
+
+                $dosyaAdi = $dosyaAdi ."_".date('YmdHis').'.'.$uzanti;
                 $path = base_path('galeriResimler/600x450/'.$dosyaAdi);
                 Image::make($dosya->getRealPath())->resize(600,450)->save($path);
                 $path = base_path('galeriResimler/defaultSize/'.$dosyaAdi);
@@ -77,10 +80,10 @@ class galerilerController extends Controller
 
         $resim = DB::select('select yol from gal_resim where id = ?', array($id));
 
-        $defaultSizePath = "\\galeriResimler\\defaultSize\\";
-        $path600x450 = "\\galeriResimler\\600x450\\";
-        $fullPathDefaultSize = base_path().$defaultSizePath. $resim[0]->yol;
-        $fullPath600x450 = base_path().$path600x450. $resim[0]->yol;
+        $defaultSizePath = "/galeriResimler/defaultSize/";
+        $path600x450 = "/galeriResimler/600x450/";
+        $fullPathDefaultSize = base_path($defaultSizePath.$resim[0]->yol);
+        $fullPath600x450 = base_path($path600x450.$resim[0]->yol);
 
         if (File::exists($fullPathDefaultSize) && File::exists($fullPath600x450) ) {
             File::delete($fullPathDefaultSize);

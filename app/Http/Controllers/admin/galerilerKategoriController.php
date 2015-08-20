@@ -49,10 +49,10 @@ class galerilerKategoriController extends Controller
 
         foreach ($resimler as $resim){
 
-            $defaultSizePath = "\\galeriResimler\\defaultSize\\";
-            $path600x450 = "\\galeriResimler\\600x450\\";
-            $fullPathDefaultSize = base_path().$defaultSizePath. $resim->yol;
-            $fullPath600x450 = base_path().$path600x450. $resim->yol;
+            $defaultSizePath = "/galeriResimler/defaultSize/";
+            $path600x450 = "/galeriResimler/600x450/";
+            $fullPathDefaultSize = base_path($defaultSizePath.$resim->yol);
+            $fullPath600x450 = base_path($path600x450.$resim->yol);
 
             if (File::exists($fullPathDefaultSize) && File::exists($fullPath600x450) ) {
                 File::delete($fullPathDefaultSize);
