@@ -169,7 +169,7 @@ Route::get('admin/linklerDuzenle/{id}','admin\linklerDuzenleController@duzenleAc
 Route::post('admin/linklerDuzenle/{id}','admin\linklerDuzenleController@duzenle');
 
 
-/banner listele
+//banner listele
 Route::get('admin/bannerListele','admin\bannerListeleController@index');
 Route::post('admin/bannerListele','admin\bannerListeleController@listele');
 
