@@ -1,4 +1,4 @@
-@include('admin/ustMenu')
+﻿@include('admin/ustMenu')
 
 
 <div id="page-wrapper">
@@ -69,13 +69,22 @@
                            </div>
 
                            <!-- Detay -->
-                           <div class="form-group">
-                           <div class="row">
-                           <div class="col-md-3">
-                           <label >Detay</label>
-                            </div>
-                            <div class="col-md-9">
-                           <textarea style="width:535px;" name="detay">{{$veri->detay}}</textarea>
+                            <script type="text/javascript">
+                                                          CKEDITOR.replace( 'detay',
+                                                                  {
+                                                                      customConfig : 'config.js',
+                                                                      toolbar : 'simple'
+                                                                  })
+                                                      </script>
+
+                                                      <!-- Detay -->
+                                                      <div class="form-group">
+                                                      <div class="row">
+                                                      <div class="col-md-3">
+                                                      <label for="kisa_aciklama">Detay</label>
+                                                       </div>
+                                                       <div class="col-md-9">
+                                                      <textarea name="detay" id="detay" rows="7" class="form-control ckeditor">{{$veri->detay}}</textarea>
                            </div>
                            </div>
                            </div>
