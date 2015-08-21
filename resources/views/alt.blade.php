@@ -8,7 +8,7 @@
 
                         <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
                             <div class="block_content">
-                                <form action="http://prestashop.magentech.com/sp_shoppystore/en/" method="post">
+                                <form action="" method="post">
                                     <div class="form-group" >
                                         <input class="inputNew grey newsletter-input" size="80" id="newsletter-input" type="text" name="email"  placeholder="Enter your email" />
                                         <button type="submit" name="submitNewsletter" class="btn btn-default button button-small">
@@ -44,12 +44,12 @@
                         <h3 class="mod-title">My account</h3>
                         <div class="block_content toggle-footer">
                             <ul class="list-link">
-                                <li><a href="http://prestashop.magentech.com/sp_shoppystore/en/order-history" title="My orders" rel="nofollow"> My orders</a></li>
-                                <li><a href="http://prestashop.magentech.com/sp_shoppystore/en/order-follow" title="My merchandise returns" rel="nofollow"> My merchandise returns</a></li>
-                                <li><a href="http://prestashop.magentech.com/sp_shoppystore/en/order-slip" title="My credit slips" rel="nofollow"> My credit slips</a></li>
-                                <li><a href="http://prestashop.magentech.com/sp_shoppystore/en/addresses" title="My addresses" rel="nofollow"> My addresses</a></li>
-                                <li><a href="http://prestashop.magentech.com/sp_shoppystore/en/identity" title="Manage my personal information" rel="nofollow"> My personal info</a></li>
-                                <li><a href="http://prestashop.magentech.com/sp_shoppystore/en/discount" title="My vouchers" rel="nofollow"> My vouchers</a></li>
+                                <li><a href="#" title="My orders" rel="nofollow"> My orders</a></li>
+                                <li><a href="#" title="My merchandise returns" rel="nofollow"> My merchandise returns</a></li>
+                                <li><a href="#" title="My credit slips" rel="nofollow"> My credit slips</a></li>
+                                <li><a href="#" title="My addresses" rel="nofollow"> My addresses</a></li>
+                                <li><a href="#" title="Manage my personal information" rel="nofollow"> My personal info</a></li>
+                                <li><a href="#" title="My vouchers" rel="nofollow"> My vouchers</a></li>
 
                             </ul>
                         </div>
@@ -65,36 +65,36 @@
                         <h3 class="mod-title">Information</h3>
                         <ul class="list-link">
                             <li class="item">
-                                <a href="http://prestashop.magentech.com/sp_shoppystore/en/prices-drop" title="Specials">
+                                <a href="#" title="Specials">
                                     Specials
                                 </a>
                             </li>
                             <li class="item">
-                                <a href="http://prestashop.magentech.com/sp_shoppystore/en/new-products" title="New products">
+                                <a href="#" title="New products">
                                     New products
                                 </a>
                             </li>
                             <li class="item">
-                                <a href="http://prestashop.magentech.com/sp_shoppystore/en/best-sales" title="Best sellers">
+                                <a href="#" title="Best sellers">
                                     Best sellers
                                 </a>
                             </li>
 
                             <li class="item">
-                                <a href="http://prestashop.magentech.com/sp_shoppystore/en/stores" title="Our stores">
+                                <a href="#" title="Our stores">
                                     Our stores
                                 </a>
                             </li>
 
                             <li class="item">
-                                <a href="http://prestashop.magentech.com/sp_shoppystore/en/contact-us" title="Contact us">
+                                <a href="#" title="Contact us">
                                     Contact us
                                 </a>
                             </li>
                             <!--
                     -->
                             <li>
-                                <a href="http://prestashop.magentech.com/sp_shoppystore/en/sitemap" title="Sitemap">
+                                <a href="#" title="Sitemap">
                                     Sitemap
                                 </a>
                             </li>
@@ -312,7 +312,7 @@
                             <!-- BUTTON RESET CPANEL  -->
                             <div class="btn-tools">
                                 <button type="button" class="btn btn-1" id="reset" name="resetLiveConfigurator">Reset</button>
-                                <a href="http://prestashop.magentech.com/sp_shoppystore/" name="quitLiveConfigurator" id="quit" class="btn sp-quit" >Quit</a>
+                                <a href="#" name="quitLiveConfigurator" id="quit" class="btn sp-quit" >Quit</a>
                             </div>
 
 

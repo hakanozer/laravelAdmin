@@ -1,7 +1,7 @@
 <link href="bower_components/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
 <link href="bower_components/css/font-awesome/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
 
-<link rel="stylesheet" href="http://prestashop.magentech.com/sp_shoppystore/themes/sp_shoppystore/cache/v_239_63cfa66eed60a9cdc402f9ca997899e3_all.css" type="text/css" media="all" />
+<link rel="stylesheet" href="bower_components/css/font-awesome/v_239_63cfa66eed60a9cdc402f9ca997899e3_all.css" type="text/css" media="all" />
 
 
 <link rel="stylesheet" href="bower_components/css/font-awesome/font-awesome.css" type="text/css" media="all" />
@@ -24,8 +24,8 @@
     var added_to_wishlist = 'Added to your wishlist.';
     var ajax_allowed = true;
     var ajaxsearch = true;
-    var baseDir = 'http://prestashop.magentech.com/sp_shoppystore/';
-    var baseUri = 'http://prestashop.magentech.com/sp_shoppystore/';
+   /* var baseDir = 'http://prestashop.magentech.com/sp_shoppystore/';
+    var baseUri = 'http://prestashop.magentech.com/sp_shoppystore/';*/
     var comparator_max_item = 3;
     var comparedProductsIds = [];
     var contentOnly = false;
@@ -40,7 +40,7 @@
     var homeslider_speed = 0;
     var homeslider_width = 0;
     var id_lang = 1;
-    var img_dir = 'http://prestashop.magentech.com/sp_shoppystore/themes/sp_shoppystore/img/';
+//    var img_dir = 'http://prestashop.magentech.com/sp_shoppystore/themes/sp_shoppystore/img/';
     var instantsearch = false;
     var isGuest = 0;
     var isLogged = 0;
@@ -48,7 +48,7 @@
     var loggin_required = 'You must be logged in to manage your wishlist.';
     var max_item = 'You cannot add more than 3 product(s) to the product comparison';
     var min_item = 'Please select at least one product';
-    var mywishlist_url = 'http://prestashop.magentech.com/sp_shoppystore/en/module/blockwishlist/mywishlist';
+//    var mywishlist_url = 'http://prestashop.magentech.com/sp_shoppystore/en/module/blockwishlist/mywishlist';
     var page_name = 'index';
     var placeholder_blocknewsletter = 'Enter your e-mail';
     var priceDisplayMethod = 1;
@@ -131,9 +131,7 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 <![endif]-->
 </head>
-<body id="index"  itemscope itemtype="http://schema.org/WebPage" class="index hide-right-column lang_en
-
-	">
+<body id="index"  itemscope itemtype="http://schema.org/WebPage" class="index hide-right-column lang_en">
 
 
 <div id="page">
@@ -181,11 +179,11 @@
                                 <div class="layout-color color-theme">
                                     <h2>Theme Colors</h2>
                                     <ul class="list-theme">
-                                        <li class="red"><a class="sp-themelayouts" title="Red" href="http://prestashop.magentech.com/sp_shoppystore/en/?live_configurator_token=b2a4a63bb15f344a54ae3ab8f25a8858&amp;id_employee=1&amp;id_shop=1&amp;theme_font=font1&amp;pattern=pattern7&amp;theme_layout=wide&amp;theme=theme1">Red</a></li>
-                                        <li class="blue"><a class="sp-themelayouts" title="Blue" href="http://prestashop.magentech.com/sp_shoppystore/en/?live_configurator_token=b2a4a63bb15f344a54ae3ab8f25a8858&amp;id_employee=1&amp;id_shop=1&amp;theme_font=font1&amp;pattern=pattern7&amp;theme_layout=wide&amp;theme=theme2">Blue</a></li>
-                                        <li class="green"><a class="sp-themelayouts" title="Green" href="http://prestashop.magentech.com/sp_shoppystore/en/?live_configurator_token=b2a4a63bb15f344a54ae3ab8f25a8858&amp;id_employee=1&amp;id_shop=1&amp;theme_font=font1&amp;pattern=pattern7&amp;theme_layout=wide&amp;theme=theme3">Green</a></li>
-                                        <li class="orange"><a class="sp-themelayouts" title="Orange" href="http://prestashop.magentech.com/sp_shoppystore/en/?live_configurator_token=b2a4a63bb15f344a54ae3ab8f25a8858&amp;id_employee=1&amp;id_shop=1&amp;theme_font=font1&amp;pattern=pattern7&amp;theme_layout=wide&amp;theme=theme4">Orange</a></li>
-                                        <li class="cyan"><a class="sp-themelayouts" title="Cyan" href="http://prestashop.magentech.com/sp_shoppystore/en/?live_configurator_token=b2a4a63bb15f344a54ae3ab8f25a8858&amp;id_employee=1&amp;id_shop=1&amp;theme_font=font1&amp;pattern=pattern7&amp;theme_layout=wide&amp;theme=theme5">Cyan</a></li>
+                                        <li class="red"><a class="sp-themelayouts" title="Red" href="#">Red</a></li>
+                                        <li class="blue"><a class="sp-themelayouts" title="Blue" href="#">Blue</a></li>
+                                        <li class="green"><a class="sp-themelayouts" title="Green" href="#">Green</a></li>
+                                        <li class="orange"><a class="sp-themelayouts" title="Orange" href="#">Orange</a></li>
+                                        <li class="cyan"><a class="sp-themelayouts" title="Cyan" href="#">Cyan</a></li>
 
 
 
@@ -206,7 +204,7 @@
 
                                 <li class="account" >
 
-                                    <a class="login" href="http://prestashop.magentech.com/sp_shoppystore/en/my-account" rel="nofollow" title="Log in to your customer account">
+                                    <a class="login" href="#" rel="nofollow" title="Log in to your customer account">
 
                                         My Account
 
@@ -216,7 +214,7 @@
 
                                         <li>
 
-                                            <a href="http://prestashop.magentech.com/sp_shoppystore/en/order-history" title="My orders">
+                                            <a href="#" title="My orders">
 
                                                 My orders
 
@@ -228,7 +226,7 @@
 
                                         <li>
 
-                                            <a href="http://prestashop.magentech.com/sp_shoppystore/en/order-follow" title="My merchandise returns">
+                                            <a href="#" title="My merchandise returns">
 
                                                 My merchandise returns
 
@@ -240,7 +238,7 @@
 
                                         <li>
 
-                                            <a href="http://prestashop.magentech.com/sp_shoppystore/en/order-slip" title="My credit slips">	My credit slips
+                                            <a href="#" title="My credit slips">	My credit slips
 
                                             </a>
 
@@ -248,7 +246,7 @@
 
                                         <li>
 
-                                            <a href="http://prestashop.magentech.com/sp_shoppystore/en/addresses" title="My addresses">
+                                            <a href="#" title="My addresses">
 
                                                 My addresses
 
@@ -258,7 +256,7 @@
 
                                         <li>
 
-                                            <a href="http://prestashop.magentech.com/sp_shoppystore/en/identity" title="My personal info">
+                                            <a href="#" title="My personal info">
 
                                                 My personal info
 
@@ -270,7 +268,7 @@
 
                                         <li>
 
-                                            <a href="http://prestashop.magentech.com/sp_shoppystore/en/discount" title="My vouchers">
+                                            <a href=#" title="My vouchers">
 
                                                 My vouchers
 
@@ -286,7 +284,7 @@
 
 
 
-                                <li class="last checkout" > <a href="http://prestashop.magentech.com/sp_shoppystore/en/order"  title="Check out" rel="nofollow"> Checkout</a></li>
+                                <li class="last checkout" > <a href="#"  title="Check out" rel="nofollow"> Checkout</a></li>
 
 
 
@@ -296,7 +294,7 @@
 
                         <!-- Block currencies module -->
                         <div id="currencies-block-top">
-                            <form id="setCurrency" action="/sp_shoppystore/en/" method="post">
+                            <form id="setCurrency" action="" method="post">
                                 <div class="current">
                                     <input type="hidden" name="id_currency" id="id_currency" value=""/>
                                     <input type="hidden" name="SubmitCurrency" value="" />
@@ -348,7 +346,7 @@
             <div class="container">
                 <div class="row">
                     <div id="header_logo" class=" col-lg-3 col-md-3 col-sm-2 col-xs-12 ">
-                        <a class="logo" href="http://prestashop.magentech.com/sp_shoppystore/" title="Welcome to SP ShoppyStore">
+                        <a class="logo" href="#" title="Welcome to SP ShoppyStore">
                             <img  src="http://prestashop.magentech.com/sp_shoppystore/img/logo.png" alt="Welcome to SP ShoppyStore"  />
                         </a>
                     </div>
@@ -362,11 +360,11 @@
                             <ul class="sf-menu clearfix menu-content">
 
                                 <li><a href="index.php" title="Home">Home</a></li>
-                                <li><a href="http://prestashop.magentech.com/sp_shoppystore/en/124-electronics" title="New Arrivals">New Arrivals</a></li>
-                                <li><a href="http://prestashop.magentech.com/sp_shoppystore/en/123-fashion" title="Daily Deals">Daily Deals</a></li>
-                                <li><a href="index.php?fc=module&amp;module=smartblog&amp;controller=category" title="Blog">Blog</a></li>
-                                <li><a href="http://prestashop.magentech.com/sp_shoppystore/en/content/4-about-us" title="About Us">About Us</a></li>
-                                <li><a href="index.php?controller=contact" title="Contact Us">Contact Us</a></li>
+                                <li><a href="#" title="New Arrivals">New Arrivals</a></li>
+                                <li><a href="#" title="Daily Deals">Daily Deals</a></li>
+                                <li><a href="#" title="Blog">Blog</a></li>
+                                <li><a href="#" title="About Us">About Us</a></li>
+                                <li><a href="#" title="Contact Us">Contact Us</a></li>
 
                             </ul>
                         </div>
@@ -378,7 +376,7 @@
                                     <h2 class="title">Shopping cart</h2>
 
 
-                                    <a href="http://prestashop.magentech.com/sp_shoppystore/en/order" title="View my shopping cart" rel="nofollow" class="shop-detail">
+                                    <a href="#" title="View my shopping cart" rel="nofollow" class="shop-detail">
 
                                         <span class="ajax_cart_quantity unvisible ">0</span>
                                         <p class="no-product">
@@ -421,9 +419,9 @@
                                                 </div>
                                                 <div class="buttons pull-right" style="width:50%;">
 
-                                                    <a id="button_order_cart" class="btn btn-default button button-small" href="http://prestashop.magentech.com/sp_shoppystore/en/order" title="Check out" rel="nofollow">
+                                                    <a id="button_order_cart" class="btn btn-default button button-small" href="#" title="Check out" rel="nofollow">
                                                     </a>
-                                                    <a id="button_goto_cart" class="btn btn-default button button-small" href="http://prestashop.magentech.com/sp_shoppystore/en/order" title="View my shopping cart" rel="nofollow">
+                                                    <a id="button_goto_cart" class="btn btn-default button button-small" href="#" title="View my shopping cart" rel="nofollow">
 
                                                     </a>
                                                 </div>
@@ -542,7 +540,7 @@
 
                                 <ul class="vf-megamenu clearfix megamenu-content">
 
-                                    <li  class=" spvmm-havechild "><a href="http://prestashop.magentech.com/sp_shoppystore/en/124-electronics" title="Electronics">Electronics</a><span class="vf-button icon-close"></span><div class="spvmm_container_menu_child"><div class="spvmm_menu_child" style="width:524px;"><div class="spvmm_numbers_col col2"><ul><li class=" spvmm-havechildchild"><a href="http://prestashop.magentech.com/sp_shoppystore/en/145-product-types" title="Product Types">Product Types</a><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/148-grouped-product" title="Grouped Product">Grouped Product</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/146-simple-product" title="Simple Product">Simple Product</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/147-configurable-product" title="Configurable Product">Configurable Product</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/149-virtual-product" title="Virtual Product">Virtual Product</a></li></ul></li></ul><ul><li class=" spvmm-havechildchild"><a href="http://prestashop.magentech.com/sp_shoppystore/en/170-laptop" title="Laptop">Laptop</a><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/199-camera-camcorders" title="Camera & Camcorders">Camera & Camcorders</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/200-electronic" title="Electronic">Electronic</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/201-medical-healthcare" title="Medical & Healthcare">Medical & Healthcare</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/202-laptop-computer" title="Laptop & Computer">Laptop & Computer</a></li></ul></li></ul><ul><li class=" spvmm-havechildchild"><a href="http://prestashop.magentech.com/sp_shoppystore/en/122-accessories" title="Accessories">Accessories</a><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/131-cases-covers" title="Cases & Covers">Cases & Covers</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/133-screen-protectors" title="Screen Protectors">Screen Protectors</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/134-bluetooth" title="Bluetooth">Bluetooth</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/132-cables-connectors" title="Cables & Connectors">Cables & Connectors</a></li></ul></li></ul><ul><li class=" spvmm-havechildchild"><a href="http://prestashop.magentech.com/sp_shoppystore/en/135-mobile-brands" title="Mobile Brands">Mobile Brands</a><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/139-lg" title="LG">LG</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/138-sony" title="Sony">Sony</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/137-sam-sung" title="Sam Sung">Sam Sung</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/136-apple" title="Apple">Apple</a></li></ul></li></ul><ul class="category-thumbnail"><li class="category-thumbnail"><div><img src="http://prestashop.magentech.com/sp_shoppystore/img/c/124-0_thumb.jpg" alt="Electronics" title="Electronics" class="img_spvmm" /></div></li></ul></div></div></div></li><li  class=" spvmm-havechild "><a href="http://prestashop.magentech.com/sp_shoppystore/en/143-computer" title="Computer">Computer</a><span class="vf-button icon-close"></span><div class="spvmm_container_menu_child"><div class="spvmm_menu_child" style="width:524px;"><div class="spvmm_numbers_col col2"><ul><li class=" spvmm-havechildchild"><a href="http://prestashop.magentech.com/sp_shoppystore/en/187-categories1" title="Categories1">Categories1</a><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/153-camera-camcorders" title="Camera & Camcorders">Camera & Camcorders</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/152-electronic" title="Electronic">Electronic</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/151-cosmetic" title="Cosmetic">Cosmetic</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/150-medical-healthcare" title="Medical & Healthcare">Medical & Healthcare</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/195-medical-healthcare" title="Medical & Healthcare">Medical & Healthcare</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/196-laptop-computer" title="Laptop & Computer">Laptop & Computer</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/197-aliquam-in-risus" title="Aliquam in risus">Aliquam in risus</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/189-laptop-computer" title="Laptop & Computer">Laptop & Computer</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/198-scelerisque-odio" title="Scelerisque odio">Scelerisque odio</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/190-phasellus-laoreet" title="Phasellus laoreet">Phasellus laoreet</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/191-etiam-id-finibus" title="Etiam id finibus">Etiam id finibus</a></li></ul></li></ul><ul class="category-thumbnail"><li class="category-thumbnail"><div><img src="http://prestashop.magentech.com/sp_shoppystore/img/c/143-0_thumb.jpg" alt="Computer" title="Computer" class="img_spvmm" /></div></li></ul></div></div></div></li><li  class=" spvmm-havechild "><a href="http://prestashop.magentech.com/sp_shoppystore/en/135-mobile-brands" title="Mobile Brands">Mobile Brands</a><span class="vf-button icon-close"></span><div class="spvmm_container_menu_child"><div class="spvmm_menu_child" style="width:262px;"><div class="spvmm_numbers_col col1"><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/139-lg" title="LG">LG</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/138-sony" title="Sony">Sony</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/137-sam-sung" title="Sam Sung">Sam Sung</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/136-apple" title="Apple">Apple</a></li></ul></div></div></div></li><li  class=" spvmm-havechild "><a href="http://prestashop.magentech.com/sp_shoppystore/en/123-fashion" title="Fashion">Fashion</a><span class="vf-button icon-close"></span><div class="spvmm_container_menu_child"><div class="spvmm_menu_child" style="width:262px;"><div class="spvmm_numbers_col col1"><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/171-kids" title="Kids">Kids</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/172-men" title="Men">Men</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/173-women" title="Women">Women</a></li></ul></div></div></div></li><li  class=" spvmm-havechild "><a href="http://prestashop.magentech.com/sp_shoppystore/en/119-mobile" title="Mobile">Mobile</a><span class="vf-button icon-close"></span><div class="spvmm_container_menu_child"><div class="spvmm_menu_child" style="width:524px;"><div class="spvmm_numbers_col col2"><ul><li class=" spvmm-havechildchild"><a href="http://prestashop.magentech.com/sp_shoppystore/en/144-memory-card" title="Memory Card">Memory Card</a><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/157-htc" title="HTC">HTC</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/156-sony" title="Sony">Sony</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/155-apple" title="Apple">Apple</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/154-samsung" title="Samsung">Samsung</a></li></ul></li></ul><ul><li class=" spvmm-havechildchild"><a href="http://prestashop.magentech.com/sp_shoppystore/en/127-mobile-accessories" title="Mobile Accessories">Mobile Accessories</a><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/159-screen-protectors" title="Screen Protectors">Screen Protectors</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/160-cables-connectors" title="Cables & Connectors">Cables & Connectors</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/161-cases-covers" title="Cases & Covers">Cases & Covers</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/158-bluetooth" title="Bluetooth">Bluetooth</a></li></ul></li></ul><ul><li class=" spvmm-havechildchild"><a href="http://prestashop.magentech.com/sp_shoppystore/en/126-tablet" title="Tablet">Tablet</a><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/162-samsung" title="Samsung">Samsung</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/163-apple" title="Apple">Apple</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/165-sony" title="Sony">Sony</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/164-lg" title="LG">LG</a></li></ul></li></ul><ul><li class=" spvmm-havechildchild"><a href="http://prestashop.magentech.com/sp_shoppystore/en/125-smartphone" title="Smartphone">Smartphone</a><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/166-nokia" title="Nokia">Nokia</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/167-sony" title="Sony">Sony</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/169-samsung" title="Samsung">Samsung</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/168-apple" title="Apple">Apple</a></li></ul></li></ul></div></div></div></li><li  class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/121-bags" title="Bags">Bags</a></li><li  class=" spvmm-havechild "><a href="http://prestashop.magentech.com/sp_shoppystore/en/120-sports" title="Sports">Sports</a><span class="vf-button icon-close"></span><div class="spvmm_container_menu_child"><div class="spvmm_menu_child" style="width:262px;"><div class="spvmm_numbers_col col1"><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/128-watches" title="Watches">Watches</a></li></ul></div></div></div></li><li  class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/132-cables-connectors" title="Cables & Connectors">Cables & Connectors</a></li><li  class=" spvmm-havechild "><a href="http://prestashop.magentech.com/sp_shoppystore/en/144-memory-card" title="Memory Card">Memory Card</a><span class="vf-button icon-close"></span><div class="spvmm_container_menu_child"><div class="spvmm_menu_child" style="width:262px;"><div class="spvmm_numbers_col col1"><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/157-htc" title="HTC">HTC</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/156-sony" title="Sony">Sony</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/155-apple" title="Apple">Apple</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/154-samsung" title="Samsung">Samsung</a></li></ul></div></div></div></li><li  class=" spvmm-havechild "><a href="http://prestashop.magentech.com/sp_shoppystore/en/125-smartphone" title="Smartphone">Smartphone</a><span class="vf-button icon-close"></span><div class="spvmm_container_menu_child"><div class="spvmm_menu_child" style="width:262px;"><div class="spvmm_numbers_col col1"><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/166-nokia" title="Nokia">Nokia</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/167-sony" title="Sony">Sony</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/169-samsung" title="Samsung">Samsung</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/168-apple" title="Apple">Apple</a></li></ul></div></div></div></li><li  class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/159-screen-protectors" title="Screen Protectors">Screen Protectors</a></li><li  class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/146-simple-product" title="Simple Product">Simple Product</a></li><li  class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/147-configurable-product" title="Configurable Product">Configurable Product</a></li><li  class=" spvmm-havechild "><a href="http://prestashop.magentech.com/sp_shoppystore/en/127-mobile-accessories" title="Mobile Accessories">Mobile Accessories</a><span class="vf-button icon-close"></span><div class="spvmm_container_menu_child"><div class="spvmm_menu_child" style="width:262px;"><div class="spvmm_numbers_col col1"><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/159-screen-protectors" title="Screen Protectors">Screen Protectors</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/160-cables-connectors" title="Cables & Connectors">Cables & Connectors</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/161-cases-covers" title="Cases & Covers">Cases & Covers</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/158-bluetooth" title="Bluetooth">Bluetooth</a></li></ul></div></div></div></li><li  class=" spvmm-havechild "><a href="http://prestashop.magentech.com/sp_shoppystore/en/145-product-types" title="Product Types">Product Types</a><span class="vf-button icon-close"></span><div class="spvmm_container_menu_child"><div class="spvmm_menu_child" style="width:262px;"><div class="spvmm_numbers_col col1"><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/148-grouped-product" title="Grouped Product">Grouped Product</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/146-simple-product" title="Simple Product">Simple Product</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/147-configurable-product" title="Configurable Product">Configurable Product</a></li></ul><ul><li class=""><a href="http://prestashop.magentech.com/sp_shoppystore/en/149-virtual-product" title="Virtual Product">Virtual Product</a></li></ul></div></div></div></li>
+                                    <li  class=" spvmm-havechild "><a href="#" title="Electronics">Electronics</a><span class="vf-button icon-close"></span><div class="spvmm_container_menu_child"><div class="spvmm_menu_child" style="width:524px;"><div class="spvmm_numbers_col col2"><ul><li class=" spvmm-havechildchild"><a href="#" title="Product Types">Product Types</a><ul><li class=""><a href="#" title="Grouped Product">Grouped Product</a></li></ul><ul><li class=""><a href="#" title="Simple Product">Simple Product</a></li></ul><ul><li class=""><a href="#" title="Configurable Product">Configurable Product</a></li></ul><ul><li class=""><a href="#" title="Virtual Product">Virtual Product</a></li></ul></li></ul><ul><li class=" spvmm-havechildchild"><a href="#" title="Laptop">Laptop</a><ul><li class=""><a href="#" title="Camera & Camcorders">Camera & Camcorders</a></li></ul><ul><li class=""><a href="#" title="Electronic">Electronic</a></li></ul><ul><li class=""><a href="#" title="Medical & Healthcare">Medical & Healthcare</a></li></ul><ul><li class=""><a href="#" title="Laptop & Computer">Laptop & Computer</a></li></ul></li></ul><ul><li class=" spvmm-havechildchild"><a href="#" title="Accessories">Accessories</a><ul><li class=""><a href="#" title="Cases & Covers">Cases & Covers</a></li></ul><ul><li class=""><a href="#" title="Screen Protectors">Screen Protectors</a></li></ul><ul><li class=""><a href="#" title="Bluetooth">Bluetooth</a></li></ul><ul><li class=""><a href="#" title="Cables & Connectors">Cables & Connectors</a></li></ul></li></ul><ul><li class=" spvmm-havechildchild"><a href="#" title="Mobile Brands">Mobile Brands</a><ul><li class=""><a href="#" title="LG">LG</a></li></ul><ul><li class=""><a href="#" title="Sony">Sony</a></li></ul><ul><li class=""><a href="#" title="Sam Sung">Sam Sung</a></li></ul><ul><li class=""><a href="#" title="Apple">Apple</a></li></ul></li></ul><ul class="category-thumbnail"><li class="category-thumbnail"><div><img src="#" alt="Electronics" title="Electronics" class="img_spvmm" /></div></li></ul></div></div></div></li><li  class=" spvmm-havechild "><a href="#" title="Computer">Computer</a><span class="vf-button icon-close"></span><div class="spvmm_container_menu_child"><div class="spvmm_menu_child" style="width:524px;"><div class="spvmm_numbers_col col2"><ul><li class=" spvmm-havechildchild"><a href="#" title="Categories1">Categories1</a><ul><li class=""><a href="#" title="Camera & Camcorders">Camera & Camcorders</a></li></ul><ul><li class=""><a href="#" title="Electronic">Electronic</a></li></ul><ul><li class=""><a href="#" title="Cosmetic">Cosmetic</a></li></ul><ul><li class=""><a href="#" title="Medical & Healthcare">Medical & Healthcare</a></li></ul><ul><li class=""><a href="#" title="Medical & Healthcare">Medical & Healthcare</a></li></ul><ul><li class=""><a href="#" title="Laptop & Computer">Laptop & Computer</a></li></ul><ul><li class=""><a href="#" title="Aliquam in risus">Aliquam in risus</a></li></ul><ul><li class=""><a href="#" title="Laptop & Computer">Laptop & Computer</a></li></ul><ul><li class=""><a href="#" title="Scelerisque odio">Scelerisque odio</a></li></ul><ul><li class=""><a href="#" title="Phasellus laoreet">Phasellus laoreet</a></li></ul><ul><li class=""><a href="#" title="Etiam id finibus">Etiam id finibus</a></li></ul></li></ul><ul class="category-thumbnail"><li class="category-thumbnail"><div><img src="#" alt="Computer" title="Computer" class="img_spvmm" /></div></li></ul></div></div></div></li><li  class=" spvmm-havechild "><a href="#" title="Mobile Brands">Mobile Brands</a><span class="vf-button icon-close"></span><div class="spvmm_container_menu_child"><div class="spvmm_menu_child" style="width:262px;"><div class="spvmm_numbers_col col1"><ul><li class=""><a href="#" title="LG">LG</a></li></ul><ul><li class=""><a href="#" title="Sony">Sony</a></li></ul><ul><li class=""><a href="#" title="Sam Sung">Sam Sung</a></li></ul><ul><li class=""><a href="#" title="Apple">Apple</a></li></ul></div></div></div></li><li  class=" spvmm-havechild "><a href="#" title="Fashion">Fashion</a><span class="vf-button icon-close"></span><div class="spvmm_container_menu_child"><div class="spvmm_menu_child" style="width:262px;"><div class="spvmm_numbers_col col1"><ul><li class=""><a href="#" title="Kids">Kids</a></li></ul><ul><li class=""><a href="#" title="Men">Men</a></li></ul><ul><li class=""><a href="#" title="Women">Women</a></li></ul></div></div></div></li><li  class=" spvmm-havechild "><a href="#" title="Mobile">Mobile</a><span class="vf-button icon-close"></span><div class="spvmm_container_menu_child"><div class="spvmm_menu_child" style="width:524px;"><div class="spvmm_numbers_col col2"><ul><li class=" spvmm-havechildchild"><a href="#" title="Memory Card">Memory Card</a><ul><li class=""><a href="#" title="HTC">HTC</a></li></ul><ul><li class=""><a href="#" title="Sony">Sony</a></li></ul><ul><li class=""><a href="#" title="Apple">Apple</a></li></ul><ul><li class=""><a href="#" title="Samsung">Samsung</a></li></ul></li></ul><ul><li class=" spvmm-havechildchild"><a href="#" title="Mobile Accessories">Mobile Accessories</a><ul><li class=""><a href="#" title="Screen Protectors">Screen Protectors</a></li></ul><ul><li class=""><a href="#" title="Cables & Connectors">Cables & Connectors</a></li></ul><ul><li class=""><a href="#" title="Cases & Covers">Cases & Covers</a></li></ul><ul><li class=""><a href="#" title="Bluetooth">Bluetooth</a></li></ul></li></ul><ul><li class=" spvmm-havechildchild"><a href="#" title="Tablet">Tablet</a><ul><li class=""><a href="#" title="Samsung">Samsung</a></li></ul><ul><li class=""><a href="#" title="Apple">Apple</a></li></ul><ul><li class=""><a href="#" title="Sony">Sony</a></li></ul><ul><li class=""><a href="#" title="LG">LG</a></li></ul></li></ul><ul><li class=" spvmm-havechildchild"><a href="#" title="Smartphone">Smartphone</a><ul><li class=""><a href="#" title="Nokia">Nokia</a></li></ul><ul><li class=""><a href="#" title="Sony">Sony</a></li></ul><ul><li class=""><a href="#" title="Samsung">Samsung</a></li></ul><ul><li class=""><a href="#" title="Apple">Apple</a></li></ul></li></ul></div></div></div></li><li  class=""><a href="#" title="Bags">Bags</a></li><li  class=" spvmm-havechild "><a href="#" title="Sports">Sports</a><span class="vf-button icon-close"></span><div class="spvmm_container_menu_child"><div class="spvmm_menu_child" style="width:262px;"><div class="spvmm_numbers_col col1"><ul><li class=""><a href="#" title="Watches">Watches</a></li></ul></div></div></div></li><li  class=""><a href="#" title="Cables & Connectors">Cables & Connectors</a></li><li  class=" spvmm-havechild "><a href="#" title="Memory Card">Memory Card</a><span class="vf-button icon-close"></span><div class="spvmm_container_menu_child"><div class="spvmm_menu_child" style="width:262px;"><div class="spvmm_numbers_col col1"><ul><li class=""><a href="#" title="HTC">HTC</a></li></ul><ul><li class=""><a href="#" title="Sony">Sony</a></li></ul><ul><li class=""><a href="#" title="Apple">Apple</a></li></ul><ul><li class=""><a href="#" title="Samsung">Samsung</a></li></ul></div></div></div></li><li  class=" spvmm-havechild "><a href="#" title="Smartphone">Smartphone</a><span class="vf-button icon-close"></span><div class="spvmm_container_menu_child"><div class="spvmm_menu_child" style="width:262px;"><div class="spvmm_numbers_col col1"><ul><li class=""><a href="#" title="Nokia">Nokia</a></li></ul><ul><li class=""><a href="#" title="Sony">Sony</a></li></ul><ul><li class=""><a href="#" title="Samsung">Samsung</a></li></ul><ul><li class=""><a href="#" title="Apple">Apple</a></li></ul></div></div></div></li><li  class=""><a href="#" title="Screen Protectors">Screen Protectors</a></li><li  class=""><a href="#" title="Simple Product">Simple Product</a></li><li  class=""><a href="#" title="Configurable Product">Configurable Product</a></li><li  class=" spvmm-havechild "><a href="#" title="Mobile Accessories">Mobile Accessories</a><span class="vf-button icon-close"></span><div class="spvmm_container_menu_child"><div class="spvmm_menu_child" style="width:262px;"><div class="spvmm_numbers_col col1"><ul><li class=""><a href="#" title="Screen Protectors">Screen Protectors</a></li></ul><ul><li class=""><a href="#" title="Cables & Connectors">Cables & Connectors</a></li></ul><ul><li class=""><a href="#" title="Cases & Covers">Cases & Covers</a></li></ul><ul><li class=""><a href="#" title="Bluetooth">Bluetooth</a></li></ul></div></div></div></li><li  class=" spvmm-havechild "><a href="#" title="Product Types">Product Types</a><span class="vf-button icon-close"></span><div class="spvmm_container_menu_child"><div class="spvmm_menu_child" style="width:262px;"><div class="spvmm_numbers_col col1"><ul><li class=""><a href="#" title="Grouped Product">Grouped Product</a></li></ul><ul><li class=""><a href="#" title="Simple Product">Simple Product</a></li></ul><ul><li class=""><a href="#" title="Configurable Product">Configurable Product</a></li></ul><ul><li class=""><a href="#" title="Virtual Product">Virtual Product</a></li></ul></div></div></div></li>
 
                                 </ul>
 
@@ -1268,7 +1266,7 @@
 
                                     jQuery(document).ready(function ($) {
 
-                                        ;
+
 
                                         (function (element) {
 
@@ -1301,7 +1299,7 @@
                                             });
 
 
-
+/*
                                             // ------------begin schreiben function load ajax ------------- //
 
                                             var $input = $('.spr-query', $element);
@@ -1480,8 +1478,9 @@
 
 
 
-                                            // -------end schreiben function load ajax -------------------- //
+                                            // -------end schreiben function load ajax -------------------- //*/
 
+/*
 
 
                                             // =====begin instal_search begin 4 characters one more======= //
@@ -1613,6 +1612,7 @@
                                             // =====end instal_search begin 4 characters one more ======== //
 
 
+*/
 
 
 
