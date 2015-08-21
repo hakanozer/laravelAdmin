@@ -1,7 +1,7 @@
 <link href="bower_components/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
 <link href="bower_components/css/font-awesome/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
 
-<link rel="stylesheet" href="bower_components/css/font-awesome/v_239_63cfa66eed60a9cdc402f9ca997899e3_all.css" type="text/css" media="all" />
+<link rel="stylesheet" href="bower_components/css/v_239_63cfa66eed60a9cdc402f9ca997899e3_all.css" type="text/css" media="all" />
 
 
 <link rel="stylesheet" href="bower_components/css/font-awesome/font-awesome.css" type="text/css" media="all" />
