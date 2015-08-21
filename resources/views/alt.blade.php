@@ -1,4 +1,4 @@
-<div class="footer-container">alt
+<div class="footer-container">
     <div id="footer_top">
         <div class="container">
             <div class="row">

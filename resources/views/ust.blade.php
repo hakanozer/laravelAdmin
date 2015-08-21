@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="bower_components/css/v_239_63cfa66eed60a9cdc402f9ca997899e3_all.css" type="text/css" media="all" />
 
 
-<link rel="stylesheet" href="bower_components/css/font-awesome/font-awesome.css" type="text/css" media="all" />
+<link rel="stylesheet" href="bower_components/css/font-awesome.css" type="text/css" media="all" />
 <link rel="stylesheet" href="bower_components/css/system_tool.css" type="text/css" media="all" />
 <link rel="stylesheet" href="bower_components/css/responsive.css" type="text/css" media="all" />
 <link rel="stylesheet" href="bower_components/css/owl.carousel.css" type="text/css" media="all" />
@@ -24,8 +24,8 @@
     var added_to_wishlist = 'Added to your wishlist.';
     var ajax_allowed = true;
     var ajaxsearch = true;
-   /* var baseDir = 'http://prestashop.magentech.com/sp_shoppystore/';
-    var baseUri = 'http://prestashop.magentech.com/sp_shoppystore/';*/
+    var baseDir = 'http://prestashop.magentech.com/sp_shoppystore/';
+    var baseUri = 'http://prestashop.magentech.com/sp_shoppystore/';
     var comparator_max_item = 3;
     var comparedProductsIds = [];
     var contentOnly = false;
@@ -1299,7 +1299,7 @@
                                             });
 
 
-/*
+
                                             // ------------begin schreiben function load ajax ------------- //
 
                                             var $input = $('.spr-query', $element);
@@ -1480,7 +1480,7 @@
 
                                             // -------end schreiben function load ajax -------------------- //*/
 
-/*
+
 
 
                                             // =====begin instal_search begin 4 characters one more======= //
