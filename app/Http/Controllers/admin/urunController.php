@@ -111,4 +111,10 @@ class urunController extends Controller
     }
 
 
+    function resimEkle($id) {
+        return View::make("admin/resimEkle", array('id' => $id));
+
+    }
+
+
 }

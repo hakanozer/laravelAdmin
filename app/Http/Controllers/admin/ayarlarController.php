@@ -7,19 +7,23 @@
  */
 
 namespace App\Http\Controllers\admin;
-
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\sessionController;
 use Illuminate\Redis\Database;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Validator;
+use Request;
+use Session;
+
 
 class ayarlarController extends Controller{
 
     function liste()
     {
+
 
         $data = DB::select('select * from ayarlar order by id DESC limit 0,1');
         return view('admin/ayarlar',array('data'=>$data));
@@ -78,6 +82,48 @@ class ayarlarController extends Controller{
     }
 
 
+
+
+
+
+
+    public function resimUpload() {
+        // getting all of the post data
+        $file = array('image' => Input::file('logo'));
+        $data = Input::all();
+        $id = $data["id"];
+
+        // setting up rules
+        $rules = array('image' => 'required',); //mimes:jpeg,bmp,png and for max size max:10000
+        // doing the validation, passing post data, rules and the messages
+        $validator = Validator::make($file, $rules);
+        if ($validator->fails()) {
+            // send back to the page with the input data and errors
+            return Redirect::to('admin/siteAyarlar')->withInput()->withErrors($validator);
+        }
+        else {
+            // checking file is valid.
+            if (Input::file('logo')->isValid()) {
+                $destinationPath = 'logolar'; // upload path
+                $extension = Input::file('logo')->getClientOriginalExtension(); // getting image extension
+                $fileName = rand(11111,99999).'.'.$extension; // renameing image
+                Input::file('logo')->move($destinationPath, $fileName); // uploading file to given path
+                // sending back with message
+                Session::flash('success', 'Upload successfully');
+
+                DB::table('ayarlar')->where('id', $id)->update( array('logo' => $fileName));
+
+                return Redirect::to('admin/siteAyarlar');
+            }
+            else {
+                // sending back with error message.
+                Session::flash('error', 'uploaded file is not valid');
+                return Redirect::to('upload');
+            }
+        }
+
+        return \Redirect::to('admin/siteAyarlar');
+    }
 
 
 

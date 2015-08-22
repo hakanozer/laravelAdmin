@@ -1,6 +1,7 @@
 ﻿<?php
 $dil = Session::get('dil');
 App::setLocale($dil);
+
 ?>
 
 

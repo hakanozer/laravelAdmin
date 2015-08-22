@@ -193,9 +193,33 @@
                            <div id="map-canvas"></div>
                         </div>
                         <button type="submit" class="btn btn-success pull-right">Güncelle</button>
-
-                     </div>
+                    </div>
                   </form>
+
+
+
+<form role="form" action="{{url("admin/siteAyarlar/1")}}" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+    <input type="hidden" name="id" value="{{$veri->id}}">
+    <div style="padding: 10px;"></div>
+    <div class="form-group">
+     <label>Logo Düzenle</label>
+     <input type="file" name="logo" id="logo"/>
+
+        @if(isset($data))
+            @foreach($data as $veri)
+               @if($veri->logo != null)
+     <img src="../logolar/{{$veri->logo}}" width="100" height="100" alt="Resim Yok"/>
+            @else
+     <img src="../logolar/resimyok.png" width="100" height="100" alt="Resim Yok"/>
+            @endif
+            @endforeach
+</div>
+<button type="submit" class="btn btn-success pull-right">Güncelle</button>
+</form>
+
+                              @endif
+
                   @endforeach
                   @endif
                </div>

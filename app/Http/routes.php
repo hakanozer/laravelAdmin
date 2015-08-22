@@ -120,6 +120,7 @@ Route::post('admin/icerikDuzenle/{id}', 'admin\icerikDuzenleController@duzenleFo
 //site ayarları
 Route::get("admin/siteAyarlar","admin\ayarlarController@liste");
 Route::post("admin/siteAyarlar", "admin\ayarlarController@duzenle");
+Route::post("admin/siteAyarlar/{id}", "admin\ayarlarController@resimUpload");
 
 //ürün puanlari
 Route::get('admin/urunPuan', 'admin\urunPuanController@urunPuanlari');
@@ -242,10 +243,13 @@ Route::get('admin/urun', 'admin\urunController@listele');
 Route::get('admin/urunEkle', 'admin\urunController@index');
 Route::post('admin/urunEkle', 'admin\urunController@ekle');
 
+// resim ekleme
+Route::get('admin/resimEkle/{id}', 'admin\urunController@resimEkle');
+
 // ürün sil
 Route::get('admin/urun/sil/{id}', 'admin\urunController@urunSil');
 
-//ürün düzenlemöe
+//ürün düzenleme
 Route::get("admin/urunDuzenle/{id}", "admin\urunController@urunDuzenleAc");
 Route::post("admin/urunDuzenle/{id}", "admin\urunController@duzenleUrun");
 

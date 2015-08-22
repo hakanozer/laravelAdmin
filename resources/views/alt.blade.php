@@ -528,6 +528,8 @@
 <!-- /MODULE Block best sellers -->
 <script type="text/javascript">
     $(document).ready(function($) {
+
+
         $('.recommend-title').accordion_snyderplace({
             defaultOpen: 'section-1',
             speed: 'fast',
@@ -553,4 +555,13 @@
         };
     });
 </script>
+
+
+<style>
+    div.item.clone {
+        visibility: hidden;
+    }
+</style>
+
+
 </body></html>
