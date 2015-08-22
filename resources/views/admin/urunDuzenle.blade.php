@@ -273,6 +273,8 @@ piyasa_fiyati}}" class="form-control">
         
       </div>
       <div class="col-md-9 text-right">
+      <a href="{{url("admin/resimEkle/".$veri->id)}}" class="btn btn-primary">Resim Ekle</a>
+
         <input type="submit" value="Kaydet" name="kaydet" class="btn btn-primary">
         <input type="hidden" name="sirketId" value="11">
       </div>

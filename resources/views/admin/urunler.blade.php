@@ -116,8 +116,8 @@
 									{{ $urun->tarih }}
 								</td>
 								<td>
-									<a href="{{url(" admin/urunduzenle/$urun->id")}}"> <button style="margin:1px" type="button" class="btn btn-primary btn-circle"><i class="fa fa-list"></i></button></a>
-									<a href="{{url(" admin/urun/sil/$urun->id")}}"> <button style="margin:1px" type="button" class="btn btn-danger btn-circle"><i class="fa fa-times"></i></button></a>
+									<a href="{{url("admin/urunDuzenle/$urun->id")}}"> <button style="margin:1px" type="button" class="btn btn-primary btn-circle"><i class="fa fa-list"></i></button></a>
+									<a href="{{url("admin/urun/sil/$urun->id")}}"> <button style="margin:1px" type="button" class="btn btn-danger btn-circle"><i class="fa fa-times"></i></button></a>
 								</td>
 							</tr>
 							 @endforeach @endif
