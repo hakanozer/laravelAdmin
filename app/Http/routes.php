@@ -247,3 +247,16 @@ Route::get('admin/urun/sil/{id}', 'admin\urunController@urunSil');
 //ürün düzenlemöe
 Route::get("admin/urunDuzenle/{id}", "admin\urunController@urunDuzenleAc");
 Route::post("admin/urunDuzenle/{id}", "admin\urunController@duzenleUrun");
+
+//haberler
+Route::get('admin/haberler', 'admin\haberlerController@listele');
+Route::post('admin/haberler', 'admin\haberlerController@durumPasifAktif');
+Route::get('admin/haberler/sil/{id}', 'admin\haberlerController@haberSil') ;
+
+//haberduzenle
+Route::get('admin/haberDuzenle/{id}', 'admin\haberDuzenleController@haberDuzenleAc');
+Route::post('admin/haberDuzenle/{id}', 'admin\haberDuzenleController@haberDuzenle');
+
+//haber ekle
+Route::get('admin/haberEkle', 'admin\haberEkleController@index');
+Route::post('admin/haberEkle', 'admin\haberEkleController@haberEkle');

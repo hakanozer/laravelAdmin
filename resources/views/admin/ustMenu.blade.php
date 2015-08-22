@@ -348,6 +348,9 @@
                     </li>
 
 
+<li>
+                        <a href="{{ url('admin/haberler')  }}"><i class="fa fa-table fa-fw"></i>Haberler</a>
+                    </li>
 
                    <li>
                         <a href="#"><i class="fa fa-camera-retro fa-fw"></i> Galeri Yönetimi<span class="fa arrow"></span></a>
