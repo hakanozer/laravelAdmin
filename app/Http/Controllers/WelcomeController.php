@@ -37,25 +37,29 @@ class WelcomeController extends Controller {
 	 * @return Response
 	 */
 	public function index()
-	{
-       return $this->sliderGoster();
-	}
+    {
+        $veri = $this->gonder();
+        $sorgu = $this->iletisimGetir();
+        $data = $this->sliderGoster();
+
+        return view('site', array('ust' => $veri), array('sorgu' => $sorgu), array('data'=>$data));
+    }
+
+    public function gonder(){
+        $veri=DB::select('select * from kategoriler ');
+        return $veri;
+    }
 
     public function sliderGoster()
     {
         $data = DB::select('select yol, url from slider order by id desc');
-        return view('site',array('data'=>$data));
+        return $data;
     }
-    public function gonder(){
-        global $html;
-        $veri=DB::select('select * from kategoriler ');
-        return view('site', array('ust' => $veri));
 
-    }
     public function iletisimGetir()
     {
         $sorgu=DB::select("select * from ayarlar");
-        return view('site',array('sorgu'=>$sorgu));
+        return $sorgu;
     }
 
     public function bultenAboneEkle(){
@@ -63,7 +67,7 @@ class WelcomeController extends Controller {
 
         $sonuc = DB::table('bulten_abone')
             ->insert(['email' => $gelenAbone["email"], 'tarih' => date('Y-m-d H:i:s')]);
-	return Redirect::to('/');
+        return Redirect::to('/');
     }
 
 

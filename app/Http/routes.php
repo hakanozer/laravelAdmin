@@ -304,9 +304,6 @@ Route::get('admin/{locale}', function ($locale) {
 Route::get('admin/excel','admin\excelController@liste');
 Route::get('admin/excel/{tableName}','admin\excelController@dosyaOlustur');
 
-//Kategoriler Menü
-Route::get('/', 'WelcomeController@gonder');
-
 //iletisim Getirme
 Route::get('/', 'WelcomeController@iletisimGetir');
 

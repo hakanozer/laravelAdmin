@@ -1,4 +1,4 @@
-<link href="bower_components/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+﻿<link href="bower_components/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
 <link href="bower_components/css/font-awesome/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
 
 <link rel="stylesheet" href="bower_components/css/v_239_63cfa66eed60a9cdc402f9ca997899e3_all.css" type="text/css" media="all" />
@@ -536,37 +536,39 @@
 
                             <div id="sp_vertical_megamenu" class="sp-vertical-megamenu clearfix">
 
-                                <div id="cat-titleall"><span><i class="fa fa-th-list"></i>Categories</span><i class="fa-chevron-circle-down"></i>
-                                </div>
+                                <div id="cat-titleall"><span><i class="fa fa-th-list"></i>Categories</span><i class="fa-chevron-circle-down"></i></div>
 
-                                <ul class="vf-megamenu clearfix megamenu-content">
+ <ul class="vf-megamenu clearfix megamenu-content">
                                 @if(isset($ust))
-                                @foreach($ust as $item)
-                                @if ($item->ust_id == 0)
-
-                                <li  class=" spvmm-havechild "><a href="{{url('urunler/'.$item->ust_id)}}" title="Electronics">{{$item->baslik}}</a>
-
-                                <span class="vf-button icon-close"></span>
-                                <div class="spvmm_container_menu_child">
-                                    <div class="spvmm_menu_child" style="width:524px;">
-                                        <div class="spvmm_numbers_col col2"></div>
+                                 @foreach($ust as $item)
+                                 @if ($item->ust_id == 0)
 
 
-                                        @foreach($ust as $alt)
-                                        @if($item->id == $alt->ust_id )
-                                            <ul><li class=""><a href="{{url('urunler/'.$alt->ust_id)}}" title="Grouped Product">{{$alt->baslik}}</a></li></ul>
+                                    <li  class=" spvmm-havechild "><a href="{{url('urunler/'.$item->id)}}" title="Electronics">{{$item->baslik}}</a>
 
-                                        @endif
-                                        @endforeach
+                                <span class="vf-button icon-close"></span><div class="spvmm_container_menu_child"><div class="spvmm_menu_child" style="width:524px;"><div class="spvmm_numbers_col col2"></div>
 
-                                @endif
-                                @endforeach
-                                @endif
-                                     </div>
+
+@foreach($ust as $alt)
+@if($item->id == $alt->ust_id )
+<ul><li class=""><a href="{{url('urunler/'.$alt->id)}}" title="Grouped Product">{{$alt->baslik}}</a></li></ul>
+
+@endif
+@endforeach
+
+
+
+
+                                   @endif
+                                   @endforeach
+@endif
+ </div>
+                        </div>
+                     </ul>
+
                             </div>
-                            </ul>
 
-                            </div>
+
 
                             <!--/ Menu -->
 
