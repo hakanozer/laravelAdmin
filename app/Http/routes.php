@@ -305,7 +305,7 @@ Route::get('admin/excel','admin\excelController@liste');
 Route::get('admin/excel/{tableName}','admin\excelController@dosyaOlustur');
 
 //iletisim Getirme
-Route::get('/', 'WelcomeController@iletisimGetir');
+//Route::get('/', 'WelcomeController@iletisimGetir');
 
 //site onyuz abone ekle
 Route::post('/','WelcomeController@bultenAboneEkle');
