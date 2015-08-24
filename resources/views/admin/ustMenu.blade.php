@@ -337,7 +337,7 @@ App::setLocale($dil);
 
 
                                       <li>
-                                          <a href="#"><i class="ffa fa-list-alt fa-fw"></i> {{ trans('adminDil.icerikYonetimi') }}<span class="fa arrow"></span></a>
+                                          <a href="#"><i class="fa fa-list-alt fa-fw"></i> {{ trans('adminDil.icerikYonetimi') }}<span class="fa arrow"></span></a>
                                           <ul class="nav nav-second-level">
                                               <li>
                                                   <a href="{{url('admin/icerik')}}">{{ trans('adminDil.icerikler') }}</a>
@@ -421,7 +421,7 @@ App::setLocale($dil);
 
 
 <li>
-                         <a href="{{url('admin/linkler')}}"><i class="fa glyphicon-link fa-fw"></i>{{ trans('adminDil.linkler') }}</a>
+                         <a href="{{url('admin/linkler')}}"><i class="fa fa-link fa-fw"></i>{{ trans('adminDil.linkler') }}</a>
                                         </li>
 
 

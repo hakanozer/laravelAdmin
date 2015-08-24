@@ -26,8 +26,8 @@
 <script>
         $(document).ready(function() {
             if ($('#dataTables-example').length){
-                $('#dataTables-example').DataTable({
-                    responsive: true,
+                //$('#dataTables-example').DataTable({
+                   // responsive: true,
 
                     "language": {
                         "sProcessing":   "İşleniyor...",
