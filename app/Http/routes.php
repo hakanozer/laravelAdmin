@@ -298,3 +298,6 @@ Route::get('/', 'WelcomeController@gonder');
 
 //iletisim Getirme
 Route::get('/', 'WelcomeController@iletisimGetir');
+
+//site onyuz abone ekle
+Route::post('/','WelcomeController@bultenAboneEkle');

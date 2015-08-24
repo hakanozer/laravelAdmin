@@ -58,5 +58,13 @@ class WelcomeController extends Controller {
         return view('site',array('sorgu'=>$sorgu));
     }
 
+    public function bultenAboneEkle(){
+        $gelenAbone=Input::all();
+
+        $sonuc = DB::table('bulten_abone')
+            ->insert(['email' => $gelenAbone["email"], 'tarih' => date('Y-m-d H:i:s')]);
+	return Redirect::to('/');
+    }
+
 
 }

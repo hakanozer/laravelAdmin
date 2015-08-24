@@ -1,4 +1,4 @@
-<div class="footer-container">
+﻿<div class="footer-container">
     <div id="footer_top">
         <div class="container">
             <div class="row">
@@ -9,12 +9,13 @@
                         <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
                             <div class="block_content">
                                 <form action="" method="post">
+                                <input type="hidden" name="_token" value="{{csrf_token()}}"/>
                                     <div class="form-group" >
-                                        <input class="inputNew grey newsletter-input" size="80" id="newsletter-input" type="text" name="email"  placeholder="Enter your email" />
-                                        <button type="submit" name="submitNewsletter" class="btn btn-default button button-small">
-                                            <span>Subscribe</span>
+                                        <input class="inputNew grey newsletter-input" size="80" id="newsletter-input" type="email" name="email" required="true"  placeholder="Lütfen E-posta Adresinizi Giriniz" />
+                                        <button type="submit" name="AboneEkle" class="btn btn-default button button-small">
+                                            <span>Abone Ol</span>
                                         </button>
-                                        <input type="hidden" name="action" value="0" />
+
                                     </div>
                                 </form>
                             </div>
