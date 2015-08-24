@@ -292,3 +292,6 @@ Route::get('admin/{locale}', function ($locale) {
 //excel işlemleri için gerekli rotalar
 Route::get('admin/excel','admin\excelController@liste');
 Route::get('admin/excel/{tableName}','admin\excelController@dosyaOlustur');
+
+//Kategoriler Menü
+Route::get('/', 'WelcomeController@gonder');

@@ -46,5 +46,12 @@ class WelcomeController extends Controller {
         $data = DB::select('select yol, url from slider order by id desc');
         return view('site',array('data'=>$data));
     }
+    public function gonder(){
+        global $html;
+        $veri=DB::select('select * from kategoriler ');
+        return view('site', array('ust' => $veri));
+
+    }
+
 
 }
