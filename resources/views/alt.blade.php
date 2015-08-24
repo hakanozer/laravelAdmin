@@ -471,8 +471,8 @@
     <div id="footer-bottom">
         <div  class="container">
             <div class="row">
-                <div class="copy-right col-sm-7 clear">
-                    &copy; 2015  <a class="_blank" href="http://www.magentech.com/">PrestaShop Themes Demo Store</a>. All Rights Reserved. Designed By <a class="_blank" href="http://www.magentech.com">MagenTech.Com</a>
+               <div class="copy-right col-sm-7 clear">
+                   {{$veri->telif}}
                 </div>
 
                 <div class="ps-footer-payment col-lg-5 col-sm-5">
