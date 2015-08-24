@@ -279,6 +279,17 @@ Route::get('admin/anketSoruEkle','admin\anketController@soruEkleAc');
 Route::post('admin/anketSoruEkle','admin\anketController@soruEkle');
 
 
+//Video sayfası
+
+Route::get('admin/video', 'admin\videoController@listele');
+Route::get('admin/videoEkle', 'admin\videoEkleController@index');
+Route::post('admin/videoEkle', 'admin\videoEkleController@ekle');
+Route::get('admin/video/sil/{id}', 'admin\videoController@videoSil');
+Route::get('admin/videoDuz/{id}', 'admin\videoDuzController@videoDuz');
+Route::post('admin/videoDuz/{id}', 'admin\videoDuzController@duzForm');
+
+
+
 Route::get('admin/{locale}', function ($locale) {
     $dil = substr($locale,0,2);
     //$url = "http://".$_SERVER['HTTP_HOST']."".$_SERVER['REQUEST_URI']."";
