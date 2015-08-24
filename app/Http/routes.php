@@ -295,3 +295,6 @@ Route::get('admin/excel/{tableName}','admin\excelController@dosyaOlustur');
 
 //Kategoriler Menü
 Route::get('/', 'WelcomeController@gonder');
+
+//iletisim Getirme
+Route::get('/', 'WelcomeController@iletisimGetir');

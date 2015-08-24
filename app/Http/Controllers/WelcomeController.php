@@ -52,6 +52,11 @@ class WelcomeController extends Controller {
         return view('site', array('ust' => $veri));
 
     }
+    public function iletisimGetir()
+    {
+        $sorgu=DB::select("select * from ayarlar");
+        return view('site',array('sorgu'=>$sorgu));
+    }
 
 
 }

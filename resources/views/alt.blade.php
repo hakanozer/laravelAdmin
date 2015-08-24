@@ -169,30 +169,33 @@
                     <!-- SP Category Slider -->
                     <!-- /SP Category Slider -->
                     <!-- MODULE Block contact infos -->
+                    @if(isset($sorgu))
+                    @foreach($sorgu as $veri)
                     <section id="block_contact_infos" class="contact-infos box-footer">
-                        <h3 class="mod-title">Contact us</h3>
-                        <span style="display:inline-block; padding-bottom:10px;">Maecenas euismod felis et purus consectetur, quis fermentum velition. Aenean egestas quis turpis vehicula.</span>
+                        <h3 class="mod-title">İletişim</h3>
                         <ul class="list-contact">
                             <li>
                                 <label class="label"><i class="fa fa-home"></i></label>
-                                Add:
-                                <span> SP ShoppyStore,  113 Street, Los Angeles</span>
+                                Adres:
+                                <span> {{$veri->adres}}</span>
                             </li>
                             <li>
-                                <label class="label"><i class="fa fa-phone"></i></label>
-                                Tel:
-                                <span>+113 456 7899</span>
+                                 <label class="label"><i class="fa fa-phone"></i></label>
+                                 Tel:
+                                 <span>{{$veri->telefon}}</span>
                             </li>
                             <li>
-                                <label class="label"><i class="fa fa-envelope"></i></label>
-                                Email:
-                                <span><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;%63%6f%6e%74%61%63%74@%73%68%6f%70%70%79%73%74%6f%72%65.%63%6f%6d" >&#x63;&#x6f;&#x6e;&#x74;&#x61;&#x63;&#x74;&#x40;&#x73;&#x68;&#x6f;&#x70;&#x70;&#x79;&#x73;&#x74;&#x6f;&#x72;&#x65;&#x2e;&#x63;&#x6f;&#x6d;</a></span>
+                                 <label class="label"><i class="fa fa-envelope"></i></label>
+                                 Email:
+                                 <span>{{$veri->mail_adres}}</span>
                             </li>
 
                         </ul>
 
 
                     </section>
+                    @endforeach
+                    @endif
                     <!-- /MODULE Block contact infos -->
 
 
