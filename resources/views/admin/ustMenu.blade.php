@@ -1,6 +1,10 @@
 ﻿<?php
-$dil = Session::get('dil');
-App::setLocale($dil);
+$x = \App\Http\Controllers\sessionController::genelkontrol(); if ($x) {  echo $x; exit(); } else{}
+$dil = Session::get('dil'); App::setLocale($dil);
+?>
+<?php
+//$dil = Session::get('dil');
+//App::setLocale($dil);
 
 ?>
 
@@ -72,22 +76,27 @@ App::setLocale($dil);
             <a class="navbar-brand" href="{{ url('admin/anasayfa')  }}">Laravel Admin Panel</a>
         </div>
         <div>
-            <p class="prg">// {{ trans('adminDil.hosgeldinz') }}
+            <p class="prg" style="    margin-top: -10px;"> {{ trans('hosgeldiniz') }}
 
-        @if (Session::get('adi'))
+                @if (Session::get('adi'))
 
-           <a href="{{ url('admin/adminDuzenle')  }}">
-            {{ Session::get('adi')  }}
-            {{ Session::get('soyadi')  }}
-            </a>
+                    <a href="{{ url('admin/adminDuzenle')  }}">
+                        {{ Session::get('adi')  }}
+                        {{ Session::get('soyadi')  }}
+                    </a>
 
-        @endif
+                @endif
 
-        <a href="{{url("admin/tr")}}"><button type="button" name="tr" class="btn btn-link">Tr</button></a>
-        <a href="{{url("admin/en")}}"><button type="button" name="en" class="btn btn-link">En</button></a>
+                <a href="{{url("admin/dil/tr")}}"><button type="button" name="tr" class="btn btn-link">Tr</button></a>
+                <a href="{{url("admin/dil/en")}}"><button type="button" name="en" class="btn btn-link">En</button></a>
 
-        </p>
+
+            </p>
+
+
         </div>
+
+        <!-- /.navbar-header -->
         <!-- /.navbar-header -->
 
         <ul class="nav navbar-top-links navbar-right">
@@ -365,7 +374,7 @@ App::setLocale($dil);
                                           <a href="#"><i class="fa fa-camera-retro fa-fw"></i> {{ trans('adminDil.galeriYonetimi') }}<span class="fa arrow"></span></a>
                                           <ul class="nav nav-second-level">
                                               <li>
-                                                  <a href="{{url('admin/galerilerKategori')}}">{{ trans('adminDil.kategori') }}</a>
+                                                  <a href="{{url('admin/galerikategori')}}">{{ trans('adminDil.kategori') }}</a>
                                               </li>
                                               <li>
                                                   <a href="{{url('admin/galeriler')}}">{{ trans('adminDil.galeriler') }}</a>

@@ -47,9 +47,7 @@ class ayarlarController extends Controller{
             'telefon'=>'required|numeric|digits_between:10,13',
             'fax'=>'required|numeric|digits_between:10,13',
             'gsm'=>'required|numeric|digits_between:10,13',
-            'adres'=>'required|max:500',
-            'telif'=>'required|max:500'
-
+            'adres'=>'required|max:500'
         );
         $dogrulama = \Validator::Make($data,$kural);
         if($dogrulama->fails()){
@@ -74,8 +72,7 @@ class ayarlarController extends Controller{
                 'telefon' => $data["telefon"],
                 'fax' => $data["fax"],
                 'gsm' => $data["gsm"],
-                'adres' => $data["adres"],
-                'telif' => $data["telif"]
+                'adres' => $data["adres"]
                 )
             );
             return \Redirect::to('admin/siteAyarlar');

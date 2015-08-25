@@ -17,6 +17,9 @@ Route::get('home', 'HomeController@index');
 
 
 
+Route::get('sayfa', 'HomeController@sayfa');
+
+
 // üye listeleri alınıyor
 Route::get('uyeler', 'uyeController@uye');
 Route::get('uyeler/sil/{id}','uyeController@sil');
@@ -49,10 +52,6 @@ Route::post("kullanicilar/ekle", "KullanicilarController@ekleForm");
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
-
-//contact sayfası yönlendiriliyor
-Route::get('iletisim','WelcomeController@contactUs');
-Route::post('iletisim','WelcomeController@contactUsKaydet');
 ]);
 
 
@@ -294,7 +293,7 @@ Route::post('admin/videoDuz/{id}', 'admin\videoDuzController@duzForm');
 
 
 
-Route::get('admin/{locale}', function ($locale) {
+Route::get('admin/dil/{locale}', function ($locale) {
     $dil = substr($locale,0,2);
     //$url = "http://".$_SERVER['HTTP_HOST']."".$_SERVER['REQUEST_URI']."";
     Session::put('dil', $dil);
@@ -303,6 +302,8 @@ Route::get('admin/{locale}', function ($locale) {
     //echo "<script> window.history.go(-1);</script>";
     //echo "<meta http-equiv=\"refresh\" content=\"0;url=javascript:history.back()\">";
 });
+
+
 
 //excel işlemleri için gerekli rotalar
 Route::get('admin/excel','admin\excelController@liste');
@@ -313,7 +314,3 @@ Route::get('admin/excel/{tableName}','admin\excelController@dosyaOlustur');
 
 //site onyuz abone ekle
 Route::post('/','WelcomeController@bultenAboneEkle');
-
-//contact sayfası yönlendiriliyor
-Route::get('iletisim','WelcomeController@contactUs');
-Route::post('iletisim','WelcomeController@contactUsKaydet');

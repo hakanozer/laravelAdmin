@@ -168,13 +168,7 @@
 
     <!-- jssor slideri için kulladığımız javascript dosyaları -->
 
-    <script>
-        $(document).ready(function() {
-            $('#dataTables-example').DataTable({
-                responsive: true
-            });
-        });
-    </script>
+
 
 
 <script>

@@ -17,12 +17,10 @@ use App\Http\Controllers\Controller;
 
 class excelController extends Controller {
 
+
     public function liste(){
-
         $sorgu = DB::select("SHOW TABLES");
-
-        return view('admin\excel',array('data'=>$sorgu));
-
+        return view('admin/excel',array('data'=>$sorgu));
     }
 
     public function dosyaOlustur($tableName){
