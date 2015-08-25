@@ -53,7 +53,7 @@ class sessionController
 
         }
         else {
-            return "<script>window.location.href = 'http://localhost:8080/laravelAdmin/admin';</script>";
+            return "<script>window.location.href = '../';</script>";
         }
 
     }
@@ -66,7 +66,7 @@ class sessionController
         $CookieValue = Cookie::get('user');
 
         if(Session::has('email')) {
-            return "<script>window.location.href = 'http://localhost:8080/laravelAdmin/admin/anasayfa';</script>";
+            return "<script>window.location.href = '/admin/anasayfa';</script>";
         }
         else if(Cookie::get('user')){
             session()->regenerate();
@@ -79,7 +79,7 @@ class sessionController
 
             Session::put('adi', $bilgi->adi);
             Session::put('soyadi', $bilgi->soyadi);
-            return "<script>window.location.href = 'http://localhost:8080/laravelAdmin/admin/anasayfa';</script>";
+            return "<script>window.location.href = '/admin/anasayfa';</script>";
         }
         else {  }
 
