@@ -70,5 +70,21 @@ class WelcomeController extends Controller {
         return Redirect::to('/');
     }
 
+    public function contactUs(){
+        $sorgu = $this->iletisimGetir();
+        $veri = $this->gonder();
+        return view('contactUs',array('sorgu'=>$sorgu));
+
+    }
+    public function contactUsKaydet()
+    {
+        $contactBilgi = Input::all();
+
+
+        $contactSonuc = DB::table('iletisim_mesaj')
+            ->insert(['baslik' => $contactBilgi["baslik"],'mail' => $contactBilgi["mail"],'referans_no' => $contactBilgi["referans"],'mesaj' => $contactBilgi["message"], 'tarih' => date('Y-m-d H:i:s')]);
+        return Redirect::to('iletisim');
+    }
+
 
 }

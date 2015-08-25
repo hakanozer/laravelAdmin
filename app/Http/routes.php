@@ -49,6 +49,10 @@ Route::post("kullanicilar/ekle", "KullanicilarController@ekleForm");
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
+
+//contact sayfası yönlendiriliyor
+Route::get('iletisim','WelcomeController@contactUs');
+Route::post('iletisim','WelcomeController@contactUsKaydet');
 ]);
 
 
@@ -309,3 +313,7 @@ Route::get('admin/excel/{tableName}','admin\excelController@dosyaOlustur');
 
 //site onyuz abone ekle
 Route::post('/','WelcomeController@bultenAboneEkle');
+
+//contact sayfası yönlendiriliyor
+Route::get('iletisim','WelcomeController@contactUs');
+Route::post('iletisim','WelcomeController@contactUsKaydet');
