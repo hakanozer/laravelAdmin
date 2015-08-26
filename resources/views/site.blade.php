@@ -806,12 +806,9 @@
                         <!-- SP Slider -->
                         <div class="moduletable  sp-slider electronic">
 
-
-
-
                             <div class="page-title-slider">
                                 <strong>
-                                    <span> Electronics </span>
+                                    <span> İndirimde Olanlar </span>
                                 </strong>
                             </div>
 
@@ -820,28 +817,13 @@
                                 <form method="post" action="http://prestashop.magentech.com/sp_shoppystore/en/products-comparison" class="compare-form">
 
                                     <button type="submit" class="button  bt_compare" >
-
                                         <span>Compare (0)<i class="fa fa-chevron-right right"></i></span>
-
                                     </button>
 
                                     <input type="hidden" name="compare_product_count" class="compare_product_count" value="0" />
-
                                     <input type="hidden" name="compare_product_list" class="compare_product_list" value="" />
 
                                 </form>
-
-
-
-
-
-
-
-
-
-
-
-
 
                                 <div class="page-button top style1">
                                     <div class="control-button">
@@ -849,223 +831,165 @@
                                         <a class="next"><i class="fa fa-angle-right"></i></a>
                                     </div>
                                 </div>
-                                <div class="slider not-js cols-6 preset01-4 preset02-4 preset03-2 preset04-1">
+
+                                <div class="slider cols-6 preset01-4 preset02-4 preset03-2 preset04-1 js-loaded">
                                     <div class="vpo-wrap">
-                                        <div class="vp">
-                                            <div class="vpi-wrap ">
 
 
-
+                                        <div class="vp" style="height: 362px;">
+                                            <div class="vpi-wrap" style="left: 0px;">
+                                             @if(isset($indirimliUrunler))
+                                             @foreach( $indirimliUrunler as $indirimliUrun)
                                                 <div class="item clone">
                                                     <div class="item-wrap">
                                                         <div class="item-image-container item-height">
                                                             <div class="item-img-info ">
-                                                                <div class="new-box">
-                                                                    <span>New</span>
-                                                                </div>
-
                                                                 <div class="sale-box reduced_price">
                                                                     <span>Sale!</span>
                                                                 </div>
-                                                                <a class="product_img_link"
-                                                                   href="http://prestashop.magentech.com/sp_shoppystore/en/electronics/83-xaren-naxe-faceme-timan-chika.html"
-                                                                   title="Xaren naxe faceme"  >
-                                                                    <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/161-home_default/xaren-naxe-faceme-timan-chika.jpg"
-                                                                         alt=""/>
-                                                                    <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/159-home_default/xaren-naxe-faceme-timan-chika.jpg"  alt="Xaren naxe faceme" />
+
+                                                                <a class="product_img_link" href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/58-lorem-ipsum-dolor-sit-ame.html" title="Lorem ipsum dolor sit">
+                                                                    <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/960-home_default/lorem-ipsum-dolor-sit-ame.jpg" alt="Lorem ipsum dolor sit">
+                                                                    <img class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/961-home_default/lorem-ipsum-dolor-sit-ame.jpg" alt="Lorem ipsum dolor sit">
                                                                 </a>
-
-
                                                             </div>
                                                         </div>
-                                                        <div class="item-info ">
-                                                            <div class="item-inner">
-                                                                <div class="info">
 
-                                                                    <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                        <div class="star_content ">
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <meta itemprop="worstRating" content = "0" />
-                                                                            <meta itemprop="ratingValue" content = "0" />
-                                                                            <meta itemprop="bestRating" content = "5" />
-                                                                        </div>
-                                                                        <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
+                                                    <div class="item-info ">
+                                                        <div class="item-inner">
+                                                            <div class="info">
+                                                                <div class="comments_note" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+                                                                    <div class="star_content ">
+                                                                         <div class="star"></div>
+                                                                         <div class="star"></div>
+                                                                         <div class="star"></div>
+                                                                         <div class="star"></div>
+                                                                         <div class="star"></div>
+                                                                         <meta itemprop="worstRating" content="0">
+                                                                         <meta itemprop="ratingValue" content="0">
+                                                                         <meta itemprop="bestRating" content="5">
                                                                     </div>
-
-
-                                                                    <h5 class="item-title">
-                                                                        <a href="http://prestashop.magentech.com/sp_shoppystore/en/electronics/83-xaren-naxe-faceme-timan-chika.html"
-                                                                           title="Xaren naxe faceme"   >
-                                                                            Xaren naxe faceme
-                                                                        </a>
-                                                                    </h5>
-
-
-
+                                                                    <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
                                                                 </div>
 
+                                                                <h5 class="item-title">
+                                                                    <a href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/58-lorem-ipsum-dolor-sit-ame.html" title="Lorem ipsum dolor sit">
+                                                                        {{$indirimliUrun->baslik}}
+                                                                    </a>
+                                                                </h5>
+                                                            </div>
 
-                                                                <div itemprop="offers" itemscope
-                                                                     itemtype="http://schema.org/Offer"
-                                                                     class="content_price">
-									    										    <span itemprop="price"
-                                                                                          class="price product-price">
-								    $ 98.00							    </span>
-                                                                    <meta itemprop="priceCurrency"
-                                                                          content="USD"/>
-
-
-                                                                </div>
-
-
+                                                            <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" class="content_price">
+                                                                <span itemprop="price" class="price product-price">
+                                                                    {{$indirimliUrun->fiyat}}
+                                                                </span>
+                                                                <meta itemprop="priceCurrency" content="USD">
+                                                                <span class="old-price product-price">
+                                                                    {{$indirimliUrun->piyasa_fiyati}}
+                                                                </span>
                                                             </div>
                                                         </div>
+                                                    </div>
                                                     </div>
 
                                                     <div class="item-wrap full">
                                                         <div class="item-image-container item-height">
                                                             <div class="item-img-info ">
-                                                                <div class="new-box">
-                                                                    <span>New</span>
-                                                                </div>
-
                                                                 <div class="sale-box reduced_price">
                                                                     <span>Sale!</span>
                                                                 </div>
-                                                                <a class="product_img_link"
-                                                                   href="http://prestashop.magentech.com/sp_shoppystore/en/electronics/83-xaren-naxe-faceme-timan-chika.html"
-                                                                   title="Xaren naxe faceme"  >
-                                                                    <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/161-home_default/xaren-naxe-faceme-timan-chika.jpg"
-                                                                         alt=""/>
-                                                                    <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/159-home_default/xaren-naxe-faceme-timan-chika.jpg"  alt="Xaren naxe faceme" />
+
+                                                                <a class="product_img_link" href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/58-lorem-ipsum-dolor-sit-ame.html" title="Lorem ipsum dolor sit">
+                                                                    <img class="img_1" src="{{asset("resim/server/php/files/".$indirimliUrun->id."/".$indirimliUrun->adi)}}" alt="Lorem ipsum dolor sit">
+                                                                    <img class="img_0" src="{{asset("resim/server/php/files/".$indirimliUrun->id."/".$indirimliUrun->adi)}}">
                                                                 </a>
-
-
-
                                                             </div>
                                                         </div>
+
                                                         <div class="item-info ">
                                                             <div class="item-inner">
-                                                                <div class="info">
 
-                                                                    <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                        <div class="star_content ">
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <meta itemprop="worstRating" content = "0" />
-                                                                            <meta itemprop="ratingValue" content = "0" />
-                                                                            <meta itemprop="bestRating" content = "5" />
-                                                                        </div>
-                                                                        <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                                    </div>
+                                                             <div class="info">
+                                                                 <div class="comments_note" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+                                                                     <div class="star_content ">
+                                                                         <div class="star"></div>
+                                                                         <div class="star"></div>
+                                                                         <div class="star"></div>
+                                                                         <div class="star"></div>
+                                                                         <div class="star"></div>
+                                                                         <meta itemprop="worstRating" content="0">
+                                                                         <meta itemprop="ratingValue" content="0">
+                                                                         <meta itemprop="bestRating" content="5">
+                                                                     </div>
+                                                                     <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
+                                                                 </div>
 
+                                                                 <h5 class="item-title">
+                                                                     <a href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/58-lorem-ipsum-dolor-sit-ame.html" title="Lorem ipsum dolor sit">
+                                                                         {{$indirimliUrun->baslik}}
+                                                                     </a>
+                                                                 </h5>
+                                                             </div>
 
-                                                                    <h5 class="item-title">
-                                                                        <a href="http://prestashop.magentech.com/sp_shoppystore/en/electronics/83-xaren-naxe-faceme-timan-chika.html"
-                                                                           title="Xaren naxe faceme"   >
-                                                                            Xaren naxe faceme
-                                                                        </a>
-                                                                    </h5>
+                                                            <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" class="content_price">
+                                                                <span itemprop="price" class="price product-price">
+                                                                    {{$indirimliUrun->fiyat}}
+                                                                </span>
+                                                                <meta itemprop="priceCurrency" content="USD">
 
-
-
-                                                                </div>
-
-
-                                                                <div itemprop="offers" itemscope
-                                                                     itemtype="http://schema.org/Offer"
-                                                                     class="content_price">
-									    										    <span itemprop="price"
-                                                                                          class="price product-price">
-								    $ 98.00							    </span>
-                                                                    <meta itemprop="priceCurrency"
-                                                                          content="USD"/>
-
-
-                                                                </div>
-
-
-                                                                <div class="button-container">
-
-
-                                                                    <a class="button ajax_add_to_cart_button cart_button btn btn-default"
-                                                                       href="http://prestashop.magentech.com/sp_shoppystore/en/cart?add=1&amp;id_product=83&amp;token=1a38e74d2f7e496bc2df6d1450f5d997"
-                                                                       rel="nofollow"
-                                                                       title="Add to cart"
-                                                                       data-id-product="83">
-                                                                        Add to Cart
-                                                                    </a>
-
-                                                                    <div class="wrap-box-button">
-
-                                                                        <div class="wishlist">
-                                                                            <a class="addToWishlist  btn-gn wishlistProd_83" data-toggle="tooltip"  title="Add to wishlist" href="#" rel="nofollow" onclick="WishlistCart('wishlist_block_list', 'add', '83', false, 1); return false;">
-
-                                                                            </a>
-                                                                        </div>
-
-
-
-
-                                                                        <div class="compare">
-                                                                            <a class="add_to_compare" title="Add to Compare"
-                                                                               href="http://prestashop.magentech.com/sp_shoppystore/en/electronics/83-xaren-naxe-faceme-timan-chika.html"
-                                                                               data-id-product="83"></a>
-                                                                        </div>
-
-
-                                                                        <!-- <div class="quick-view-wrapper-mobile">
-										    <a class="quick-view-mobile" href="http://prestashop.magentech.com/sp_shoppystore/en/electronics/83-xaren-naxe-faceme-timan-chika.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/electronics/83-xaren-naxe-faceme-timan-chika.html">
-											    <i class="icon-eye-open"></i>
-										    </a>
-									    </div>-->
-                                                                        <div class="qview">
-                                                                            <a class="quick-view btn-gn" href="http://prestashop.magentech.com/sp_shoppystore/en/electronics/83-xaren-naxe-faceme-timan-chika.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/electronics/83-xaren-naxe-faceme-timan-chika.html" title="Quick view">
-                                                                                <span>Quick view</span>
-                                                                            </a>
-                                                                        </div>
-
-                                                                    </div>
-
-
-
-
-
-                                                                </div>
-
-
+                                                                <span class="old-price product-price">
+                                                                    {{$indirimliUrun->piyasa_fiyati}}
+                                                                </span>
                                                             </div>
+
+                                                            <div class="button-container">
+                                                                 <a class="button ajax_add_to_cart_button cart_button btn btn-default" href="http://prestashop.magentech.com/sp_shoppystore/en/cart?add=1&amp;id_product=58&amp;token=1a38e74d2f7e496bc2df6d1450f5d997" rel="nofollow" title="Add to cart" data-id-product="58">
+                                                                     Add to Cart
+                                                                 </a>
+
+                                                                <div class="wrap-box-button">
+
+                                                                    <div class="wishlist">
+                                                                        <a class="addToWishlist  btn-gn wishlistProd_58" data-toggle="tooltip" title="Add to wishlist" href="#" rel="nofollow" onclick="WishlistCart('wishlist_block_list', 'add', '58', false, 1); return false;"></a>
+                                                                    </div>
+
+                                                                    <div class="compare">
+                                                                        <a class="add_to_compare" title="Add to Compare" href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/58-lorem-ipsum-dolor-sit-ame.html" data-id-product="58"></a>
+                                                                    </div>
+
+                                                                    <div class="qview">
+                                                                        <a class="quick-view btn-gn" href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/58-lorem-ipsum-dolor-sit-ame.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/58-lorem-ipsum-dolor-sit-ame.html" title="Quick view">
+                                                                            <span>Quick view</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                    </div>
                                                         </div>
                                                     </div>
 
                                                 </div>
-
-
-
-
-
+                                                 @endforeach
+                                                 @endif
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
+
                             <script type="text/javascript">
                                 //<![CDATA[
-                                jQuery(document).ready(function ($) {
+                                jQuery(document).ready(function ($)
+                                {
                                     ;
-
-                                    (function (element) {
+                                    (function (element)
+                                    {
                                         var $el = $(element);
-
-                                        function runSlider() {
-                                            $('.slider', $el).responsiver({
+                                        function runSlider()
+                                        {
+                                            $('.slider', $el).responsiver(
+                                            {
                                                 interval: 0,
                                                 speed: 800,
                                                 start: 0,
@@ -1074,15 +998,19 @@
                                                 preload: true,
                                                 //fx: 'fade',
                                                 pause: 'hover',
-                                                control: {
+                                                control:
+                                                {
                                                     prev: '#sp_slider_1 .control-button a[class="preview"]',
                                                     next: '#sp_slider_1 .control-button a[class="next"]'
                                                 },
-                                                getColumns: function (_element) {
+                                                getColumns: function (_element)
+                                                {
                                                     var match = $(_element).attr('class').match(/cols-(\d+)/);
-                                                    if (match[1]) {
+                                                    if (match[1])
+                                                    {
                                                         var column = parseInt(match[1]);
-                                                    } else {
+                                                    } else
+                                                    {
                                                         var column = 1;
                                                     }
                                                     if (!column) column = 1;
@@ -1092,34 +1020,36 @@
                                         }
 
                                         var _timer = 0;
-                                        $(window).load(function () {
+                                        $(window).load(function ()
+                                        {
                                             if (_timer) clearTimeout(_timer);
-                                            _timer = setTimeout(function () {
+                                            _timer = setTimeout(function ()
+                                            {
                                                 runSlider();
                                                 $('.sp-loading', $el).remove();
                                                 $el.removeClass('sp-preload');
                                             }, 1000);
                                         });
 
-                                        $('.slider', $el).touchSwipeLeft(function () {
-                                                    $('.slider', $el).responsiver('next');
-                                                }
+                                        $('.slider', $el).touchSwipeLeft(function ()
+                                            {
+                                                $('.slider', $el).responsiver('next');
+                                            }
                                         );
-                                        $('.slider', $el).touchSwipeRight(function () {
-                                                    $('.slider', $el).responsiver('prev');
-                                                }
+                                        $('.slider', $el).touchSwipeRight(function ()
+                                            {
+                                                $('.slider', $el).responsiver('prev');
+                                            }
                                         );
                                     })('#sp_slider_1')
-
-
                                 });
                                 //]]>
                             </script>
-                            <div class="postext-slider">
+                                                        <div class="postext-slider">
 
-                            </div>
+                                                        </div>
                         </div>
-                        <!-- /SP Slider -->
+                                                <!-- /SP Slider -->
 
 
 
@@ -1150,1590 +1080,297 @@
                     <div class="ps-spotlight2 clearfix">
 
                         <!-- SP Slider -->
-                        <div class="moduletable  sp-slider slider-item2">
+                    <div class="moduletable  sp-slider slider-item2">
 
 
 
 
-                            <div class="page-title-slider">
-                                <strong>
-                                    <span>  Jewerly watches </span>
-                                </strong>
-                            </div>
-
-                            <div id="sp_slider_2" class="sp-slider sp-preload" style="">
-                                <div class="sp-loading"></div>
-                                <form method="post" action="http://prestashop.magentech.com/sp_shoppystore/en/products-comparison" class="compare-form">
-
-                                    <button type="submit" class="button  bt_compare" >
-
-                                        <span>Compare (0)<i class="fa fa-chevron-right right"></i></span>
-
-                                    </button>
-
-                                    <input type="hidden" name="compare_product_count" class="compare_product_count" value="0" />
-
-                                    <input type="hidden" name="compare_product_list" class="compare_product_list" value="" />
-
-                                </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                <div class="page-button top style1">
-                                    <div class="control-button">
-                                        <a class="preview"><i class="fa fa-angle-left"></i></a>
-                                        <a class="next"><i class="fa fa-angle-right"></i></a>
-                                    </div>
-                                </div>
-                                <div class="slider not-js cols-6 preset01-4 preset02-4 preset03-2 preset04-1">
-                                    <div class="vpo-wrap">
-                                        <div class="vp">
-                                            <div class="vpi-wrap ">
-                                                <div class="item">
-                                                    <div class="item-wrap">
-                                                        <div class="item-image-container item-height">
-                                                            <div class="item-img-info ">
-                                                                <div class="new-box">
-                                                                    <span>New</span>
-                                                                </div>
-
-                                                                <a class="product_img_link"
-                                                                   href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/73-zase-muten-miten-mukam-pirem.html"
-                                                                   title="Zase muten miten katen mipan"  >
-                                                                    <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/214-home_default/zase-muten-miten-mukam-pirem.jpg"
-                                                                         alt="Zase muten miten katen mipan"/>
-                                                                    <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/215-home_default/zase-muten-miten-mukam-pirem.jpg"  alt="Zase muten miten katen mipan" />
-                                                                </a>
-
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="item-info ">
-                                                            <div class="item-inner">
-                                                                <div class="info">
-
-                                                                    <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                        <div class="star_content ">
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <meta itemprop="worstRating" content = "0" />
-                                                                            <meta itemprop="ratingValue" content = "0" />
-                                                                            <meta itemprop="bestRating" content = "5" />
-                                                                        </div>
-                                                                        <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                                    </div>
-
-
-                                                                    <h5 class="item-title">
-                                                                        <a href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/73-zase-muten-miten-mukam-pirem.html"
-                                                                           title="Zase muten miten katen mipan"   >
-                                                                            Zase muten miten katen
-                                                                        </a>
-                                                                    </h5>
-
-
-
-                                                                </div>
-
-
-                                                                <div itemprop="offers" itemscope
-                                                                     itemtype="http://schema.org/Offer"
-                                                                     class="content_price">
-									    										    <span itemprop="price"
-                                                                                          class="price product-price">
-								    $ 84.00							    </span>
-                                                                    <meta itemprop="priceCurrency"
-                                                                          content="USD"/>
-
-
-                                                                </div>
-
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="item-wrap full">
-                                                        <div class="item-image-container item-height">
-                                                            <div class="item-img-info ">
-                                                                <div class="new-box">
-                                                                    <span>New</span>
-                                                                </div>
-
-                                                                <a class="product_img_link"
-                                                                   href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/73-zase-muten-miten-mukam-pirem.html"
-                                                                   title="Zase muten miten katen mipan"  >
-                                                                    <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/214-home_default/zase-muten-miten-mukam-pirem.jpg"
-                                                                         alt="Zase muten miten katen mipan"/>
-                                                                    <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/215-home_default/zase-muten-miten-mukam-pirem.jpg"  alt="Zase muten miten katen mipan" />
-                                                                </a>
-
-
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="item-info ">
-                                                            <div class="item-inner">
-                                                                <div class="info">
-
-                                                                    <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                        <div class="star_content ">
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <meta itemprop="worstRating" content = "0" />
-                                                                            <meta itemprop="ratingValue" content = "0" />
-                                                                            <meta itemprop="bestRating" content = "5" />
-                                                                        </div>
-                                                                        <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                                    </div>
-
-
-                                                                    <h5 class="item-title">
-                                                                        <a href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/73-zase-muten-miten-mukam-pirem.html"
-                                                                           title="Zase muten miten katen mipan"   >
-                                                                            Zase muten miten katen
-                                                                        </a>
-                                                                    </h5>
-
-
-
-                                                                </div>
-
-
-                                                                <div itemprop="offers" itemscope
-                                                                     itemtype="http://schema.org/Offer"
-                                                                     class="content_price">
-									    										    <span itemprop="price"
-                                                                                          class="price product-price">
-								    $ 84.00							    </span>
-                                                                    <meta itemprop="priceCurrency"
-                                                                          content="USD"/>
-
-
-                                                                </div>
-
-
-                                                                <div class="button-container">
-
-
-                                                                    <a class="button ajax_add_to_cart_button cart_button btn btn-default"
-                                                                       href="http://prestashop.magentech.com/sp_shoppystore/en/cart?add=1&amp;id_product=73&amp;token=1a38e74d2f7e496bc2df6d1450f5d997"
-                                                                       rel="nofollow"
-                                                                       title="Add to cart"
-                                                                       data-id-product="73">
-                                                                        Add to Cart
-                                                                    </a>
-
-                                                                    <div class="wrap-box-button">
-
-                                                                        <div class="wishlist">
-                                                                            <a class="addToWishlist  btn-gn wishlistProd_73" data-toggle="tooltip"  title="Add to wishlist" href="#" rel="nofollow" onclick="WishlistCart('wishlist_block_list', 'add', '73', false, 1); return false;">
-
-                                                                            </a>
-                                                                        </div>
-
-
-
-
-                                                                        <div class="compare">
-                                                                            <a class="add_to_compare" title="Add to Compare"
-                                                                               href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/73-zase-muten-miten-mukam-pirem.html"
-                                                                               data-id-product="73"></a>
-                                                                        </div>
-
-
-                                                                        <!-- <div class="quick-view-wrapper-mobile">
-										    <a class="quick-view-mobile" href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/73-zase-muten-miten-mukam-pirem.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/fashion/73-zase-muten-miten-mukam-pirem.html">
-											    <i class="icon-eye-open"></i>
-										    </a>
-									    </div>-->
-                                                                        <div class="qview">
-                                                                            <a class="quick-view btn-gn" href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/73-zase-muten-miten-mukam-pirem.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/fashion/73-zase-muten-miten-mukam-pirem.html" title="Quick view">
-                                                                                <span>Quick view</span>
-                                                                            </a>
-                                                                        </div>
-
-                                                                    </div>
-
-
-
-
-
-                                                                </div>
-
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
+                                                <div class="page-title-slider">
+                                                    <strong>
+                                                        <span>  ÖNE ÇIKAN ÜRÜNLER </span>
+                                                    </strong>
                                                 </div>
-                                                <div class="item">
-                                                    <div class="item-wrap">
-                                                        <div class="item-image-container item-height">
-                                                            <div class="item-img-info ">
-                                                                <div class="new-box">
-                                                                    <span>New</span>
-                                                                </div>
 
-                                                                <a class="product_img_link"
-                                                                   href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/79-piza-sumas-caca-liten-miren.html"
-                                                                   title="Piza sumas caca"  >
-                                                                    <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/219-home_default/piza-sumas-caca-liten-miren.jpg"
-                                                                         alt="Piza sumas caca"/>
-                                                                    <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/220-home_default/piza-sumas-caca-liten-miren.jpg"  alt="Piza sumas caca" />
-                                                                </a>
+                                                <div id="sp_slider_2" class="sp-slider sp-preload" style="">
+                                                    <div class="sp-loading"></div>
+                                                    <form method="post" action="http://prestashop.magentech.com/sp_shoppystore/en/products-comparison" class="compare-form">
+
+                                                        <button type="submit" class="button  bt_compare" >
+
+                                                            <span>Compare (0)<i class="fa fa-chevron-right right"></i></span>
+
+                                                        </button>
+
+                                                        <input type="hidden" name="compare_product_count" class="compare_product_count" value="0" />
+
+                                                        <input type="hidden" name="compare_product_list" class="compare_product_list" value="" />
+
+                                                    </form>
 
 
-                                                            </div>
+                                                    <div class="page-button top style1">
+                                                        <div class="control-button">
+                                                            <a class="preview"><i class="fa fa-angle-left"></i></a>
+                                                            <a class="next"><i class="fa fa-angle-right"></i></a>
                                                         </div>
-                                                        <div class="item-info ">
-                                                            <div class="item-inner">
-                                                                <div class="info">
+                                                    </div>
+                                                    <div class="slider not-js cols-6 preset01-4 preset02-4 preset03-2 preset04-1">
+                                                        <div class="vpo-wrap">
+                                                            <div class="vp">
+                                                                <div class="vpi-wrap ">
+                                                                 @if(isset($oneCikanUrunler))
+                                                                 @foreach( $oneCikanUrunler as $oneCikanUrun)
+                                                                    <div class="item clone">
+                                                                        <div class="item-wrap">
+                                                                            <div class="item-image-container item-height">
+                                                                                <div class="item-img-info ">
+                                                                                    <div class="new-box">
+                                                                                        <span>New</span>
+                                                                                    </div>
 
-                                                                    <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                        <div class="star_content ">
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <meta itemprop="worstRating" content = "0" />
-                                                                            <meta itemprop="ratingValue" content = "0" />
-                                                                            <meta itemprop="bestRating" content = "5" />
+                                                                                    <a class="product_img_link"
+                                                                                       href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/73-zase-muten-miten-mukam-pirem.html"
+                                                                                       title="Zase muten miten katen mipan"  >
+                                                                                        <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/214-home_default/zase-muten-miten-mukam-pirem.jpg"
+                                                                                             alt="Zase muten miten katen mipan"/>
+                                                                                        <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/215-home_default/zase-muten-miten-mukam-pirem.jpg"  alt="Zase muten miten katen mipan" />
+                                                                                    </a>
+
+
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="item-info ">
+                                                                                <div class="item-inner">
+                                                                                    <div class="info">
+
+                                                                                        <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                                                                                            <div class="star_content ">
+                                                                                                <div class="star"></div>
+                                                                                                <div class="star"></div>
+                                                                                                <div class="star"></div>
+                                                                                                <div class="star"></div>
+                                                                                                <div class="star"></div>
+                                                                                                <meta itemprop="worstRating" content = "0" />
+                                                                                                <meta itemprop="ratingValue" content = "0" />
+                                                                                                <meta itemprop="bestRating" content = "5" />
+                                                                                            </div>
+                                                                                            <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
+                                                                                        </div>
+
+
+                                                                                        <h5 class="item-title">
+                                                                                            <a href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/73-zase-muten-miten-mukam-pirem.html"
+                                                                                               title="Zase muten miten katen mipan"   >
+
+                                                                                            </a>
+                                                                                        </h5>
+
+
+
+                                                                                    </div>
+
+
+                                                                                    <div itemprop="offers" itemscope
+                                                                                         itemtype="http://schema.org/Offer"
+                                                                                         class="content_price">
+                    									    										    <span itemprop="price"
+                                                                                                              class="price product-price">
+                    								    {{$oneCikanUrun->piyasa_fiyati}}						    </span>
+                                                                                        <meta itemprop="priceCurrency"
+                                                                                              content="USD"/>
+
+
+                                                                                    </div>
+
+
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
-                                                                        <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
+
+                                                                        <div class="item-wrap full">
+                                                                            <div class="item-image-container item-height">
+                                                                                <div class="item-img-info ">
+                                                                                    <div class="new-box">
+                                                                                        <span>New</span>
+                                                                                    </div>
+
+                                                                                    <a class="product_img_link"
+                                                                                       href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/73-zase-muten-miten-mukam-pirem.html"
+                                                                                       title="Zase muten miten katen mipan"  >
+                                                                                        <img class="img_1" src="{{asset("resim/server/php/files/".$oneCikanUrun->id."/".$oneCikanUrun->adi)}}"
+                                                                                             alt="Zase muten miten katen mipan"/>
+                                                                                        <img  class="img_0" src="{{asset("resim/server/php/files/".$oneCikanUrun->id."/".$oneCikanUrun->adi)}}"  alt="Zase muten miten katen mipan" />
+                                                                                    </a>
+
+
+
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="item-info ">
+                                                                                <div class="item-inner">
+                                                                                    <div class="info">
+
+                                                                                        <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                                                                                            <div class="star_content ">
+                                                                                                <div class="star"></div>
+                                                                                                <div class="star"></div>
+                                                                                                <div class="star"></div>
+                                                                                                <div class="star"></div>
+                                                                                                <div class="star"></div>
+                                                                                                <meta itemprop="worstRating" content = "0" />
+                                                                                                <meta itemprop="ratingValue" content = "0" />
+                                                                                                <meta itemprop="bestRating" content = "5" />
+                                                                                            </div>
+                                                                                            <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
+                                                                                        </div>
+
+
+                                                                                        <h5 class="item-title">
+                                                                                            <a href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/73-zase-muten-miten-mukam-pirem.html"
+                                                                                               title="Zase muten miten katen mipan"   >
+                                                                                                {{$oneCikanUrun->baslik}}
+                                                                                            </a>
+                                                                                        </h5>
+
+
+
+                                                                                    </div>
+
+
+                                                                                    <div itemprop="offers" itemscope
+                                                                                         itemtype="http://schema.org/Offer"
+                                                                                         class="content_price">
+                    									    										    <span itemprop="price"
+                                                                                                              class="price product-price">
+                    								    {{$oneCikanUrun->fiyat}}							    </span>
+                                                                                        <meta itemprop="priceCurrency"
+                                                                                              content="USD"/>
+
+
+                                                                                    </div>
+
+
+                                                                                    <div class="button-container">
+
+
+                                                                                        <a class="button ajax_add_to_cart_button cart_button btn btn-default"
+                                                                                           href="http://prestashop.magentech.com/sp_shoppystore/en/cart?add=1&amp;id_product=73&amp;token=1a38e74d2f7e496bc2df6d1450f5d997"
+                                                                                           rel="nofollow"
+                                                                                           title="Add to cart"
+                                                                                           data-id-product="73">
+                                                                                            Add to Cart
+                                                                                        </a>
+
+                                                                                        <div class="wrap-box-button">
+
+                                                                                            <div class="wishlist">
+                                                                                                <a class="addToWishlist  btn-gn wishlistProd_73" data-toggle="tooltip"  title="Add to wishlist" href="#" rel="nofollow" onclick="WishlistCart('wishlist_block_list', 'add', '73', false, 1); return false;">
+
+                                                                                                </a>
+                                                                                            </div>
+
+                                                                                            <div class="compare">
+                                                                                                <a class="add_to_compare" title="Add to Compare"
+                                                                                                   href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/73-zase-muten-miten-mukam-pirem.html"
+                                                                                                   data-id-product="73"></a>
+                                                                                            </div>
+
+                                                                                            <div class="qview">
+                                                                                                <a class="quick-view btn-gn" href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/73-zase-muten-miten-mukam-pirem.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/fashion/73-zase-muten-miten-mukam-pirem.html" title="Quick view">
+                                                                                                    <span>Quick view</span>
+                                                                                                </a>
+                                                                                            </div>
+
+                                                                                        </div>
+
+
+
+
+
+                                                                                    </div>
+
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
                                                                     </div>
 
-
-                                                                    <h5 class="item-title">
-                                                                        <a href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/79-piza-sumas-caca-liten-miren.html"
-                                                                           title="Piza sumas caca"   >
-                                                                            Piza sumas caca
-                                                                        </a>
-                                                                    </h5>
-
-
-
+                                                                 @endforeach
+                                                                 @endif
                                                                 </div>
-
-
-                                                                <div itemprop="offers" itemscope
-                                                                     itemtype="http://schema.org/Offer"
-                                                                     class="content_price">
-									    										    <span itemprop="price"
-                                                                                          class="price product-price">
-								    $ 75.00							    </span>
-                                                                    <meta itemprop="priceCurrency"
-                                                                          content="USD"/>
-
-
-                                                                </div>
-
-
                                                             </div>
                                                         </div>
                                                     </div>
-
-                                                    <div class="item-wrap full">
-                                                        <div class="item-image-container item-height">
-                                                            <div class="item-img-info ">
-                                                                <div class="new-box">
-                                                                    <span>New</span>
-                                                                </div>
-
-                                                                <a class="product_img_link"
-                                                                   href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/79-piza-sumas-caca-liten-miren.html"
-                                                                   title="Piza sumas caca"  >
-                                                                    <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/219-home_default/piza-sumas-caca-liten-miren.jpg"
-                                                                         alt="Piza sumas caca"/>
-                                                                    <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/220-home_default/piza-sumas-caca-liten-miren.jpg"  alt="Piza sumas caca" />
-                                                                </a>
-
-
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="item-info ">
-                                                            <div class="item-inner">
-                                                                <div class="info">
-
-                                                                    <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                        <div class="star_content ">
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <meta itemprop="worstRating" content = "0" />
-                                                                            <meta itemprop="ratingValue" content = "0" />
-                                                                            <meta itemprop="bestRating" content = "5" />
-                                                                        </div>
-                                                                        <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                                    </div>
-
-
-                                                                    <h5 class="item-title">
-                                                                        <a href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/79-piza-sumas-caca-liten-miren.html"
-                                                                           title="Piza sumas caca"   >
-                                                                            Piza sumas caca
-                                                                        </a>
-                                                                    </h5>
-
-
-
-                                                                </div>
-
-
-                                                                <div itemprop="offers" itemscope
-                                                                     itemtype="http://schema.org/Offer"
-                                                                     class="content_price">
-									    										    <span itemprop="price"
-                                                                                          class="price product-price">
-								    $ 75.00							    </span>
-                                                                    <meta itemprop="priceCurrency"
-                                                                          content="USD"/>
-
-
-                                                                </div>
-
-
-                                                                <div class="button-container">
-
-
-                                                                    <a class="button ajax_add_to_cart_button cart_button btn btn-default"
-                                                                       href="http://prestashop.magentech.com/sp_shoppystore/en/cart?add=1&amp;id_product=79&amp;token=1a38e74d2f7e496bc2df6d1450f5d997"
-                                                                       rel="nofollow"
-                                                                       title="Add to cart"
-                                                                       data-id-product="79">
-                                                                        Add to Cart
-                                                                    </a>
-
-                                                                    <div class="wrap-box-button">
-
-                                                                        <div class="wishlist">
-                                                                            <a class="addToWishlist  btn-gn wishlistProd_79" data-toggle="tooltip"  title="Add to wishlist" href="#" rel="nofollow" onclick="WishlistCart('wishlist_block_list', 'add', '79', false, 1); return false;">
-
-                                                                            </a>
-                                                                        </div>
-
-
-
-
-                                                                        <div class="compare">
-                                                                            <a class="add_to_compare" title="Add to Compare"
-                                                                               href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/79-piza-sumas-caca-liten-miren.html"
-                                                                               data-id-product="79"></a>
-                                                                        </div>
-
-
-                                                                        <!-- <div class="quick-view-wrapper-mobile">
-										    <a class="quick-view-mobile" href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/79-piza-sumas-caca-liten-miren.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/fashion/79-piza-sumas-caca-liten-miren.html">
-											    <i class="icon-eye-open"></i>
-										    </a>
-									    </div>-->
-                                                                        <div class="qview">
-                                                                            <a class="quick-view btn-gn" href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/79-piza-sumas-caca-liten-miren.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/fashion/79-piza-sumas-caca-liten-miren.html" title="Quick view">
-                                                                                <span>Quick view</span>
-                                                                            </a>
-                                                                        </div>
-
-                                                                    </div>
-
-
-
-
-
-                                                                </div>
-
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
                                                 </div>
-                                                <div class="item">
-                                                    <div class="item-wrap">
-                                                        <div class="item-image-container item-height">
-                                                            <div class="item-img-info ">
-                                                                <div class="new-box">
-                                                                    <span>New</span>
-                                                                </div>
 
-                                                                <a class="product_img_link"
-                                                                   href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/70-piza-caren-mace-mazen-pitem.html"
-                                                                   title="Piza caren mace mazen pitem"  >
-                                                                    <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/224-home_default/piza-caren-mace-mazen-pitem.jpg"
-                                                                         alt="Piza caren mace mazen pitem"/>
-                                                                    <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/225-home_default/piza-caren-mace-mazen-pitem.jpg"  alt="Piza caren mace mazen pitem" />
-                                                                </a>
 
 
-                                                            </div>
-                                                        </div>
-                                                        <div class="item-info ">
-                                                            <div class="item-inner">
-                                                                <div class="info">
 
-                                                                    <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                        <div class="star_content ">
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <meta itemprop="worstRating" content = "0" />
-                                                                            <meta itemprop="ratingValue" content = "0" />
-                                                                            <meta itemprop="bestRating" content = "5" />
-                                                                        </div>
-                                                                        <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                                    </div>
 
 
-                                                                    <h5 class="item-title">
-                                                                        <a href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/70-piza-caren-mace-mazen-pitem.html"
-                                                                           title="Piza caren mace mazen pitem"   >
-                                                                            Piza caren mace mazen
-                                                                        </a>
-                                                                    </h5>
 
 
-
-                                                                </div>
-
-
-                                                                <div itemprop="offers" itemscope
-                                                                     itemtype="http://schema.org/Offer"
-                                                                     class="content_price">
-									    										    <span itemprop="price"
-                                                                                          class="price product-price">
-								    $ 80.00							    </span>
-                                                                    <meta itemprop="priceCurrency"
-                                                                          content="USD"/>
-
-
-                                                                </div>
-
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="item-wrap full">
-                                                        <div class="item-image-container item-height">
-                                                            <div class="item-img-info ">
-                                                                <div class="new-box">
-                                                                    <span>New</span>
-                                                                </div>
-
-                                                                <a class="product_img_link"
-                                                                   href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/70-piza-caren-mace-mazen-pitem.html"
-                                                                   title="Piza caren mace mazen pitem"  >
-                                                                    <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/224-home_default/piza-caren-mace-mazen-pitem.jpg"
-                                                                         alt="Piza caren mace mazen pitem"/>
-                                                                    <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/225-home_default/piza-caren-mace-mazen-pitem.jpg"  alt="Piza caren mace mazen pitem" />
-                                                                </a>
-
-
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="item-info ">
-                                                            <div class="item-inner">
-                                                                <div class="info">
-
-                                                                    <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                        <div class="star_content ">
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <meta itemprop="worstRating" content = "0" />
-                                                                            <meta itemprop="ratingValue" content = "0" />
-                                                                            <meta itemprop="bestRating" content = "5" />
-                                                                        </div>
-                                                                        <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                                    </div>
-
-
-                                                                    <h5 class="item-title">
-                                                                        <a href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/70-piza-caren-mace-mazen-pitem.html"
-                                                                           title="Piza caren mace mazen pitem"   >
-                                                                            Piza caren mace mazen
-                                                                        </a>
-                                                                    </h5>
-
-
-
-                                                                </div>
-
-
-                                                                <div itemprop="offers" itemscope
-                                                                     itemtype="http://schema.org/Offer"
-                                                                     class="content_price">
-									    										    <span itemprop="price"
-                                                                                          class="price product-price">
-								    $ 80.00							    </span>
-                                                                    <meta itemprop="priceCurrency"
-                                                                          content="USD"/>
-
-
-                                                                </div>
-
-
-                                                                <div class="button-container">
-
-
-                                                                    <a class="button ajax_add_to_cart_button cart_button btn btn-default"
-                                                                       href="http://prestashop.magentech.com/sp_shoppystore/en/cart?add=1&amp;id_product=70&amp;token=1a38e74d2f7e496bc2df6d1450f5d997"
-                                                                       rel="nofollow"
-                                                                       title="Add to cart"
-                                                                       data-id-product="70">
-                                                                        Add to Cart
-                                                                    </a>
-
-                                                                    <div class="wrap-box-button">
-
-                                                                        <div class="wishlist">
-                                                                            <a class="addToWishlist  btn-gn wishlistProd_70" data-toggle="tooltip"  title="Add to wishlist" href="#" rel="nofollow" onclick="WishlistCart('wishlist_block_list', 'add', '70', false, 1); return false;">
-
-                                                                            </a>
-                                                                        </div>
-
-
-
-
-                                                                        <div class="compare">
-                                                                            <a class="add_to_compare" title="Add to Compare"
-                                                                               href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/70-piza-caren-mace-mazen-pitem.html"
-                                                                               data-id-product="70"></a>
-                                                                        </div>
-
-
-                                                                        <!-- <div class="quick-view-wrapper-mobile">
-										    <a class="quick-view-mobile" href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/70-piza-caren-mace-mazen-pitem.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/fashion/70-piza-caren-mace-mazen-pitem.html">
-											    <i class="icon-eye-open"></i>
-										    </a>
-									    </div>-->
-                                                                        <div class="qview">
-                                                                            <a class="quick-view btn-gn" href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/70-piza-caren-mace-mazen-pitem.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/fashion/70-piza-caren-mace-mazen-pitem.html" title="Quick view">
-                                                                                <span>Quick view</span>
-                                                                            </a>
-                                                                        </div>
-
-                                                                    </div>
-
-
-
-
-
-                                                                </div>
-
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="item">
-                                                    <div class="item-wrap">
-                                                        <div class="item-image-container item-height">
-                                                            <div class="item-img-info ">
-                                                                <div class="new-box">
-                                                                    <span>New</span>
-                                                                </div>
-
-                                                                <div class="sale-box reduced_price">
-                                                                    <span>Sale!</span>
-                                                                </div>
-                                                                <a class="product_img_link"
-                                                                   href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/82-kazen-rimas-chuman-piten-goren.html"
-                                                                   title="Kazen rimas chuman piten goren"  >
-                                                                    <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/234-home_default/kazen-rimas-chuman-piten-goren.jpg"
-                                                                         alt="Kazen rimas chuman piten goren"/>
-                                                                    <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/235-home_default/kazen-rimas-chuman-piten-goren.jpg"  alt="Kazen rimas chuman piten goren" />
-                                                                </a>
-
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="item-info ">
-                                                            <div class="item-inner">
-                                                                <div class="info">
-
-                                                                    <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                        <div class="star_content ">
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <meta itemprop="worstRating" content = "0" />
-                                                                            <meta itemprop="ratingValue" content = "0" />
-                                                                            <meta itemprop="bestRating" content = "5" />
-                                                                        </div>
-                                                                        <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                                    </div>
-
-
-                                                                    <h5 class="item-title">
-                                                                        <a href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/82-kazen-rimas-chuman-piten-goren.html"
-                                                                           title="Kazen rimas chuman piten goren"   >
-                                                                            Kazen rimas chuman piten
-                                                                        </a>
-                                                                    </h5>
-
-
-
-                                                                </div>
-
-
-                                                                <div itemprop="offers" itemscope
-                                                                     itemtype="http://schema.org/Offer"
-                                                                     class="content_price">
-									    										    <span itemprop="price"
-                                                                                          class="price product-price">
-								    $ 69.00							    </span>
-                                                                    <meta itemprop="priceCurrency"
-                                                                          content="USD"/>
-
-
-                                                                </div>
-
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="item-wrap full">
-                                                        <div class="item-image-container item-height">
-                                                            <div class="item-img-info ">
-                                                                <div class="new-box">
-                                                                    <span>New</span>
-                                                                </div>
-
-                                                                <div class="sale-box reduced_price">
-                                                                    <span>Sale!</span>
-                                                                </div>
-                                                                <a class="product_img_link"
-                                                                   href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/82-kazen-rimas-chuman-piten-goren.html"
-                                                                   title="Kazen rimas chuman piten goren"  >
-                                                                    <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/234-home_default/kazen-rimas-chuman-piten-goren.jpg"
-                                                                         alt="Kazen rimas chuman piten goren"/>
-                                                                    <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/235-home_default/kazen-rimas-chuman-piten-goren.jpg"  alt="Kazen rimas chuman piten goren" />
-                                                                </a>
-
-
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="item-info ">
-                                                            <div class="item-inner">
-                                                                <div class="info">
-
-                                                                    <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                        <div class="star_content ">
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <meta itemprop="worstRating" content = "0" />
-                                                                            <meta itemprop="ratingValue" content = "0" />
-                                                                            <meta itemprop="bestRating" content = "5" />
-                                                                        </div>
-                                                                        <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                                    </div>
-
-
-                                                                    <h5 class="item-title">
-                                                                        <a href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/82-kazen-rimas-chuman-piten-goren.html"
-                                                                           title="Kazen rimas chuman piten goren"   >
-                                                                            Kazen rimas chuman piten
-                                                                        </a>
-                                                                    </h5>
-
-
-
-                                                                </div>
-
-
-                                                                <div itemprop="offers" itemscope
-                                                                     itemtype="http://schema.org/Offer"
-                                                                     class="content_price">
-									    										    <span itemprop="price"
-                                                                                          class="price product-price">
-								    $ 69.00							    </span>
-                                                                    <meta itemprop="priceCurrency"
-                                                                          content="USD"/>
-
-
-                                                                </div>
-
-
-                                                                <div class="button-container">
-
-
-                                                                    <a class="button ajax_add_to_cart_button cart_button btn btn-default"
-                                                                       href="http://prestashop.magentech.com/sp_shoppystore/en/cart?add=1&amp;id_product=82&amp;token=1a38e74d2f7e496bc2df6d1450f5d997"
-                                                                       rel="nofollow"
-                                                                       title="Add to cart"
-                                                                       data-id-product="82">
-                                                                        Add to Cart
-                                                                    </a>
-
-                                                                    <div class="wrap-box-button">
-
-                                                                        <div class="wishlist">
-                                                                            <a class="addToWishlist  btn-gn wishlistProd_82" data-toggle="tooltip"  title="Add to wishlist" href="#" rel="nofollow" onclick="WishlistCart('wishlist_block_list', 'add', '82', false, 1); return false;">
-
-                                                                            </a>
-                                                                        </div>
-
-
-
-
-                                                                        <div class="compare">
-                                                                            <a class="add_to_compare" title="Add to Compare"
-                                                                               href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/82-kazen-rimas-chuman-piten-goren.html"
-                                                                               data-id-product="82"></a>
-                                                                        </div>
-
-
-                                                                        <!-- <div class="quick-view-wrapper-mobile">
-										    <a class="quick-view-mobile" href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/82-kazen-rimas-chuman-piten-goren.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/82-kazen-rimas-chuman-piten-goren.html">
-											    <i class="icon-eye-open"></i>
-										    </a>
-									    </div>-->
-                                                                        <div class="qview">
-                                                                            <a class="quick-view btn-gn" href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/82-kazen-rimas-chuman-piten-goren.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/82-kazen-rimas-chuman-piten-goren.html" title="Quick view">
-                                                                                <span>Quick view</span>
-                                                                            </a>
-                                                                        </div>
-
-                                                                    </div>
-
-
-
-
-
-                                                                </div>
-
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="item">
-                                                    <div class="item-wrap">
-                                                        <div class="item-image-container item-height">
-                                                            <div class="item-img-info ">
-                                                                <div class="new-box">
-                                                                    <span>New</span>
-                                                                </div>
-
-                                                                <a class="product_img_link"
-                                                                   href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/54-jiza-suma-nia-jaren-mizan-seka.html"
-                                                                   title="Jiza suma nia jaren mizan "  >
-                                                                    <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/239-home_default/jiza-suma-nia-jaren-mizan-seka.jpg"
-                                                                         alt="Jiza suma nia jaren mizan "/>
-                                                                    <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/240-home_default/jiza-suma-nia-jaren-mizan-seka.jpg"  alt="Jiza suma nia jaren mizan " />
-                                                                </a>
-
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="item-info ">
-                                                            <div class="item-inner">
-                                                                <div class="info">
-
-                                                                    <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                        <div class="star_content ">
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <meta itemprop="worstRating" content = "0" />
-                                                                            <meta itemprop="ratingValue" content = "0" />
-                                                                            <meta itemprop="bestRating" content = "5" />
-                                                                        </div>
-                                                                        <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                                    </div>
-
-
-                                                                    <h5 class="item-title">
-                                                                        <a href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/54-jiza-suma-nia-jaren-mizan-seka.html"
-                                                                           title="Jiza suma nia jaren mizan "   >
-                                                                            Jiza suma nia jaren
-                                                                        </a>
-                                                                    </h5>
-
-
-
-                                                                </div>
-
-
-                                                                <div itemprop="offers" itemscope
-                                                                     itemtype="http://schema.org/Offer"
-                                                                     class="content_price">
-									    										    <span itemprop="price"
-                                                                                          class="price product-price">
-								    $ 68.00							    </span>
-                                                                    <meta itemprop="priceCurrency"
-                                                                          content="USD"/>
-
-
-                                                                </div>
-
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="item-wrap full">
-                                                        <div class="item-image-container item-height">
-                                                            <div class="item-img-info ">
-                                                                <div class="new-box">
-                                                                    <span>New</span>
-                                                                </div>
-
-                                                                <a class="product_img_link"
-                                                                   href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/54-jiza-suma-nia-jaren-mizan-seka.html"
-                                                                   title="Jiza suma nia jaren mizan "  >
-                                                                    <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/239-home_default/jiza-suma-nia-jaren-mizan-seka.jpg"
-                                                                         alt="Jiza suma nia jaren mizan "/>
-                                                                    <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/240-home_default/jiza-suma-nia-jaren-mizan-seka.jpg"  alt="Jiza suma nia jaren mizan " />
-                                                                </a>
-
-
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="item-info ">
-                                                            <div class="item-inner">
-                                                                <div class="info">
-
-                                                                    <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                        <div class="star_content ">
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <meta itemprop="worstRating" content = "0" />
-                                                                            <meta itemprop="ratingValue" content = "0" />
-                                                                            <meta itemprop="bestRating" content = "5" />
-                                                                        </div>
-                                                                        <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                                    </div>
-
-
-                                                                    <h5 class="item-title">
-                                                                        <a href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/54-jiza-suma-nia-jaren-mizan-seka.html"
-                                                                           title="Jiza suma nia jaren mizan "   >
-                                                                            Jiza suma nia jaren
-                                                                        </a>
-                                                                    </h5>
-
-
-
-                                                                </div>
-
-
-                                                                <div itemprop="offers" itemscope
-                                                                     itemtype="http://schema.org/Offer"
-                                                                     class="content_price">
-									    										    <span itemprop="price"
-                                                                                          class="price product-price">
-								    $ 68.00							    </span>
-                                                                    <meta itemprop="priceCurrency"
-                                                                          content="USD"/>
-
-
-                                                                </div>
-
-
-                                                                <div class="button-container">
-
-
-                                                                    <a class="button ajax_add_to_cart_button cart_button btn btn-default disabled">
-                                                                        Add to Cart
-                                                                    </a>
-
-                                                                    <div class="wrap-box-button">
-
-                                                                        <div class="wishlist">
-                                                                            <a class="addToWishlist  btn-gn wishlistProd_54" data-toggle="tooltip"  title="Add to wishlist" href="#" rel="nofollow" onclick="WishlistCart('wishlist_block_list', 'add', '54', false, 1); return false;">
-
-                                                                            </a>
-                                                                        </div>
-
-
-
-
-                                                                        <div class="compare">
-                                                                            <a class="add_to_compare" title="Add to Compare"
-                                                                               href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/54-jiza-suma-nia-jaren-mizan-seka.html"
-                                                                               data-id-product="54"></a>
-                                                                        </div>
-
-
-                                                                        <!-- <div class="quick-view-wrapper-mobile">
-										    <a class="quick-view-mobile" href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/54-jiza-suma-nia-jaren-mizan-seka.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/fashion/54-jiza-suma-nia-jaren-mizan-seka.html">
-											    <i class="icon-eye-open"></i>
-										    </a>
-									    </div>-->
-                                                                        <div class="qview">
-                                                                            <a class="quick-view btn-gn" href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/54-jiza-suma-nia-jaren-mizan-seka.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/fashion/54-jiza-suma-nia-jaren-mizan-seka.html" title="Quick view">
-                                                                                <span>Quick view</span>
-                                                                            </a>
-                                                                        </div>
-
-                                                                    </div>
-
-
-
-
-
-                                                                </div>
-
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="item">
-                                                    <div class="item-wrap">
-                                                        <div class="item-image-container item-height">
-                                                            <div class="item-img-info ">
-                                                                <div class="new-box">
-                                                                    <span>New</span>
-                                                                </div>
-
-                                                                <a class="product_img_link"
-                                                                   href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/56-jaze-naze-xuna-maze-piten-maxe.html"
-                                                                   title="Jaze naze xuna maze kitem"  >
-                                                                    <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/244-home_default/jaze-naze-xuna-maze-piten-maxe.jpg"
-                                                                         alt="Jaze naze xuna maze kitem"/>
-                                                                    <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/245-home_default/jaze-naze-xuna-maze-piten-maxe.jpg"  alt="Jaze naze xuna maze kitem" />
-                                                                </a>
-
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="item-info ">
-                                                            <div class="item-inner">
-                                                                <div class="info">
-
-                                                                    <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                        <div class="star_content ">
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <meta itemprop="worstRating" content = "0" />
-                                                                            <meta itemprop="ratingValue" content = "0" />
-                                                                            <meta itemprop="bestRating" content = "5" />
-                                                                        </div>
-                                                                        <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                                    </div>
-
-
-                                                                    <h5 class="item-title">
-                                                                        <a href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/56-jaze-naze-xuna-maze-piten-maxe.html"
-                                                                           title="Jaze naze xuna maze kitem"   >
-                                                                            Jaze naze xuna maze kitem
-                                                                        </a>
-                                                                    </h5>
-
-
-
-                                                                </div>
-
-
-                                                                <div itemprop="offers" itemscope
-                                                                     itemtype="http://schema.org/Offer"
-                                                                     class="content_price">
-									    										    <span itemprop="price"
-                                                                                          class="price product-price">
-								    $ 56.00							    </span>
-                                                                    <meta itemprop="priceCurrency"
-                                                                          content="USD"/>
-
-
-                                                                </div>
-
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="item-wrap full">
-                                                        <div class="item-image-container item-height">
-                                                            <div class="item-img-info ">
-                                                                <div class="new-box">
-                                                                    <span>New</span>
-                                                                </div>
-
-                                                                <a class="product_img_link"
-                                                                   href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/56-jaze-naze-xuna-maze-piten-maxe.html"
-                                                                   title="Jaze naze xuna maze kitem"  >
-                                                                    <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/244-home_default/jaze-naze-xuna-maze-piten-maxe.jpg"
-                                                                         alt="Jaze naze xuna maze kitem"/>
-                                                                    <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/245-home_default/jaze-naze-xuna-maze-piten-maxe.jpg"  alt="Jaze naze xuna maze kitem" />
-                                                                </a>
-
-
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="item-info ">
-                                                            <div class="item-inner">
-                                                                <div class="info">
-
-                                                                    <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                        <div class="star_content ">
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <meta itemprop="worstRating" content = "0" />
-                                                                            <meta itemprop="ratingValue" content = "0" />
-                                                                            <meta itemprop="bestRating" content = "5" />
-                                                                        </div>
-                                                                        <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                                    </div>
-
-
-                                                                    <h5 class="item-title">
-                                                                        <a href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/56-jaze-naze-xuna-maze-piten-maxe.html"
-                                                                           title="Jaze naze xuna maze kitem"   >
-                                                                            Jaze naze xuna maze kitem
-                                                                        </a>
-                                                                    </h5>
-
-
-
-                                                                </div>
-
-
-                                                                <div itemprop="offers" itemscope
-                                                                     itemtype="http://schema.org/Offer"
-                                                                     class="content_price">
-									    										    <span itemprop="price"
-                                                                                          class="price product-price">
-								    $ 56.00							    </span>
-                                                                    <meta itemprop="priceCurrency"
-                                                                          content="USD"/>
-
-
-                                                                </div>
-
-
-                                                                <div class="button-container">
-
-
-                                                                    <a class="button ajax_add_to_cart_button cart_button btn btn-default disabled">
-                                                                        Add to Cart
-                                                                    </a>
-
-                                                                    <div class="wrap-box-button">
-
-                                                                        <div class="wishlist">
-                                                                            <a class="addToWishlist  btn-gn wishlistProd_56" data-toggle="tooltip"  title="Add to wishlist" href="#" rel="nofollow" onclick="WishlistCart('wishlist_block_list', 'add', '56', false, 1); return false;">
-
-                                                                            </a>
-                                                                        </div>
-
-
-
-
-                                                                        <div class="compare">
-                                                                            <a class="add_to_compare" title="Add to Compare"
-                                                                               href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/56-jaze-naze-xuna-maze-piten-maxe.html"
-                                                                               data-id-product="56"></a>
-                                                                        </div>
-
-
-                                                                        <!-- <div class="quick-view-wrapper-mobile">
-										    <a class="quick-view-mobile" href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/56-jaze-naze-xuna-maze-piten-maxe.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/fashion/56-jaze-naze-xuna-maze-piten-maxe.html">
-											    <i class="icon-eye-open"></i>
-										    </a>
-									    </div>-->
-                                                                        <div class="qview">
-                                                                            <a class="quick-view btn-gn" href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/56-jaze-naze-xuna-maze-piten-maxe.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/fashion/56-jaze-naze-xuna-maze-piten-maxe.html" title="Quick view">
-                                                                                <span>Quick view</span>
-                                                                            </a>
-                                                                        </div>
-
-                                                                    </div>
-
-
-
-
-
-                                                                </div>
-
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="item">
-                                                    <div class="item-wrap">
-                                                        <div class="item-image-container item-height">
-                                                            <div class="item-img-info ">
-                                                                <div class="new-box">
-                                                                    <span>New</span>
-                                                                </div>
-
-                                                                <a class="product_img_link"
-                                                                   href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/66-guzan-hutem-mizan-pisan-duma.html"
-                                                                   title="Guzan hutem mizan pisan duma"  >
-                                                                    <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/249-home_default/guzan-hutem-mizan-pisan-duma.jpg"
-                                                                         alt="Guzan hutem mizan pisan duma"/>
-                                                                    <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/250-home_default/guzan-hutem-mizan-pisan-duma.jpg"  alt="Guzan hutem mizan pisan duma" />
-                                                                </a>
-
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="item-info ">
-                                                            <div class="item-inner">
-                                                                <div class="info">
-
-                                                                    <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                        <div class="star_content ">
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <meta itemprop="worstRating" content = "0" />
-                                                                            <meta itemprop="ratingValue" content = "0" />
-                                                                            <meta itemprop="bestRating" content = "5" />
-                                                                        </div>
-                                                                        <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                                    </div>
-
-
-                                                                    <h5 class="item-title">
-                                                                        <a href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/66-guzan-hutem-mizan-pisan-duma.html"
-                                                                           title="Guzan hutem mizan pisan duma"   >
-                                                                            Guzan hutem mizan pisan
-                                                                        </a>
-                                                                    </h5>
-
-
-
-                                                                </div>
-
-
-                                                                <div itemprop="offers" itemscope
-                                                                     itemtype="http://schema.org/Offer"
-                                                                     class="content_price">
-									    										    <span itemprop="price"
-                                                                                          class="price product-price">
-								    $ 84.00							    </span>
-                                                                    <meta itemprop="priceCurrency"
-                                                                          content="USD"/>
-
-
-                                                                </div>
-
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="item-wrap full">
-                                                        <div class="item-image-container item-height">
-                                                            <div class="item-img-info ">
-                                                                <div class="new-box">
-                                                                    <span>New</span>
-                                                                </div>
-
-                                                                <a class="product_img_link"
-                                                                   href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/66-guzan-hutem-mizan-pisan-duma.html"
-                                                                   title="Guzan hutem mizan pisan duma"  >
-                                                                    <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/249-home_default/guzan-hutem-mizan-pisan-duma.jpg"
-                                                                         alt="Guzan hutem mizan pisan duma"/>
-                                                                    <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/250-home_default/guzan-hutem-mizan-pisan-duma.jpg"  alt="Guzan hutem mizan pisan duma" />
-                                                                </a>
-
-
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="item-info ">
-                                                            <div class="item-inner">
-                                                                <div class="info">
-
-                                                                    <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                        <div class="star_content ">
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <meta itemprop="worstRating" content = "0" />
-                                                                            <meta itemprop="ratingValue" content = "0" />
-                                                                            <meta itemprop="bestRating" content = "5" />
-                                                                        </div>
-                                                                        <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                                    </div>
-
-
-                                                                    <h5 class="item-title">
-                                                                        <a href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/66-guzan-hutem-mizan-pisan-duma.html"
-                                                                           title="Guzan hutem mizan pisan duma"   >
-                                                                            Guzan hutem mizan pisan
-                                                                        </a>
-                                                                    </h5>
-
-
-
-                                                                </div>
-
-
-                                                                <div itemprop="offers" itemscope
-                                                                     itemtype="http://schema.org/Offer"
-                                                                     class="content_price">
-									    										    <span itemprop="price"
-                                                                                          class="price product-price">
-								    $ 84.00							    </span>
-                                                                    <meta itemprop="priceCurrency"
-                                                                          content="USD"/>
-
-
-                                                                </div>
-
-
-                                                                <div class="button-container">
-
-
-                                                                    <a class="button ajax_add_to_cart_button cart_button btn btn-default"
-                                                                       href="http://prestashop.magentech.com/sp_shoppystore/en/cart?add=1&amp;id_product=66&amp;token=1a38e74d2f7e496bc2df6d1450f5d997"
-                                                                       rel="nofollow"
-                                                                       title="Add to cart"
-                                                                       data-id-product="66">
-                                                                        Add to Cart
-                                                                    </a>
-
-                                                                    <div class="wrap-box-button">
-
-                                                                        <div class="wishlist">
-                                                                            <a class="addToWishlist  btn-gn wishlistProd_66" data-toggle="tooltip"  title="Add to wishlist" href="#" rel="nofollow" onclick="WishlistCart('wishlist_block_list', 'add', '66', false, 1); return false;">
-
-                                                                            </a>
-                                                                        </div>
-
-
-
-
-                                                                        <div class="compare">
-                                                                            <a class="add_to_compare" title="Add to Compare"
-                                                                               href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/66-guzan-hutem-mizan-pisan-duma.html"
-                                                                               data-id-product="66"></a>
-                                                                        </div>
-
-
-                                                                        <!-- <div class="quick-view-wrapper-mobile">
-										    <a class="quick-view-mobile" href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/66-guzan-hutem-mizan-pisan-duma.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/fashion/66-guzan-hutem-mizan-pisan-duma.html">
-											    <i class="icon-eye-open"></i>
-										    </a>
-									    </div>-->
-                                                                        <div class="qview">
-                                                                            <a class="quick-view btn-gn" href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/66-guzan-hutem-mizan-pisan-duma.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/fashion/66-guzan-hutem-mizan-pisan-duma.html" title="Quick view">
-                                                                                <span>Quick view</span>
-                                                                            </a>
-                                                                        </div>
-
-                                                                    </div>
-
-
-
-
-
-                                                                </div>
-
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="item">
-                                                    <div class="item-wrap">
-                                                        <div class="item-image-container item-height">
-                                                            <div class="item-img-info ">
-                                                                <div class="new-box">
-                                                                    <span>New</span>
-                                                                </div>
-
-                                                                <a class="product_img_link"
-                                                                   href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/81-gazen-dima-piten-caxem-miren.html"
-                                                                   title="Gazen dima piten caxem miren"  >
-                                                                    <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/229-home_default/gazen-dima-piten-caxem-miren.jpg"
-                                                                         alt="Gazen dima piten caxem miren"/>
-                                                                    <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/230-home_default/gazen-dima-piten-caxem-miren.jpg"  alt="Gazen dima piten caxem miren" />
-                                                                </a>
-
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="item-info ">
-                                                            <div class="item-inner">
-                                                                <div class="info">
-
-                                                                    <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                        <div class="star_content ">
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <meta itemprop="worstRating" content = "0" />
-                                                                            <meta itemprop="ratingValue" content = "0" />
-                                                                            <meta itemprop="bestRating" content = "5" />
-                                                                        </div>
-                                                                        <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                                    </div>
-
-
-                                                                    <h5 class="item-title">
-                                                                        <a href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/81-gazen-dima-piten-caxem-miren.html"
-                                                                           title="Gazen dima piten caxem miren"   >
-                                                                            Gazen dima piten caxem
-                                                                        </a>
-                                                                    </h5>
-
-
-
-                                                                </div>
-
-
-                                                                <div itemprop="offers" itemscope
-                                                                     itemtype="http://schema.org/Offer"
-                                                                     class="content_price">
-									    										    <span itemprop="price"
-                                                                                          class="price product-price">
-								    $ 86.00							    </span>
-                                                                    <meta itemprop="priceCurrency"
-                                                                          content="USD"/>
-
-
-                                                                </div>
-
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="item-wrap full">
-                                                        <div class="item-image-container item-height">
-                                                            <div class="item-img-info ">
-                                                                <div class="new-box">
-                                                                    <span>New</span>
-                                                                </div>
-
-                                                                <a class="product_img_link"
-                                                                   href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/81-gazen-dima-piten-caxem-miren.html"
-                                                                   title="Gazen dima piten caxem miren"  >
-                                                                    <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/229-home_default/gazen-dima-piten-caxem-miren.jpg"
-                                                                         alt="Gazen dima piten caxem miren"/>
-                                                                    <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/230-home_default/gazen-dima-piten-caxem-miren.jpg"  alt="Gazen dima piten caxem miren" />
-                                                                </a>
-
-
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="item-info ">
-                                                            <div class="item-inner">
-                                                                <div class="info">
-
-                                                                    <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                        <div class="star_content ">
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <meta itemprop="worstRating" content = "0" />
-                                                                            <meta itemprop="ratingValue" content = "0" />
-                                                                            <meta itemprop="bestRating" content = "5" />
-                                                                        </div>
-                                                                        <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                                    </div>
-
-
-                                                                    <h5 class="item-title">
-                                                                        <a href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/81-gazen-dima-piten-caxem-miren.html"
-                                                                           title="Gazen dima piten caxem miren"   >
-                                                                            Gazen dima piten caxem
-                                                                        </a>
-                                                                    </h5>
-
-
-
-                                                                </div>
-
-
-                                                                <div itemprop="offers" itemscope
-                                                                     itemtype="http://schema.org/Offer"
-                                                                     class="content_price">
-									    										    <span itemprop="price"
-                                                                                          class="price product-price">
-								    $ 86.00							    </span>
-                                                                    <meta itemprop="priceCurrency"
-                                                                          content="USD"/>
-
-
-                                                                </div>
-
-
-                                                                <div class="button-container">
-
-
-                                                                    <a class="button ajax_add_to_cart_button cart_button btn btn-default"
-                                                                       href="http://prestashop.magentech.com/sp_shoppystore/en/cart?add=1&amp;id_product=81&amp;token=1a38e74d2f7e496bc2df6d1450f5d997"
-                                                                       rel="nofollow"
-                                                                       title="Add to cart"
-                                                                       data-id-product="81">
-                                                                        Add to Cart
-                                                                    </a>
-
-                                                                    <div class="wrap-box-button">
-
-                                                                        <div class="wishlist">
-                                                                            <a class="addToWishlist  btn-gn wishlistProd_81" data-toggle="tooltip"  title="Add to wishlist" href="#" rel="nofollow" onclick="WishlistCart('wishlist_block_list', 'add', '81', false, 1); return false;">
-
-                                                                            </a>
-                                                                        </div>
-
-
-
-
-                                                                        <div class="compare">
-                                                                            <a class="add_to_compare" title="Add to Compare"
-                                                                               href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/81-gazen-dima-piten-caxem-miren.html"
-                                                                               data-id-product="81"></a>
-                                                                        </div>
-
-
-                                                                        <!-- <div class="quick-view-wrapper-mobile">
-										    <a class="quick-view-mobile" href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/81-gazen-dima-piten-caxem-miren.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/fashion/81-gazen-dima-piten-caxem-miren.html">
-											    <i class="icon-eye-open"></i>
-										    </a>
-									    </div>-->
-                                                                        <div class="qview">
-                                                                            <a class="quick-view btn-gn" href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/81-gazen-dima-piten-caxem-miren.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/fashion/81-gazen-dima-piten-caxem-miren.html" title="Quick view">
-                                                                                <span>Quick view</span>
-                                                                            </a>
-                                                                        </div>
-
-                                                                    </div>
-
-
-
-
-
-                                                                </div>
-
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                <script type="text/javascript">
+                                                    //<![CDATA[
+                                                    jQuery(document).ready(function ($) {
+                                                        ;
+                                                        (function (element) {
+                                                            var $el = $(element);
+
+                                                            function runSlider() {
+                                                                $('.slider', $el).responsiver({
+                                                                    interval: 0,
+                                                                    speed: 800,
+                                                                    start: 0,
+                                                                    step: 1,
+                                                                    circular: true,
+                                                                    preload: true,
+                                                                    //fx: 'fade',
+                                                                    pause: 'hover',
+                                                                    control: {
+                                                                        prev: '#sp_slider_2 .control-button a[class="preview"]',
+                                                                        next: '#sp_slider_2 .control-button a[class="next"]'
+                                                                    },
+                                                                    getColumns: function (_element) {
+                                                                        var match = $(_element).attr('class').match(/cols-(\d+)/);
+                                                                        if (match[1]) {
+                                                                            var column = parseInt(match[1]);
+                                                                        } else {
+                                                                            var column = 1;
+                                                                        }
+                                                                        if (!column) column = 1;
+                                                                        return column;
+                                                                    }
+                                                                });
+                                                            }
+
+                                                            var _timer = 0;
+                                                            $(window).load(function () {
+                                                                if (_timer) clearTimeout(_timer);
+                                                                _timer = setTimeout(function () {
+                                                                    runSlider();
+                                                                    $('.sp-loading', $el).remove();
+                                                                    $el.removeClass('sp-preload');
+                                                                }, 1000);
+                                                            });
+
+                                                            $('.slider', $el).touchSwipeLeft(function () {
+                                                                        $('.slider', $el).responsiver('next');
+                                                                    }
+                                                            );
+                                                            $('.slider', $el).touchSwipeRight(function () {
+                                                                        $('.slider', $el).responsiver('prev');
+                                                                    }
+                                                            );
+                                                        })('#sp_slider_2')
+                                                    });
+                                                    //]]>
+                                                </script>
+                                                <div class="postext-slider">
 
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <script type="text/javascript">
-                                //<![CDATA[
-                                jQuery(document).ready(function ($) {
-                                    ;
-                                    (function (element) {
-                                        var $el = $(element);
-
-                                        function runSlider() {
-                                            $('.slider', $el).responsiver({
-                                                interval: 0,
-                                                speed: 800,
-                                                start: 0,
-                                                step: 1,
-                                                circular: true,
-                                                preload: true,
-                                                //fx: 'fade',
-                                                pause: 'hover',
-                                                control: {
-                                                    prev: '#sp_slider_2 .control-button a[class="preview"]',
-                                                    next: '#sp_slider_2 .control-button a[class="next"]'
-                                                },
-                                                getColumns: function (_element) {
-                                                    var match = $(_element).attr('class').match(/cols-(\d+)/);
-                                                    if (match[1]) {
-                                                        var column = parseInt(match[1]);
-                                                    } else {
-                                                        var column = 1;
-                                                    }
-                                                    if (!column) column = 1;
-                                                    return column;
-                                                }
-                                            });
-                                        }
-
-                                        var _timer = 0;
-                                        $(window).load(function () {
-                                            if (_timer) clearTimeout(_timer);
-                                            _timer = setTimeout(function () {
-                                                runSlider();
-                                                $('.sp-loading', $el).remove();
-                                                $el.removeClass('sp-preload');
-                                            }, 1000);
-                                        });
-
-                                        $('.slider', $el).touchSwipeLeft(function () {
-                                                    $('.slider', $el).responsiver('next');
-                                                }
-                                        );
-                                        $('.slider', $el).touchSwipeRight(function () {
-                                                    $('.slider', $el).responsiver('prev');
-                                                }
-                                        );
-                                    })('#sp_slider_2')
-                                });
-                                //]]>
-                            </script>
-                            <div class="postext-slider">
-
-                            </div>
-                        </div>
                         <!-- /SP Slider -->
 
                         <!-- SP Listing Tabs -->
@@ -2791,7 +1428,7 @@
 
                     <div class="page-title-slider">
                         <strong>
-                            <span> Bags Shoes </span>
+                            <span> ÇOK SATANLAR </span>
                         </strong>
                     </div>
 
@@ -2829,11 +1466,13 @@
                                 <a class="next"><i class="fa fa-angle-right"></i></a>
                             </div>
                         </div>
-                        <div class="slider not-js cols-6 preset01-5 preset02-4 preset03-2 preset04-1">
+                        <div class="slider not-js cols-6 preset01-5 preset0/2-4 preset03-2 preset04-1">
                             <div class="vpo-wrap">
                                 <div class="vp">
                                     <div class="vpi-wrap ">
-                                        <div class="item">
+                                    @if(isset($oneCikanUrunler))
+                                    @foreach($cokSatanUrunler as $cokSatanUrun)
+                                        <div class="item clone">
                                             <div class="item-wrap">
                                                 <div class="item-image-container item-height">
                                                     <div class="item-img-info ">
@@ -2874,7 +1513,7 @@
                                                             <h5 class="item-title">
                                                                 <a href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/2-blouse.html"
                                                                    title="Vose ruka mika "   >
-                                                                    Vose ruka mika
+                                                                    {{$cokSatanUrun->baslik}}
                                                                 </a>
                                                             </h5>
 
@@ -2888,7 +1527,7 @@
                                                              class="content_price">
 									    										    <span itemprop="price"
                                                                                           class="price product-price">
-								    $ 64.00							    </span>
+								    {{$cokSatanUrun->piyasa_fiyati}}						    </span>
                                                             <meta itemprop="priceCurrency"
                                                                   content="USD"/>
 
@@ -2910,9 +1549,9 @@
                                                         <a class="product_img_link"
                                                            href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/2-blouse.html"
                                                            title="Vose ruka mika "  >
-                                                            <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/269-home_default/blouse.jpg"
+                                                            <img class="img_1 " src="{{asset("resim/server/php/files/".$cokSatanUrun->id."/".$cokSatanUrun->adi)}}"
                                                                  alt="Vose ruka mika "/>
-                                                            <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/270-home_default/blouse.jpg"  alt="Vose ruka mika " />
+                                                            <img  class="img_0" src="{{asset("resim/server/php/files/".$cokSatanUrun->id."/".$cokSatanUrun->adi)}}"  alt="Vose ruka mika " />
                                                         </a>
 
 
@@ -2941,7 +1580,7 @@
                                                             <h5 class="item-title">
                                                                 <a href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/2-blouse.html"
                                                                    title="Vose ruka mika "   >
-                                                                    Vose ruka mika
+                                                                     {{$cokSatanUrun->baslik}}
                                                                 </a>
                                                             </h5>
 
@@ -2955,7 +1594,7 @@
                                                              class="content_price">
 									    										    <span itemprop="price"
                                                                                           class="price product-price">
-								    $ 64.00							    </span>
+								    {{$cokSatanUrun->piyasa_fiyati}}						    </span>
                                                             <meta itemprop="priceCurrency"
                                                                   content="USD"/>
 
@@ -3017,742 +1656,12 @@
                                             </div>
 
                                         </div>
-                                        <div class="item">
-                                            <div class="item-wrap">
-                                                <div class="item-image-container item-height">
-                                                    <div class="item-img-info ">
-                                                        <div class="new-box">
-                                                            <span>New</span>
-                                                        </div>
+                                        @endforeach
+                                        @endif
 
-                                                        <a class="product_img_link"
-                                                           href="http://prestashop.magentech.com/sp_shoppystore/en/bags/65-vaze-duma-piten-chukan-miten.html"
-                                                           title="Vaze duma piten keten mipan"  >
-                                                            <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/274-home_default/vaze-duma-piten-chukan-miten.jpg"
-                                                                 alt="Vaze duma piten keten mipan"/>
-                                                            <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/275-home_default/vaze-duma-piten-chukan-miten.jpg"  alt="Vaze duma piten keten mipan" />
-                                                        </a>
 
 
-                                                    </div>
-                                                </div>
-                                                <div class="item-info ">
-                                                    <div class="item-inner">
-                                                        <div class="info">
 
-                                                            <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                <div class="star_content ">
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <meta itemprop="worstRating" content = "0" />
-                                                                    <meta itemprop="ratingValue" content = "0" />
-                                                                    <meta itemprop="bestRating" content = "5" />
-                                                                </div>
-                                                                <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                            </div>
-
-
-                                                            <h5 class="item-title">
-                                                                <a href="http://prestashop.magentech.com/sp_shoppystore/en/bags/65-vaze-duma-piten-chukan-miten.html"
-                                                                   title="Vaze duma piten keten mipan"   >
-                                                                    Vaze duma piten keten
-                                                                </a>
-                                                            </h5>
-
-
-
-                                                        </div>
-
-
-                                                        <div itemprop="offers" itemscope
-                                                             itemtype="http://schema.org/Offer"
-                                                             class="content_price">
-									    										    <span itemprop="price"
-                                                                                          class="price product-price">
-								    $ 94.00							    </span>
-                                                            <meta itemprop="priceCurrency"
-                                                                  content="USD"/>
-
-
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="item-wrap full">
-                                                <div class="item-image-container item-height">
-                                                    <div class="item-img-info ">
-                                                        <div class="new-box">
-                                                            <span>New</span>
-                                                        </div>
-
-                                                        <a class="product_img_link"
-                                                           href="http://prestashop.magentech.com/sp_shoppystore/en/bags/65-vaze-duma-piten-chukan-miten.html"
-                                                           title="Vaze duma piten keten mipan"  >
-                                                            <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/274-home_default/vaze-duma-piten-chukan-miten.jpg"
-                                                                 alt="Vaze duma piten keten mipan"/>
-                                                            <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/275-home_default/vaze-duma-piten-chukan-miten.jpg"  alt="Vaze duma piten keten mipan" />
-                                                        </a>
-
-
-
-                                                    </div>
-                                                </div>
-                                                <div class="item-info ">
-                                                    <div class="item-inner">
-                                                        <div class="info">
-
-                                                            <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                <div class="star_content ">
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <meta itemprop="worstRating" content = "0" />
-                                                                    <meta itemprop="ratingValue" content = "0" />
-                                                                    <meta itemprop="bestRating" content = "5" />
-                                                                </div>
-                                                                <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                            </div>
-
-
-                                                            <h5 class="item-title">
-                                                                <a href="http://prestashop.magentech.com/sp_shoppystore/en/bags/65-vaze-duma-piten-chukan-miten.html"
-                                                                   title="Vaze duma piten keten mipan"   >
-                                                                    Vaze duma piten keten
-                                                                </a>
-                                                            </h5>
-
-
-
-                                                        </div>
-
-
-                                                        <div itemprop="offers" itemscope
-                                                             itemtype="http://schema.org/Offer"
-                                                             class="content_price">
-									    										    <span itemprop="price"
-                                                                                          class="price product-price">
-								    $ 94.00							    </span>
-                                                            <meta itemprop="priceCurrency"
-                                                                  content="USD"/>
-
-
-                                                        </div>
-
-
-                                                        <div class="button-container">
-
-
-                                                            <a class="button ajax_add_to_cart_button cart_button btn btn-default"
-                                                               href="http://prestashop.magentech.com/sp_shoppystore/en/cart?add=1&amp;id_product=65&amp;token=1a38e74d2f7e496bc2df6d1450f5d997"
-                                                               rel="nofollow"
-                                                               title="Add to cart"
-                                                               data-id-product="65">
-                                                                Add to Cart
-                                                            </a>
-
-                                                            <div class="wrap-box-button">
-
-                                                                <div class="wishlist">
-                                                                    <a class="addToWishlist  btn-gn wishlistProd_65" data-toggle="tooltip"  title="Add to wishlist" href="#" rel="nofollow" onclick="WishlistCart('wishlist_block_list', 'add', '65', false, 1); return false;">
-
-                                                                    </a>
-                                                                </div>
-
-
-
-
-                                                                <div class="compare">
-                                                                    <a class="add_to_compare" title="Add to Compare"
-                                                                       href="http://prestashop.magentech.com/sp_shoppystore/en/bags/65-vaze-duma-piten-chukan-miten.html"
-                                                                       data-id-product="65"></a>
-                                                                </div>
-
-
-                                                                <!-- <div class="quick-view-wrapper-mobile">
-										    <a class="quick-view-mobile" href="http://prestashop.magentech.com/sp_shoppystore/en/bags/65-vaze-duma-piten-chukan-miten.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/bags/65-vaze-duma-piten-chukan-miten.html">
-											    <i class="icon-eye-open"></i>
-										    </a>
-									    </div>-->
-                                                                <div class="qview">
-                                                                    <a class="quick-view btn-gn" href="http://prestashop.magentech.com/sp_shoppystore/en/bags/65-vaze-duma-piten-chukan-miten.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/bags/65-vaze-duma-piten-chukan-miten.html" title="Quick view">
-                                                                        <span>Quick view</span>
-                                                                    </a>
-                                                                </div>
-
-                                                            </div>
-
-
-
-
-
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="item">
-                                            <div class="item-wrap">
-                                                <div class="item-image-container item-height">
-                                                    <div class="item-img-info ">
-                                                        <div class="new-box">
-                                                            <span>New</span>
-                                                        </div>
-
-                                                        <a class="product_img_link"
-                                                           href="http://prestashop.magentech.com/sp_shoppystore/en/bags/3-printed-dress.html"
-                                                           title="Pima suna ketun"  >
-                                                            <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/466-home_default/printed-dress.jpg"
-                                                                 alt="Pima suna ketun"/>
-                                                            <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/467-home_default/printed-dress.jpg"  alt="Pima suna ketun" />
-                                                        </a>
-
-
-                                                    </div>
-                                                </div>
-                                                <div class="item-info ">
-                                                    <div class="item-inner">
-                                                        <div class="info">
-
-                                                            <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                <div class="star_content ">
-                                                                    <div class="star star_on"></div>
-                                                                    <div class="star star_on"></div>
-                                                                    <div class="star star_on"></div>
-                                                                    <div class="star star_on"></div>
-                                                                    <div class="star star_on"></div>
-                                                                    <meta itemprop="worstRating" content = "0" />
-                                                                    <meta itemprop="ratingValue" content = "5" />
-                                                                    <meta itemprop="bestRating" content = "5" />
-                                                                </div>
-                                                                <span class="nb-comments"><span itemprop="reviewCount">1</span> Review(s)</span>
-                                                            </div>
-
-
-                                                            <h5 class="item-title">
-                                                                <a href="http://prestashop.magentech.com/sp_shoppystore/en/bags/3-printed-dress.html"
-                                                                   title="Pima suna ketun"   >
-                                                                    Pima suna ketun
-                                                                </a>
-                                                            </h5>
-
-
-
-                                                        </div>
-
-
-                                                        <div itemprop="offers" itemscope
-                                                             itemtype="http://schema.org/Offer"
-                                                             class="content_price">
-									    										    <span itemprop="price"
-                                                                                          class="price product-price">
-								    $ 26.00							    </span>
-                                                            <meta itemprop="priceCurrency"
-                                                                  content="USD"/>
-
-
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="item-wrap full">
-                                                <div class="item-image-container item-height">
-                                                    <div class="item-img-info ">
-                                                        <div class="new-box">
-                                                            <span>New</span>
-                                                        </div>
-
-                                                        <a class="product_img_link"
-                                                           href="http://prestashop.magentech.com/sp_shoppystore/en/bags/3-printed-dress.html"
-                                                           title="Pima suna ketun"  >
-                                                            <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/466-home_default/printed-dress.jpg"
-                                                                 alt="Pima suna ketun"/>
-                                                            <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/467-home_default/printed-dress.jpg"  alt="Pima suna ketun" />
-                                                        </a>
-
-
-
-                                                    </div>
-                                                </div>
-                                                <div class="item-info ">
-                                                    <div class="item-inner">
-                                                        <div class="info">
-
-                                                            <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                <div class="star_content ">
-                                                                    <div class="star star_on"></div>
-                                                                    <div class="star star_on"></div>
-                                                                    <div class="star star_on"></div>
-                                                                    <div class="star star_on"></div>
-                                                                    <div class="star star_on"></div>
-                                                                    <meta itemprop="worstRating" content = "0" />
-                                                                    <meta itemprop="ratingValue" content = "5" />
-                                                                    <meta itemprop="bestRating" content = "5" />
-                                                                </div>
-                                                                <span class="nb-comments"><span itemprop="reviewCount">1</span> Review(s)</span>
-                                                            </div>
-
-
-                                                            <h5 class="item-title">
-                                                                <a href="http://prestashop.magentech.com/sp_shoppystore/en/bags/3-printed-dress.html"
-                                                                   title="Pima suna ketun"   >
-                                                                    Pima suna ketun
-                                                                </a>
-                                                            </h5>
-
-
-
-                                                        </div>
-
-
-                                                        <div itemprop="offers" itemscope
-                                                             itemtype="http://schema.org/Offer"
-                                                             class="content_price">
-									    										    <span itemprop="price"
-                                                                                          class="price product-price">
-								    $ 26.00							    </span>
-                                                            <meta itemprop="priceCurrency"
-                                                                  content="USD"/>
-
-
-                                                        </div>
-
-
-                                                        <div class="button-container">
-
-
-                                                            <a class="button ajax_add_to_cart_button cart_button btn btn-default"
-                                                               href="http://prestashop.magentech.com/sp_shoppystore/en/cart?add=1&amp;id_product=3&amp;token=1a38e74d2f7e496bc2df6d1450f5d997"
-                                                               rel="nofollow"
-                                                               title="Add to cart"
-                                                               data-id-product="3">
-                                                                Add to Cart
-                                                            </a>
-
-                                                            <div class="wrap-box-button">
-
-                                                                <div class="wishlist">
-                                                                    <a class="addToWishlist  btn-gn wishlistProd_3" data-toggle="tooltip"  title="Add to wishlist" href="#" rel="nofollow" onclick="WishlistCart('wishlist_block_list', 'add', '3', false, 1); return false;">
-
-                                                                    </a>
-                                                                </div>
-
-
-
-
-                                                                <div class="compare">
-                                                                    <a class="add_to_compare" title="Add to Compare"
-                                                                       href="http://prestashop.magentech.com/sp_shoppystore/en/bags/3-printed-dress.html"
-                                                                       data-id-product="3"></a>
-                                                                </div>
-
-
-                                                                <!-- <div class="quick-view-wrapper-mobile">
-										    <a class="quick-view-mobile" href="http://prestashop.magentech.com/sp_shoppystore/en/bags/3-printed-dress.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/bags/3-printed-dress.html">
-											    <i class="icon-eye-open"></i>
-										    </a>
-									    </div>-->
-                                                                <div class="qview">
-                                                                    <a class="quick-view btn-gn" href="http://prestashop.magentech.com/sp_shoppystore/en/bags/3-printed-dress.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/bags/3-printed-dress.html" title="Quick view">
-                                                                        <span>Quick view</span>
-                                                                    </a>
-                                                                </div>
-
-                                                            </div>
-
-
-
-
-
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="item">
-                                            <div class="item-wrap">
-                                                <div class="item-image-container item-height">
-                                                    <div class="item-img-info ">
-                                                        <div class="new-box">
-                                                            <span>New</span>
-                                                        </div>
-
-                                                        <a class="product_img_link"
-                                                           href="http://prestashop.magentech.com/sp_shoppystore/en/bags/63-nazem-duka-muten-muka-chulam.html"
-                                                           title="Nazem duka muten loten mutema"  >
-                                                            <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/291-home_default/nazem-duka-muten-muka-chulam.jpg"
-                                                                 alt="Nazem duka muten loten mutema"/>
-                                                            <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/290-home_default/nazem-duka-muten-muka-chulam.jpg"  alt="Nazem duka muten loten mutema" />
-                                                        </a>
-
-
-                                                    </div>
-                                                </div>
-                                                <div class="item-info ">
-                                                    <div class="item-inner">
-                                                        <div class="info">
-
-                                                            <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                <div class="star_content ">
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <meta itemprop="worstRating" content = "0" />
-                                                                    <meta itemprop="ratingValue" content = "0" />
-                                                                    <meta itemprop="bestRating" content = "5" />
-                                                                </div>
-                                                                <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                            </div>
-
-
-                                                            <h5 class="item-title">
-                                                                <a href="http://prestashop.magentech.com/sp_shoppystore/en/bags/63-nazem-duka-muten-muka-chulam.html"
-                                                                   title="Nazem duka muten loten mutema"   >
-                                                                    Nazem duka muten loten
-                                                                </a>
-                                                            </h5>
-
-
-
-                                                        </div>
-
-
-                                                        <div itemprop="offers" itemscope
-                                                             itemtype="http://schema.org/Offer"
-                                                             class="content_price">
-									    										    <span itemprop="price"
-                                                                                          class="price product-price">
-								    $ 99.00							    </span>
-                                                            <meta itemprop="priceCurrency"
-                                                                  content="USD"/>
-
-
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="item-wrap full">
-                                                <div class="item-image-container item-height">
-                                                    <div class="item-img-info ">
-                                                        <div class="new-box">
-                                                            <span>New</span>
-                                                        </div>
-
-                                                        <a class="product_img_link"
-                                                           href="http://prestashop.magentech.com/sp_shoppystore/en/bags/63-nazem-duka-muten-muka-chulam.html"
-                                                           title="Nazem duka muten loten mutema"  >
-                                                            <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/291-home_default/nazem-duka-muten-muka-chulam.jpg"
-                                                                 alt="Nazem duka muten loten mutema"/>
-                                                            <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/290-home_default/nazem-duka-muten-muka-chulam.jpg"  alt="Nazem duka muten loten mutema" />
-                                                        </a>
-
-
-
-                                                    </div>
-                                                </div>
-                                                <div class="item-info ">
-                                                    <div class="item-inner">
-                                                        <div class="info">
-
-                                                            <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                <div class="star_content ">
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <meta itemprop="worstRating" content = "0" />
-                                                                    <meta itemprop="ratingValue" content = "0" />
-                                                                    <meta itemprop="bestRating" content = "5" />
-                                                                </div>
-                                                                <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                            </div>
-
-
-                                                            <h5 class="item-title">
-                                                                <a href="http://prestashop.magentech.com/sp_shoppystore/en/bags/63-nazem-duka-muten-muka-chulam.html"
-                                                                   title="Nazem duka muten loten mutema"   >
-                                                                    Nazem duka muten loten
-                                                                </a>
-                                                            </h5>
-
-
-
-                                                        </div>
-
-
-                                                        <div itemprop="offers" itemscope
-                                                             itemtype="http://schema.org/Offer"
-                                                             class="content_price">
-									    										    <span itemprop="price"
-                                                                                          class="price product-price">
-								    $ 99.00							    </span>
-                                                            <meta itemprop="priceCurrency"
-                                                                  content="USD"/>
-
-
-                                                        </div>
-
-
-                                                        <div class="button-container">
-
-
-                                                            <a class="button ajax_add_to_cart_button cart_button btn btn-default"
-                                                               href="http://prestashop.magentech.com/sp_shoppystore/en/cart?add=1&amp;id_product=63&amp;token=1a38e74d2f7e496bc2df6d1450f5d997"
-                                                               rel="nofollow"
-                                                               title="Add to cart"
-                                                               data-id-product="63">
-                                                                Add to Cart
-                                                            </a>
-
-                                                            <div class="wrap-box-button">
-
-                                                                <div class="wishlist">
-                                                                    <a class="addToWishlist  btn-gn wishlistProd_63" data-toggle="tooltip"  title="Add to wishlist" href="#" rel="nofollow" onclick="WishlistCart('wishlist_block_list', 'add', '63', false, 1); return false;">
-
-                                                                    </a>
-                                                                </div>
-
-
-
-
-                                                                <div class="compare">
-                                                                    <a class="add_to_compare" title="Add to Compare"
-                                                                       href="http://prestashop.magentech.com/sp_shoppystore/en/bags/63-nazem-duka-muten-muka-chulam.html"
-                                                                       data-id-product="63"></a>
-                                                                </div>
-
-
-                                                                <!-- <div class="quick-view-wrapper-mobile">
-										    <a class="quick-view-mobile" href="http://prestashop.magentech.com/sp_shoppystore/en/bags/63-nazem-duka-muten-muka-chulam.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/bags/63-nazem-duka-muten-muka-chulam.html">
-											    <i class="icon-eye-open"></i>
-										    </a>
-									    </div>-->
-                                                                <div class="qview">
-                                                                    <a class="quick-view btn-gn" href="http://prestashop.magentech.com/sp_shoppystore/en/bags/63-nazem-duka-muten-muka-chulam.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/bags/63-nazem-duka-muten-muka-chulam.html" title="Quick view">
-                                                                        <span>Quick view</span>
-                                                                    </a>
-                                                                </div>
-
-                                                            </div>
-
-
-
-
-
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="item">
-                                            <div class="item-wrap">
-                                                <div class="item-image-container item-height">
-                                                    <div class="item-img-info ">
-                                                        <div class="new-box">
-                                                            <span>New</span>
-                                                        </div>
-
-                                                        <a class="product_img_link"
-                                                           href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/64-enas-chuaka-mire-tunase-pikan.html"
-                                                           title="Enas chuaka mire tunase pikan"  >
-                                                            <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/264-home_default/enas-chuaka-mire-tunase-pikan.jpg"
-                                                                 alt="Enas chuaka mire tunase pikan"/>
-                                                            <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/265-home_default/enas-chuaka-mire-tunase-pikan.jpg"  alt="Enas chuaka mire tunase pikan" />
-                                                        </a>
-
-
-                                                    </div>
-                                                </div>
-                                                <div class="item-info ">
-                                                    <div class="item-inner">
-                                                        <div class="info">
-
-                                                            <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                <div class="star_content ">
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <meta itemprop="worstRating" content = "0" />
-                                                                    <meta itemprop="ratingValue" content = "0" />
-                                                                    <meta itemprop="bestRating" content = "5" />
-                                                                </div>
-                                                                <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                            </div>
-
-
-                                                            <h5 class="item-title">
-                                                                <a href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/64-enas-chuaka-mire-tunase-pikan.html"
-                                                                   title="Enas chuaka mire tunase pikan"   >
-                                                                    Enas chuaka mire tunase
-                                                                </a>
-                                                            </h5>
-
-
-
-                                                        </div>
-
-
-                                                        <div itemprop="offers" itemscope
-                                                             itemtype="http://schema.org/Offer"
-                                                             class="content_price">
-									    										    <span itemprop="price"
-                                                                                          class="price product-price">
-								    $ 94.00							    </span>
-                                                            <meta itemprop="priceCurrency"
-                                                                  content="USD"/>
-
-
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="item-wrap full">
-                                                <div class="item-image-container item-height">
-                                                    <div class="item-img-info ">
-                                                        <div class="new-box">
-                                                            <span>New</span>
-                                                        </div>
-
-                                                        <a class="product_img_link"
-                                                           href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/64-enas-chuaka-mire-tunase-pikan.html"
-                                                           title="Enas chuaka mire tunase pikan"  >
-                                                            <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/264-home_default/enas-chuaka-mire-tunase-pikan.jpg"
-                                                                 alt="Enas chuaka mire tunase pikan"/>
-                                                            <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/265-home_default/enas-chuaka-mire-tunase-pikan.jpg"  alt="Enas chuaka mire tunase pikan" />
-                                                        </a>
-
-
-
-                                                    </div>
-                                                </div>
-                                                <div class="item-info ">
-                                                    <div class="item-inner">
-                                                        <div class="info">
-
-                                                            <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                <div class="star_content ">
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <meta itemprop="worstRating" content = "0" />
-                                                                    <meta itemprop="ratingValue" content = "0" />
-                                                                    <meta itemprop="bestRating" content = "5" />
-                                                                </div>
-                                                                <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                            </div>
-
-
-                                                            <h5 class="item-title">
-                                                                <a href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/64-enas-chuaka-mire-tunase-pikan.html"
-                                                                   title="Enas chuaka mire tunase pikan"   >
-                                                                    Enas chuaka mire tunase
-                                                                </a>
-                                                            </h5>
-
-
-
-                                                        </div>
-
-
-                                                        <div itemprop="offers" itemscope
-                                                             itemtype="http://schema.org/Offer"
-                                                             class="content_price">
-									    										    <span itemprop="price"
-                                                                                          class="price product-price">
-								    $ 94.00							    </span>
-                                                            <meta itemprop="priceCurrency"
-                                                                  content="USD"/>
-
-
-                                                        </div>
-
-
-                                                        <div class="button-container">
-
-
-                                                            <a class="button ajax_add_to_cart_button cart_button btn btn-default"
-                                                               href="http://prestashop.magentech.com/sp_shoppystore/en/cart?add=1&amp;id_product=64&amp;token=1a38e74d2f7e496bc2df6d1450f5d997"
-                                                               rel="nofollow"
-                                                               title="Add to cart"
-                                                               data-id-product="64">
-                                                                Add to Cart
-                                                            </a>
-
-                                                            <div class="wrap-box-button">
-
-                                                                <div class="wishlist">
-                                                                    <a class="addToWishlist  btn-gn wishlistProd_64" data-toggle="tooltip"  title="Add to wishlist" href="#" rel="nofollow" onclick="WishlistCart('wishlist_block_list', 'add', '64', false, 1); return false;">
-
-                                                                    </a>
-                                                                </div>
-
-
-
-
-                                                                <div class="compare">
-                                                                    <a class="add_to_compare" title="Add to Compare"
-                                                                       href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/64-enas-chuaka-mire-tunase-pikan.html"
-                                                                       data-id-product="64"></a>
-                                                                </div>
-
-
-                                                                <!-- <div class="quick-view-wrapper-mobile">
-										    <a class="quick-view-mobile" href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/64-enas-chuaka-mire-tunase-pikan.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/64-enas-chuaka-mire-tunase-pikan.html">
-											    <i class="icon-eye-open"></i>
-										    </a>
-									    </div>-->
-                                                                <div class="qview">
-                                                                    <a class="quick-view btn-gn" href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/64-enas-chuaka-mire-tunase-pikan.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/64-enas-chuaka-mire-tunase-pikan.html" title="Quick view">
-                                                                        <span>Quick view</span>
-                                                                    </a>
-                                                                </div>
-
-                                                            </div>
-
-
-
-
-
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -3822,2055 +1731,7 @@
 
                 <!-- SP Listing Tabs -->
 
-                <div class="moduletable  wrapper-listingtab ">
 
-                    <div class="title-module-listingtab">
-
-                        <h3>
-
-                            <span>Top Selling </span>
-
-                        </h3>
-
-                    </div>
-
-
-
-                    <div class="pretext">
-
-
-
-                    </div>
-
-
-
-
-
-
-
-                    <!--[if lt IE 9]>
-
-                    <div id="sp_listing_tabs_1" class="sp-listing-tabs msie lt-ie9 first-load"><![endif]-->
-
-                    <!--[if IE 9]>
-
-                    <div id="sp_listing_tabs_1" class="sp-listing-tabs msie first-load"><![endif]-->
-
-                    <!--[if gt IE 9]><!-->
-
-                    <div id="sp_listing_tabs_1" class="sp-listing-tabs first-load"><!--<![endif]-->
-
-                        <div class="ltabs-wrap">
-
-                            <!--Begin Tabs-->
-
-                            <div class="ltabs-tabs-container"
-
-                                 data-delay="1500"
-
-                                 data-duration="500"
-
-                                 data-effect="flip"
-
-                                 data-ajaxurl="http://prestashop.magentech.com/sp_shoppystore/"
-
-                                 data-modid="1">
-
-                                <div class="ltabs-tabs-wrap">
-
-                                    <span class='ltabs-tab-selected'></span>
-
-                                    <span class='ltabs-tab-arrow'>&#9660;</span>
-
-                                    <ul class="ltabs-tabs cf">
-
-                                        <li class="ltabs-tab   tab-sel tab-loaded "
-
-                                            data-category-id="122"
-
-                                            data-active-content=".items-category-122">
-
-
-
-
-
-                                            <div class="ltabs-tab-img">
-
-                                                <img src="http://prestashop.magentech.com/sp_shoppystore/c/122-category_default/accessories.jpg" alt="Accessories"/>
-
-                                            </div>
-
-			                            			 <span class="ltabs-tab-label">
-
-				Accessories
-
-			    </span>
-
-
-
-
-
-                                        </li>
-
-                                        <li class="ltabs-tab  "
-
-                                            data-category-id="121"
-
-                                            data-active-content=".items-category-121">
-
-
-
-
-
-                                            <div class="ltabs-tab-img">
-
-                                                <img src="http://prestashop.magentech.com/sp_shoppystore/c/121-category_default/bags.jpg" alt="Bags"/>
-
-                                            </div>
-
-			                            			 <span class="ltabs-tab-label">
-
-				Bags
-
-			    </span>
-
-
-
-
-
-                                        </li>
-
-                                        <li class="ltabs-tab  "
-
-                                            data-category-id="143"
-
-                                            data-active-content=".items-category-143">
-
-
-
-
-
-                                            <div class="ltabs-tab-img">
-
-                                                <img src="http://prestashop.magentech.com/sp_shoppystore/c/143-category_default/computer.jpg" alt="Computer"/>
-
-                                            </div>
-
-			                            			 <span class="ltabs-tab-label">
-
-				Computer
-
-			    </span>
-
-
-
-
-
-                                        </li>
-
-                                        <li class="ltabs-tab  "
-
-                                            data-category-id="124"
-
-                                            data-active-content=".items-category-124">
-
-
-
-
-
-                                            <div class="ltabs-tab-img">
-
-                                                <img src="http://prestashop.magentech.com/sp_shoppystore/c/124-category_default/electronics.jpg" alt="Electronics"/>
-
-                                            </div>
-
-			                            			 <span class="ltabs-tab-label">
-
-				Electronics
-
-			    </span>
-
-
-
-
-
-                                        </li>
-
-                                        <li class="ltabs-tab  "
-
-                                            data-category-id="123"
-
-                                            data-active-content=".items-category-123">
-
-
-
-
-
-                                            <div class="ltabs-tab-img">
-
-                                                <img src="http://prestashop.magentech.com/sp_shoppystore/c/123-category_default/fashion.jpg" alt="Fashion"/>
-
-                                            </div>
-
-			                            			 <span class="ltabs-tab-label">
-
-				Fashion
-
-			    </span>
-
-
-
-
-
-                                        </li>
-
-                                        <li class="ltabs-tab  "
-
-                                            data-category-id="172"
-
-                                            data-active-content=".items-category-172">
-
-
-
-
-
-                                            <div class="ltabs-tab-img">
-
-                                                <img src="http://prestashop.magentech.com/sp_shoppystore/c/172-category_default/men.jpg" alt="Men"/>
-
-                                            </div>
-
-			                            			 <span class="ltabs-tab-label">
-
-				Men
-
-			    </span>
-
-
-
-
-
-                                        </li>
-
-                                        <li class="ltabs-tab  "
-
-                                            data-category-id="119"
-
-                                            data-active-content=".items-category-119">
-
-
-
-
-
-                                            <div class="ltabs-tab-img">
-
-                                                <img src="http://prestashop.magentech.com/sp_shoppystore/c/119-category_default/mobile.jpg" alt="Mobile"/>
-
-                                            </div>
-
-			                            			 <span class="ltabs-tab-label">
-
-				Mobile
-
-			    </span>
-
-
-
-
-
-                                        </li>
-
-                                        <li class="ltabs-tab  "
-
-                                            data-category-id="120"
-
-                                            data-active-content=".items-category-120">
-
-
-
-
-
-                                            <div class="ltabs-tab-img">
-
-                                                <img src="http://prestashop.magentech.com/sp_shoppystore/c/120-category_default/sports.jpg" alt="Sports"/>
-
-                                            </div>
-
-			                            			 <span class="ltabs-tab-label">
-
-				Sports
-
-			    </span>
-
-
-
-
-
-                                        </li>
-
-                                        <li class="ltabs-tab  "
-
-                                            data-category-id="128"
-
-                                            data-active-content=".items-category-128">
-
-
-
-
-
-                                            <div class="ltabs-tab-img">
-
-                                                <img src="http://prestashop.magentech.com/sp_shoppystore/c/128-category_default/watches.jpg" alt="Watches"/>
-
-                                            </div>
-
-			                            			 <span class="ltabs-tab-label">
-
-				Watches
-
-			    </span>
-
-
-
-
-
-                                        </li>
-
-                                        <li class="ltabs-tab  "
-
-                                            data-category-id="173"
-
-                                            data-active-content=".items-category-173">
-
-
-
-
-
-                                            <div class="ltabs-tab-img">
-
-                                                <img src="http://prestashop.magentech.com/sp_shoppystore/c/173-category_default/women.jpg" alt="Women"/>
-
-                                            </div>
-
-			                            			 <span class="ltabs-tab-label">
-
-				Women
-
-			    </span>
-
-
-
-
-
-                                        </li>
-
-                                    </ul>
-
-                                </div>
-
-
-
-                            </div>
-
-                            <!-- End Tabs-->
-
-
-
-                            <!--Begin ltabs-items-container-->
-
-                            <div class="ltabs-items-container  show-slider ">
-
-                                <div class="row">
-
-                                    <div class="ltabs-img-des col-lg-3 col-md-3  col-sm-0 col-xs-0">
-
-                                        <a href="#">
-
-                                            <img src="http://prestashop.magentech.com/sp_shoppystore//modules/splistingtabs/views/img/img-listing-left.png" alt="img-listing-left" />
-
-                                        </a>
-
-
-
-                                    </div>
-
-
-
-                                    <div class="col-lg-9 col-md-9 col-md-12 col-xs-12">
-
-                                        <div class="ltabs-items  ltabs-items-selected ltabs-items-loaded  items-category-122">
-
-                                            <div class="ltabs-items-inner ltabs01-4 ltabs02-3 ltabs03-2 ltabs04-1 flip">
-
-
-
-
-
-
-
-                                                <div class="ltabs-item new-ltabs-item">
-
-                                                    <div class="item-inner">
-
-
-
-                                                        <div class="item-image">
-
-                                                            <a class="product_img_link" href="http://prestashop.magentech.com/sp_shoppystore/en/accessories/5-printed-summer-dress.html"
-
-                                                               title="Hure mazte pizan"  >
-
-                                                                <img src="http://prestashop.magentech.com/sp_shoppystore/954-home_default/printed-summer-dress.jpg" alt="Hure mazte pizan"/>
-
-                                                            </a>
-
-
-
-                                                        </div>
-
-                                                        <div class="item-info">
-
-
-
-                                                            <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                <div class="star_content ">
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <meta itemprop="worstRating" content = "0" />
-                                                                    <meta itemprop="ratingValue" content = "0" />
-                                                                    <meta itemprop="bestRating" content = "5" />
-                                                                </div>
-                                                                <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                            </div>
-
-
-                                                            <div class="item-title ">
-
-                                                                <a href="http://prestashop.magentech.com/sp_shoppystore/en/accessories/5-printed-summer-dress.html"
-
-                                                                   title="Hure mazte pizan"   >
-
-                                                                    Hure mazte pizan
-
-                                                                </a>
-
-                                                            </div>
-
-
-
-                                                            <div class="item-price">
-
-
-
-
-
-
-
-
-
-                                                                <div itemprop="offers" itemscope
-
-                                                                     itemtype="http://schema.org/Offer" class="content_price">
-
-				    					<span itemprop="price" class="price product-price">
-
-																    $ 20.51															    </span>
-
-                                                                    <meta itemprop="priceCurrency"
-
-                                                                          content="USD"/>
-
-										    
-
-					    <span class="old-price product-price">
-
-																	    $ 30.51
-
-																    </span>
-
-
-
-
-
-
-
-                                                                </div>
-
-                                                            </div>
-
-
-
-
-
-                                                            <div class="button-container">
-
-                                                                <a class="button ajax_add_to_cart_button btn btn-default"
-
-                                                                   href="http://prestashop.magentech.com/sp_shoppystore/en/cart?add=1&amp;id_product=5&amp;token=1a38e74d2f7e496bc2df6d1450f5d997"
-
-                                                                   rel="nofollow" title="Add to cart"
-
-                                                                   data-id-product="5">
-
-                                                                    <span>Add to cart</span>
-
-                                                                </a>
-
-                                                                <div class="wrap-box-button clearfix">
-
-
-
-
-
-
-
-
-
-
-                                                                    <div class="wishlist">
-                                                                        <a class="addToWishlist  btn-gn wishlistProd_5" data-toggle="tooltip"  title="Add to wishlist" href="#" rel="nofollow" onclick="WishlistCart('wishlist_block_list', 'add', '5', false, 1); return false;">
-
-                                                                        </a>
-                                                                    </div>
-
-
-
-
-                                                                    <div class="compare">
-
-                                                                        <a class="add_to_compare"
-
-                                                                           href="http://prestashop.magentech.com/sp_shoppystore/en/accessories/5-printed-summer-dress.html"
-
-                                                                           data-id-product="5"></a>
-
-                                                                    </div>
-
-                                                                    <div class="quick-view-wrapper-mobile">
-
-                                                                        <a class="quick-view-mobile" href="http://prestashop.magentech.com/sp_shoppystore/en/accessories/5-printed-summer-dress.html"
-
-                                                                           rel="http://prestashop.magentech.com/sp_shoppystore/en/accessories/5-printed-summer-dress.html">
-
-                                                                            <i class="icon-eye-open"></i>
-
-                                                                        </a>
-
-                                                                    </div>
-
-
-
-                                                                    <div class="qview">
-
-                                                                        <a class="quick-view btn-gn" href="http://prestashop.magentech.com/sp_shoppystore/en/accessories/5-printed-summer-dress.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/accessories/5-printed-summer-dress.html" title="Quick view">
-
-                                                                            <span>Quick view</span>
-
-                                                                        </a>
-
-                                                                    </div>
-
-
-
-                                                                </div>
-
-                                                            </div>
-
-                                                        </div>
-
-                                                    </div>
-
-                                                </div>
-
-
-
-                                                <div class="ltabs-item new-ltabs-item">
-
-                                                    <div class="item-inner">
-
-
-
-                                                        <div class="item-image">
-
-                                                            <a class="product_img_link" href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/62-kuzan-suma-piten-runa-miame.html"
-
-                                                               title="Kuzan suma piten"  >
-
-                                                                <img src="http://prestashop.magentech.com/sp_shoppystore/184-home_default/kuzan-suma-piten-runa-miame.jpg" alt="Kuzan suma piten runa miame"/>
-
-                                                            </a>
-
-
-
-                                                        </div>
-
-                                                        <div class="item-info">
-
-
-
-                                                            <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                <div class="star_content ">
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <meta itemprop="worstRating" content = "0" />
-                                                                    <meta itemprop="ratingValue" content = "0" />
-                                                                    <meta itemprop="bestRating" content = "5" />
-                                                                </div>
-                                                                <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                            </div>
-
-
-                                                            <div class="item-title ">
-
-                                                                <a href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/62-kuzan-suma-piten-runa-miame.html"
-
-                                                                   title="Kuzan suma piten"   >
-
-                                                                    Kuzan suma piten
-
-                                                                </a>
-
-                                                            </div>
-
-
-
-                                                            <div class="item-price">
-
-
-
-
-
-
-
-
-
-                                                                <div itemprop="offers" itemscope
-
-                                                                     itemtype="http://schema.org/Offer" class="content_price">
-
-				    					<span itemprop="price" class="price product-price">
-
-																    $ 168.00															    </span>
-
-                                                                    <meta itemprop="priceCurrency"
-
-                                                                          content="USD"/>
-
-
-
-
-
-                                                                </div>
-
-                                                            </div>
-
-
-
-
-
-                                                            <div class="button-container">
-
-                                                                <a class="button ajax_add_to_cart_button btn btn-default"
-
-                                                                   href="http://prestashop.magentech.com/sp_shoppystore/en/cart?add=1&amp;id_product=62&amp;token=1a38e74d2f7e496bc2df6d1450f5d997"
-
-                                                                   rel="nofollow" title="Add to cart"
-
-                                                                   data-id-product="62">
-
-                                                                    <span>Add to cart</span>
-
-                                                                </a>
-
-                                                                <div class="wrap-box-button clearfix">
-
-
-
-
-
-
-
-
-
-
-                                                                    <div class="wishlist">
-                                                                        <a class="addToWishlist  btn-gn wishlistProd_62" data-toggle="tooltip"  title="Add to wishlist" href="#" rel="nofollow" onclick="WishlistCart('wishlist_block_list', 'add', '62', false, 1); return false;">
-
-                                                                        </a>
-                                                                    </div>
-
-
-
-
-                                                                    <div class="compare">
-
-                                                                        <a class="add_to_compare"
-
-                                                                           href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/62-kuzan-suma-piten-runa-miame.html"
-
-                                                                           data-id-product="62"></a>
-
-                                                                    </div>
-
-                                                                    <div class="quick-view-wrapper-mobile">
-
-                                                                        <a class="quick-view-mobile" href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/62-kuzan-suma-piten-runa-miame.html"
-
-                                                                           rel="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/62-kuzan-suma-piten-runa-miame.html">
-
-                                                                            <i class="icon-eye-open"></i>
-
-                                                                        </a>
-
-                                                                    </div>
-
-
-
-                                                                    <div class="qview">
-
-                                                                        <a class="quick-view btn-gn" href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/62-kuzan-suma-piten-runa-miame.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/62-kuzan-suma-piten-runa-miame.html" title="Quick view">
-
-                                                                            <span>Quick view</span>
-
-                                                                        </a>
-
-                                                                    </div>
-
-
-
-                                                                </div>
-
-                                                            </div>
-
-                                                        </div>
-
-                                                    </div>
-
-                                                </div>
-
-
-
-                                                <div class="ltabs-item new-ltabs-item">
-
-                                                    <div class="item-inner">
-
-
-
-                                                        <div class="item-image">
-
-                                                            <a class="product_img_link" href="http://prestashop.magentech.com/sp_shoppystore/en/bags/63-nazem-duka-muten-muka-chulam.html"
-
-                                                               title="Nazem duka muten loten mutema"  >
-
-                                                                <img src="http://prestashop.magentech.com/sp_shoppystore/291-home_default/nazem-duka-muten-muka-chulam.jpg" alt="Nazem duka muten loten mutema"/>
-
-                                                            </a>
-
-
-
-                                                        </div>
-
-                                                        <div class="item-info">
-
-
-
-                                                            <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                <div class="star_content ">
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <meta itemprop="worstRating" content = "0" />
-                                                                    <meta itemprop="ratingValue" content = "0" />
-                                                                    <meta itemprop="bestRating" content = "5" />
-                                                                </div>
-                                                                <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                            </div>
-
-
-                                                            <div class="item-title ">
-
-                                                                <a href="http://prestashop.magentech.com/sp_shoppystore/en/bags/63-nazem-duka-muten-muka-chulam.html"
-
-                                                                   title="Nazem duka muten loten mutema"   >
-
-                                                                    Nazem duka muten loten
-
-                                                                </a>
-
-                                                            </div>
-
-
-
-                                                            <div class="item-price">
-
-
-
-
-
-
-
-
-
-                                                                <div itemprop="offers" itemscope
-
-                                                                     itemtype="http://schema.org/Offer" class="content_price">
-
-				    					<span itemprop="price" class="price product-price">
-
-																    $ 99.00															    </span>
-
-                                                                    <meta itemprop="priceCurrency"
-
-                                                                          content="USD"/>
-
-
-
-
-
-                                                                </div>
-
-                                                            </div>
-
-
-
-
-
-                                                            <div class="button-container">
-
-                                                                <a class="button ajax_add_to_cart_button btn btn-default"
-
-                                                                   href="http://prestashop.magentech.com/sp_shoppystore/en/cart?add=1&amp;id_product=63&amp;token=1a38e74d2f7e496bc2df6d1450f5d997"
-
-                                                                   rel="nofollow" title="Add to cart"
-
-                                                                   data-id-product="63">
-
-                                                                    <span>Add to cart</span>
-
-                                                                </a>
-
-                                                                <div class="wrap-box-button clearfix">
-
-
-
-
-
-
-
-
-
-
-                                                                    <div class="wishlist">
-                                                                        <a class="addToWishlist  btn-gn wishlistProd_63" data-toggle="tooltip"  title="Add to wishlist" href="#" rel="nofollow" onclick="WishlistCart('wishlist_block_list', 'add', '63', false, 1); return false;">
-
-                                                                        </a>
-                                                                    </div>
-
-
-
-
-                                                                    <div class="compare">
-
-                                                                        <a class="add_to_compare"
-
-                                                                           href="http://prestashop.magentech.com/sp_shoppystore/en/bags/63-nazem-duka-muten-muka-chulam.html"
-
-                                                                           data-id-product="63"></a>
-
-                                                                    </div>
-
-                                                                    <div class="quick-view-wrapper-mobile">
-
-                                                                        <a class="quick-view-mobile" href="http://prestashop.magentech.com/sp_shoppystore/en/bags/63-nazem-duka-muten-muka-chulam.html"
-
-                                                                           rel="http://prestashop.magentech.com/sp_shoppystore/en/bags/63-nazem-duka-muten-muka-chulam.html">
-
-                                                                            <i class="icon-eye-open"></i>
-
-                                                                        </a>
-
-                                                                    </div>
-
-
-
-                                                                    <div class="qview">
-
-                                                                        <a class="quick-view btn-gn" href="http://prestashop.magentech.com/sp_shoppystore/en/bags/63-nazem-duka-muten-muka-chulam.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/bags/63-nazem-duka-muten-muka-chulam.html" title="Quick view">
-
-                                                                            <span>Quick view</span>
-
-                                                                        </a>
-
-                                                                    </div>
-
-
-
-                                                                </div>
-
-                                                            </div>
-
-                                                        </div>
-
-                                                    </div>
-
-                                                </div>
-
-
-
-                                                <div class="ltabs-item new-ltabs-item">
-
-                                                    <div class="item-inner">
-
-
-
-                                                        <div class="item-image">
-
-                                                            <a class="product_img_link" href="http://prestashop.magentech.com/sp_shoppystore/en/bags/3-printed-dress.html"
-
-                                                               title="Pima suna ketun"  >
-
-                                                                <img src="http://prestashop.magentech.com/sp_shoppystore/466-home_default/printed-dress.jpg" alt="Pima suna ketun"/>
-
-                                                            </a>
-
-
-
-                                                        </div>
-
-                                                        <div class="item-info">
-
-
-
-                                                            <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                <div class="star_content ">
-                                                                    <div class="star star_on"></div>
-                                                                    <div class="star star_on"></div>
-                                                                    <div class="star star_on"></div>
-                                                                    <div class="star star_on"></div>
-                                                                    <div class="star star_on"></div>
-                                                                    <meta itemprop="worstRating" content = "0" />
-                                                                    <meta itemprop="ratingValue" content = "5" />
-                                                                    <meta itemprop="bestRating" content = "5" />
-                                                                </div>
-                                                                <span class="nb-comments"><span itemprop="reviewCount">1</span> Review(s)</span>
-                                                            </div>
-
-
-                                                            <div class="item-title ">
-
-                                                                <a href="http://prestashop.magentech.com/sp_shoppystore/en/bags/3-printed-dress.html"
-
-                                                                   title="Pima suna ketun"   >
-
-                                                                    Pima suna ketun
-
-                                                                </a>
-
-                                                            </div>
-
-
-
-                                                            <div class="item-price">
-
-
-
-
-
-
-
-
-
-                                                                <div itemprop="offers" itemscope
-
-                                                                     itemtype="http://schema.org/Offer" class="content_price">
-
-				    					<span itemprop="price" class="price product-price">
-
-																    $ 26.00															    </span>
-
-                                                                    <meta itemprop="priceCurrency"
-
-                                                                          content="USD"/>
-
-
-
-
-
-                                                                </div>
-
-                                                            </div>
-
-
-
-
-
-                                                            <div class="button-container">
-
-                                                                <a class="button ajax_add_to_cart_button btn btn-default"
-
-                                                                   href="http://prestashop.magentech.com/sp_shoppystore/en/cart?add=1&amp;id_product=3&amp;token=1a38e74d2f7e496bc2df6d1450f5d997"
-
-                                                                   rel="nofollow" title="Add to cart"
-
-                                                                   data-id-product="3">
-
-                                                                    <span>Add to cart</span>
-
-                                                                </a>
-
-                                                                <div class="wrap-box-button clearfix">
-
-
-
-
-
-
-
-
-
-
-                                                                    <div class="wishlist">
-                                                                        <a class="addToWishlist  btn-gn wishlistProd_3" data-toggle="tooltip"  title="Add to wishlist" href="#" rel="nofollow" onclick="WishlistCart('wishlist_block_list', 'add', '3', false, 1); return false;">
-
-                                                                        </a>
-                                                                    </div>
-
-
-
-
-                                                                    <div class="compare">
-
-                                                                        <a class="add_to_compare"
-
-                                                                           href="http://prestashop.magentech.com/sp_shoppystore/en/bags/3-printed-dress.html"
-
-                                                                           data-id-product="3"></a>
-
-                                                                    </div>
-
-                                                                    <div class="quick-view-wrapper-mobile">
-
-                                                                        <a class="quick-view-mobile" href="http://prestashop.magentech.com/sp_shoppystore/en/bags/3-printed-dress.html"
-
-                                                                           rel="http://prestashop.magentech.com/sp_shoppystore/en/bags/3-printed-dress.html">
-
-                                                                            <i class="icon-eye-open"></i>
-
-                                                                        </a>
-
-                                                                    </div>
-
-
-
-                                                                    <div class="qview">
-
-                                                                        <a class="quick-view btn-gn" href="http://prestashop.magentech.com/sp_shoppystore/en/bags/3-printed-dress.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/bags/3-printed-dress.html" title="Quick view">
-
-                                                                            <span>Quick view</span>
-
-                                                                        </a>
-
-                                                                    </div>
-
-
-
-                                                                </div>
-
-                                                            </div>
-
-                                                        </div>
-
-                                                    </div>
-
-                                                </div>
-
-
-
-                                                <div class="ltabs-item new-ltabs-item">
-
-                                                    <div class="item-inner">
-
-
-
-                                                        <div class="item-image">
-
-                                                            <a class="product_img_link" href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/61-saze-mute-rikn-mitra-poren-sire.html"
-
-                                                               title="Saze mute rik"  >
-
-                                                                <img src="http://prestashop.magentech.com/sp_shoppystore/165-home_default/saze-mute-rikn-mitra-poren-sire.jpg" alt="Saze mute rikn liten nace rika"/>
-
-                                                            </a>
-
-
-
-                                                        </div>
-
-                                                        <div class="item-info">
-
-
-
-                                                            <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                <div class="star_content ">
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <meta itemprop="worstRating" content = "0" />
-                                                                    <meta itemprop="ratingValue" content = "0" />
-                                                                    <meta itemprop="bestRating" content = "5" />
-                                                                </div>
-                                                                <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                            </div>
-
-
-                                                            <div class="item-title ">
-
-                                                                <a href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/61-saze-mute-rikn-mitra-poren-sire.html"
-
-                                                                   title="Saze mute rik"   >
-
-                                                                    Saze mute rik
-
-                                                                </a>
-
-                                                            </div>
-
-
-
-                                                            <div class="item-price">
-
-
-
-
-
-
-
-
-
-                                                                <div itemprop="offers" itemscope
-
-                                                                     itemtype="http://schema.org/Offer" class="content_price">
-
-				    					<span itemprop="price" class="price product-price">
-
-																    $ 84.00															    </span>
-
-                                                                    <meta itemprop="priceCurrency"
-
-                                                                          content="USD"/>
-
-
-
-
-
-                                                                </div>
-
-                                                            </div>
-
-
-
-
-
-                                                            <div class="button-container">
-
-                                                                <a class="button ajax_add_to_cart_button btn btn-default"
-
-                                                                   href="http://prestashop.magentech.com/sp_shoppystore/en/cart?add=1&amp;id_product=61&amp;token=1a38e74d2f7e496bc2df6d1450f5d997"
-
-                                                                   rel="nofollow" title="Add to cart"
-
-                                                                   data-id-product="61">
-
-                                                                    <span>Add to cart</span>
-
-                                                                </a>
-
-                                                                <div class="wrap-box-button clearfix">
-
-
-
-
-
-
-
-
-
-
-                                                                    <div class="wishlist">
-                                                                        <a class="addToWishlist  btn-gn wishlistProd_61" data-toggle="tooltip"  title="Add to wishlist" href="#" rel="nofollow" onclick="WishlistCart('wishlist_block_list', 'add', '61', false, 1); return false;">
-
-                                                                        </a>
-                                                                    </div>
-
-
-
-
-                                                                    <div class="compare">
-
-                                                                        <a class="add_to_compare"
-
-                                                                           href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/61-saze-mute-rikn-mitra-poren-sire.html"
-
-                                                                           data-id-product="61"></a>
-
-                                                                    </div>
-
-                                                                    <div class="quick-view-wrapper-mobile">
-
-                                                                        <a class="quick-view-mobile" href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/61-saze-mute-rikn-mitra-poren-sire.html"
-
-                                                                           rel="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/61-saze-mute-rikn-mitra-poren-sire.html">
-
-                                                                            <i class="icon-eye-open"></i>
-
-                                                                        </a>
-
-                                                                    </div>
-
-
-
-                                                                    <div class="qview">
-
-                                                                        <a class="quick-view btn-gn" href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/61-saze-mute-rikn-mitra-poren-sire.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/61-saze-mute-rikn-mitra-poren-sire.html" title="Quick view">
-
-                                                                            <span>Quick view</span>
-
-                                                                        </a>
-
-                                                                    </div>
-
-
-
-                                                                </div>
-
-                                                            </div>
-
-                                                        </div>
-
-                                                    </div>
-
-                                                </div>
-
-
-
-                                                <div class="ltabs-item new-ltabs-item">
-
-                                                    <div class="item-inner">
-
-
-
-                                                        <div class="item-image">
-
-                                                            <a class="product_img_link" href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/2-blouse.html"
-
-                                                               title="Vose ruka mika "  >
-
-                                                                <img src="http://prestashop.magentech.com/sp_shoppystore/269-home_default/blouse.jpg" alt="Vose ruka mika "/>
-
-                                                            </a>
-
-
-
-                                                        </div>
-
-                                                        <div class="item-info">
-
-
-
-                                                            <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                                <div class="star_content ">
-                                                                    <div class="star star_on"></div>
-                                                                    <div class="star star_on"></div>
-                                                                    <div class="star star_on"></div>
-                                                                    <div class="star star_on"></div>
-                                                                    <div class="star"></div>
-                                                                    <meta itemprop="worstRating" content = "0" />
-                                                                    <meta itemprop="ratingValue" content = "4.3" />
-                                                                    <meta itemprop="bestRating" content = "5" />
-                                                                </div>
-                                                                <span class="nb-comments"><span itemprop="reviewCount">3</span> Review(s)</span>
-                                                            </div>
-
-
-                                                            <div class="item-title ">
-
-                                                                <a href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/2-blouse.html"
-
-                                                                   title="Vose ruka mika "   >
-
-                                                                    Vose ruka mika
-
-                                                                </a>
-
-                                                            </div>
-
-
-
-                                                            <div class="item-price">
-
-
-
-
-
-
-
-
-
-                                                                <div itemprop="offers" itemscope
-
-                                                                     itemtype="http://schema.org/Offer" class="content_price">
-
-				    					<span itemprop="price" class="price product-price">
-
-																    $ 64.00															    </span>
-
-                                                                    <meta itemprop="priceCurrency"
-
-                                                                          content="USD"/>
-
-
-
-
-
-                                                                </div>
-
-                                                            </div>
-
-
-
-
-
-                                                            <div class="button-container">
-
-                                                                <a class="button ajax_add_to_cart_button btn btn-default"
-
-                                                                   href="http://prestashop.magentech.com/sp_shoppystore/en/cart?add=1&amp;id_product=2&amp;token=1a38e74d2f7e496bc2df6d1450f5d997"
-
-                                                                   rel="nofollow" title="Add to cart"
-
-                                                                   data-id-product="2">
-
-                                                                    <span>Add to cart</span>
-
-                                                                </a>
-
-                                                                <div class="wrap-box-button clearfix">
-
-
-
-
-
-
-
-
-
-
-                                                                    <div class="wishlist">
-                                                                        <a class="addToWishlist  btn-gn wishlistProd_2" data-toggle="tooltip"  title="Add to wishlist" href="#" rel="nofollow" onclick="WishlistCart('wishlist_block_list', 'add', '2', false, 1); return false;">
-
-                                                                        </a>
-                                                                    </div>
-
-
-
-
-                                                                    <div class="compare">
-
-                                                                        <a class="add_to_compare"
-
-                                                                           href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/2-blouse.html"
-
-                                                                           data-id-product="2"></a>
-
-                                                                    </div>
-
-                                                                    <div class="quick-view-wrapper-mobile">
-
-                                                                        <a class="quick-view-mobile" href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/2-blouse.html"
-
-                                                                           rel="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/2-blouse.html">
-
-                                                                            <i class="icon-eye-open"></i>
-
-                                                                        </a>
-
-                                                                    </div>
-
-
-
-                                                                    <div class="qview">
-
-                                                                        <a class="quick-view btn-gn" href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/2-blouse.html" rel="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/2-blouse.html" title="Quick view">
-
-                                                                            <span>Quick view</span>
-
-                                                                        </a>
-
-                                                                    </div>
-
-
-
-                                                                </div>
-
-                                                            </div>
-
-                                                        </div>
-
-                                                    </div>
-
-                                                </div>
-
-
-
-
-
-                                            </div>
-
-
-
-                                        </div>
-
-                                        <div class="ltabs-items   items-category-121">
-
-                                            <div class="ltabs-items-inner ltabs01-4 ltabs02-3 ltabs03-2 ltabs04-1 flip">
-
-                                                <div class="ltabs-loading"></div>
-
-                                            </div>
-
-
-
-                                        </div>
-
-                                        <div class="ltabs-items   items-category-143">
-
-                                            <div class="ltabs-items-inner ltabs01-4 ltabs02-3 ltabs03-2 ltabs04-1 flip">
-
-                                                <div class="ltabs-loading"></div>
-
-                                            </div>
-
-
-
-                                        </div>
-
-                                        <div class="ltabs-items   items-category-124">
-
-                                            <div class="ltabs-items-inner ltabs01-4 ltabs02-3 ltabs03-2 ltabs04-1 flip">
-
-                                                <div class="ltabs-loading"></div>
-
-                                            </div>
-
-
-
-                                        </div>
-
-                                        <div class="ltabs-items   items-category-123">
-
-                                            <div class="ltabs-items-inner ltabs01-4 ltabs02-3 ltabs03-2 ltabs04-1 flip">
-
-                                                <div class="ltabs-loading"></div>
-
-                                            </div>
-
-
-
-                                        </div>
-
-                                        <div class="ltabs-items   items-category-172">
-
-                                            <div class="ltabs-items-inner ltabs01-4 ltabs02-3 ltabs03-2 ltabs04-1 flip">
-
-                                                <div class="ltabs-loading"></div>
-
-                                            </div>
-
-
-
-                                        </div>
-
-                                        <div class="ltabs-items   items-category-119">
-
-                                            <div class="ltabs-items-inner ltabs01-4 ltabs02-3 ltabs03-2 ltabs04-1 flip">
-
-                                                <div class="ltabs-loading"></div>
-
-                                            </div>
-
-
-
-                                        </div>
-
-                                        <div class="ltabs-items   items-category-120">
-
-                                            <div class="ltabs-items-inner ltabs01-4 ltabs02-3 ltabs03-2 ltabs04-1 flip">
-
-                                                <div class="ltabs-loading"></div>
-
-                                            </div>
-
-
-
-                                        </div>
-
-                                        <div class="ltabs-items   items-category-128">
-
-                                            <div class="ltabs-items-inner ltabs01-4 ltabs02-3 ltabs03-2 ltabs04-1 flip">
-
-                                                <div class="ltabs-loading"></div>
-
-                                            </div>
-
-
-
-                                        </div>
-
-                                        <div class="ltabs-items   items-category-173">
-
-                                            <div class="ltabs-items-inner ltabs01-4 ltabs02-3 ltabs03-2 ltabs04-1 flip">
-
-                                                <div class="ltabs-loading"></div>
-
-                                            </div>
-
-
-
-                                        </div>
-
-                                    </div>
-
-
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <!--End ltabs-wrap-->
-
-                    </div>
-
-                    <div class="postext">
-
-
-
-                    </div>
-
-
-
-
-
-                    <script type="text/javascript">
-
-                        //<![CDATA[
-
-                        jQuery(document).ready(function ($) {
-
-                            ;
-
-                            (function (element) {
-
-                                var $element = $(element),
-
-                                        $tab = $('.ltabs-tab', $element),
-
-                                        $tab_label = $('.ltabs-tab-label', $tab),
-
-                                        $tabs = $('.ltabs-tabs', $element),
-
-                                        ajax_url = $tabs.parents('.ltabs-tabs-container').attr('data-ajaxurl'),
-
-                                        effect = $tabs.parents('.ltabs-tabs-container').attr('data-effect'),
-
-                                        delay = $tabs.parents('.ltabs-tabs-container').attr('data-delay'),
-
-                                        duration = $tabs.parents('.ltabs-tabs-container').attr('data-duration'),
-
-                                        rl_moduleid = $tabs.parents('.ltabs-tabs-container').attr('data-modid'),
-
-                                        $items_content = $('.ltabs-items', $element),
-
-                                        $items_inner = $('.ltabs-items-inner', $items_content),
-
-                                        $items_first_active = $('.ltabs-items-selected', $element),
-
-                                        $load_more = $('.ltabs-loadmore', $element),
-
-                                        $btn_loadmore = $('.ltabs-loadmore-btn', $load_more),
-
-                                        $select_box = $('.ltabs-selectbox', $element),
-
-                                        $tab_label_select = $('.ltabs-tab-selected', $element);
-
-
-
-                                enableSelectBoxes();
-
-                                function enableSelectBoxes() {
-
-                                    $tab_wrap = $('.ltabs-tabs-wrap', $element),
-
-                                            $tab_label_select.html($('.ltabs-tab', $element).filter('.tab-sel').children('.ltabs-tab-label').html());
-
-                                    if ($(window).innerWidth() <= 479) {
-
-                                        $tab_wrap.addClass('ltabs-selectbox');
-
-                                    } else {
-
-                                        $tab_wrap.removeClass('ltabs-selectbox');
-
-                                    }
-
-                                }
-
-
-
-                                $('span.ltabs-tab-selected, span.ltabs-tab-arrow', $element).click(function () {
-
-                                    if ($('.ltabs-tabs', $element).hasClass('ltabs-open')) {
-
-                                        $('.ltabs-tabs', $element).removeClass('ltabs-open');
-
-                                    } else {
-
-                                        $('.ltabs-tabs', $element).addClass('ltabs-open');
-
-                                    }
-
-                                });
-
-
-
-                                $(window).resize(function () {
-
-                                    if ($(window).innerWidth() <= 479) {
-
-                                        $('.ltabs-tabs-wrap', $element).addClass('ltabs-selectbox');
-
-                                    } else {
-
-                                        $('.ltabs-tabs-wrap', $element).removeClass('ltabs-selectbox');
-
-                                    }
-
-                                });
-
-
-
-                                function showAnimateItems(el) {
-
-                                    var $_items = $('.new-ltabs-item', el), nub = 0;
-
-                                    $('.ltabs-loadmore-btn', el).fadeOut('fast');
-
-                                    $_items.each(function (i) {
-
-                                        nub++;
-
-                                        switch (effect) {
-
-                                            case 'none' :
-
-
-
-                                                $(this).css({'opacity': '1', 'filter': 'alpha(opacity = 100)'});
-
-                                                break;
-
-
-
-                                            default:
-
-                                                animatesItems($(this), nub * delay, i, el);
-
-                                        }
-
-                                        if (i == $_items.length - 1) {
-
-                                            $('.ltabs-loadmore-btn', el).fadeIn(delay);
-
-                                        }
-
-                                        $(this).removeClass('new-ltabs-item');
-
-                                    });
-
-                                }
-
-
-
-                                function animatesItems($this, fdelay, i, el) {
-
-                                    var $_items = $('.ltabs-item', el);
-
-                                    $this.attr("style",
-
-                                            "-webkit-animation:" + effect + " " + duration + "ms;"
-
-                                            + "-moz-animation:" + effect + " " + duration + "ms;"
-
-                                            + "-o-animation:" + effect + " " + duration + "ms;"
-
-                                            + "-moz-animation-delay:" + fdelay + "ms;"
-
-                                            + "-webkit-animation-delay:" + fdelay + "ms;"
-
-                                            + "-o-animation-delay:" + fdelay + "ms;"
-
-                                            + "animation-delay:" + fdelay + "ms;").delay(fdelay).animate({
-
-                                                opacity: 1,
-
-                                                filter: 'alpha(opacity = 100)'
-
-                                            }, {
-
-                                                delay: 100
-
-                                            });
-
-                                    if (i == ($_items.length - 1)) {
-
-                                        $(".ltabs-items-inner").addClass("play");
-
-                                    }
-
-                                }
-
-
-
-                                showAnimateItems($items_first_active);
-
-                                $tab.on('click.tab', function () {
-
-                                    var $this = $(this);
-
-                                    if ($this.hasClass('tab-sel')) return false;
-
-                                    if ($this.parents('.ltabs-tabs').hasClass('ltabs-open')) {
-
-                                        $this.parents('.ltabs-tabs').removeClass('ltabs-open');
-
-                                    }
-
-                                    $tab.removeClass('tab-sel');
-
-                                    $this.addClass('tab-sel');
-
-                                    var items_active = $this.attr('data-active-content');
-
-                                    var _items_active = $(items_active, $element);
-
-
-
-                                    $items_content.removeClass('ltabs-items-selected');
-
-                                    _items_active.addClass('ltabs-items-selected');
-
-                                    $tab_label_select.html($tab.filter('.tab-sel').children('.ltabs-tab-label').html());
-
-                                    var $loading = $('.ltabs-loading', _items_active);
-
-                                    var loaded = _items_active.hasClass('ltabs-items-loaded');
-
-                                    if (!loaded && !_items_active.hasClass('ltabs-process')) {
-
-                                        _items_active.addClass('ltabs-process');
-
-                                        var category_id = $this.attr('data-category-id');
-
-                                        $loading.show();
-
-                                        $.ajax({
-
-                                            type: 'POST',
-
-                                            url: ajax_url,
-
-                                            data: {
-
-                                                listing_tabs_moduleid: rl_moduleid,
-
-                                                is_ajax_listing_tabs: 1,
-
-                                                ajax_reslisting_start: 0,
-
-                                                categoryid: category_id
-
-                                            },
-
-                                            success: function (data) {
-
-                                                if (data.items_markup != '') {
-
-                                                    $('.ltabs-items-inner', _items_active).html(data.items_markup);
-
-                                                    _items_active.addClass('ltabs-items-loaded').removeClass('ltabs-process');
-
-                                                    $loading.remove();
-
-                                                    showAnimateItems(_items_active);
-
-                                                    updateStatus(_items_active);
-
-
-
-                                                    CreateProSlider($('.ltabs-items-inner', _items_active));
-
-                                                }
-
-                                            },
-
-                                            dataType: 'json'
-
-                                        });
-
-                                    } else {
-
-
-
-                                        var owl = $('.ltabs-items-inner', _items_active);
-
-                                        owl = owl.data('owlCarousel');
-
-                                        if (typeof owl === 'undefined') {
-
-                                        } else {
-
-                                            owl.onResize();
-
-                                        }
-
-                                    }
-
-                                });
-
-
-
-                                function updateStatus($el) {
-
-                                    $('.ltabs-loadmore-btn', $el).removeClass('loading');
-
-                                    var countitem = $('.ltabs-item', $el).length;
-
-
-
-                                    $('.ltabs-image-loading', $el).css({display: 'none'});
-
-
-
-                                    $('.ltabs-loadmore-btn', $el).parent().attr('data-rl_start', countitem);
-
-                                    var rl_total = $('.ltabs-loadmore-btn', $el).parent().attr('data-rl_total');
-
-                                    var rl_load = $('.ltabs-loadmore-btn', $el).parent().attr('data-rl_load');
-
-                                    var rl_allready = $('.ltabs-loadmore-btn', $el).parent().attr('data-rl_allready');
-
-
-
-                                    if (countitem >= rl_total) {
-
-                                        $('.ltabs-loadmore-btn', $el).addClass('loaded');
-
-
-
-                                        $('.ltabs-image-loading', $el).css({display: 'none'});
-
-
-
-                                        $('.ltabs-loadmore-btn', $el).attr('data-label', rl_allready);
-
-                                        $('.ltabs-loadmore-btn', $el).removeClass('loading');
-
-                                    }
-
-                                }
-
-
-
-                                $btn_loadmore.on('click.loadmore', function () {
-
-                                    var $this = $(this);
-
-                                    if ($this.hasClass('loaded') || $this.hasClass('loading')) {
-
-                                        return false;
-
-                                    } else {
-
-                                        $this.addClass('loading');
-
-
-
-                                        $('.ltabs-image-loading', $this).css({display: 'inline-block'});
-
-
-
-                                        var rl_start = $this.parent().attr('data-rl_start'),
-
-                                                rl_moduleid = $this.parent().attr('data-modid'),
-
-                                                rl_ajaxurl = $this.parent().attr('data-ajaxurl'),
-
-                                                effect = $this.parent().attr('data-effect'),
-
-                                                category_id = $this.parent().attr('data-categoryid'),
-
-                                                items_active = $this.parent().attr('data-active-content');
-
-                                        var _items_active = $(items_active, $element);
-
-
-
-                                        $.ajax({
-
-                                            type: 'POST',
-
-                                            url: rl_ajaxurl,
-
-                                            data: {
-
-                                                listing_tabs_moduleid: rl_moduleid,
-
-                                                is_ajax_listing_tabs: 1,
-
-                                                ajax_reslisting_start: rl_start,
-
-                                                categoryid: category_id
-
-                                            },
-
-                                            success: function (data) {
-
-                                                if (data.items_markup != '') {
-
-                                                    $(data.items_markup).insertAfter($('.ltabs-item', _items_active).nextAll().last());
-
-
-
-                                                    $('.ltabs-image-loading', $this).css({display: 'none'});
-
-
-
-                                                    showAnimateItems(_items_active);
-
-                                                    updateStatus(_items_active);
-
-                                                }
-
-                                            }, dataType: 'json'
-
-                                        });
-
-                                    }
-
-                                    return false;
-
-                                });
-
-
-
-
-
-                                if ($('.ltabs-items-inner', $element).parent().hasClass('ltabs-items-selected')) {
-
-                                    var items_active = $('.ltabs-tab.tab-sel', $element).attr('data-active-content');
-
-                                    var _items_active = $(items_active, $element);
-
-                                    CreateProSlider($('.ltabs-items-inner', _items_active));
-
-                                }
-
-
-
-                                function CreateProSlider($items_inner) {
-
-                                    $items_inner.owlCarousel({
-
-                                        center: false,
-
-                                        nav: true,
-
-                                        loop: true,
-
-                                        margin: 0,
-
-                                        slideBy: 1,
-
-                                        autoplay: false,
-
-                                        autoplayHoverPause: true,
-
-                                        autoplayTimeout: 1000,
-
-                                        autoplaySpeed: 1500,
-
-                                        navSpeed: 1500,
-
-                                        smartSpeed: 1500,
-
-                                        startPosition: 0,
-
-                                        mouseDrag: true,
-
-                                        touchDrag:true,
-
-                                        pullDrag:true,
-
-                                        dots: false,
-
-                                        autoWidth: false,
-
-                                        navClass: ['owl-prev', 'owl-next'],
-
-                                        navText: ['&#139;', '&#155;'],
-
-                                        responsive: {
-
-                                            0: { items:1 },
-
-                                            480: {items:2},
-
-                                            768: {items:3},
-
-                                            1200: {items: 4}
-
-                                        }
-
-                                    });
-
-                                }
-
-
-
-
-
-                            })('#sp_listing_tabs_1');
-
-                        });
-
-                        //]]>
-
-                    </script>
-
-
-
-                </div>
 
                 <!-- End SP Listing Tabs -->
 

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 20 Ağu 2015, 00:40:45
+-- Üretim Zamanı: 26 Ağu 2015, 15:38:34
 -- Sunucu sürümü: 5.6.21
 -- PHP Sürümü: 5.6.3
 
@@ -105,15 +105,17 @@ CREATE TABLE IF NOT EXISTS `ayarlar` (
   `telefon` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
   `fax` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
   `gsm` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
-  `adres` varchar(500) COLLATE utf8_turkish_ci DEFAULT NULL
+  `adres` varchar(500) COLLATE utf8_turkish_ci DEFAULT NULL,
+  `logo` varchar(500) COLLATE utf8_turkish_ci NOT NULL,
+  `telif` varchar(500) COLLATE utf8_turkish_ci NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
 -- Tablo döküm verisi `ayarlar`
 --
 
-INSERT INTO `ayarlar` (`id`, `site_baslik`, `meta_key`, `meta_desc`, `domain_name`, `smtp_adres`, `smtp_kul_adi`, `smtp_sifre`, `long`, `lat`, `mail_adres`, `telefon`, `fax`, `gsm`, `adres`) VALUES
-(1, 'Laravel Admin Paneli', 'Laravel,admin,template,panel,wissen', 'Muhtesem bir admin paneli', 'ornekdomain.com', 'smtp.ornekdomain.com', 'ornek', 'ornek123', '29.0069081419158', '41.04389113879316', 'info@ornekdomain.com', '+902129896598', '02129876532', '05369886532', 'Ornek Mah, Ornek Caddesi 6/20');
+INSERT INTO `ayarlar` (`id`, `site_baslik`, `meta_key`, `meta_desc`, `domain_name`, `smtp_adres`, `smtp_kul_adi`, `smtp_sifre`, `long`, `lat`, `mail_adres`, `telefon`, `fax`, `gsm`, `adres`, `logo`, `telif`) VALUES
+(1, 'Laravel Admin Paneli', 'Laravel,admin,template,panel,wissen', 'Muhtesem bir admin paneli', 'ornekdomain.com', 'smtp.ornekdomain.com', 'ornek', 'ornek123', '29.0069081419158', '41.04389113879316', 'info@ornekdomain.com', '+902129896598', '02129876532', '05369886532', 'Ornek Mah, Ornek Caddesi 6/20', '72214.jpg', '© Tüm Hakkı Saklıdır.');
 
 -- --------------------------------------------------------
 
@@ -252,6 +254,28 @@ INSERT INTO `gal_resim` (`id`, `gal_kat_id`, `baslik`, `yol`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Tablo için tablo yapısı `haberler`
+--
+
+CREATE TABLE IF NOT EXISTS `haberler` (
+`id` int(11) NOT NULL,
+  `haber_baslik` varchar(500) COLLATE utf8_turkish_ci NOT NULL,
+  `detay` varchar(5000) COLLATE utf8_turkish_ci NOT NULL,
+  `resimYolu` varchar(500) COLLATE utf8_turkish_ci NOT NULL,
+  `durum` tinyint(1) NOT NULL,
+  `tarih` datetime NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+
+--
+-- Tablo döküm verisi `haberler`
+--
+
+INSERT INTO `haberler` (`id`, `haber_baslik`, `detay`, `resimYolu`, `durum`, `tarih`) VALUES
+(1, 'cvbdfgdfd', '<p>cvbcvbcv</p>\r\n', 'deser_wxeqRKwjOFyN.jpg', 1, '2015-08-20 17:08:55');
+
+-- --------------------------------------------------------
+
+--
 -- Tablo için tablo yapısı `icerikler`
 --
 
@@ -261,7 +285,14 @@ CREATE TABLE IF NOT EXISTS `icerikler` (
   `kisa_aciklama` varchar(500) COLLATE utf8_turkish_ci DEFAULT NULL,
   `detay` varchar(5000) COLLATE utf8_turkish_ci DEFAULT NULL,
   `tarih` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+
+--
+-- Tablo döküm verisi `icerikler`
+--
+
+INSERT INTO `icerikler` (`id`, `baslik`, `kisa_aciklama`, `detay`, `tarih`) VALUES
+(1, 'asdas', 'das', '<p>dasda</p>\r\n', '2015-08-20 16:59:27');
 
 -- --------------------------------------------------------
 
@@ -390,7 +421,7 @@ CREATE TABLE IF NOT EXISTS `siparisler` (
   `durum` varchar(255) COLLATE utf8_turkish_ci NOT NULL DEFAULT 'onay bekliyor',
   `ekleme_tarihi` datetime NOT NULL,
   `toplam` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
 -- Tablo döküm verisi `siparisler`
@@ -414,14 +445,7 @@ CREATE TABLE IF NOT EXISTS `slider` (
   `kisa_aciklama` varchar(500) COLLATE utf8_turkish_ci DEFAULT NULL,
   `url` varchar(1000) COLLATE utf8_turkish_ci DEFAULT NULL,
   `tarih` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
-
---
--- Tablo döküm verisi `slider`
---
-
-INSERT INTO `slider` (`id`, `adi`, `yol`, `baslik`, `kisa_aciklama`, `url`, `tarih`) VALUES
-(35, 'Slider Deneme-1', 'chrysanthemu_l0GBCHvx3deo.jpg', 'Slider Denem', 'Slider Deneme  -  1', 'http://www.google.com.tr', '2015-08-14 18:53:01');
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 -- --------------------------------------------------------
 
@@ -458,20 +482,29 @@ CREATE TABLE IF NOT EXISTS `urunler` (
   `kisa_aciklama` varchar(500) COLLATE utf8_turkish_ci NOT NULL,
   `aciklama` varchar(5000) COLLATE utf8_turkish_ci NOT NULL,
   `fiyat` decimal(6,2) NOT NULL,
-  `kampanya` tinyint(1) NOT NULL COMMENT '0 ise kampanyasız, 1 ise kampanyalı',
+  `kampanya` tinyint(1) NOT NULL COMMENT '0 ise kampanyas?z, 1 ise kampanyal?',
   `piyasa_fiyati` decimal(6,2) NOT NULL,
   `durum` tinyint(1) NOT NULL COMMENT '0 ise aktif, 1 ise pasif',
   `stok` smallint(4) NOT NULL,
+  `one_cikan` tinyint(1) NOT NULL,
+  `indirimli_urun` tinyint(1) NOT NULL,
+  `cok_satan` tinyint(1) NOT NULL,
+  `kargo_bedava` tinyint(1) NOT NULL,
+  `bugun_teslimat` tinyint(1) NOT NULL,
   `tarih` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
 -- Tablo döküm verisi `urunler`
 --
 
-INSERT INTO `urunler` (`id`, `kategori_id`, `baslik`, `kisa_aciklama`, `aciklama`, `fiyat`, `kampanya`, `piyasa_fiyati`, `durum`, `stok`, `tarih`) VALUES
-(1, 60, '1', '2', '3', '4.00', 0, '111.00', 1, 123, '2015-08-20 01:07:41'),
-(2, 58, 'iPhone 6', '2', 'assss', '2698.00', 0, '5000.00', 2, 123, '2015-08-20 01:08:17');
+INSERT INTO `urunler` (`id`, `kategori_id`, `baslik`, `kisa_aciklama`, `aciklama`, `fiyat`, `kampanya`, `piyasa_fiyati`, `durum`, `stok`, `one_cikan`, `indirimli_urun`, `cok_satan`, `kargo_bedava`, `bugun_teslimat`, `tarih`) VALUES
+(7, 59, 'Ürün Adı - 1', 'Kısa Açıklama - 1', 'Ürün Açıklaması - 1', '5000.00', 1, '5500.00', 1, 5, 0, 1, 0, 0, 0, '2015-08-24 16:52:58'),
+(8, 59, 'Ürün Adı - 2', 'Kısa Açıklama -2', 'Ürün Açıklaması - 2', '1500.00', 0, '1700.00', 1, 10, 0, 1, 0, 0, 0, '2015-08-24 17:01:27'),
+(9, 59, 'Ürün Adı - 3', 'Kısa Açıklama - 3', '                    Ürün Açıklaması - 3\r\n        \r\n        ', '2200.00', 0, '1600.00', 0, 78, 0, 1, 0, 0, 0, '2015-08-24 17:04:44'),
+(10, 59, 'Ürün Adı - 4', 'Kısa Açıklama - 4', 'Ürün Açıklaması - 4', '3000.00', 0, '3200.00', 1, 4, 1, 0, 0, 0, 0, '2015-08-24 17:09:10'),
+(14, 61, 'Bosch', 'Çamaşır makinesi', 'ABC', '1520.00', 1, '1600.00', 1, 5, 1, 0, 0, 0, 0, '2015-08-25 17:46:21'),
+(15, 60, 'Asus', 'Zenbook', 'DSA', '3200.00', 1, '3650.00', 1, 5, 0, 0, 1, 0, 0, '2015-08-25 17:48:53');
 
 -- --------------------------------------------------------
 
@@ -486,6 +519,33 @@ CREATE TABLE IF NOT EXISTS `urun_puan` (
   `ip_no` varchar(25) COLLATE utf8_turkish_ci NOT NULL,
   `tarih` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `urun_resimleri`
+--
+
+CREATE TABLE IF NOT EXISTS `urun_resimleri` (
+`id` int(11) NOT NULL,
+  `urun_id` int(11) NOT NULL,
+  `adi` varchar(500) COLLATE utf8_bin NOT NULL,
+  `klasor` varchar(500) COLLATE utf8_bin NOT NULL
+) ENGINE=MyISAM AUTO_INCREMENT=45 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Tablo döküm verisi `urun_resimleri`
+--
+
+INSERT INTO `urun_resimleri` (`id`, `urun_id`, `adi`, `klasor`) VALUES
+(40, 10, '10_26940620urun-4.jpg', '10'),
+(34, 9, '9_11041261urun-66.jpg', '9'),
+(36, 8, '8_26546314urun-2.jpg', '8'),
+(29, 7, '7_15006066urun-1.jpg', '7'),
+(33, 11, '11_27119036urun-5.jpg', '11'),
+(42, 14, '14_26823102urun-5.jpg', '14'),
+(39, 12, '12_12961859urun-8.jpg', '12'),
+(44, 15, '15_158767asuszen.jpg', '15');
 
 -- --------------------------------------------------------
 
@@ -577,6 +637,12 @@ ALTER TABLE `gal_resim`
  ADD PRIMARY KEY (`id`);
 
 --
+-- Tablo için indeksler `haberler`
+--
+ALTER TABLE `haberler`
+ ADD PRIMARY KEY (`id`);
+
+--
 -- Tablo için indeksler `icerikler`
 --
 ALTER TABLE `icerikler`
@@ -643,6 +709,12 @@ ALTER TABLE `urun_puan`
  ADD PRIMARY KEY (`id`);
 
 --
+-- Tablo için indeksler `urun_resimleri`
+--
+ALTER TABLE `urun_resimleri`
+ ADD PRIMARY KEY (`id`);
+
+--
 -- Tablo için indeksler `yorumlar`
 --
 ALTER TABLE `yorumlar`
@@ -703,10 +775,15 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
 ALTER TABLE `gal_resim`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=44;
 --
+-- Tablo için AUTO_INCREMENT değeri `haberler`
+--
+ALTER TABLE `haberler`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
 -- Tablo için AUTO_INCREMENT değeri `icerikler`
 --
 ALTER TABLE `icerikler`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- Tablo için AUTO_INCREMENT değeri `kategoriler`
 --
@@ -736,12 +813,12 @@ MODIFY `siparis_ref` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 -- Tablo için AUTO_INCREMENT değeri `siparisler`
 --
 ALTER TABLE `siparisler`
-MODIFY `sip_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `sip_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- Tablo için AUTO_INCREMENT değeri `slider`
 --
 ALTER TABLE `slider`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=37;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=36;
 --
 -- Tablo için AUTO_INCREMENT değeri `sosyalmedya`
 --
@@ -751,12 +828,17 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- Tablo için AUTO_INCREMENT değeri `urunler`
 --
 ALTER TABLE `urunler`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
 --
 -- Tablo için AUTO_INCREMENT değeri `urun_puan`
 --
 ALTER TABLE `urun_puan`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- Tablo için AUTO_INCREMENT değeri `urun_resimleri`
+--
+ALTER TABLE `urun_resimleri`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=45;
 --
 -- Tablo için AUTO_INCREMENT değeri `yorumlar`
 --
