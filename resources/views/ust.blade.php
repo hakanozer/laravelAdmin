@@ -150,10 +150,39 @@
                             <div class="welcome-msg">
 
                                 <ul class="list-msg">
+@if(isset($UsIltsmData))
+@foreach($UsIltsmData as $iletisim)
 
-                                    <li><span class="sp-ic fa  fa-phone-square color-theme">  </span>Telephone: <a style="margin-right: 15px;" title="Call:(801) 2345 - 6789" href="tel:+84123456789">(801) 2345 - 6789</a> E-mail: <a title="Contact@gmail.com" href="mailto:contact@gmail.com">contact@gmail.com</a></li>
+<li>
+<span class="sp-ic fa  fa-phone-square color-theme">  </span>
+Telefon: <a style="margin-right: 15px;" title="Ara:{{$iletisim->telefon}} "
+href="tel:{{$iletisim->telefon}}">{{$iletisim->telefon}}              </a>
 
-                                    <li><span class="sp-ic fa  fa-phone-square color-theme">  </span>Telephone: <a style="margin-right: 15px;" title="Call:(801) 2345 - 6789" href="tel:+84123456789">(801) 2345 - 6789</a><span class="sp-ic fa  fa-home color-theme">  </span>No 304, Sky Tower, New York</li>
+<span class="sp-ic fa  fa-phone-square color-theme">  </span>
+Adres: <a style="margin-right: 15px;" title="Google Map'de Göster:{{$iletisim->adres}}"
+href="https://www.google.com/maps/&#x00040;{{$iletisim->lat}},{{$iletisim->long}},16.5z">{{$iletisim->adres}}</a>
+</li>
+
+<li>
+<span class="fa fa-mobile color-theme">  </span>
+GSM: <a style="margin-right: 15px;" title="Ara:{{$iletisim->gsm}} "
+href="tel:{{$iletisim->gsm}}">{{$iletisim->gsm}}                     </a>
+
+<span class="fa fa-envelope color-theme">  </span>
+E-mail: <a title="E-mail Gönder:{{$iletisim->mail_adres}}"
+href="mailto:{{$iletisim->mail_adres}}">{{$iletisim->mail_adres}}    </a>
+</li>
+
+<li>
+<span class="fa fa-fax color-theme">  </span>
+Fax: <a title="Fax">{{$iletisim->fax}}
+</li>
+
+
+
+@endforeach
+@endif
+
 
                                 </ul>
 

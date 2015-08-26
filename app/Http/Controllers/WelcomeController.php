@@ -46,7 +46,8 @@ class WelcomeController extends Controller {
         $indirimliUrunler = $this->indirimliUrunler();
         $oneCikanUrunler=$this->oneCikanUrunler();
         $cokSatanUrunler=$this->cokSatanUrunler();
-        return view('site',array('ust' => $veri,'sorgu' => $sorgu,'data'=>$data,'indirimliUrunler'=>$indirimliUrunler,'oneCikanUrunler'=>$oneCikanUrunler,'cokSatanUrunler'=>$cokSatanUrunler));
+	$UsIltsmData = $this->UstIletisim();
+        return view('site',array('ust' => $veri,'sorgu' => $sorgu,'data'=>$data,'indirimliUrunler'=>$indirimliUrunler,'oneCikanUrunler'=>$oneCikanUrunler,'cokSatanUrunler'=>$cokSatanUrunler,'UsIltsmData' => $UsIltsmData));
     }
 
     public function gonder(){
@@ -80,13 +81,20 @@ class WelcomeController extends Controller {
         $indirimliUrunler  = DB::select('select u.*,ur.adi from urunler as u inner join urun_resimleri as ur on u.id = ur.urun_id where u.indirimli_urun = 1 order by u.id desc limit 10');
         return $indirimliUrunler;
     }
+    
     public function oneCikanUrunler()
     {
         $oneCikanUrunler  = DB::select('select u.*,ur.adi from urunler as u inner join urun_resimleri as ur on u.id = ur.urun_id where u.one_cikan = 1 order by u.id desc limit 10');
         return $oneCikanUrunler;
     }
-    public function cokSatanUrunler(){
+    
+     public function cokSatanUrunler(){
         $cokSatanUrunler=DB::select('select u.*,ur.adi from urunler as u inner join urun_resimleri as ur on u.id = ur.urun_id where u.cok_satan = 1 order by u.id desc limit 10');
         return $cokSatanUrunler;
+    }
+    
+     public function UstIletisim(){
+        $UsIltsmData = DB::select("select * from ayarlar");
+        return $UsIltsmData;
     }
 }
