@@ -10,39 +10,43 @@ use File;
 
 class WelcomeController extends Controller {
 
-	/*
-	|--------------------------------------------------------------------------
-	| Welcome Controller
-	|--------------------------------------------------------------------------
-	|
-	| This controller renders the "marketing page" for the application and
-	| is configured to only allow guests. Like most of the other sample
-	| controllers, you are free to modify or remove it as you desire.
-	|
-	*/
+    /*
+    |--------------------------------------------------------------------------
+    | Welcome Controller
+    |--------------------------------------------------------------------------
+    |
+    | This controller renders the "marketing page" for the application and
+    | is configured to only allow guests. Like most of the other sample
+    | controllers, you are free to modify or remove it as you desire.
+    |
+    */
 
-	/**
-	 * Create a new controller instance.
-	 *
-	 * @return void
-	 */
-	public function __construct()
-	{
-		$this->middleware('guest');
-	}
-
-	/**
-	 * Show the application welcome screen to the user.
-	 *
-	 * @return Response
-	 */
-	public function index()
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
     {
+        $this->middleware('guest');
+    }
+
+    /**
+     * Show the application welcome screen to the user.
+     *
+     * @return Response
+     */
+    public function index()
+    {
+
         $veri = $this->gonder();
         $sorgu = $this->iletisimGetir();
         $data = $this->sliderGoster();
-
-        return view('site', array('ust' => $veri,'sorgu' => $sorgu,'data'=>$data));
+        
+        $indirimliUrunler = $this->indirimliUrunler();
+        $oneCikanUrunler=$this->oneCikanUrunler();
+        $cokSatanUrunler=$this->cokSatanUrunler();
+        return view('site',array('ust' => $veri,'sorgu' => $sorgu,'data'=>$data,'indirimliUrunler'=>$indirimliUrunler,'oneCikanUrunler'=>$oneCikanUrunler,'cokSatanUrunler'=>$cokSatanUrunler));
     }
 
     public function gonder(){
@@ -71,4 +75,18 @@ class WelcomeController extends Controller {
     }
 
 
+    public function indirimliUrunler()
+    {
+        $indirimliUrunler  = DB::select('select u.*,ur.adi from urunler as u inner join urun_resimleri as ur on u.id = ur.urun_id where u.indirimli_urun = 1 order by u.id desc limit 10');
+        return $indirimliUrunler;
+    }
+    public function oneCikanUrunler()
+    {
+        $oneCikanUrunler  = DB::select('select u.*,ur.adi from urunler as u inner join urun_resimleri as ur on u.id = ur.urun_id where u.one_cikan = 1 order by u.id desc limit 10');
+        return $oneCikanUrunler;
+    }
+    public function cokSatanUrunler(){
+        $cokSatanUrunler=DB::select('select u.*,ur.adi from urunler as u inner join urun_resimleri as ur on u.id = ur.urun_id where u.cok_satan = 1 order by u.id desc limit 10');
+        return $cokSatanUrunler;
+    }
 }
