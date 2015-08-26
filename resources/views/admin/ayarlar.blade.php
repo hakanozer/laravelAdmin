@@ -28,8 +28,9 @@
                   @endif
                   @if(isset($data))
                   @foreach($data as $veri)
+                  <div class="col-lg-6">
                   <form role="form" action="" method="post">
-                     <div class="col-lg-6">
+
                         <div class="form-group">
                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
                            <input type="hidden" name="id" value="{{$veri->id}}">
@@ -193,8 +194,11 @@
                            <div id="map-canvas"></div>
                         </div>
                         <button type="submit" class="btn btn-success pull-right">Güncelle</button>
-                    </div>
-                  </form>
+                        </form>
+
+
+
+
 
 
 
@@ -203,20 +207,32 @@
     <input type="hidden" name="id" value="{{$veri->id}}">
     <div style="padding: 10px;"></div>
     <div class="form-group">
-     <label>Logo Düzenle</label>
-     <input type="file" name="logo" id="logo"/>
+     <label>Logo Düzenle</label><br>
 
+     <input type="file" name="logo" id="logo"/><br>
+     <div class="form-group" align="center" style="border: groove">
         @if(isset($data))
             @foreach($data as $veri)
                @if($veri->logo != null)
-     <img src="../logolar/{{$veri->logo}}" width="100" height="100" alt="Resim Yok"/>
+     <img src="../logolar/{{$veri->logo}}" width="100" height="100" alt="Resim Yok"/><br>
             @else
-     <img src="../logolar/resimyok.png" width="100" height="100" alt="Resim Yok"/>
+     <img src="../logolar/resimyok.png" width="100" height="100" alt="Resim Yok"/><br>
             @endif
             @endforeach
 </div>
+ <div class="form-group">
 <button type="submit" class="btn btn-success pull-right">Güncelle</button>
+</div>
+
 </form>
+                        </div>
+
+                        </div>
+
+
+                    </div>
+                  </form>
+
 
                               @endif
 
