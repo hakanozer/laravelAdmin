@@ -710,7 +710,7 @@
                                                                             <span>Sale!</span>
                                                                         </div>
 
-                                                                        <a class="product_img_link" href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/58-lorem-ipsum-dolor-sit-ame.html" title="Lorem ipsum dolor sit">
+                                                                        <a class="product_img_link" href="{{url("urunDetay/".$indirimliUrun->id)}}" title="Lorem ipsum dolor sit">
                                                                             <img class="img_1" src="{{asset("resim/server/php/files/".$indirimliUrun->id."/".$indirimliUrun->adi)}}" alt="Lorem ipsum dolor sit">
                                                                             <img class="img_0" src="{{asset("resim/server/php/files/".$indirimliUrun->id."/".$indirimliUrun->adi)}}">
                                                                         </a>
@@ -1005,7 +1005,7 @@
                                                                         </div>
 
                                                                         <a class="product_img_link"
-                                                                           href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/73-zase-muten-miten-mukam-pirem.html"
+                                                                           href="{{url('urunDetay/'.$oneCikanUrun->id)}}"
                                                                            title="Zase muten miten katen mipan"  >
                                                                             <img class="img_1" src="{{asset("resim/server/php/files/".$oneCikanUrun->id."/".$oneCikanUrun->adi)}}"
                                                                                  alt="Zase muten miten katen mipan"/>
@@ -1400,7 +1400,7 @@
                                                                 </div>
 
                                                                 <a class="product_img_link"
-                                                                   href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/2-blouse.html"
+                                                                   href="{{url('urunDetay/'.$cokSatanUrun->id)}}"
                                                                    title="Vose ruka mika "  >
                                                                     <img class="img_1 " src="{{asset("resim/server/php/files/".$cokSatanUrun->id."/".$cokSatanUrun->adi)}}"
                                                                          alt="Vose ruka mika "/>

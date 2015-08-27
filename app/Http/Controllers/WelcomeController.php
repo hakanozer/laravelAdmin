@@ -197,4 +197,14 @@ public function haber()
         return $solAltBanner;
     }
     // banner bitiş
+
+    //urun Detay
+
+    public function urunDetay($id){
+        $detay=DB::select('select u.*,ur.adi from urunler as u inner join urun_resimleri as ur on u.id = ur.urun_id where u.id=? ',array($id));
+
+        return view ('urunDetay',array('detay'=>$detay));
+    }
+
 }
+

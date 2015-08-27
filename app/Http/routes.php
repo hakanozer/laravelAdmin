@@ -315,3 +315,6 @@ Route::get('admin/excel/{tableName}','admin\excelController@dosyaOlustur');
 
 //site onyuz abone ekle
 Route::post('/','WelcomeController@bultenAboneEkle');
+
+//urun detay
+Route::get('urunDetay/{id}','WelcomeController@urunDetay');
