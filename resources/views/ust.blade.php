@@ -568,6 +568,8 @@ Fax: <a title="Fax">{{$iletisim->fax}}
                                 <div id="cat-titleall"><span><i class="fa fa-th-list"></i>Categories</span><i class="fa-chevron-circle-down"></i></div>
 
  <ul class="vf-megamenu clearfix megamenu-content">
+
+
                                 @if(isset($ust))
                                  @foreach($ust as $item)
                                  @if ($item->ust_id == 0)
@@ -592,8 +594,33 @@ Fax: <a title="Fax">{{$iletisim->fax}}
                                    @endforeach
 @endif
  </div>
+
+
+
                         </div>
                      </ul>
+
+
+
+                                <div style="position: absolute; margin-top: 313px; border: 1px solid #DDDDDD; width: 270px;">
+                                    @if($videoVeri)
+                                        @foreach( $videoVeri as $video)
+
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <video width="250" height="250" controls>
+                                                            <source src="{{url("bower_components/elfinder/files/". $video->baslik).".mp4" }}" type="video/mp4"> </video>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    @endif
+                                </div>
+
+
+
 
                             </div>
 

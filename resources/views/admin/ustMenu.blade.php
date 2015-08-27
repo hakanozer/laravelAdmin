@@ -366,7 +366,7 @@ $dil = Session::get('dil'); App::setLocale($dil);
                                       </li>
 
                   <li>
-                                          <a href="{{ url('admin/haberler')  }}"><i class="fa fa-camera-retro fa-fw"></i>{{ trans('adminDil.haberler') }}</a>
+                                          <a href="{{ url('admin/haberler')  }}"><i class="fa fa-newspaper-o fa-fw"></i>{{ trans('adminDil.haberler') }}</a>
                                       </li>
 
 
@@ -383,9 +383,13 @@ $dil = Session::get('dil'); App::setLocale($dil);
                                           <!-- /.nav-second-level -->
                                       </li>
 
+                                        <li>
+                                            <a href="{{ url('admin/video')  }}"><i class="fa fa-video-camera"></i> Video</a>
+                                        </li>
+
 
                                       <li>
-                                          <a href="{{ url('admin/sliderYonetimi')  }}"><i class="fa fa-photo fa-fw"></i> {{ trans('adminDil.sliderYonetimi') }}</a>
+                                          <a href="{{ url('admin/sliderYonetimi')  }}"><i class="fa fa-sliders fa-fw"></i> {{ trans('adminDil.sliderYonetimi') }}</a>
                                       </li>
 
 
@@ -407,9 +411,7 @@ $dil = Session::get('dil'); App::setLocale($dil);
                                           <a href="{{ url('admin/siparisler')  }}"><i class="fa fa-bars fa-fw"></i> {{ trans('adminDil.siparisIslemleri') }}</a>
                                       </li>
 
-                                      <li>
-                                          <a href="tables.html"><i class="fa fa-file-text fa-fw"></i> {{ trans('adminDil.raporlar') }}</a>
-                                      </li>
+
 
 
                                       <li>

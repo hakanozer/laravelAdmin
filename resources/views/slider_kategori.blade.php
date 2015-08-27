@@ -37,237 +37,55 @@
 
                     <!--<div class="page-title-slider">Deal Product</div>-->
 
-                    <div id="sp_deal_1" class="sp-deal sp-preload" style="margin-bottom:40px;">
+                    <div id="sp_deal_1" class="sp-deal sp-preload" style="margin-bottom:40px; height: 362px;">
+
                         <div class="sp-loading"></div>
 
                         <div class="slider not-js cols-6 preset01-1 preset02-1 preset03-1 preset04-1">
                             <div class="vpo-wrap">
                                 <div class="vp">
                                     <div class="vpi-wrap tt-effect-frontrow tt-effect-delay">
-                                        <div class="item">
-                                            <div class="item-wrap clearfix">
-                                                <div class="item-img item-height">
+                                        @if (isset($teklislider))
+                                            @foreach($teklislider as $veri1)
+                                                <div class="item">
+                                                    <div class="item-wrap clearfix">
+                                                        <div class="item-img item-height">
 
 
-                                                    <!--								<div class="price-percent-reduction"><span>-15%</span></div>
-                        -->
+                                                            <!--								<div class="price-percent-reduction"><span>-10%</span></div>
+                                -->
 
-                                                    <div class="item-img-info ">
-                                                        <a class="product_img_link"
-                                                           href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/58-lorem-ipsum-dolor-sit-ame.html"
-                                                           title="Lorem ipsum dolor sit"  >
-                                                            <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/960-home_default/lorem-ipsum-dolor-sit-ame.jpg"
-                                                                 alt="Lorem ipsum dolor sit"/>
-                                                            <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/961-home_default/lorem-ipsum-dolor-sit-ame.jpg"  alt="Lorem ipsum dolor sit" />
-                                                        </a>
-
-
-
-
-                                                    </div>
-
-
-                                                    <div class="item-time">
-                                                        <div class="item-timer product_time_1_58"></div>
-                                                        <script type="text/javascript">
-                                                            //<![CDATA[
-                                                            listdeal.push('product_time_1_58|2015/09/27 00:00:00') ;
-                                                            //]]>
-                                                        </script>
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="item-info">
-                                                    <div class="item-inner">
-                                                        <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                            <div class="star_content ">
-                                                                <div class="star"></div>
-                                                                <div class="star"></div>
-                                                                <div class="star"></div>
-                                                                <div class="star"></div>
-                                                                <div class="star"></div>
-                                                                <meta itemprop="worstRating" content = "0" />
-                                                                <meta itemprop="ratingValue" content = "0" />
-                                                                <meta itemprop="bestRating" content = "5" />
-                                                            </div>
-                                                            <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                        </div>
-
-
-                                                        <div class="item-title">
-                                                            <a href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/58-lorem-ipsum-dolor-sit-ame.html"
-                                                               title="Lorem ipsum dolor sit"   >
-                                                                Lorem ipsum dolor sit
-                                                            </a>
-                                                        </div>
-
-
-                                                        <div class="item-content">
-                                                            <div itemprop="offers" itemscope
-                                                                 itemtype="http://schema.org/Offer"
-                                                                 class="content_price">
-                                                                                                                                            <span itemprop="price"
-                                                                                                                                                  class="price product-price">
-																			$ 71.40																		</span>
-                                                                <meta itemprop="priceCurrency"
-                                                                      content="USD"/>
-
-                                                                        <span class="old-price product-price">
-																		$ 84.00
-																	</span>
+                                                            <div class="item-img-info ">
+                                                                <a class="product_img_link"
+                                                                   href="#"
+                                                                   title="Baze suma pite cazen mita katem"  >
+                                                                    <img class="img_1" src="{{asset("resim/server/php/files/".$veri1->klasor."/".$veri1->resimAdi)}}"/>
+                                                                </a>
 
 
 
 
                                                             </div>
 
-                                                        </div>
 
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="item-wrap clearfix">
-                                                <div class="item-img item-height">
-
-
-                                                    <!---->
-
-                                                    <div class="item-img-info ">
-                                                        <a class="product_img_link"
-                                                           href="http://prestashop.magentech.com/sp_shoppystore/en/accessories/5-printed-summer-dress.html"
-                                                           title="Hure mazte pizan"  >
-                                                            <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/954-home_default/printed-summer-dress.jpg"
-                                                                 alt="Hure mazte pizan"/>
-                                                            <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/951-home_default/printed-summer-dress.jpg"  alt="Hure mazte pizan" />
-                                                        </a>
-
-
-
-
-                                                    </div>
-
-
-                                                    <div class="item-time">
-                                                        <div class="item-timer product_time_1_5"></div>
-                                                        <script type="text/javascript">
-                                                            //<![CDATA[
-                                                            listdeal.push('product_time_1_5|2017/02/26 00:00:00') ;
-                                                            //]]>
-                                                        </script>
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="item-info">
-                                                    <div class="item-inner">
-                                                        <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                            <div class="star_content ">
-                                                                <div class="star"></div>
-                                                                <div class="star"></div>
-                                                                <div class="star"></div>
-                                                                <div class="star"></div>
-                                                                <div class="star"></div>
-                                                                <meta itemprop="worstRating" content = "0" />
-                                                                <meta itemprop="ratingValue" content = "0" />
-                                                                <meta itemprop="bestRating" content = "5" />
+                                                            <div class="item-time">
+                                                                <div class="item-timer product_time_1_33"></div>
+                                                                <script type="text/javascript">
+                                                                    //<![CDATA[
+                                                                    listdeal.push('product_time_1_33|2016/08/31 00:00:00') ;
+                                                                    //]]>
+                                                                </script>
                                                             </div>
-                                                            <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
                                                         </div>
 
 
-                                                        <div class="item-title">
-                                                            <a href="http://prestashop.magentech.com/sp_shoppystore/en/accessories/5-printed-summer-dress.html"
-                                                               title="Hure mazte pizan"   >
-                                                                Hure mazte pizan
-                                                            </a>
-                                                        </div>
 
-
-                                                        <div class="item-content">
-                                                            <div itemprop="offers" itemscope
-                                                                 itemtype="http://schema.org/Offer"
-                                                                 class="content_price">
-                                                                                                                                            <span itemprop="price"
-                                                                                                                                                  class="price product-price">
-																			$ 20.51																		</span>
-                                                                <meta itemprop="priceCurrency"
-                                                                      content="USD"/>
-
-                                                                        <span class="old-price product-price">
-																		$ 30.51
-																	</span>
-
-
-
-
-                                                            </div>
-
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="item-wrap clearfix">
-                                                <div class="item-img item-height">
-
-
-                                                    <!--								<div class="price-percent-reduction"><span>-10%</span></div>
-                        -->
-
-                                                    <div class="item-img-info ">
-                                                        <a class="product_img_link"
-                                                           href="http://prestashop.magentech.com/sp_shoppystore/en/sofas-chairs/33-baze-suma-pite-cazen-mita-katem.html"
-                                                           title="Baze suma pite cazen mita katem"  >
-                                                            <img class="img_1" src="http://prestashop.magentech.com/sp_shoppystore/975-home_default/baze-suma-pite-cazen-mita-katem.jpg"
-                                                                 alt="Liza setem mute"/>
-                                                            <img  class="img_0" src="http://prestashop.magentech.com/sp_shoppystore/976-home_default/baze-suma-pite-cazen-mita-katem.jpg"  alt="Baze suma pite cazen mita katem" />
-                                                        </a>
-
-
-
-
-                                                    </div>
-
-
-                                                    <div class="item-time">
-                                                        <div class="item-timer product_time_1_33"></div>
-                                                        <script type="text/javascript">
-                                                            //<![CDATA[
-                                                            listdeal.push('product_time_1_33|2016/08/31 00:00:00') ;
-                                                            //]]>
-                                                        </script>
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="item-info">
-                                                    <div class="item-inner">
-                                                        <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                            <div class="star_content ">
-                                                                <div class="star star_on"></div>
-                                                                <div class="star star_on"></div>
-                                                                <div class="star star_on"></div>
-                                                                <div class="star star_on"></div>
-                                                                <div class="star star_on"></div>
-                                                                <meta itemprop="worstRating" content = "0" />
-                                                                <meta itemprop="ratingValue" content = "5" />
-                                                                <meta itemprop="bestRating" content = "5" />
-                                                            </div>
-                                                            <span class="nb-comments"><span itemprop="reviewCount">1</span> Review(s)</span>
-                                                        </div>
 
 
                                                         <div class="item-title">
                                                             <a href="http://prestashop.magentech.com/sp_shoppystore/en/sofas-chairs/33-baze-suma-pite-cazen-mita-katem.html"
                                                                title="Baze suma pite cazen mita katem"   >
-                                                                Baze suma pite cazen
+                                                                {{$veri1->baslik}}
                                                             </a>
                                                         </div>
 
@@ -278,12 +96,12 @@
                                                                  class="content_price">
                                                                                                                                             <span itemprop="price"
                                                                                                                                                   class="price product-price">
-																			$ 81.00																		</span>
+																			{{$veri1->fiyat}}																</span>
                                                                 <meta itemprop="priceCurrency"
                                                                       content="USD"/>
 
                                                                         <span class="old-price product-price">
-																		$ 90.00
+																		{{$veri1->piyasa_fiyati}}
 																	</span>
 
 
@@ -296,8 +114,9 @@
                                                     </div>
                                                 </div>
 
-                                            </div>
-                                        </div>
+
+                                @endforeach
+                                @endif
                                     </div>
                                 </div>
                             </div>
@@ -419,16 +238,37 @@
 
 
 
+                <style>
+                    .static-home .banner-1 {
+                        margin-left: 16px;
+                    }
+
+
+                    .static-home .banner-2 {
+                        margin-left: -1px;
+                    }
+                    .static-home .banner-3 {
+                        float: right;
+                        margin-right: 15px;
+                    }
+                </style>
+
+
+
                 <!-- SP Custom Html -->
                 <div class="moduletable  banner-home col-sm-12">
 
                     <div class="static-home">
+                        <div class="row">
+                            <?php  $i = 1; ?>
+                            @if(isset($ustBanner))
+                                @foreach( $ustBanner as $banner1)
 
-                        <div class="img-banner banner-1"><a title="Static Image" href="#"><img src="../img/cms/banner-img1.png" alt="Static Image" /></a></div>
-
-                        <div class="img-banner banner-2"><a title="Static Image" href="#"><img src="../img/cms/banner-img2.png" alt="Static Image" /></a></div>
-
-                        <div class="img-banner banner-3"><a title="Static Image" href="#"><img src="../img/cms/banner-img3.png" alt="Static Image" /></a></div>
+                                    <div class="img-banner banner-<?php echo $i;?>"><a title="Static Image" href="{{$banner1->url}}"><img src="{{ url("bannerResimler/".$banner1->yol) }}" alt="Static Image" /></a></div>
+                                    <?php  $i++; ?>
+                                @endforeach
+                            @endif
+                        </div>
 
                     </div>
                 </div>
