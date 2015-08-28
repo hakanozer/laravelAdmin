@@ -376,9 +376,14 @@ Fax: <a title="Fax">{{$iletisim->fax}}
                 <div class="row">
                     <div id="header_logo" class=" col-lg-3 col-md-3 col-sm-2 col-xs-12 ">
                         <a class="logo" href="./" title="Welcome to SP ShoppyStore">
-                            <img  src="http://prestashop.magentech.com/sp_shoppystore/img/logo.png" alt="Welcome to SP ShoppyStore"  />
+                             @if(isset($sorgu))
+                        @foreach($sorgu as $item)
+                            <img  src="{{asset("logolar/".$item->logo)}}" alt="Welcome to SP ShoppyStore"  />
                         </a>
                     </div>
+
+                    @endforeach
+                    @endif
 
                     <div id="top_menu" class=" col-lg-9 col-md-9 col-sm-10 col-xs-12">
 
