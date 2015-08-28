@@ -62,46 +62,22 @@
 
 
                     <!-- MODULE Block footer -->
-                    <section class="footer-block box-footer" id="block_various_links_footer">
-                        <h3 class="mod-title">Information</h3>
-                        <ul class="list-link">
-                            <li class="item">
-                                <a href="#" title="Specials">
-                                    Specials
-                                </a>
-                            </li>
-                            <li class="item">
-                                <a href="#" title="New products">
-                                    New products
-                                </a>
-                            </li>
-                            <li class="item">
-                                <a href="#" title="Best sellers">
-                                    Best sellers
-                                </a>
-                            </li>
+                   <section class="footer-block box-footer" id="block_various_links_footer">
+                        <h3 class="mod-title">Linkler</h3>
+                            @if(isset($link))
+                                <ul class="list-link">
+                                @foreach($link as $veriler)
+                                    <li class="item">
+                                    <a href="{{url('$veriler->site_adresi')}}" title="New products">
+                                        {{$veriler->site_adi}}
+                                    </a>
+                                    </li>
+                                @endforeach
+                                </ul>
 
-                            <li class="item">
-                                <a href="#" title="Our stores">
-                                    Our stores
-                                </a>
-                            </li>
+                   </section>
 
-                            <li class="item">
-                                <a href="#" title="Contact us">
-                                    Contact us
-                                </a>
-                            </li>
-                            <!--
-                    -->
-                            <li>
-                                <a href="#" title="Sitemap">
-                                    Sitemap
-                                </a>
-                            </li>
-                        </ul>
-
-                    </section>
+                             @endif
 
                     <!-- /MODULE Block footer -->
 

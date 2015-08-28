@@ -55,14 +55,12 @@ class WelcomeController extends Controller {
         $solAltBanner = $this->solAltBanner();
         $videoGonder=$this->videoGonder();
         $teklislider=$this->teklislider();
-<<<<<<< HEAD
         $cokSatanlar= $this->cokSatanlar();
-        return view('site',array('ust' => $veri,'sorgu' => $sorgu,'data'=>$data,'indirimliUrunler'=>$indirimliUrunler,'oneCikanUrunler'=>$oneCikanUrunler,'cokSatanUrunler'=>$cokSatanUrunler,'UsIltsmData' => $UsIltsmData,'haber'=>$haber,'icerikler'=>$icerikler, 'ustBanner'=>$ustBanner,'altBanner'=>$altBanner,'ortaBanner'=>$ortaBanner,'solAltBanner'=>$solAltBanner,'videoVeri'=>$videoGonder,'teklislider'=>$teklislider,'cokSatanlar'=>$cokSatanlar ));    }
-=======
-        $cokSatanlar= $this->$cokSatanlar();
-        return view('site',array('ust' => $veri,'sorgu' => $sorgu,'data'=>$data,'indirimliUrunler'=>$indirimliUrunler,'oneCikanUrunler'=>$oneCikanUrunler,'cokSatanUrunler'=>$cokSatanUrunler,'UsIltsmData' => $UsIltsmData,'haber'=>$haber,'icerikler'=>$icerikler, 'ustBanner'=>$ustBanner,'altBanner'=>$altBanner,'ortaBanner'=>$ortaBanner,'solAltBanner'=>$solAltBanner,'videoVeri'=>$videoGonder,'teklislider'=>$teklislider,'cokSatanlar'=>$cokSatanlar ));
+        $link = $this->linkGetir();
+        return view('site',array('ust' => $veri,'sorgu' => $sorgu,'data'=>$data,'indirimliUrunler'=>$indirimliUrunler,'oneCikanUrunler'=>$oneCikanUrunler,'cokSatanUrunler'=>$cokSatanUrunler,'UsIltsmData' => $UsIltsmData,'haber'=>$haber,'icerikler'=>$icerikler, 'ustBanner'=>$ustBanner,'altBanner'=>$altBanner,'ortaBanner'=>$ortaBanner,'solAltBanner'=>$solAltBanner,'videoVeri'=>$videoGonder,'teklislider'=>$teklislider,'cokSatanlar'=>$cokSatanlar , 'link'=>$link ));
+
     }
->>>>>>> origin/master
+
 
     // slider ürün sağ
     public function teklislider()
@@ -248,7 +246,7 @@ public function haber()
 
     }
 
-<<<<<<< HEAD
+
     // iletişim
     public function contactUs(){
         $sorgu = $this->iletisimGetir();
@@ -265,9 +263,14 @@ public function haber()
             ->insert(['baslik' => $contactBilgi["baslik"],'mail' => $contactBilgi["mail"],'referans_no' => $contactBilgi["referans"],'mesaj' => $contactBilgi["message"], 'tarih' => date('Y-m-d H:i:s')]);
         return Redirect::to('iletisim');
     }
-    // iletişim
+    // LinkGetir
+    public function linkGetir(){
+        $link=DB::select("select * from linkler");
 
-=======
->>>>>>> origin/master
+        return $link;
+    }
+
+
+
 }
 
