@@ -55,10 +55,19 @@ class WelcomeController extends Controller {
         $solAltBanner = $this->solAltBanner();
         $videoGonder=$this->videoGonder();
         $teklislider=$this->teklislider();
+<<<<<<< HEAD
         $cokSatanlar= $this->cokSatanlar();
         $link = $this->linkGetir();
         return view('site',array('ust' => $veri,'sorgu' => $sorgu,'data'=>$data,'indirimliUrunler'=>$indirimliUrunler,'oneCikanUrunler'=>$oneCikanUrunler,'cokSatanUrunler'=>$cokSatanUrunler,'UsIltsmData' => $UsIltsmData,'haber'=>$haber,'icerikler'=>$icerikler, 'ustBanner'=>$ustBanner,'altBanner'=>$altBanner,'ortaBanner'=>$ortaBanner,'solAltBanner'=>$solAltBanner,'videoVeri'=>$videoGonder,'teklislider'=>$teklislider,'cokSatanlar'=>$cokSatanlar , 'link'=>$link ));
 
+=======
+
+        $cokSatanlar= $this->cokSatanlar();
+        return view('site',array('ust' => $veri,'sorgu' => $sorgu,'data'=>$data,'indirimliUrunler'=>$indirimliUrunler,'oneCikanUrunler'=>$oneCikanUrunler,'cokSatanUrunler'=>$cokSatanUrunler,'UsIltsmData' => $UsIltsmData,'haber'=>$haber,'icerikler'=>$icerikler, 'ustBanner'=>$ustBanner,'altBanner'=>$altBanner,'ortaBanner'=>$ortaBanner,'solAltBanner'=>$solAltBanner,'videoVeri'=>$videoGonder,'teklislider'=>$teklislider,'cokSatanlar'=>$cokSatanlar ));  
+
+        $cokSatanlar= $this->$cokSatanlar();
+        return view('site',array('ust' => $veri,'sorgu' => $sorgu,'data'=>$data,'indirimliUrunler'=>$indirimliUrunler,'oneCikanUrunler'=>$oneCikanUrunler,'cokSatanUrunler'=>$cokSatanUrunler,'UsIltsmData' => $UsIltsmData,'haber'=>$haber,'icerikler'=>$icerikler, 'ustBanner'=>$ustBanner,'altBanner'=>$altBanner,'ortaBanner'=>$ortaBanner,'solAltBanner'=>$solAltBanner,'videoVeri'=>$videoGonder,'teklislider'=>$teklislider,'cokSatanlar'=>$cokSatanlar ));
+>>>>>>> origin/master
     }
 
 
@@ -246,6 +255,7 @@ public function haber()
 
     }
 
+<<<<<<< HEAD
 
     // iletişim
     public function contactUs(){
@@ -273,4 +283,7 @@ public function haber()
 
 
 }
+=======
+
+>>>>>>> origin/master
 
