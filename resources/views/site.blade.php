@@ -34,7 +34,7 @@
 
                 <div id="left_column" class="column col-sm-12 col-md-3">
                     <!-- SP Extra Slider -->
-                    <div class="moduletable  recommend">
+                      <div class="moduletable  recommend">
 
                         <div class="module-title">
                             <h3><span>En Çok Satanlar</span></h3>
@@ -53,6 +53,7 @@
                       button-type1">
                             <!-- Begin extraslider-inner -->
                             <div class="extraslider-inner" data-effect="flip">
+<<<<<<< HEAD
                                 <?php $itemNumber=0; ?>
                                 @if(isset($cokSatanlar))
                                     @foreach($cokSatanlar as $cokSatanUrunValue)
@@ -62,12 +63,73 @@
 
                                                 <div class="recommend-title" id="section-{{$itemNumber += 1}}">
                                                     <span class="number">{{$itemNumber}}</span>
+=======
+                            <?php $itemNumber=0; ?>        
+                            @if(isset($cokSatanlar))
+                                @foreach($cokSatanlar as $cokSatanUrunValue)
+                                <!-- Begin item -->
+                                <div class="item ">
+                                    <div class="item-wrap style1 " >
+
+                                        <div class="recommend-title" id="section-{{$itemNumber += 1}}">
+                                            <span class="number">{{$itemNumber}}</span>
+                                            <a href="http://prestashop.magentech.com/sp_shoppystore/en/sofas-chairs/33-baze-suma-pite-cazen-mita-katem.html"
+                                               title="Baze suma pite cazen mita katem"   >
+                                                {{$cokSatanUrunValue["baslik"]}}
+                                            </a>
+                                        </div>
+                                        <div class="item-wrap-inner">
+
+
+
+                                            <div class="item-image">
+                                                <div class="item-img-info">
+                                                    <a class="product_img_link" href="#"
+                                                       title="Baze suma pite cazen mita katem"  >
+                                                        <span class="number">1</span>
+                                                        <img src="{{asset("resim/server/php/files/".$cokSatanUrunValue["id"]."/".$cokSatanUrunValue["resimAdi"])}}"/>
+                                                    </a>
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="item-info">
+                                                <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                                                    <div class="star_content ">
+                                                        @if($cokSatanUrunValue["puan"] == null)
+                                                            <div class="star star_off"></div>
+                                                            <div class="star star_off"></div>
+                                                            <div class="star star_off"></div>
+                                                            <div class="star star_off"></div>
+                                                            <div class="star star_off"></div>
+                                                        @else
+                                                            @for($i = 0; $i < $cokSatanUrunValue["puan"];$i++)
+                                                                <div class="star star_on"></div>
+                                                            @endfor
+                                                            @for($i = 0; $i < 5 - $cokSatanUrunValue["puan"];$i++)
+                                                                <div class="star star_off"></div>                                                                                               @endfor
+                                                        @endif
+
+                                                    </div>
+                                                    <span class="nb-comments"><span itemprop="reviewCount">1</span> Review(s)</span>
+                                                </div>
+
+                                                <div class="item-title">
+>>>>>>> origin/master
                                                     <a href="http://prestashop.magentech.com/sp_shoppystore/en/sofas-chairs/33-baze-suma-pite-cazen-mita-katem.html"
                                                        title="Baze suma pite cazen mita katem"   >
                                                         {{$cokSatanUrunValue["baslik"]}}
                                                     </a>
                                                 </div>
+<<<<<<< HEAD
                                                 <div class="item-wrap-inner">
+=======
+
+                                                <!-- Begin item-content -->
+                                                <div class="item-content">
+
+>>>>>>> origin/master
 
 
 
@@ -80,6 +142,7 @@
                                                             </a>
 
 
+<<<<<<< HEAD
                                                         </div>
                                                     </div>
 
@@ -130,6 +193,15 @@
 
                                                         </div>
                                                         <!-- End item-content -->
+=======
+                                                    <div itemprop="offers" itemscope
+                                                         itemtype="http://schema.org/Offer"
+                                                         class="content_price">
+                                                            <span itemprop="price" class="price product-price">{{$cokSatanUrunValue["fiyat"]}} TL</span>
+
+
+
+>>>>>>> origin/master
                                                     </div>
                                                     <!-- End item-info -->
                                                 </div>
@@ -137,9 +209,19 @@
                                             </div>
                                             <!-- End item-wrap -->
                                         </div>
+<<<<<<< HEAD
                                         @endforeach
                                         @endif
                                                 <!-- End item-->
+=======
+                                        <!-- End item-wrap-inner -->
+                                    </div>
+                                    <!-- End item-wrap -->
+                                </div>
+                                @endforeach
+                            @endif
+                                <!-- End item-->
+>>>>>>> origin/master
                             </div>
                             <!--End extraslider-inner -->
                         </div>
