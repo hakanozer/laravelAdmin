@@ -55,14 +55,14 @@ class WelcomeController extends Controller {
         $solAltBanner = $this->solAltBanner();
         $videoGonder=$this->videoGonder();
         $teklislider=$this->teklislider();
-<<<<<<< HEAD
+
         $cokSatanlar= $this->cokSatanlar();
-        return view('site',array('ust' => $veri,'sorgu' => $sorgu,'data'=>$data,'indirimliUrunler'=>$indirimliUrunler,'oneCikanUrunler'=>$oneCikanUrunler,'cokSatanUrunler'=>$cokSatanUrunler,'UsIltsmData' => $UsIltsmData,'haber'=>$haber,'icerikler'=>$icerikler, 'ustBanner'=>$ustBanner,'altBanner'=>$altBanner,'ortaBanner'=>$ortaBanner,'solAltBanner'=>$solAltBanner,'videoVeri'=>$videoGonder,'teklislider'=>$teklislider,'cokSatanlar'=>$cokSatanlar ));    }
-=======
+        return view('site',array('ust' => $veri,'sorgu' => $sorgu,'data'=>$data,'indirimliUrunler'=>$indirimliUrunler,'oneCikanUrunler'=>$oneCikanUrunler,'cokSatanUrunler'=>$cokSatanUrunler,'UsIltsmData' => $UsIltsmData,'haber'=>$haber,'icerikler'=>$icerikler, 'ustBanner'=>$ustBanner,'altBanner'=>$altBanner,'ortaBanner'=>$ortaBanner,'solAltBanner'=>$solAltBanner,'videoVeri'=>$videoGonder,'teklislider'=>$teklislider,'cokSatanlar'=>$cokSatanlar ));  
+
         $cokSatanlar= $this->$cokSatanlar();
         return view('site',array('ust' => $veri,'sorgu' => $sorgu,'data'=>$data,'indirimliUrunler'=>$indirimliUrunler,'oneCikanUrunler'=>$oneCikanUrunler,'cokSatanUrunler'=>$cokSatanUrunler,'UsIltsmData' => $UsIltsmData,'haber'=>$haber,'icerikler'=>$icerikler, 'ustBanner'=>$ustBanner,'altBanner'=>$altBanner,'ortaBanner'=>$ortaBanner,'solAltBanner'=>$solAltBanner,'videoVeri'=>$videoGonder,'teklislider'=>$teklislider,'cokSatanlar'=>$cokSatanlar ));
     }
->>>>>>> origin/master
+
 
     // slider ürün sağ
     public function teklislider()
@@ -248,26 +248,5 @@ public function haber()
 
     }
 
-<<<<<<< HEAD
-    // iletişim
-    public function contactUs(){
-        $sorgu = $this->iletisimGetir();
-        $veri = $this->gonder();
-        return view('contactUs',array('sorgu'=>$sorgu));
 
-    }
-    public function contactUsKaydet()
-    {
-        $contactBilgi = Input::all();
-
-
-        $contactSonuc = DB::table('iletisim_mesaj')
-            ->insert(['baslik' => $contactBilgi["baslik"],'mail' => $contactBilgi["mail"],'referans_no' => $contactBilgi["referans"],'mesaj' => $contactBilgi["message"], 'tarih' => date('Y-m-d H:i:s')]);
-        return Redirect::to('iletisim');
-    }
-    // iletişim
-
-=======
->>>>>>> origin/master
-}
 
