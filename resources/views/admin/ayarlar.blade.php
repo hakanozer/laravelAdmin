@@ -87,6 +87,10 @@
                            <label>Adres</label>
                            <input class="form-control" name="adres"  value="{{$veri->adres}}"/>
                         </div>
+                      <div class="form-group">
+                          <label>Telif Hakları Yazısı</label>
+                          <input class="form-control" name="telif"  value="{{$veri->telif}}"/>
+                      </div>
                      </div>
                      <!-- /.col-lg-6 (nested) -->
                      <div class="col-lg-6">

@@ -375,7 +375,7 @@ Fax: <a title="Fax">{{$iletisim->fax}}
             <div class="container">
                 <div class="row">
                     <div id="header_logo" class=" col-lg-3 col-md-3 col-sm-2 col-xs-12 ">
-                        <a class="logo" href="#" title="Welcome to SP ShoppyStore">
+                        <a class="logo" href="./" title="Welcome to SP ShoppyStore">
                             <img  src="http://prestashop.magentech.com/sp_shoppystore/img/logo.png" alt="Welcome to SP ShoppyStore"  />
                         </a>
                     </div>
@@ -388,12 +388,10 @@ Fax: <a title="Fax">{{$iletisim->fax}}
                             <div class="cat-title"><i class="fa fa-bars"></i></div>
                             <ul class="sf-menu clearfix menu-content">
 
-                                <li><a href="index.php" title="Home">Home</a></li>
-                                <li><a href="#" title="New Arrivals">New Arrivals</a></li>
-                                <li><a href="#" title="Daily Deals">Daily Deals</a></li>
-                                <li><a href="#" title="Blog">Blog</a></li>
-                                <li><a href="#" title="About Us">About Us</a></li>
-                                <li><a href="#" title="Contact Us">Contact Us</a></li>
+                                <li><a href="./" title="Anasayfa">Anasayfa</a></li>
+                                <li><a href="#" title="Galerimiz">Galerimiz</a></li>
+                                <li><a href="#" title="Hakkımızda">Hakkımızda</a></li>
+                                <li><a href="{{url("iletisim")}}" title="İletişim">İletişim</a></li>
 
                             </ul>
                         </div>
@@ -603,15 +601,18 @@ Fax: <a title="Fax">{{$iletisim->fax}}
 
 
                                 <div style="position: absolute; margin-top: 313px; border: 1px solid #DDDDDD; width: 270px;">
-                                    @if($videoVeri)
+                                    @if(isset($videoVeri))
                                         @foreach( $videoVeri as $video)
 
                                             <div class="container">
                                                 <div class="row">
-                                                    <div class="col-md-4">
-                                                        <video width="250" height="250" controls>
-                                                            <source src="{{url("bower_components/elfinder/files/". $video->baslik).".mp4" }}" type="video/mp4"> </video>
 
+
+
+
+
+                                                        <video  controls style="margin-left: -14px; width: 267px;">
+                                                            <source src="{{url("bower_components/elfinder/files/". $video->baslik).".mp4" }}" type="video/mp4"  preload controls></video>
                                                     </div>
                                                 </div>
                                             </div>
@@ -823,7 +824,7 @@ Fax: <a title="Fax">{{$iletisim->fax}}
                             </script>
                         </div>
 
-                        <div class="header_search col-lg-9 col-md-9 col-sm-10 col-xs-12">
+                        <div class="header_search col-lg-9 col-md-9 col-sm-10 col-xs-12" style="float: right; margin-right: 9px; margin-top: -50px;">
 
 
 

@@ -387,77 +387,7 @@
     </div>
 
     <div class="ps-footer-tag clearfix">
-        <div class="container">
 
-            <!-- SP Custom Html -->
-            <div class="moduletable  ">
-
-                <div class="footer-tags">
-
-                    <div class="block-title"><strong>Hot Tags</strong></div>
-
-                    <div class="block-content">
-
-                        <ul class="tags-list">
-
-                            <li><a style="font-size: 75%;" href="#">Cum</a>|</li>
-
-                            <li><a style="font-size: 75%;" href="#">Vel</a>|</li>
-
-                            <li><a style="font-size: 75%;" href="#">altera</a>|</li>
-
-                            <li><a style="font-size: 75%;" href="#">discere</a>|</li>
-
-                            <li><a style="font-size: 75%;" href="#">disputationi</a>|</li>
-
-                            <li><a style="font-size: 75%;" href="#">mandamus</a>|</li>
-
-                            <li><a style="font-size: 75%;" href="#">maxshop, shoppystore</a>|</li>
-
-                            <li><a style="font-size: 110%;" href="#">maxshop,prestashop</a>|</li>
-
-                            <li><a style="font-size: 75%;" href="#">mea</a>|</li>
-
-                            <li><a style="font-size: 75%;" href="#">regione</a>|</li>
-
-                            <li><a style="font-size: 145%;" href="#/">sp</a>|</li>
-
-                            <li><a style="font-size: 145%;" href="#">smartaddons,smtemplates,</a>|</li>
-
-                            <li><a style="font-size: 145%;" href="#">Estimated Delivery till Novarm opan</a>|</li>
-
-                            <li><a style="font-size: 145%;" href="#">Mini book, Macbook pro, pc senter</a>|</li>
-
-                            <li><a style="font-size: 145%;" href="#">android smart, new product</a>|</li>
-
-                            <li><a style="font-size: 145%;" href="#">case iphone reflective</a>|</li>
-
-                            <li><a style="font-size: 145%;" href="#">repacement touch screen</a>|</li>
-
-                            <li><a style="font-size: 145%;" href="#">bluetooth motorcycle headset</a>|</li>
-
-                            <li><a style="font-size: 145%;" href="#">32gb tf card</a>|</li>
-
-                            <li><a style="font-size: 145%;" href="#">bluetooth motorcycle headset</a>|</li>
-
-                            <li><a style="font-size: 145%;" href="#">figures the best smartphone</a>|</li>
-
-                            <li><a style="font-size: 145%;" href="#">case iphone reflective</a>|</li>
-
-                            <li><a style="font-size: 145%;" href="#">led tall light</a>|</li>
-
-                            <li><a style="font-size: 145%;" href="#">ramos lcd tablet pc black</a>|</li>
-
-                        </ul>
-
-                        <div class="view-all-tag" style="display: none;"><a title="View more" href="#">View more</a></div>
-
-                    </div>
-
-                </div>
-            </div>
-            <!-- /SP Custom Html -->
-        </div>
     </div>
 
 
@@ -465,7 +395,7 @@
         <div  class="container">
             <div class="row">
                 <div class="copy-right col-sm-7 clear">
-                    &copy; 2015  <a class="_blank" href="http://www.magentech.com/">PrestaShop Themes Demo Store</a>. All Rights Reserved. Designed By <a class="_blank" href="http://www.magentech.com">MagenTech.Com</a>
+                    {{$veri->telif}}
                 </div>
 
                 <div class="ps-footer-payment col-lg-5 col-sm-5">
@@ -473,17 +403,7 @@
                     <!-- SP Custom Html -->
                     <div class="moduletable  ">
 
-                        <ul class="payment-method">
 
-                            <li><a title="Payment Method" href="#"><img src="http://dev.ytcvn.com/ytc_templates/prestashop/sp_shoppystore/img/cms/payment/payment-1.png" alt="Payment" /></a></li>
-
-                            <li><a title="Payment Method" href="#"><img src="http://dev.ytcvn.com/ytc_templates/prestashop/sp_shoppystore/img/cms/payment/payment-2.png" alt="Payment" /></a></li>
-
-                            <li><a title="Payment Method" href="#"><img src="http://dev.ytcvn.com/ytc_templates/prestashop/sp_shoppystore/img/cms/payment/payment-3.png" alt="Payment" /></a></li>
-
-                            <li><a title="Payment Method" href="#"><img src="http://dev.ytcvn.com/ytc_templates/prestashop/sp_shoppystore/img/cms/payment/payment-4.png" alt="Payment" /></a></li>
-
-                        </ul>
                     </div>
                     <!-- /SP Custom Html -->
                 </div>

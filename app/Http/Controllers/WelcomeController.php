@@ -55,8 +55,8 @@ class WelcomeController extends Controller {
         $solAltBanner = $this->solAltBanner();
         $videoGonder=$this->videoGonder();
         $teklislider=$this->teklislider();
-        return view('site',array('ust' => $veri,'sorgu' => $sorgu,'data'=>$data,'indirimliUrunler'=>$indirimliUrunler,'oneCikanUrunler'=>$oneCikanUrunler,'cokSatanUrunler'=>$cokSatanUrunler,'UsIltsmData' => $UsIltsmData,'haber'=>$haber,'icerikler'=>$icerikler, 'ustBanner'=>$ustBanner,'altBanner'=>$altBanner,'ortaBanner'=>$ortaBanner,'solAltBanner'=>$solAltBanner,'videoVeri'=>$videoGonder,'teklislider'=>$teklislider ));
-    }
+        $cokSatanlar= $this->cokSatanlar();
+        return view('site',array('ust' => $veri,'sorgu' => $sorgu,'data'=>$data,'indirimliUrunler'=>$indirimliUrunler,'oneCikanUrunler'=>$oneCikanUrunler,'cokSatanUrunler'=>$cokSatanUrunler,'UsIltsmData' => $UsIltsmData,'haber'=>$haber,'icerikler'=>$icerikler, 'ustBanner'=>$ustBanner,'altBanner'=>$altBanner,'ortaBanner'=>$ortaBanner,'solAltBanner'=>$solAltBanner,'videoVeri'=>$videoGonder,'teklislider'=>$teklislider,'cokSatanlar'=>$cokSatanlar ));    }
 
     // slider ürün sağ
     public function teklislider()
@@ -205,6 +205,60 @@ public function haber()
 
         return view ('urunDetay',array('detay'=>$detay));
     }
+
+    public function cokSatanlar(){
+        $query = DB::select("select urunler.id,urunler.baslik,urunler.fiyat, resim.adi from urunler inner join urun_resimleri as resim on urunler.id = resim.urun_id where urunler.cok_satan = 1 group by urunler.id order by urunler.id asc limit 5");
+
+        $cokSatanlarIndex = 0;
+        foreach($query as $value) {
+
+            $cokSatanlar[$cokSatanlarIndex]["id"] = $value->id;
+            $cokSatanlar[$cokSatanlarIndex]["baslik"] = $value->baslik;
+            $cokSatanlar[$cokSatanlarIndex]["fiyat"] = $value->fiyat;
+            $cokSatanlar[$cokSatanlarIndex]["resimAdi"] = $value->adi;
+
+            $query2 = DB::select("select count(*) as sayi from urun_puan where urun_id = ?", array($value->id));
+
+            if ($query2[0]->sayi != 0){
+                $query3 = DB::select("select puan from urun_puan where urun_id = ?", array($value->id));
+
+                $toplamPuan = 0;
+
+                foreach($query3 as $value2){
+                    $toplamPuan += $value2->puan;
+                }
+
+                $puan = $toplamPuan / $query2[0]->sayi;
+                $cokSatanlar[$cokSatanlarIndex]["puan"] = round($puan);
+            }
+            else{
+                $cokSatanlar[$cokSatanlarIndex]["puan"]= null;
+
+            }
+            $cokSatanlarIndex += 1;
+        }
+
+        return $cokSatanlar;
+
+    }
+
+    // iletişim
+    public function contactUs(){
+        $sorgu = $this->iletisimGetir();
+        $veri = $this->gonder();
+        return view('contactUs',array('sorgu'=>$sorgu));
+
+    }
+    public function contactUsKaydet()
+    {
+        $contactBilgi = Input::all();
+
+
+        $contactSonuc = DB::table('iletisim_mesaj')
+            ->insert(['baslik' => $contactBilgi["baslik"],'mail' => $contactBilgi["mail"],'referans_no' => $contactBilgi["referans"],'mesaj' => $contactBilgi["message"], 'tarih' => date('Y-m-d H:i:s')]);
+        return Redirect::to('iletisim');
+    }
+    // iletişim
 
 }
 

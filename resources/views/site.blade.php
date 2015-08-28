@@ -37,7 +37,7 @@
                     <div class="moduletable  recommend">
 
                         <div class="module-title">
-                            <h3><span>Recommend Products</span></h3>
+                            <h3><span>En Çok Satanlar</span></h3>
                         </div>
 
                         <div class="pretext-spextraslider">
@@ -53,409 +53,93 @@
                       button-type1">
                             <!-- Begin extraslider-inner -->
                             <div class="extraslider-inner" data-effect="flip">
+                                <?php $itemNumber=0; ?>
+                                @if(isset($cokSatanlar))
+                                    @foreach($cokSatanlar as $cokSatanUrunValue)
+                                        <!-- Begin item -->
+                                        <div class="item ">
+                                            <div class="item-wrap style1 " >
 
-
-                                <!-- Begin item -->
-                                <div class="item ">
-                                    <div class="item-wrap style1 " >
-
-                                        <div class="recommend-title" id="section-1">
-                                            <span class="number">1</span>
-                                            <a href="http://prestashop.magentech.com/sp_shoppystore/en/sofas-chairs/33-baze-suma-pite-cazen-mita-katem.html"
-                                               title="Baze suma pite cazen mita katem"   >
-                                                Baze suma pite cazen
-                                            </a>
-                                        </div>
-                                        <div class="item-wrap-inner">
-
-
-
-                                            <div class="item-image">
-                                                <div class="item-img-info">
-                                                    <a class="product_img_link" href="http://prestashop.magentech.com/sp_shoppystore/en/sofas-chairs/33-baze-suma-pite-cazen-mita-katem.html"
-                                                       title="Baze suma pite cazen mita katem"  >
-                                                        <span class="number">1</span>
-                                                        <img src="http://prestashop.magentech.com/sp_shoppystore/975-medium_default/baze-suma-pite-cazen-mita-katem.jpg" alt="Liza setem mute"/>
-                                                    </a>
-
-
-                                                </div>
-                                            </div>
-
-                                            <div class="item-info">
-                                                <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                    <div class="star_content ">
-                                                        <div class="star star_on"></div>
-                                                        <div class="star star_on"></div>
-                                                        <div class="star star_on"></div>
-                                                        <div class="star star_on"></div>
-                                                        <div class="star star_on"></div>
-                                                        <meta itemprop="worstRating" content = "0" />
-                                                        <meta itemprop="ratingValue" content = "5" />
-                                                        <meta itemprop="bestRating" content = "5" />
-                                                    </div>
-                                                    <span class="nb-comments"><span itemprop="reviewCount">1</span> Review(s)</span>
-                                                </div>
-
-                                                <div class="item-title">
+                                                <div class="recommend-title" id="section-{{$itemNumber += 1}}">
+                                                    <span class="number">{{$itemNumber}}</span>
                                                     <a href="http://prestashop.magentech.com/sp_shoppystore/en/sofas-chairs/33-baze-suma-pite-cazen-mita-katem.html"
                                                        title="Baze suma pite cazen mita katem"   >
-                                                        Baze suma pite cazen
+                                                        {{$cokSatanUrunValue["baslik"]}}
                                                     </a>
                                                 </div>
-
-                                                <!-- Begin item-content -->
-                                                <div class="item-content">
+                                                <div class="item-wrap-inner">
 
 
 
+                                                    <div class="item-image">
+                                                        <div class="item-img-info">
+                                                            <a class="product_img_link" href="#"
+                                                               title="Baze suma pite cazen mita katem"  >
+                                                                <span class="number">1</span>
+                                                                <img src="{{asset("resim/server/php/files/".$cokSatanUrunValue["id"]."/".$cokSatanUrunValue["resimAdi"])}}"/>
+                                                            </a>
 
 
-
-                                                    <div itemprop="offers" itemscope
-                                                         itemtype="http://schema.org/Offer"
-                                                         class="content_price">
-                                                                                                                                    <span itemprop="price" class="price product-price">
-																        $ 81.00                                                                    </span>
-                                                        <meta itemprop="priceCurrency"
-                                                              content="USD"/>
-                                                                                                                                            
-                                                                        <span class="old-price product-price">
-																	$ 90.00
-																</span>
-                                                                        
-                                                                                                                                                    <span class="price-percent-reduction">-10
-                                                                                %</span>
-
-
+                                                        </div>
                                                     </div>
 
-                                                </div>
-                                                <!-- End item-content -->
-                                            </div>
-                                            <!-- End item-info -->
-                                        </div>
-                                        <!-- End item-wrap-inner -->
-                                    </div>
-                                    <!-- End item-wrap -->
-                                </div>
-                                <!-- End item-->
+                                                    <div class="item-info">
+                                                        <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                                                            <div class="star_content ">
+                                                                @if($cokSatanUrunValue["puan"] == null)
+                                                                    <div class="star star_off"></div>
+                                                                    <div class="star star_off"></div>
+                                                                    <div class="star star_off"></div>
+                                                                    <div class="star star_off"></div>
+                                                                    <div class="star star_off"></div>
+                                                                @else
+                                                                    @for($i = 0; $i < $cokSatanUrunValue["puan"];$i++)
+                                                                        <div class="star star_on"></div>
+                                                                    @endfor
+                                                                    @for($i = 0; $i < 5 - $cokSatanUrunValue["puan"];$i++)
+                                                                        <div class="star star_off"></div>                                                                                               @endfor
+                                                                @endif
 
-                                <!-- Begin item -->
-                                <div class="item ">
-                                    <div class="item-wrap style1 " >
+                                                            </div>
+                                                            <span class="nb-comments"><span itemprop="reviewCount">1</span> Review(s)</span>
+                                                        </div>
 
-                                        <div class="recommend-title" id="section-2">
-                                            <span class="number">2</span>
-                                            <a href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/54-jiza-suma-nia-jaren-mizan-seka.html"
-                                               title="Jiza suma nia jaren mizan "   >
-                                                Jiza suma nia jaren
-                                            </a>
-                                        </div>
-                                        <div class="item-wrap-inner">
+                                                        <div class="item-title">
+                                                            <a href="http://prestashop.magentech.com/sp_shoppystore/en/sofas-chairs/33-baze-suma-pite-cazen-mita-katem.html"
+                                                               title="Baze suma pite cazen mita katem"   >
+                                                                {{$cokSatanUrunValue["baslik"]}}
+                                                            </a>
+                                                        </div>
 
-
-
-                                            <div class="item-image">
-                                                <div class="item-img-info">
-                                                    <a class="product_img_link" href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/54-jiza-suma-nia-jaren-mizan-seka.html"
-                                                       title="Jiza suma nia jaren mizan "  >
-                                                        <span class="number">2</span>
-                                                        <img src="http://prestashop.magentech.com/sp_shoppystore/239-medium_default/jiza-suma-nia-jaren-mizan-seka.jpg" alt="Jiza suma nia jaren mizan "/>
-                                                    </a>
+                                                        <!-- Begin item-content -->
+                                                        <div class="item-content">
 
 
-                                                </div>
-                                            </div>
 
-                                            <div class="item-info">
-                                                <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                    <div class="star_content ">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <meta itemprop="worstRating" content = "0" />
-                                                        <meta itemprop="ratingValue" content = "0" />
-                                                        <meta itemprop="bestRating" content = "5" />
+
+
+
+                                                            <div itemprop="offers" itemscope
+                                                                 itemtype="http://schema.org/Offer"
+                                                                 class="content_price">
+                                                                <span itemprop="price" class="price product-price">{{$cokSatanUrunValue["fiyat"]}} TL</span>
+
+
+
+                                                            </div>
+
+                                                        </div>
+                                                        <!-- End item-content -->
                                                     </div>
-                                                    <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
+                                                    <!-- End item-info -->
                                                 </div>
-
-                                                <div class="item-title">
-                                                    <a href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/54-jiza-suma-nia-jaren-mizan-seka.html"
-                                                       title="Jiza suma nia jaren mizan "   >
-                                                        Jiza suma nia jaren
-                                                    </a>
-                                                </div>
-
-                                                <!-- Begin item-content -->
-                                                <div class="item-content">
-
-
-
-
-
-
-                                                    <div itemprop="offers" itemscope
-                                                         itemtype="http://schema.org/Offer"
-                                                         class="content_price">
-                                                                                                                                    <span itemprop="price" class="price product-price">
-																        $ 68.00                                                                    </span>
-                                                        <meta itemprop="priceCurrency"
-                                                              content="USD"/>
-
-
-                                                    </div>
-
-                                                </div>
-                                                <!-- End item-content -->
+                                                <!-- End item-wrap-inner -->
                                             </div>
-                                            <!-- End item-info -->
+                                            <!-- End item-wrap -->
                                         </div>
-                                        <!-- End item-wrap-inner -->
-                                    </div>
-                                    <!-- End item-wrap -->
-                                </div>
-                                <!-- End item-->
-
-                                <!-- Begin item -->
-                                <div class="item ">
-                                    <div class="item-wrap style1 " >
-
-                                        <div class="recommend-title" id="section-3">
-                                            <span class="number">3</span>
-                                            <a href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/56-jaze-naze-xuna-maze-piten-maxe.html"
-                                               title="Jaze naze xuna maze kitem"   >
-                                                Jaze naze xuna maze kitem
-                                            </a>
-                                        </div>
-                                        <div class="item-wrap-inner">
-
-
-
-                                            <div class="item-image">
-                                                <div class="item-img-info">
-                                                    <a class="product_img_link" href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/56-jaze-naze-xuna-maze-piten-maxe.html"
-                                                       title="Jaze naze xuna maze kitem"  >
-                                                        <span class="number">3</span>
-                                                        <img src="http://prestashop.magentech.com/sp_shoppystore/244-medium_default/jaze-naze-xuna-maze-piten-maxe.jpg" alt="Jaze naze xuna maze kitem"/>
-                                                    </a>
-
-
-                                                </div>
-                                            </div>
-
-                                            <div class="item-info">
-                                                <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                    <div class="star_content ">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <meta itemprop="worstRating" content = "0" />
-                                                        <meta itemprop="ratingValue" content = "0" />
-                                                        <meta itemprop="bestRating" content = "5" />
-                                                    </div>
-                                                    <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                </div>
-
-                                                <div class="item-title">
-                                                    <a href="http://prestashop.magentech.com/sp_shoppystore/en/fashion/56-jaze-naze-xuna-maze-piten-maxe.html"
-                                                       title="Jaze naze xuna maze kitem"   >
-                                                        Jaze naze xuna maze kitem
-                                                    </a>
-                                                </div>
-
-                                                <!-- Begin item-content -->
-                                                <div class="item-content">
-
-
-
-
-
-
-                                                    <div itemprop="offers" itemscope
-                                                         itemtype="http://schema.org/Offer"
-                                                         class="content_price">
-                                                                                                                                    <span itemprop="price" class="price product-price">
-																        $ 56.00                                                                    </span>
-                                                        <meta itemprop="priceCurrency"
-                                                              content="USD"/>
-
-
-                                                    </div>
-
-                                                </div>
-                                                <!-- End item-content -->
-                                            </div>
-                                            <!-- End item-info -->
-                                        </div>
-                                        <!-- End item-wrap-inner -->
-                                    </div>
-                                    <!-- End item-wrap -->
-                                </div>
-                                <!-- End item-->
-
-                                <!-- Begin item -->
-                                <div class="item ">
-                                    <div class="item-wrap style1 " >
-
-                                        <div class="recommend-title" id="section-4">
-                                            <span class="number">4</span>
-                                            <a href="http://prestashop.magentech.com/sp_shoppystore/en/mobile/60-hiza-sunma-pite-ruma-caze-tima.html"
-                                               title="Hiza sunma pit"   >
-                                                Hiza sunma pit
-                                            </a>
-                                        </div>
-                                        <div class="item-wrap-inner">
-
-
-
-                                            <div class="item-image">
-                                                <div class="item-img-info">
-                                                    <a class="product_img_link" href="http://prestashop.magentech.com/sp_shoppystore/en/mobile/60-hiza-sunma-pite-ruma-caze-tima.html"
-                                                       title="Hiza sunma pit"  >
-                                                        <span class="number">4</span>
-                                                        <img src="http://prestashop.magentech.com/sp_shoppystore/194-medium_default/hiza-sunma-pite-ruma-caze-tima.jpg" alt="Hiza sunma pite ruma caze tima"/>
-                                                    </a>
-
-
-                                                </div>
-                                            </div>
-
-                                            <div class="item-info">
-                                                <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                    <div class="star_content ">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <meta itemprop="worstRating" content = "0" />
-                                                        <meta itemprop="ratingValue" content = "0" />
-                                                        <meta itemprop="bestRating" content = "5" />
-                                                    </div>
-                                                    <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                </div>
-
-                                                <div class="item-title">
-                                                    <a href="http://prestashop.magentech.com/sp_shoppystore/en/mobile/60-hiza-sunma-pite-ruma-caze-tima.html"
-                                                       title="Hiza sunma pit"   >
-                                                        Hiza sunma pit
-                                                    </a>
-                                                </div>
-
-                                                <!-- Begin item-content -->
-                                                <div class="item-content">
-
-
-
-
-
-
-                                                    <div itemprop="offers" itemscope
-                                                         itemtype="http://schema.org/Offer"
-                                                         class="content_price">
-                                                                                                                                    <span itemprop="price" class="price product-price">
-																        $ 76.00                                                                    </span>
-                                                        <meta itemprop="priceCurrency"
-                                                              content="USD"/>
-
-
-                                                    </div>
-
-                                                </div>
-                                                <!-- End item-content -->
-                                            </div>
-                                            <!-- End item-info -->
-                                        </div>
-                                        <!-- End item-wrap-inner -->
-                                    </div>
-                                    <!-- End item-wrap -->
-                                </div>
-                                <!-- End item-->
-
-                                <!-- Begin item -->
-                                <div class="item ">
-                                    <div class="item-wrap style1 " >
-
-                                        <div class="recommend-title" id="section-5">
-                                            <span class="number">5</span>
-                                            <a href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/61-saze-mute-rikn-mitra-poren-sire.html"
-                                               title="Saze mute rik"   >
-                                                Saze mute rik
-                                            </a>
-                                        </div>
-                                        <div class="item-wrap-inner">
-
-
-
-                                            <div class="item-image">
-                                                <div class="item-img-info">
-                                                    <a class="product_img_link" href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/61-saze-mute-rikn-mitra-poren-sire.html"
-                                                       title="Saze mute rik"  >
-                                                        <span class="number">5</span>
-                                                        <img src="http://prestashop.magentech.com/sp_shoppystore/165-medium_default/saze-mute-rikn-mitra-poren-sire.jpg" alt="Saze mute rikn liten nace rika"/>
-                                                    </a>
-
-
-                                                </div>
-                                            </div>
-
-                                            <div class="item-info">
-                                                <div class="comments_note" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                    <div class="star_content ">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <meta itemprop="worstRating" content = "0" />
-                                                        <meta itemprop="ratingValue" content = "0" />
-                                                        <meta itemprop="bestRating" content = "5" />
-                                                    </div>
-                                                    <span class="nb-comments"><span itemprop="reviewCount">0</span> Review(s)</span>
-                                                </div>
-
-                                                <div class="item-title">
-                                                    <a href="http://prestashop.magentech.com/sp_shoppystore/en/shop-shoppystore/61-saze-mute-rikn-mitra-poren-sire.html"
-                                                       title="Saze mute rik"   >
-                                                        Saze mute rik
-                                                    </a>
-                                                </div>
-
-                                                <!-- Begin item-content -->
-                                                <div class="item-content">
-
-
-
-
-
-
-                                                    <div itemprop="offers" itemscope
-                                                         itemtype="http://schema.org/Offer"
-                                                         class="content_price">
-                                                                                                                                    <span itemprop="price" class="price product-price">
-																        $ 84.00                                                                    </span>
-                                                        <meta itemprop="priceCurrency"
-                                                              content="USD"/>
-
-
-                                                    </div>
-
-                                                </div>
-                                                <!-- End item-content -->
-                                            </div>
-                                            <!-- End item-info -->
-                                        </div>
-                                        <!-- End item-wrap-inner -->
-                                    </div>
-                                    <!-- End item-wrap -->
-                                </div>
-                                <!-- End item-->
+                                        @endforeach
+                                        @endif
+                                                <!-- End item-->
                             </div>
                             <!--End extraslider-inner -->
                         </div>
@@ -476,19 +160,19 @@
                                 }
                                 else {
                                     var $item = $('.owl-item', $element);
-                                    
+
                                     $item.css({'opacity': 1, 'filter': 'alpha(opacity = 100)'});
-                                    
+
                                 }
                                                                     if ($('.owl-dot', $element).length < 2) {
                                         $('.owl-prev', $element).css('display', 'none');
                                         $('.owl-next', $element).css('display', 'none');
                                         $('.owl-dot', $element).css('display', 'none');
                                     }
-                                
+
                                                                     $('.owl-controls', $element).insertBefore($extraslider);
                                     $('.owl-dots', $element).insertAfter($('.owl-prev', $element));
-                                
+
                             });
                             $extraslider.owlCarousel({
                                 margin: 5,
@@ -505,8 +189,8 @@
                                 autoWidth: false,
                                 responsive: {
                                     0: {
-                                        
-                                        items:1 
+
+                                        items:1
                                     },
                                     480: {items:1},
                                     768: {items:1},
@@ -534,9 +218,9 @@
                                 if ($item_active.length > 1 && _effect != 'none') {
                                     _getAnimate($item_active);
                                 } else {
-                                    
+
                                          $item.css({'opacity': 1, 'filter': 'alpha(opacity = 100)'});
-                                    
+
                                 }
                             });
                             function _getAnimate($el) {

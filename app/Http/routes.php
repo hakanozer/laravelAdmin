@@ -310,11 +310,15 @@ Route::get('admin/dil/{locale}', function ($locale) {
 Route::get('admin/excel','admin\excelController@liste');
 Route::get('admin/excel/{tableName}','admin\excelController@dosyaOlustur');
 
-//iletisim Getirme
-//Route::get('/', 'WelcomeController@iletisimGetir');
 
 //site onyuz abone ekle
 Route::post('/','WelcomeController@bultenAboneEkle');
 
 //urun detay
 Route::get('urunDetay/{id}','WelcomeController@urunDetay');
+
+// iletişim
+//contact sayfası yönlendiriliyor
+Route::get('iletisim','WelcomeController@contactUs');
+Route::post('iletisim','WelcomeController@contactUsKaydet');
+// iletişim
