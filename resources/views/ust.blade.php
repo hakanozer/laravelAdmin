@@ -612,18 +612,18 @@ Fax: <a title="Fax">{{$iletisim->fax}}
                                             <div class="container">
                                                 <div class="row">
 
+                                                    <video width="270" controls>
+                                                        <source src="{{url("bower_components/elfinder/files/". $video->baslik).".mp4" }}" type="video/mp4">
+                                                        <source src="{{url("bower_components/elfinder/files/". $video->baslik).".ogv" }}" type="video/ogg">
+                                                        HTML5 Desteği Yok
+                                                    </video>
 
-
-
-
-                                                        <video  controls style="margin-left: -14px; width: 267px;">
-                                                            <source src="{{url("bower_components/elfinder/files/". $video->baslik).".mp4" }}" type="video/mp4"  preload controls></video>
-                                                    </div>
                                                 </div>
                                             </div>
-                                        @endforeach
-                                    @endif
                                 </div>
+                                @endforeach
+                                @endif
+                            </div>
 
 
 
