@@ -1,14 +1,19 @@
-﻿<?php namespace App\Http\Controllers;
+<?php
+
+namespace App\Http\Controllers;
 
 use \Illuminate\Redis\Database;
 use \Illuminate\Support\Facades\DB;
 use \Illuminate\Support\Facades\Input;
 use \Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
 use \Illuminate\Support\Facades\View;
 use Image;
 use File;
 
-class WelcomeController extends Controller {
+
+class WelcomeController extends Controller
+{
 
     /*
     |--------------------------------------------------------------------------
@@ -42,44 +47,47 @@ class WelcomeController extends Controller {
         $veri = $this->gonder();
         $sorgu = $this->iletisimGetir();
         $data = $this->sliderGoster();
-        
+
         $indirimliUrunler = $this->indirimliUrunler();
-        $oneCikanUrunler=$this->oneCikanUrunler();
-        $cokSatanUrunler=$this->cokSatanUrunler();
-	    $UsIltsmData = $this->UstIletisim();
-	    $haber=$this->haber();
-        $icerikler=$this->icerikler();
+        $oneCikanUrunler = $this->oneCikanUrunler();
+        $cokSatanUrunler = $this->cokSatanUrunler();
+        $UsIltsmData = $this->UstIletisim();
+        $haber = $this->haber();
+        $icerikler = $this->icerikler();
         $ustBanner = $this->ustBannerGoster();
         $ortaBanner = $this->ortaBannerGoster();
         $altBanner = $this->altBannerGoster();
         $solAltBanner = $this->solAltBanner();
-        $videoGonder=$this->videoGonder();
-        $teklislider=$this->teklislider();
-        $cokSatanlar= $this->cokSatanlar();
+        $videoGonder = $this->videoGonder();
+        $teklislider = $this->teklislider();
+        $cokSatanlar = $this->cokSatanlar();
         $link = $this->linkGetir();
-        return view('site',array('ust' => $veri,'sorgu' => $sorgu,'data'=>$data,'indirimliUrunler'=>$indirimliUrunler,'oneCikanUrunler'=>$oneCikanUrunler,'cokSatanUrunler'=>$cokSatanUrunler,'UsIltsmData' => $UsIltsmData,'haber'=>$haber,'icerikler'=>$icerikler, 'ustBanner'=>$ustBanner,'altBanner'=>$altBanner,'ortaBanner'=>$ortaBanner,'solAltBanner'=>$solAltBanner,'videoVeri'=>$videoGonder,'teklislider'=>$teklislider,'cokSatanlar'=>$cokSatanlar , 'link'=>$link ));
+        return view('site', array('ust' => $veri, 'sorgu' => $sorgu, 'data' => $data, 'indirimliUrunler' => $indirimliUrunler, 'oneCikanUrunler' => $oneCikanUrunler, 'cokSatanUrunler' => $cokSatanUrunler, 'UsIltsmData' => $UsIltsmData, 'haber' => $haber, 'icerikler' => $icerikler, 'ustBanner' => $ustBanner, 'altBanner' => $altBanner, 'ortaBanner' => $ortaBanner, 'solAltBanner' => $solAltBanner, 'videoVeri' => $videoGonder, 'teklislider' => $teklislider, 'cokSatanlar' => $cokSatanlar, 'link' => $link));
     }
 
 
     // slider ürün sağ
     public function teklislider()
     {
-        $teklislider=DB::select("SELECT u.id, u.baslik, u.fiyat, u.piyasa_fiyati, r.adi as resimAdi, r.klasor FROM urunler u inner join urun_resimleri r ON U.id = r.urun_id where u.durum = ? group by u.id order by u.tarih desc limit 4",array(0));
+        $teklislider = DB::select("SELECT u.id, u.baslik, u.fiyat, u.piyasa_fiyati, r.adi as resimAdi, r.klasor FROM urunler u inner join urun_resimleri r ON U.id = r.urun_id where u.durum = ? group by u.id order by u.tarih desc limit 4", array(0));
         return $teklislider;
     }
     // slider ürün sağ
 
 
     // video
-    public function videoGonder(){
-        $videoGonder=DB::select('select * from videolar ORDER BY id DESC limit 1');
+    public function videoGonder()
+    {
+        $videoGonder = DB::select('select * from videolar ORDER BY id DESC limit 1');
         return $videoGonder;
     }
+
     // viodeo
 
 
-    public function gonder(){
-        $veri=DB::select('select * from kategoriler ');
+    public function gonder()
+    {
+        $veri = DB::select('select * from kategoriler ');
         return $veri;
     }
 
@@ -91,12 +99,13 @@ class WelcomeController extends Controller {
 
     public function iletisimGetir()
     {
-        $sorgu=DB::select("select * from ayarlar");
+        $sorgu = DB::select("select * from ayarlar");
         return $sorgu;
     }
 
-    public function bultenAboneEkle(){
-        $gelenAbone=Input::all();
+    public function bultenAboneEkle()
+    {
+        $gelenAbone = Input::all();
 
         $sonuc = DB::table('bulten_abone')
             ->insert(['email' => $gelenAbone["email"], 'tarih' => date('Y-m-d H:i:s')]);
@@ -106,33 +115,36 @@ class WelcomeController extends Controller {
 
     public function indirimliUrunler()
     {
-        $indirimliUrunler  = DB::select('select u.*,ur.adi from urunler as u inner join urun_resimleri as ur on u.id = ur.urun_id where u.indirimli_urun = 1 order by u.id desc limit 10');
+        $indirimliUrunler = DB::select('select u.*,ur.adi from urunler as u inner join urun_resimleri as ur on u.id = ur.urun_id where u.indirimli_urun = 1 order by u.id desc limit 10');
         return $indirimliUrunler;
     }
-    
+
     public function oneCikanUrunler()
     {
-        $oneCikanUrunler  = DB::select('select u.*,ur.adi from urunler as u inner join urun_resimleri as ur on u.id = ur.urun_id where u.one_cikan = 1 order by u.id desc limit 10');
+        $oneCikanUrunler = DB::select('select u.*,ur.adi from urunler as u inner join urun_resimleri as ur on u.id = ur.urun_id where u.one_cikan = 1 order by u.id desc limit 10');
         return $oneCikanUrunler;
     }
-    
-     public function cokSatanUrunler(){
-        $cokSatanUrunler=DB::select('select u.*,ur.adi from urunler as u inner join urun_resimleri as ur on u.id = ur.urun_id where u.cok_satan = 1 order by u.id desc limit 10');
+
+    public function cokSatanUrunler()
+    {
+        $cokSatanUrunler = DB::select('select u.*,ur.adi from urunler as u inner join urun_resimleri as ur on u.id = ur.urun_id where u.cok_satan = 1 order by u.id desc limit 10');
         return $cokSatanUrunler;
     }
-    
-     public function UstIletisim(){
+
+    public function UstIletisim()
+    {
         $UsIltsmData = DB::select("select * from ayarlar");
         return $UsIltsmData;
     }
-public function haber()
+
+    public function haber()
     {
 
         /*Haberler*/
-        $haber=DB::select('select * from haberler order BY id DESC');
+        $haber = DB::select('select * from haberler order BY id DESC');
 
         $string = "";
-        foreach($haber as $haberler){
+        foreach ($haber as $haberler) {
             $string = strip_tags($haberler->detay);
 
             if (strlen($string) > 250) {
@@ -141,37 +153,38 @@ public function haber()
                 $stringCut = substr($string, 0, 250);
 
                 // make sure it ends in a word so assassinate doesn't become ass...
-                $kisaDetay = substr($stringCut, 0, strrpos($stringCut, ' ')).'... <a href="haberDetay/'.$haberler->id.'">Devamini Oku </a>';
+                $kisaDetay = substr($stringCut, 0, strrpos($stringCut, ' ')) . '... <a href="haberDetay/' . $haberler->id . '">Devamini Oku </a>';
                 $haberler->detay = $kisaDetay;
             }
 
         }
 
 
-
         return $haber;
 
 
-
-
     }
-    public function icerikler(){
-        $icerikler=DB::select('select * from icerikler order BY id DESC');
+
+    public function icerikler()
+    {
+        $icerikler = DB::select('select * from icerikler order BY id DESC');
         return $icerikler;
     }
 
     public function haberDetay($id)
     {
-        $haberDetay=DB::select('select * from haberler where id = '.$id.'');
+        $haberDetay = DB::select('select * from haberler where id = ' . $id . '');
         $icerikler = $this->icerikler();
         $sorgu = $this->iletisimGetir();
-        return view('haberDetay',array('haberDetay'=>$haberDetay,'icerikler'=>$icerikler,'sorgu'=>$sorgu)) ;
+        return view('haberDetay', array('haberDetay' => $haberDetay, 'icerikler' => $icerikler, 'sorgu' => $sorgu));
     }
-    public function icerikDetay($id){
-        $icerikDetay=DB::select('select * from icerikler WHERE id='.$id.'');
+
+    public function icerikDetay($id)
+    {
+        $icerikDetay = DB::select('select * from icerikler WHERE id=' . $id . '');
         $icerikler = $this->icerikler();
         $sorgu = $this->iletisimGetir();
-        return view('icerikDetay',array('icerikDetay'=>$icerikDetay,'icerikler'=>$icerikler,'sorgu'=>$sorgu)) ;
+        return view('icerikDetay', array('icerikDetay' => $icerikDetay, 'icerikler' => $icerikler, 'sorgu' => $sorgu));
     }
 
 
@@ -203,17 +216,19 @@ public function haber()
 
     //urun Detay
 
-    public function urunDetay($id){
-        $detay=DB::select('select u.*,ur.adi from urunler as u inner join urun_resimleri as ur on u.id = ur.urun_id where u.id=? ',array($id));
+    public function urunDetay($id)
+    {
+        $detay = DB::select('select u.*,ur.adi from urunler as u inner join urun_resimleri as ur on u.id = ur.urun_id where u.id=? ', array($id));
 
-        return view ('urunDetay',array('detay'=>$detay));
+        return view('urunDetay', array('detay' => $detay));
     }
 
-    public function cokSatanlar(){
+    public function cokSatanlar()
+    {
         $query = DB::select("select urunler.id,urunler.baslik,urunler.fiyat, resim.adi from urunler inner join urun_resimleri as resim on urunler.id = resim.urun_id where urunler.cok_satan = 1 group by urunler.id order by urunler.id asc limit 5");
 
         $cokSatanlarIndex = 0;
-        foreach($query as $value) {
+        foreach ($query as $value) {
 
             $cokSatanlar[$cokSatanlarIndex]["id"] = $value->id;
             $cokSatanlar[$cokSatanlarIndex]["baslik"] = $value->baslik;
@@ -222,20 +237,19 @@ public function haber()
 
             $query2 = DB::select("select count(*) as sayi from urun_puan where urun_id = ?", array($value->id));
 
-            if ($query2[0]->sayi != 0){
+            if ($query2[0]->sayi != 0) {
                 $query3 = DB::select("select puan from urun_puan where urun_id = ?", array($value->id));
 
                 $toplamPuan = 0;
 
-                foreach($query3 as $value2){
+                foreach ($query3 as $value2) {
                     $toplamPuan += $value2->puan;
                 }
 
                 $puan = $toplamPuan / $query2[0]->sayi;
                 $cokSatanlar[$cokSatanlarIndex]["puan"] = round($puan);
-            }
-            else{
-                $cokSatanlar[$cokSatanlarIndex]["puan"]= null;
+            } else {
+                $cokSatanlar[$cokSatanlarIndex]["puan"] = null;
 
             }
             $cokSatanlarIndex += 1;
@@ -246,31 +260,32 @@ public function haber()
     }
 
     // iletişim
-    public function contactUs(){
+    public function contactUs()
+    {
         $sorgu = $this->iletisimGetir();
         $veri = $this->gonder();
-        return view('contactUs',array('sorgu'=>$sorgu));
+        return view('contactUs', array('sorgu' => $sorgu));
 
     }
+
     public function contactUsKaydet()
     {
         $contactBilgi = Input::all();
 
 
         $contactSonuc = DB::table('iletisim_mesaj')
-            ->insert(['baslik' => $contactBilgi["baslik"],'mail' => $contactBilgi["mail"],'referans_no' => $contactBilgi["referans"],'mesaj' => $contactBilgi["message"], 'tarih' => date('Y-m-d H:i:s')]);
+            ->insert(['baslik' => $contactBilgi["baslik"], 'mail' => $contactBilgi["mail"], 'referans_no' => $contactBilgi["referans"], 'mesaj' => $contactBilgi["message"], 'tarih' => date('Y-m-d H:i:s')]);
         return Redirect::to('iletisim');
     }
+
     // LinkGetir
-    public function linkGetir(){
-        $link=DB::select("select * from linkler");
+    public function linkGetir()
+    {
+        $link = DB::select("select * from linkler");
 
         return $link;
     }
 
-
-
-}
 
     //Siteiçi arama eylemi
     public function sitedeAra()
@@ -290,12 +305,10 @@ public function haber()
                 }
             }
             return $vtGelenArama;
-        }
-        else if($arama['arama_kategori'] == 'null'){
+        } else if ($arama['arama_kategori'] == 'null') {
             $msg = "Arama yapabilmek için en az bir kategori seçmelisiniz.";
             return $msg;
-        }
-        else{
+        } else {
             $anahtar = '%' . $arama['arama_metni'] . '%';
             $sorguJoin = 'SELECT * FROM kategoriler INNER JOIN urunler ON kategoriler.id = urunler.kategori_id
          WHERE urunler.kategori_id IN (?) AND urunler.baslik LIKE"' . $anahtar . '" limit 0,12';
@@ -313,21 +326,22 @@ public function haber()
     }
 
     //Siteiçi arama yönlendirme ve sonuc gösterme
-    public  function aramaGoster(){
+    public function aramaGoster()
+    {
         $sitedeAra = $this->sitedeAra();
         $gonder = $this->gonder();
         $kategoriAdi = DB::select('select * from kategoriler where id = ?', array($_GET['arama_kategori']));
         if (is_string($sitedeAra)) {
             $msg = $sitedeAra;
-            return view('aramaSonuc',array('msg'=>$msg,'ust' => $gonder,'kategoriAdi'=>$kategoriAdi,'aramaMetni'=>$_GET['arama_metni']));
-        }
-        else{
-            return view('aramaSonuc',array('sitedeAra'=>$sitedeAra,'ust' => $gonder,'kategoriAdi'=>$kategoriAdi,'aramaMetni'=>$_GET['arama_metni']));
+            return view('aramaSonuc', array('msg' => $msg, 'ust' => $gonder, 'kategoriAdi' => $kategoriAdi, 'aramaMetni' => $_GET['arama_metni']));
+        } else {
+            return view('aramaSonuc', array('sitedeAra' => $sitedeAra, 'ust' => $gonder, 'kategoriAdi' => $kategoriAdi, 'aramaMetni' => $_GET['arama_metni']));
         }
     }
 
     // üyelik ve giriş sayfası göster
-    public function uyelikGirisAc(){
+    public function uyelikGirisAc()
+    {
         return view('uyelikGiris');
     }
 
@@ -349,13 +363,13 @@ public function haber()
         if (isset($gelenler['uyeOl'])) {
             $sorguKayit = DB::table('kullanicilar')->insert(
                 [
-                 'adi' => $gelenler['name_create'],
-                 'soyadi' => $gelenler['surname_create'],
-                 'mail' => $gelenler['email_create'],
-                 'sifre' => md5($gelenler['pass_create']),
-                 'durum' => "0",
-                 'tarih' => date('Y-m-d H:i:s')
-                 ]);
+                    'adi' => $gelenler['name_create'],
+                    'soyadi' => $gelenler['surname_create'],
+                    'mail' => $gelenler['email_create'],
+                    'sifre' => md5($gelenler['pass_create']),
+                    'durum' => "0",
+                    'tarih' => date('Y-m-d H:i:s')
+                ]);
             if ($sorguKayit) {
                 //echo "Başarılı kayıt yapıldı";
 
@@ -368,22 +382,24 @@ public function haber()
                 Session::put('kid', $dizi['id']);
                 Session::put('kadi', $dizi['adi']);
                 return Redirect::to('/');
-            }
-            else{
+            } else {
                 //echo "Başarısız kayıt";
             }
         }
     }
 
     // üye çıkış işlemi
-    public function uyelikCikis(){
+    public function uyelikCikis()
+    {
         Session::forget('kid');
         Session::forget('kadi');
         return Redirect::to('/');
     }
 
     // şifremi unuttum sayfası
-    public function sifremiUnuttum(){
+    public function sifremiUnuttum()
+    {
         return view('sifremiUnuttum');
     }
 
+} 
