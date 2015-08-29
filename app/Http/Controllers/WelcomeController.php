@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers;
+﻿<?php namespace App\Http\Controllers;
 
 use \Illuminate\Redis\Database;
 use \Illuminate\Support\Facades\DB;
@@ -55,19 +55,9 @@ class WelcomeController extends Controller {
         $solAltBanner = $this->solAltBanner();
         $videoGonder=$this->videoGonder();
         $teklislider=$this->teklislider();
-<<<<<<< HEAD
         $cokSatanlar= $this->cokSatanlar();
         $link = $this->linkGetir();
         return view('site',array('ust' => $veri,'sorgu' => $sorgu,'data'=>$data,'indirimliUrunler'=>$indirimliUrunler,'oneCikanUrunler'=>$oneCikanUrunler,'cokSatanUrunler'=>$cokSatanUrunler,'UsIltsmData' => $UsIltsmData,'haber'=>$haber,'icerikler'=>$icerikler, 'ustBanner'=>$ustBanner,'altBanner'=>$altBanner,'ortaBanner'=>$ortaBanner,'solAltBanner'=>$solAltBanner,'videoVeri'=>$videoGonder,'teklislider'=>$teklislider,'cokSatanlar'=>$cokSatanlar , 'link'=>$link ));
-
-=======
-
-        $cokSatanlar= $this->cokSatanlar();
-        return view('site',array('ust' => $veri,'sorgu' => $sorgu,'data'=>$data,'indirimliUrunler'=>$indirimliUrunler,'oneCikanUrunler'=>$oneCikanUrunler,'cokSatanUrunler'=>$cokSatanUrunler,'UsIltsmData' => $UsIltsmData,'haber'=>$haber,'icerikler'=>$icerikler, 'ustBanner'=>$ustBanner,'altBanner'=>$altBanner,'ortaBanner'=>$ortaBanner,'solAltBanner'=>$solAltBanner,'videoVeri'=>$videoGonder,'teklislider'=>$teklislider,'cokSatanlar'=>$cokSatanlar ));  
-
-        $cokSatanlar= $this->$cokSatanlar();
-        return view('site',array('ust' => $veri,'sorgu' => $sorgu,'data'=>$data,'indirimliUrunler'=>$indirimliUrunler,'oneCikanUrunler'=>$oneCikanUrunler,'cokSatanUrunler'=>$cokSatanUrunler,'UsIltsmData' => $UsIltsmData,'haber'=>$haber,'icerikler'=>$icerikler, 'ustBanner'=>$ustBanner,'altBanner'=>$altBanner,'ortaBanner'=>$ortaBanner,'solAltBanner'=>$solAltBanner,'videoVeri'=>$videoGonder,'teklislider'=>$teklislider,'cokSatanlar'=>$cokSatanlar ));
->>>>>>> origin/master
     }
 
 
@@ -255,8 +245,6 @@ public function haber()
 
     }
 
-<<<<<<< HEAD
-
     // iletişim
     public function contactUs(){
         $sorgu = $this->iletisimGetir();
@@ -283,7 +271,119 @@ public function haber()
 
 
 }
-=======
 
->>>>>>> origin/master
+    //Siteiçi arama eylemi
+    public function sitedeAra()
+    {
+        $arama = Input::all();
+        if ($arama['arama_kategori'] == 'null' && !empty($arama['arama_kategori'])) {
+            $anahtar = '%' . $arama['arama_metni'] . '%';
+            $sorguJoin = 'SELECT * FROM kategoriler INNER JOIN urunler ON kategoriler.id = urunler.kategori_id
+         WHERE urunler.baslik LIKE"' . $anahtar . '" limit 0,12';
+
+            $vtGelenArama = DB::select($sorguJoin);
+            if (empty($vtGelenArama)) {
+                $vtGelenArama = DB::select('select * from urunler where kategori_id=?', array($arama['arama_kategori']));
+                if (empty($vtGelenArama)) {
+                    $msg = "Aranan ürün bulunamadı.";
+                    return $msg;
+                }
+            }
+            return $vtGelenArama;
+        }
+        else if($arama['arama_kategori'] == 'null'){
+            $msg = "Arama yapabilmek için en az bir kategori seçmelisiniz.";
+            return $msg;
+        }
+        else{
+            $anahtar = '%' . $arama['arama_metni'] . '%';
+            $sorguJoin = 'SELECT * FROM kategoriler INNER JOIN urunler ON kategoriler.id = urunler.kategori_id
+         WHERE urunler.kategori_id IN (?) AND urunler.baslik LIKE"' . $anahtar . '" limit 0,12';
+
+            $vtGelenArama = DB::select($sorguJoin, array($arama['arama_kategori']));
+            if (empty($vtGelenArama)) {
+                $vtGelenArama = DB::select('select * from urunler where kategori_id=?', array($arama['arama_kategori']));
+                if (empty($vtGelenArama)) {
+                    $msg = "Aranan ürün bulunamadı.";
+                    return $msg;
+                }
+            }
+            return $vtGelenArama;
+        }
+    }
+
+    //Siteiçi arama yönlendirme ve sonuc gösterme
+    public  function aramaGoster(){
+        $sitedeAra = $this->sitedeAra();
+        $gonder = $this->gonder();
+        $kategoriAdi = DB::select('select * from kategoriler where id = ?', array($_GET['arama_kategori']));
+        if (is_string($sitedeAra)) {
+            $msg = $sitedeAra;
+            return view('aramaSonuc',array('msg'=>$msg,'ust' => $gonder,'kategoriAdi'=>$kategoriAdi,'aramaMetni'=>$_GET['arama_metni']));
+        }
+        else{
+            return view('aramaSonuc',array('sitedeAra'=>$sitedeAra,'ust' => $gonder,'kategoriAdi'=>$kategoriAdi,'aramaMetni'=>$_GET['arama_metni']));
+        }
+    }
+
+    // üyelik ve giriş sayfası göster
+    public function uyelikGirisAc(){
+        return view('uyelikGiris');
+    }
+
+    // üyelik oluşturma ve giriş yapma
+    public function uyelikGiris()
+    {
+        $gelenler = Input::all();
+        if (isset($gelenler['girisYap'])) {
+            $sorgu = DB::table('kullanicilar')
+                ->where('mail', $gelenler['email'])
+                ->where('sifre', md5($gelenler['password']))
+                ->first();
+            $dizi = (array)$sorgu;
+            Session::put('kid', $dizi['id']);
+            Session::put('kadi', $dizi['adi']);
+
+            return Redirect::to('/');
+        }
+        if (isset($gelenler['uyeOl'])) {
+            $sorguKayit = DB::table('kullanicilar')->insert(
+                [
+                 'adi' => $gelenler['name_create'],
+                 'soyadi' => $gelenler['surname_create'],
+                 'mail' => $gelenler['email_create'],
+                 'sifre' => md5($gelenler['pass_create']),
+                 'durum' => "0",
+                 'tarih' => date('Y-m-d H:i:s')
+                 ]);
+            if ($sorguKayit) {
+                //echo "Başarılı kayıt yapıldı";
+
+                $sorgu = DB::table('kullanicilar')
+                    ->where('mail', $gelenler['email_create'])
+                    ->where('sifre', md5($gelenler['pass_create']))
+                    ->first();
+
+                $dizi = (array)$sorgu;
+                Session::put('kid', $dizi['id']);
+                Session::put('kadi', $dizi['adi']);
+                return Redirect::to('/');
+            }
+            else{
+                //echo "Başarısız kayıt";
+            }
+        }
+    }
+
+    // üye çıkış işlemi
+    public function uyelikCikis(){
+        Session::forget('kid');
+        Session::forget('kadi');
+        return Redirect::to('/');
+    }
+
+    // şifremi unuttum sayfası
+    public function sifremiUnuttum(){
+        return view('sifremiUnuttum');
+    }
 

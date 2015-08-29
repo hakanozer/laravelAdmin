@@ -192,6 +192,133 @@ Fax: <a title="Fax">{{$iletisim->fax}}
                     </div>
                     <div id="block_topright" class="col-md-7 col-sm-12">
 
+                        <div class="header_user_info" style="padding-right: 15px">
+
+                        @if(Session::get('kadi')!=null)
+                            Hoşgeldin, {{ strtoupper(Session::get('kadi'))  }} &nbsp;&nbsp;
+                            <div class="header_user_info">
+
+                                <ul class="links">
+
+                                    <li class="account" >
+
+                                        <a class="login" href="#" title="Hesabım">
+
+                                            Hesabım
+
+                                        </a>
+
+                                        <ul class="dropdown-link dropdown-link-account">
+
+                                            <li>
+
+                                                <a href="#" title="Sipariş Takibi">
+
+                                                    Sipariş Takibi
+
+                                                </a>
+
+                                            </li>
+
+
+
+                                            <li>
+
+                                                <a href="#">
+
+                                                    Mesajlarım
+
+                                                </a>
+
+                                            </li>
+
+
+
+                                            <li>
+
+                                                <a href="#">
+
+                                                    Üyelik Bilgilerim
+
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="#">
+
+                                                    Hediye Çeklerim
+
+                                                </a>
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="#">
+
+                                                    Fırsatlarım
+
+                                                </a>
+
+                                            </li>
+
+
+
+                                            <li>
+
+                                                <a href="#">
+
+                                                    Ödeme Kuponlarım
+
+                                                </a>
+
+                                            </li>
+
+
+                                            <li>
+
+                                                <a href="{{url('uyelikCikis')}}">
+
+                                                    Çıkış
+
+                                                </a>
+
+                                            </li>
+
+
+
+                                        </ul>
+
+                                    </li>
+
+
+
+                                    <li class="last checkout" > <a href="{{url('sepet')}}"  title="Sepetim"> Sepetim</a></li>
+
+
+
+                                </ul>
+
+                            </div>
+                        @else
+                            <div class="header_user_info" style="padding-top:10px;">
+
+                                        <a class="login"  href="{{url('uyelikGiris')}}">
+
+                                            Giriş Yap & Üye Ol
+
+                                        </a>
+
+                            </div>
+                        @endif
+
+                        </div>
+                        <!-- Block user information module NAV  -->
+
+                    </div>
+
                         <div class="demo-menu"><a href="#">Demos</a>
 
                             <div class="content-home">
@@ -863,6 +990,27 @@ Fax: <a title="Fax">{{$iletisim->fax}}
                                 <!--[if gt IE 9]><!-->
 
                                 <div id="sp_search_pro_1" class="spr-container spr-preload"><!--<![endif]-->
+
+                                    <form class="sprsearch-form" method="get" action="{{url('arama')}}">
+                                       <input type="hidden" name="_token" value="{{csrf_token()}}">
+                                       <div class="spr_selector">
+
+                                       <?php $araKategoriler = \App\Http\Controllers\Controller::araKategoriler(); ?>
+                                          <select class="spr_select" name="arama_kategori">
+                                                  <option value="null" selected>Kategoriler</option>
+                                          @if(isset($araKategoriler))
+                                          @foreach($araKategoriler as $item)
+                                                  <option value="{{$item->id}}">{{$item->baslik}}</option>
+                                          @endforeach
+                                          @endif
+
+                                          </select>
+                                       </div>
+                                       <input class="spr-query" type="text" name="arama_metni" value="" placeholder="Sitede Ara"/>
+                                       <button value="Search" class="spr-search-button" type="submit"  name="arama_buton"></button>
+                                    </form>
+
+                                </div>
 
 
 
