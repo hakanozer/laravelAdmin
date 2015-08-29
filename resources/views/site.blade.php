@@ -8,7 +8,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>SP ShoppyStore- Multi - Layout Responsive Prestashop Theme  - Welcome to SP ShoppyStore</title>
+    <title>{{$siteBaslik[0]->site_baslik}}</title>
     <meta name="description" content="SP ShoppyStore is a beautiful Responsive PretaShop Theme. It&#039;s a rick looking theme with selective colors and attractive layouts with easy-to-custom backend." />
     <meta name="keywords" content="prestashop theme,responsive theme,responsive prestashop theme,furniture store,cosmetic store,fashion store,clean design theme, multipurpose theme,modern theme,SP Maxshop" />
     <meta name="generator" content="PrestaShop" />

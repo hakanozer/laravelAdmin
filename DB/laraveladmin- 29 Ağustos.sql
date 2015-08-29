@@ -2,10 +2,10 @@
 -- version 4.2.11
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 24, 2015 at 04:03 PM
--- Server version: 5.6.21
--- PHP Version: 5.6.3
+-- Anamakine: 127.0.0.1
+-- Üretim Zamanı: 29 Ağu 2015, 13:53:26
+-- Sunucu sürümü: 5.6.21
+-- PHP Sürümü: 5.6.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `laraveladmin`
+-- Veritabanı: `laraveladmin`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Tablo için tablo yapısı `admin`
 --
 
 CREATE TABLE IF NOT EXISTS `admin` (
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `admin`
+-- Tablo döküm verisi `admin`
 --
 
 INSERT INTO `admin` (`id`, `kul_adi`, `sifre`, `adi`, `soyadi`, `mail`, `durum`, `tarih`) VALUES
@@ -47,7 +47,7 @@ INSERT INTO `admin` (`id`, `kul_adi`, `sifre`, `adi`, `soyadi`, `mail`, `durum`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `anket`
+-- Tablo için tablo yapısı `anket`
 --
 
 CREATE TABLE IF NOT EXISTS `anket` (
@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `anket` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `anket`
+-- Tablo döküm verisi `anket`
 --
 
 INSERT INTO `anket` (`id`, `anket_baslik`, `tarih`) VALUES
@@ -66,7 +66,7 @@ INSERT INTO `anket` (`id`, `anket_baslik`, `tarih`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `anketdetay`
+-- Tablo için tablo yapısı `anketdetay`
 --
 
 CREATE TABLE IF NOT EXISTS `anketdetay` (
@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS `anketdetay` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `anketdetay`
+-- Tablo döküm verisi `anketdetay`
 --
 
 INSERT INTO `anketdetay` (`id`, `anket_id`, `sorunuz`) VALUES
@@ -87,7 +87,7 @@ INSERT INTO `anketdetay` (`id`, `anket_id`, `sorunuz`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ayarlar`
+-- Tablo için tablo yapısı `ayarlar`
 --
 
 CREATE TABLE IF NOT EXISTS `ayarlar` (
@@ -106,20 +106,21 @@ CREATE TABLE IF NOT EXISTS `ayarlar` (
   `fax` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
   `gsm` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
   `adres` varchar(500) COLLATE utf8_turkish_ci DEFAULT NULL,
-  `logo` varchar(500) COLLATE utf8_turkish_ci NOT NULL
+  `logo` varchar(500) COLLATE utf8_turkish_ci NOT NULL,
+  `telif` varchar(500) COLLATE utf8_turkish_ci NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `ayarlar`
+-- Tablo döküm verisi `ayarlar`
 --
 
-INSERT INTO `ayarlar` (`id`, `site_baslik`, `meta_key`, `meta_desc`, `domain_name`, `smtp_adres`, `smtp_kul_adi`, `smtp_sifre`, `long`, `lat`, `mail_adres`, `telefon`, `fax`, `gsm`, `adres`, `logo`) VALUES
-(1, 'Laravel Admin Paneli', 'Laravel,admin,template,panel,wissen', 'Muhtesem bir admin paneli', 'ornekdomain.com', 'smtp.ornekdomain.com', 'ornek', 'ornek123', '29.0069081419158', '41.04389113879316', 'info@ornekdomain.com', '+902129896598', '02129876532', '05369886532', 'Ornek Mah, Ornek Caddesi 6/20', '72214.jpg');
+INSERT INTO `ayarlar` (`id`, `site_baslik`, `meta_key`, `meta_desc`, `domain_name`, `smtp_adres`, `smtp_kul_adi`, `smtp_sifre`, `long`, `lat`, `mail_adres`, `telefon`, `fax`, `gsm`, `adres`, `logo`, `telif`) VALUES
+(1, 'Laravel Admin Paneli', 'Laravel,admin,template,panel,wissen', 'Muhtesem bir admin paneli', 'ornekdomain.com', 'smtp.ornekdomain.com', 'ornek', 'ornek123', '29.0069081419158', '41.04389113879316', 'info@ornekdomain.com', '+902129896598', '02129876532', '05369886532', 'Ornek Mah, Ornek Caddesi 6/20', '72214.jpg', '© Tüm Hakkı Saklıdır.');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `banner`
+-- Tablo için tablo yapısı `banner`
 --
 
 CREATE TABLE IF NOT EXISTS `banner` (
@@ -135,21 +136,25 @@ CREATE TABLE IF NOT EXISTS `banner` (
   `durum` tinyint(1) NOT NULL COMMENT 'pasif 0 - aktif 1',
   `baslangic_tarih` datetime DEFAULT NULL,
   `bitis_tarih` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `banner`
+-- Tablo döküm verisi `banner`
 --
 
 INSERT INTO `banner` (`id`, `ad`, `konum`, `yukseklik`, `genislik`, `yol`, `url`, `tiklanma`, `gosterim`, `durum`, `baslangic_tarih`, `bitis_tarih`) VALUES
-(2, 'ahmet', 0, 200, 200, '20150807151847_b.jpg', 'https://www.google.com.tr/', 0, 0, 0, '2015-08-08 01:00:00', '2015-08-14 01:00:00'),
-(3, 'ahmet', 0, 200, 200, '20150807151903_b.jpg', 'https://www.google.com.tr/', 0, 0, 1, '2015-08-08 01:00:00', '2015-08-14 01:00:00'),
-(31, 'ahmet', 0, 100, 200, 'resimler/20150807190235_b.jpg', 'www.fatihgoktas.net', 0, 0, 1, '2015-08-09 04:07:00', '2015-08-08 07:05:00');
+(32, 'Banner -1', 0, 148, 301, '20150827161949_b.png', 'https://www.google.com.tr/', 0, 0, 127, '2015-11-13 14:01:00', '0000-00-00 00:00:00'),
+(33, 'Banner -2', 0, 148, 301, '20150827162037_b.png', 'https://www.google.com.tr/', 0, 0, 127, '2015-08-27 14:52:00', '0000-00-00 00:00:00'),
+(34, 'Banner -3', 0, 148, 248, '20150827162118_b.png', 'https://www.google.com.tr/', 0, 0, 127, '2016-02-02 14:02:00', '0000-00-00 00:00:00'),
+(35, 'Banner -4', 0, 78, 870, '20150827162516_b.png', 'https://www.google.com.tr/', 0, 0, 127, '2016-02-05 14:52:00', '0000-00-00 00:00:00'),
+(36, 'Banner -5', 0, 200, 570, '20150827163801_b.png', 'https://www.google.com.tr/', 0, 0, 127, '2016-02-02 14:02:00', '0000-00-00 00:00:00'),
+(37, 'Banner -6', 0, 200, 570, '20150827163905_b.png', 'https://www.google.com.tr/', 0, 0, 127, '2015-02-05 14:04:00', '0000-00-00 00:00:00'),
+(38, 'Banner -7', 0, 330, 270, '20150827164047_b.png', 'https://www.google.com.tr/', 0, 0, 127, '2015-02-02 01:02:00', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bulten`
+-- Tablo için tablo yapısı `bulten`
 --
 
 CREATE TABLE IF NOT EXISTS `bulten` (
@@ -161,7 +166,7 @@ CREATE TABLE IF NOT EXISTS `bulten` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bulten_abone`
+-- Tablo için tablo yapısı `bulten_abone`
 --
 
 CREATE TABLE IF NOT EXISTS `bulten_abone` (
@@ -171,7 +176,7 @@ CREATE TABLE IF NOT EXISTS `bulten_abone` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `bulten_abone`
+-- Tablo döküm verisi `bulten_abone`
 --
 
 INSERT INTO `bulten_abone` (`id`, `email`, `tarih`) VALUES
@@ -181,7 +186,7 @@ INSERT INTO `bulten_abone` (`id`, `email`, `tarih`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `dosya_yonetimi`
+-- Tablo için tablo yapısı `dosya_yonetimi`
 --
 
 CREATE TABLE IF NOT EXISTS `dosya_yonetimi` (
@@ -201,7 +206,7 @@ CREATE TABLE IF NOT EXISTS `dosya_yonetimi` (
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `dosya_yonetimi`
+-- Tablo döküm verisi `dosya_yonetimi`
 --
 
 INSERT INTO `dosya_yonetimi` (`id`, `parent_id`, `name`, `content`, `size`, `mtime`, `mime`, `read`, `write`, `locked`, `hidden`, `width`, `height`) VALUES
@@ -210,7 +215,7 @@ INSERT INTO `dosya_yonetimi` (`id`, `parent_id`, `name`, `content`, `size`, `mti
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gal_kategori`
+-- Tablo için tablo yapısı `gal_kategori`
 --
 
 CREATE TABLE IF NOT EXISTS `gal_kategori` (
@@ -219,7 +224,7 @@ CREATE TABLE IF NOT EXISTS `gal_kategori` (
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `gal_kategori`
+-- Tablo döküm verisi `gal_kategori`
 --
 
 INSERT INTO `gal_kategori` (`id`, `baslik`) VALUES
@@ -230,7 +235,7 @@ INSERT INTO `gal_kategori` (`id`, `baslik`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gal_resim`
+-- Tablo için tablo yapısı `gal_resim`
 --
 
 CREATE TABLE IF NOT EXISTS `gal_resim` (
@@ -241,7 +246,7 @@ CREATE TABLE IF NOT EXISTS `gal_resim` (
 ) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `gal_resim`
+-- Tablo döküm verisi `gal_resim`
 --
 
 INSERT INTO `gal_resim` (`id`, `gal_kat_id`, `baslik`, `yol`) VALUES
@@ -253,7 +258,7 @@ INSERT INTO `gal_resim` (`id`, `gal_kat_id`, `baslik`, `yol`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `haberler`
+-- Tablo için tablo yapısı `haberler`
 --
 
 CREATE TABLE IF NOT EXISTS `haberler` (
@@ -266,16 +271,16 @@ CREATE TABLE IF NOT EXISTS `haberler` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `haberler`
+-- Tablo döküm verisi `haberler`
 --
 
 INSERT INTO `haberler` (`id`, `haber_baslik`, `detay`, `resimYolu`, `durum`, `tarih`) VALUES
-(1, 'cvbdfgdfd', '<p>cvbcvbcv</p>\r\n', 'deser_wxeqRKwjOFyN.jpg', 1, '2015-08-20 17:08:55');
+(1, 'cvbdfgdfd', '<p><strong>Lorem Ipsum</strong>, dizgi ve baskı end&uuml;strisinde&nbsp;</p>\r\n', 'deser_wxeqRKwjOFyN.jpg', 1, '2015-08-20 17:08:55');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `icerikler`
+-- Tablo için tablo yapısı `icerikler`
 --
 
 CREATE TABLE IF NOT EXISTS `icerikler` (
@@ -287,7 +292,7 @@ CREATE TABLE IF NOT EXISTS `icerikler` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `icerikler`
+-- Tablo döküm verisi `icerikler`
 --
 
 INSERT INTO `icerikler` (`id`, `baslik`, `kisa_aciklama`, `detay`, `tarih`) VALUES
@@ -296,7 +301,7 @@ INSERT INTO `icerikler` (`id`, `baslik`, `kisa_aciklama`, `detay`, `tarih`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kategoriler`
+-- Tablo için tablo yapısı `kategoriler`
 --
 
 CREATE TABLE IF NOT EXISTS `kategoriler` (
@@ -306,7 +311,7 @@ CREATE TABLE IF NOT EXISTS `kategoriler` (
 ) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `kategoriler`
+-- Tablo döküm verisi `kategoriler`
 --
 
 INSERT INTO `kategoriler` (`id`, `ust_id`, `baslik`) VALUES
@@ -331,7 +336,7 @@ INSERT INTO `kategoriler` (`id`, `ust_id`, `baslik`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kullanicilar`
+-- Tablo için tablo yapısı `kullanicilar`
 --
 
 CREATE TABLE IF NOT EXISTS `kullanicilar` (
@@ -345,7 +350,7 @@ CREATE TABLE IF NOT EXISTS `kullanicilar` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `kullanicilar`
+-- Tablo döküm verisi `kullanicilar`
 --
 
 INSERT INTO `kullanicilar` (`id`, `adi`, `soyadi`, `mail`, `sifre`, `durum`, `tarih`) VALUES
@@ -354,7 +359,7 @@ INSERT INTO `kullanicilar` (`id`, `adi`, `soyadi`, `mail`, `sifre`, `durum`, `ta
 -- --------------------------------------------------------
 
 --
--- Table structure for table `linkler`
+-- Tablo için tablo yapısı `linkler`
 --
 
 CREATE TABLE IF NOT EXISTS `linkler` (
@@ -364,7 +369,7 @@ CREATE TABLE IF NOT EXISTS `linkler` (
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `linkler`
+-- Tablo döküm verisi `linkler`
 --
 
 INSERT INTO `linkler` (`id`, `site_adi`, `site_adresi`) VALUES
@@ -374,7 +379,7 @@ INSERT INTO `linkler` (`id`, `site_adi`, `site_adresi`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mesajlar`
+-- Tablo için tablo yapısı `mesajlar`
 --
 
 CREATE TABLE IF NOT EXISTS `mesajlar` (
@@ -389,7 +394,7 @@ CREATE TABLE IF NOT EXISTS `mesajlar` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sepet`
+-- Tablo için tablo yapısı `sepet`
 --
 
 CREATE TABLE IF NOT EXISTS `sepet` (
@@ -400,7 +405,7 @@ CREATE TABLE IF NOT EXISTS `sepet` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `sepet`
+-- Tablo döküm verisi `sepet`
 --
 
 INSERT INTO `sepet` (`siparis_ref`, `kul_id`, `urun_id`, `tarih`) VALUES
@@ -410,7 +415,7 @@ INSERT INTO `sepet` (`siparis_ref`, `kul_id`, `urun_id`, `tarih`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `siparisler`
+-- Tablo için tablo yapısı `siparisler`
 --
 
 CREATE TABLE IF NOT EXISTS `siparisler` (
@@ -423,7 +428,7 @@ CREATE TABLE IF NOT EXISTS `siparisler` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `siparisler`
+-- Tablo döküm verisi `siparisler`
 --
 
 INSERT INTO `siparisler` (`sip_id`, `ref_no`, `musteri`, `durum`, `ekleme_tarihi`, `toplam`) VALUES
@@ -433,7 +438,7 @@ INSERT INTO `siparisler` (`sip_id`, `ref_no`, `musteri`, `durum`, `ekleme_tarihi
 -- --------------------------------------------------------
 
 --
--- Table structure for table `slider`
+-- Tablo için tablo yapısı `slider`
 --
 
 CREATE TABLE IF NOT EXISTS `slider` (
@@ -444,12 +449,21 @@ CREATE TABLE IF NOT EXISTS `slider` (
   `kisa_aciklama` varchar(500) COLLATE utf8_turkish_ci DEFAULT NULL,
   `url` varchar(1000) COLLATE utf8_turkish_ci DEFAULT NULL,
   `tarih` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+
+--
+-- Tablo döküm verisi `slider`
+--
+
+INSERT INTO `slider` (`id`, `adi`, `yol`, `baslik`, `kisa_aciklama`, `url`, `tarih`) VALUES
+(36, 'Slider -1', 'slider_Rz3qZAlany0R.png', 'Slider -1', 'Slider -1', 'https://www.google.com.tr/', '2015-08-27 16:12:36'),
+(37, 'Slider -2', 'slider_VZa8tmqgvraF.png', 'Slider -2', 'Slider -2', 'https://www.google.com.tr/', '2015-08-27 16:12:53'),
+(38, 'Slider -3', 'slider_44sJ0d8TgbDK.png', 'Slider -3', 'Slider -3', 'https://www.google.com.tr/', '2015-08-27 16:13:08');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sosyalmedya`
+-- Tablo için tablo yapısı `sosyalmedya`
 --
 
 CREATE TABLE IF NOT EXISTS `sosyalmedya` (
@@ -462,16 +476,16 @@ CREATE TABLE IF NOT EXISTS `sosyalmedya` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `sosyalmedya`
+-- Tablo döküm verisi `sosyalmedya`
 --
 
 INSERT INTO `sosyalmedya` (`id`, `facebook`, `twitter`, `linkedin`, `googleplus`, `instagram`) VALUES
-(1, 'fatma', 'sad', 'fcg', 'dfddf', 'ddd');
+(1, 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', 'http://www.google.com', 'http://www.instagram.com');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `urunler`
+-- Tablo için tablo yapısı `urunler`
 --
 
 CREATE TABLE IF NOT EXISTS `urunler` (
@@ -491,22 +505,24 @@ CREATE TABLE IF NOT EXISTS `urunler` (
   `kargo_bedava` tinyint(1) NOT NULL,
   `bugun_teslimat` tinyint(1) NOT NULL,
   `tarih` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `urunler`
+-- Tablo döküm verisi `urunler`
 --
 
 INSERT INTO `urunler` (`id`, `kategori_id`, `baslik`, `kisa_aciklama`, `aciklama`, `fiyat`, `kampanya`, `piyasa_fiyati`, `durum`, `stok`, `one_cikan`, `indirimli_urun`, `cok_satan`, `kargo_bedava`, `bugun_teslimat`, `tarih`) VALUES
-(1, 2, 'Samsung Es 5', 'Felaket guzel bir telefon', '                    MUKEMMEL Otesi bir telefon orneği\r\n        \r\n        ', '1200.00', 0, '1500.00', 0, 10, 1, 1, 1, 1, 1, '2015-08-16 08:31:23'),
-(2, 3, 'Fatihin Lambası', 'Muthis Lamba', 'Muthis bir lamba', '12.00', 0, '1500.00', 0, 15, 1, 0, 1, 0, 1, '2015-08-28 08:41:00'),
-(3, 1, 'Emrenin Mouseu', 'Mukemmel bir mouse', '          Ele tam oturan ergonomik fanlı mouse\r\n        ', '1500.00', 0, '1600.00', 0, 12, 1, 1, 1, 1, 1, '2015-08-27 08:28:00'),
-(5, 2, '123', '4213', 'sdfsd', '9999.99', 1, '2145.00', 0, 21, 0, 1, 1, 0, 0, '2015-08-20 15:41:00');
+(7, 59, 'Ürün Adı - 1', 'Kısa Açıklama - 1', 'Ürün Açıklaması - 1', '5000.00', 1, '5500.00', 1, 5, 0, 1, 0, 0, 0, '2015-08-24 16:52:58'),
+(8, 59, 'Ürün Adı - 2', 'Kısa Açıklama -2', 'Ürün Açıklaması - 2', '1500.00', 0, '1700.00', 0, 10, 0, 1, 0, 0, 0, '2015-08-24 17:01:27'),
+(9, 59, 'Ürün Adı - 3', 'Kısa Açıklama - 3', '                    Ürün Açıklaması - 3\r\n        \r\n        ', '2200.00', 0, '1600.00', 0, 78, 0, 1, 0, 0, 0, '2015-08-24 17:04:44'),
+(10, 59, 'Ürün Adı - 4', 'Kısa Açıklama - 4', 'Ürün Açıklaması - 4', '3000.00', 0, '3200.00', 0, 4, 1, 0, 0, 0, 0, '2015-08-24 17:09:10'),
+(14, 61, 'Bosch', 'Çamaşır makinesi', 'ABC', '1520.00', 1, '1600.00', 1, 5, 1, 0, 0, 0, 0, '2015-08-25 17:46:21'),
+(15, 60, 'Asus', 'Zenbook', 'DSA', '3200.00', 1, '3650.00', 1, 5, 0, 0, 1, 0, 0, '2015-08-25 17:48:53');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `urun_puan`
+-- Tablo için tablo yapısı `urun_puan`
 --
 
 CREATE TABLE IF NOT EXISTS `urun_puan` (
@@ -520,7 +536,7 @@ CREATE TABLE IF NOT EXISTS `urun_puan` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `urun_resimleri`
+-- Tablo için tablo yapısı `urun_resimleri`
 --
 
 CREATE TABLE IF NOT EXISTS `urun_resimleri` (
@@ -528,22 +544,48 @@ CREATE TABLE IF NOT EXISTS `urun_resimleri` (
   `urun_id` int(11) NOT NULL,
   `adi` varchar(500) COLLATE utf8_bin NOT NULL,
   `klasor` varchar(500) COLLATE utf8_bin NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=MyISAM AUTO_INCREMENT=45 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Dumping data for table `urun_resimleri`
+-- Tablo döküm verisi `urun_resimleri`
 --
 
 INSERT INTO `urun_resimleri` (`id`, `urun_id`, `adi`, `klasor`) VALUES
-(16, 1, '1_6333615Jellyfish.jpg', '1'),
-(18, 1, '1_8005220Hydrangeas.jpg', '1'),
-(24, 5, '5_16080288Chrysanthemum.jpg', '5'),
-(25, 5, '5_9783258Desert.jpg', '5');
+(40, 10, '10_26940620urun-4.jpg', '10'),
+(34, 9, '9_11041261urun-66.jpg', '9'),
+(36, 8, '8_26546314urun-2.jpg', '8'),
+(29, 7, '7_15006066urun-1.jpg', '7'),
+(33, 11, '11_27119036urun-5.jpg', '11'),
+(42, 14, '14_26823102urun-5.jpg', '14'),
+(39, 12, '12_12961859urun-8.jpg', '12'),
+(44, 15, '15_158767asuszen.jpg', '15');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `yorumlar`
+-- Tablo için tablo yapısı `videolar`
+--
+
+CREATE TABLE IF NOT EXISTS `videolar` (
+`id` int(11) NOT NULL,
+  `baslik` varchar(500) COLLATE utf8_turkish_ci NOT NULL,
+  `yol` varchar(500) COLLATE utf8_turkish_ci NOT NULL,
+  `kisa_aciklama` varchar(500) COLLATE utf8_turkish_ci NOT NULL,
+  `detay` varchar(5000) COLLATE utf8_turkish_ci NOT NULL,
+  `tarih` datetime NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+
+--
+-- Tablo döküm verisi `videolar`
+--
+
+INSERT INTO `videolar` (`id`, `baslik`, `yol`, `kisa_aciklama`, `detay`, `tarih`) VALUES
+(9, 'video', 'C:\\xampp\\htdocs\\laravelAdmin/bower_components/elfinder/files', 'vine', '<p>videolar dosya işlemlerinden y&uuml;klenecektir.</p>\r\n', '2015-08-22 13:10:05');
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `yorumlar`
 --
 
 CREATE TABLE IF NOT EXISTS `yorumlar` (
@@ -558,7 +600,7 @@ CREATE TABLE IF NOT EXISTS `yorumlar` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `yorumlar`
+-- Tablo döküm verisi `yorumlar`
 --
 
 INSERT INTO `yorumlar` (`id`, `urun_id`, `kul_id`, `baslik`, `icerik`, `puan`, `durum`, `tarih`) VALUES
@@ -566,274 +608,285 @@ INSERT INTO `yorumlar` (`id`, `urun_id`, `kul_id`, `baslik`, `icerik`, `puan`, `
 (2, 1, 1, 'bu ürün iğrenç', 'çok kötü asla almayın', 1, 0, '2015-07-08 08:18:21');
 
 --
--- Indexes for dumped tables
+-- Dökümü yapılmış tablolar için indeksler
 --
 
 --
--- Indexes for table `admin`
+-- Tablo için indeksler `admin`
 --
 ALTER TABLE `admin`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `anket`
+-- Tablo için indeksler `anket`
 --
 ALTER TABLE `anket`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `anketdetay`
+-- Tablo için indeksler `anketdetay`
 --
 ALTER TABLE `anketdetay`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `ayarlar`
+-- Tablo için indeksler `ayarlar`
 --
 ALTER TABLE `ayarlar`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `banner`
+-- Tablo için indeksler `banner`
 --
 ALTER TABLE `banner`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `bulten`
+-- Tablo için indeksler `bulten`
 --
 ALTER TABLE `bulten`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `bulten_abone`
+-- Tablo için indeksler `bulten_abone`
 --
 ALTER TABLE `bulten_abone`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `dosya_yonetimi`
+-- Tablo için indeksler `dosya_yonetimi`
 --
 ALTER TABLE `dosya_yonetimi`
  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `parent_name` (`parent_id`,`name`), ADD KEY `parent_id` (`parent_id`);
 
 --
--- Indexes for table `gal_kategori`
+-- Tablo için indeksler `gal_kategori`
 --
 ALTER TABLE `gal_kategori`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `gal_resim`
+-- Tablo için indeksler `gal_resim`
 --
 ALTER TABLE `gal_resim`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `haberler`
+-- Tablo için indeksler `haberler`
 --
 ALTER TABLE `haberler`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `icerikler`
+-- Tablo için indeksler `icerikler`
 --
 ALTER TABLE `icerikler`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `kategoriler`
+-- Tablo için indeksler `kategoriler`
 --
 ALTER TABLE `kategoriler`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `kullanicilar`
+-- Tablo için indeksler `kullanicilar`
 --
 ALTER TABLE `kullanicilar`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `linkler`
+-- Tablo için indeksler `linkler`
 --
 ALTER TABLE `linkler`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `mesajlar`
+-- Tablo için indeksler `mesajlar`
 --
 ALTER TABLE `mesajlar`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `sepet`
+-- Tablo için indeksler `sepet`
 --
 ALTER TABLE `sepet`
  ADD PRIMARY KEY (`siparis_ref`);
 
 --
--- Indexes for table `siparisler`
+-- Tablo için indeksler `siparisler`
 --
 ALTER TABLE `siparisler`
  ADD PRIMARY KEY (`sip_id`);
 
 --
--- Indexes for table `slider`
+-- Tablo için indeksler `slider`
 --
 ALTER TABLE `slider`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `sosyalmedya`
+-- Tablo için indeksler `sosyalmedya`
 --
 ALTER TABLE `sosyalmedya`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `urunler`
+-- Tablo için indeksler `urunler`
 --
 ALTER TABLE `urunler`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `urun_puan`
+-- Tablo için indeksler `urun_puan`
 --
 ALTER TABLE `urun_puan`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `urun_resimleri`
+-- Tablo için indeksler `urun_resimleri`
 --
 ALTER TABLE `urun_resimleri`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `yorumlar`
+-- Tablo için indeksler `videolar`
+--
+ALTER TABLE `videolar`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `yorumlar`
 --
 ALTER TABLE `yorumlar`
  ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- Dökümü yapılmış tablolar için AUTO_INCREMENT değeri
 --
 
 --
--- AUTO_INCREMENT for table `admin`
+-- Tablo için AUTO_INCREMENT değeri `admin`
 --
 ALTER TABLE `admin`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `anket`
+-- Tablo için AUTO_INCREMENT değeri `anket`
 --
 ALTER TABLE `anket`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `anketdetay`
+-- Tablo için AUTO_INCREMENT değeri `anketdetay`
 --
 ALTER TABLE `anketdetay`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT for table `ayarlar`
+-- Tablo için AUTO_INCREMENT değeri `ayarlar`
 --
 ALTER TABLE `ayarlar`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `banner`
+-- Tablo için AUTO_INCREMENT değeri `banner`
 --
 ALTER TABLE `banner`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=32;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=39;
 --
--- AUTO_INCREMENT for table `bulten`
+-- Tablo için AUTO_INCREMENT değeri `bulten`
 --
 ALTER TABLE `bulten`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `bulten_abone`
+-- Tablo için AUTO_INCREMENT değeri `bulten_abone`
 --
 ALTER TABLE `bulten_abone`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT for table `dosya_yonetimi`
+-- Tablo için AUTO_INCREMENT değeri `dosya_yonetimi`
 --
 ALTER TABLE `dosya_yonetimi`
 MODIFY `id` int(7) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `gal_kategori`
+-- Tablo için AUTO_INCREMENT değeri `gal_kategori`
 --
 ALTER TABLE `gal_kategori`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
 --
--- AUTO_INCREMENT for table `gal_resim`
+-- Tablo için AUTO_INCREMENT değeri `gal_resim`
 --
 ALTER TABLE `gal_resim`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=44;
 --
--- AUTO_INCREMENT for table `haberler`
+-- Tablo için AUTO_INCREMENT değeri `haberler`
 --
 ALTER TABLE `haberler`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `icerikler`
+-- Tablo için AUTO_INCREMENT değeri `icerikler`
 --
 ALTER TABLE `icerikler`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `kategoriler`
+-- Tablo için AUTO_INCREMENT değeri `kategoriler`
 --
 ALTER TABLE `kategoriler`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=76;
 --
--- AUTO_INCREMENT for table `kullanicilar`
+-- Tablo için AUTO_INCREMENT değeri `kullanicilar`
 --
 ALTER TABLE `kullanicilar`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `linkler`
+-- Tablo için AUTO_INCREMENT değeri `linkler`
 --
 ALTER TABLE `linkler`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
--- AUTO_INCREMENT for table `mesajlar`
+-- Tablo için AUTO_INCREMENT değeri `mesajlar`
 --
 ALTER TABLE `mesajlar`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `sepet`
+-- Tablo için AUTO_INCREMENT değeri `sepet`
 --
 ALTER TABLE `sepet`
 MODIFY `siparis_ref` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT for table `siparisler`
+-- Tablo için AUTO_INCREMENT değeri `siparisler`
 --
 ALTER TABLE `siparisler`
 MODIFY `sip_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT for table `slider`
+-- Tablo için AUTO_INCREMENT değeri `slider`
 --
 ALTER TABLE `slider`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=36;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=39;
 --
--- AUTO_INCREMENT for table `sosyalmedya`
+-- Tablo için AUTO_INCREMENT değeri `sosyalmedya`
 --
 ALTER TABLE `sosyalmedya`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `urunler`
+-- Tablo için AUTO_INCREMENT değeri `urunler`
 --
 ALTER TABLE `urunler`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
 --
--- AUTO_INCREMENT for table `urun_puan`
+-- Tablo için AUTO_INCREMENT değeri `urun_puan`
 --
 ALTER TABLE `urun_puan`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `urun_resimleri`
+-- Tablo için AUTO_INCREMENT değeri `urun_resimleri`
 --
 ALTER TABLE `urun_resimleri`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=45;
 --
--- AUTO_INCREMENT for table `yorumlar`
+-- Tablo için AUTO_INCREMENT değeri `videolar`
+--
+ALTER TABLE `videolar`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+--
+-- Tablo için AUTO_INCREMENT değeri `yorumlar`
 --
 ALTER TABLE `yorumlar`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
