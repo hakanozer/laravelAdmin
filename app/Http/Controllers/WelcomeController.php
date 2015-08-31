@@ -62,9 +62,7 @@ class WelcomeController extends Controller
         $teklislider = $this->teklislider();
         $cokSatanlar = $this->cokSatanlar();
         $link = $this->linkGetir();
-        $siteBaslik=$this->siteBaslik();
-        $sosyalMedyaLinkler=$this->sosyalMedyaLinkler();
-        return view('site', array('ust' => $veri, 'sorgu' => $sorgu, 'data' => $data, 'indirimliUrunler' => $indirimliUrunler, 'oneCikanUrunler' => $oneCikanUrunler, 'cokSatanUrunler' => $cokSatanUrunler, 'UsIltsmData' => $UsIltsmData, 'haber' => $haber, 'icerikler' => $icerikler, 'ustBanner' => $ustBanner, 'altBanner' => $altBanner, 'ortaBanner' => $ortaBanner, 'solAltBanner' => $solAltBanner, 'videoVeri' => $videoGonder, 'teklislider' => $teklislider, 'cokSatanlar' => $cokSatanlar, 'link' => $link,'siteBaslik'=>$siteBaslik,'sosyalMedyaLinkler'=>$sosyalMedyaLinkler));
+        return view('site', array('ust' => $veri, 'sorgu' => $sorgu, 'data' => $data, 'indirimliUrunler' => $indirimliUrunler, 'oneCikanUrunler' => $oneCikanUrunler, 'cokSatanUrunler' => $cokSatanUrunler, 'UsIltsmData' => $UsIltsmData, 'haber' => $haber, 'icerikler' => $icerikler, 'ustBanner' => $ustBanner, 'altBanner' => $altBanner, 'ortaBanner' => $ortaBanner, 'solAltBanner' => $solAltBanner, 'videoVeri' => $videoGonder, 'teklislider' => $teklislider, 'cokSatanlar' => $cokSatanlar, 'link' => $link));
     }
 
 
@@ -403,14 +401,5 @@ class WelcomeController extends Controller
     {
         return view('sifremiUnuttum');
     }
-    public function siteBaslik(){
-        $siteBaslik = DB::select("select site_baslik from ayarlar");
 
-        return $siteBaslik;
-    }
-    public function sosyalMedyaLinkler(){
-        $sosyalMedyaLinkler=DB::select("select * from sosyalmedya");
-
-        return $sosyalMedyaLinkler;
-    }
 } 
