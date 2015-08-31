@@ -317,7 +317,183 @@ Fax: <a title="Fax">{{$iletisim->fax}}
                         </div>
                         <!-- Block user information module NAV  -->
 
+                    </div>
 
+                        <div class="demo-menu"><a href="#">Demos</a>
+
+                            <div class="content-home">
+                                <div class="layout-theme ">
+                                    <h2>Layouts</h2>
+                                    <ul class="list-theme">
+                                        <li><a class="sp-themelayouts" title="Home 1 full width" href="http://prestashop.magentech.com/sp_shoppystore/en/">Home I - Shop 1 - Left Sidebar</a></li>
+                                        <li><a class="sp-themelayouts" title="Home 2 right sidebar" href="http://prestashop.magentech.com/sp_shoppystore/layout2/en/">Home II - Shop 2 - Full Width  </a></li>
+                                        <li><a class="sp-themelayouts" title="Home 3 left sidebar " href="http://prestashop.magentech.com/sp_shoppystore/layout3/en/">Home III - Shop 3 - Full Width</a></li>
+
+                                    </ul>
+                                </div>
+
+                                <div class="layout-color color-theme">
+                                    <h2>Theme Colors</h2>
+                                    <ul class="list-theme">
+                                        <li class="red"><a class="sp-themelayouts" title="Red" href="#">Red</a></li>
+                                        <li class="blue"><a class="sp-themelayouts" title="Blue" href="#">Blue</a></li>
+                                        <li class="green"><a class="sp-themelayouts" title="Green" href="#">Green</a></li>
+                                        <li class="orange"><a class="sp-themelayouts" title="Orange" href="#">Orange</a></li>
+                                        <li class="cyan"><a class="sp-themelayouts" title="Cyan" href="#">Cyan</a></li>
+
+
+
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+                        <!-- Block user information module NAV  -->
+
+                        <div class="header_user_info">
+
+                            <ul class="links">
+
+                                <li class="account" >
+
+                                    <a class="login" href="#" rel="nofollow" title="Log in to your customer account">
+
+                                        My Account
+
+                                    </a>
+
+                                    <ul class="dropdown-link dropdown-link-account">
+
+                                        <li>
+
+                                            <a href="#" title="My orders">
+
+                                                My orders
+
+                                            </a>
+
+                                        </li>
+
+
+
+                                        <li>
+
+                                            <a href="#" title="My merchandise returns">
+
+                                                My merchandise returns
+
+                                            </a>
+
+                                        </li>
+
+
+
+                                        <li>
+
+                                            <a href="#" title="My credit slips">	My credit slips
+
+                                            </a>
+
+                                        </li>
+
+                                        <li>
+
+                                            <a href="#" title="My addresses">
+
+                                                My addresses
+
+                                            </a>
+
+                                        </li>
+
+                                        <li>
+
+                                            <a href="#" title="My personal info">
+
+                                                My personal info
+
+                                            </a>
+
+                                        </li>
+
+
+
+                                        <li>
+
+                                            <a href=#" title="My vouchers">
+
+                                                My vouchers
+
+                                            </a>
+
+                                        </li>
+
+
+
+                                    </ul>
+
+                                </li>
+
+
+
+                                <li class="last checkout" > <a href="#"  title="Check out" rel="nofollow"> Checkout</a></li>
+
+
+
+                            </ul>
+
+                        </div>
+
+                        <!-- Block currencies module -->
+                        <div id="currencies-block-top">
+                            <form id="setCurrency" action="" method="post">
+                                <div class="current">
+                                    <input type="hidden" name="id_currency" id="id_currency" value=""/>
+                                    <input type="hidden" name="SubmitCurrency" value="" />
+                                    <!--<span class="cur-label">Currency :</span>-->
+                                    <span>$ USD</span>																</div>
+                                <ul id="first-currencies" class="currencies_ul toogle_content">
+                                    <li class="selected">
+                                        <a href="javascript:setCurrency(1);" rel="nofollow" title="Dollar">
+                                            Dollar
+                                        </a>
+                                    </li>
+                                    <li >
+                                        <a href="javascript:setCurrency(2);" rel="nofollow" title="Euros">
+                                            Euros
+                                        </a>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                        <!-- /Block currencies module --><!-- Block languages module -->
+
+
+                        <div id="languages-block-top" class="languages-block">
+                            <div class="current">
+                                <img src="http://prestashop.magentech.com/sp_shoppystore/img/l/1.jpg" alt="en" />
+                                <span>English</span>
+                            </div>
+                            <ul id="first-languages" class="languages-block_ul toogle_content">
+                                <li class="selected">
+										<span><img src="http://prestashop.magentech.com/sp_shoppystore/img/l/1.jpg" alt="en"  />
+						English</span>
+                                </li>
+                                <li >
+                                    <a href="http://prestashop.magentech.com/sp_shoppystore/ar/" title=" Arabic (ar-AA)">
+															<span><img src="http://prestashop.magentech.com/sp_shoppystore/img/l/4.jpg" alt="ar"  />
+						 Arabic</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /Block languages module -->
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -326,10 +502,10 @@ Fax: <a title="Fax">{{$iletisim->fax}}
             <div class="container">
                 <div class="row">
                     <div id="header_logo" class=" col-lg-3 col-md-3 col-sm-2 col-xs-12 ">
-                        <a class="logo" href="./" title="Laravel Admin E-Ticaret">
+                        <a class="logo" href="./" title="Welcome to SP ShoppyStore">
                              @if(isset($sorgu))
                         @foreach($sorgu as $item)
-                            <img  src="{{asset("logolar/".$item->logo)}}" alt="Laravel Admin E-Ticaret"  />
+                            <img  src="{{asset("logolar/".$item->logo)}}" alt="Welcome to SP ShoppyStore"  />
                         </a>
                     </div>
 
@@ -836,6 +1012,477 @@ Fax: <a title="Fax">{{$iletisim->fax}}
 
                                 </div>
 
+
+
+
+
+                                    <form class="sprsearch-form" method="get" action="http://prestashop.magentech.com/sp_shoppystore/en/module/spsearchpro/catesearch">
+
+                                        <input type="hidden" name="fc" value="module"/>
+
+                                        <input type="hidden" name="module" value="spsearchpro"/>
+
+                                        <input type="hidden" name="controller" value="catesearch"/>
+
+                                        <input type="hidden" name="orderby" value="name" />
+
+                                        <input type="hidden" name="orderway" value="desc" />
+
+                                        <input type="hidden" name="day" value="20" />
+
+
+
+
+
+                                        <input type="hidden" name="cat_id" value="109,124,123,121,120,143,119,145,170,122,135,148,146,147,149,187,153,152,151,150,139,138,137,136,131,133,134,132,171,172,173,128,144,127,126,125,157,156,155,154,159,160,161,158,162,163,165,164,166,167,169,168">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <div class="spr_selector">
+
+                                            <select class="spr_select">
+
+
+
+                                                <option value="109,124,123,121,120,143,119,145,170,122,135,148,146,147,149,187,153,152,151,150,139,138,137,136,131,133,134,132,171,172,173,128,144,127,126,125,157,156,155,154,159,160,161,158,162,163,165,164,166,167,169,168">
+
+                                                    All Categories
+
+                                                </option>
+
+                                                <option value="173">
+
+                                                    -  -  - Women
+
+                                                </option>
+
+                                                <option value="128">
+
+                                                    -  -  - Watches
+
+                                                </option>
+
+                                                <option value="149">
+
+                                                    -  -  -  - Virtual Product
+
+                                                </option>
+
+                                                <option value="126">
+
+                                                    -  -  - Tablet
+
+                                                </option>
+
+                                                <option value="120">
+
+                                                    -  - Sports
+
+                                                </option>
+
+                                                <option value="156">
+
+                                                    -  -  -  - Sony
+
+                                                </option>
+
+                                                <option value="165">
+
+                                                    -  -  -  - Sony
+
+                                                </option>
+
+                                                <option value="138">
+
+                                                    -  -  -  - Sony
+
+                                                </option>
+
+                                                <option value="167">
+
+                                                    -  -  -  - Sony
+
+                                                </option>
+
+                                                <option value="125">
+
+                                                    -  -  - Smartphone
+
+                                                </option>
+
+                                                <option value="146">
+
+                                                    -  -  -  - Simple Product
+
+                                                </option>
+
+                                                <option value="109">
+
+                                                    - Shop Shoppystore
+
+                                                </option>
+
+                                                <option value="159">
+
+                                                    -  -  -  - Screen Protectors
+
+                                                </option>
+
+                                                <option value="133">
+
+                                                    -  -  -  - Screen Protectors
+
+                                                </option>
+
+                                                <option value="154">
+
+                                                    -  -  -  - Samsung
+
+                                                </option>
+
+                                                <option value="162">
+
+                                                    -  -  -  - Samsung
+
+                                                </option>
+
+                                                <option value="169">
+
+                                                    -  -  -  - Samsung
+
+                                                </option>
+
+                                                <option value="137">
+
+                                                    -  -  -  - Sam Sung
+
+                                                </option>
+
+                                                <option value="145">
+
+                                                    -  -  - Product Types
+
+                                                </option>
+
+                                                <option value="166">
+
+                                                    -  -  -  - Nokia
+
+                                                </option>
+
+                                                <option value="135">
+
+                                                    -  -  - Mobile Brands
+
+                                                </option>
+
+                                                <option value="127">
+
+                                                    -  -  - Mobile Accessories
+
+                                                </option>
+
+                                                <option value="119">
+
+                                                    -  - Mobile
+
+                                                </option>
+
+                                                <option value="172">
+
+                                                    -  -  - Men
+
+                                                </option>
+
+                                                <option value="144">
+
+                                                    -  -  - Memory Card
+
+                                                </option>
+
+                                                <option value="150">
+
+                                                    -  -  -  - Medical &amp; Healthcare
+
+                                                </option>
+
+                                                <option value="139">
+
+                                                    -  -  -  - LG
+
+                                                </option>
+
+                                                <option value="164">
+
+                                                    -  -  -  - LG
+
+                                                </option>
+
+                                                <option value="170">
+
+                                                    -  -  - Laptop
+
+                                                </option>
+
+                                                <option value="171">
+
+                                                    -  -  - Kids
+
+                                                </option>
+
+                                                <option value="157">
+
+                                                    -  -  -  - HTC
+
+                                                </option>
+
+                                                <option value="148">
+
+                                                    -  -  -  - Grouped Product
+
+                                                </option>
+
+                                                <option value="123">
+
+                                                    -  - Fashion
+
+                                                </option>
+
+                                                <option value="124">
+
+                                                    -  - Electronics
+
+                                                </option>
+
+                                                <option value="152">
+
+                                                    -  -  -  - Electronic
+
+                                                </option>
+
+                                                <option value="151">
+
+                                                    -  -  -  - Cosmetic
+
+                                                </option>
+
+                                                <option value="147">
+
+                                                    -  -  -  - Configurable Product
+
+                                                </option>
+
+                                                <option value="143">
+
+                                                    -  - Computer
+
+                                                </option>
+
+                                                <option value="187">
+
+                                                    -  -  - Categories1
+
+                                                </option>
+
+                                                <option value="131">
+
+                                                    -  -  -  - Cases &amp; Covers
+
+                                                </option>
+
+                                                <option value="161">
+
+                                                    -  -  -  - Cases &amp; Covers
+
+                                                </option>
+
+                                                <option value="153">
+
+                                                    -  -  -  - Camera &amp; Camcorders
+
+                                                </option>
+
+                                                <option value="132">
+
+                                                    -  -  -  - Cables &amp; Connectors
+
+                                                </option>
+
+                                                <option value="160">
+
+                                                    -  -  -  - Cables &amp; Connectors
+
+                                                </option>
+
+                                                <option value="158">
+
+                                                    -  -  -  - Bluetooth
+
+                                                </option>
+
+                                                <option value="134">
+
+                                                    -  -  -  - Bluetooth
+
+                                                </option>
+
+                                                <option value="121">
+
+                                                    -  - Bags
+
+                                                </option>
+
+                                                <option value="168">
+
+                                                    -  -  -  - Apple
+
+                                                </option>
+
+                                                <option value="163">
+
+                                                    -  -  -  - Apple
+
+                                                </option>
+
+                                                <option value="136">
+
+                                                    -  -  -  - Apple
+
+                                                </option>
+
+                                                <option value="155">
+
+                                                    -  -  -  - Apple
+
+                                                </option>
+
+                                                <option value="122">
+
+                                                    -  -  - Accessories
+
+                                                </option>
+
+                                            </select>
+
+                                        </div>
+
+
+
+                                        <input class="spr-query" type="text" name="search_query"
+
+                                               value=""
+
+                                               placeholder="Enter Your Keyword"/>
+
+                                        <button value="Search" class="spr-search-button" type="submit"
+
+                                                name="spr_submit_search"></button>
+
+                                        <input value="12" type="hidden" name="n"  />
+
+                                    </form>
 
                                 </div>
 
