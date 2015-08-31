@@ -321,16 +321,4 @@ Route::get('urunDetay/{id}','WelcomeController@urunDetay');
 //contact sayfası yönlendiriliyor
 Route::get('iletisim','WelcomeController@contactUs');
 Route::post('iletisim','WelcomeController@contactUsKaydet');
-
-// Sitede Arama İşlemi
-Route::post('/', 'WelcomeController@sitedeAra');
-Route::get('arama', 'WelcomeController@aramaGoster');
-
-// Üyelik İşlemleri ve Giriş
-Route::get('uyelikGiris', 'WelcomeController@uyelikGirisAc');
-Route::post('uyelikGiris', 'WelcomeController@uyelikGiris');
-Route::get('uyelikCikis', 'WelcomeController@uyelikCikis');
-Route::get('sifremiUnuttum', 'WelcomeController@sifremiUnuttum');
-
-
-
+// iletişim
