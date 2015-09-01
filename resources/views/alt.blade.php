@@ -112,24 +112,17 @@
 
                             <div class="footer-title">
 
-                                <h3>Corporate</h3>
+                                <h3>İçerikler</h3>
 
                             </div>
 
-                            <div class="content-block-footer">
+                            <div class="content-block-footer"> <ul class="list-link">
+@if(isset($icerikler))
+@foreach( $icerikler as $icerik)
 
-                                <ul class="list-link">
-
-                                    <li><a href="#"><span class="icon-caret-right"> </span>About us</a></li>
-
-                                    <li><a href="#"><span class="icon-caret-right"> </span>Customer Service</a></li>
-
-                                    <li><a href="#"><span class="icon-caret-right"> </span>Company</a></li>
-
-                                    <li><a href="#"><span class="icon-caret-right"> </span>Investor Relations</a></li>
-
-                                    <li><a href="#"><span class="icon-caret-right"> </span>Typography</a></li>
-
+<li><a href="{{url('icerikDetay/'.$icerik->id)}}"><span class="icon-caret-right">{{$icerik->baslik}}</span></a></li>
+ @endforeach
+                        @endif
                                 </ul>
 
                             </div>

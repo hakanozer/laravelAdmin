@@ -47,7 +47,9 @@ class WelcomeController extends Controller {
         $oneCikanUrunler=$this->oneCikanUrunler();
         $cokSatanUrunler=$this->cokSatanUrunler();
 	$UsIltsmData = $this->UstIletisim();
-        return view('site',array('ust' => $veri,'sorgu' => $sorgu,'data'=>$data,'indirimliUrunler'=>$indirimliUrunler,'oneCikanUrunler'=>$oneCikanUrunler,'cokSatanUrunler'=>$cokSatanUrunler,'UsIltsmData' => $UsIltsmData));
+	$haber=$this->haber();
+        $icerikler=$this->icerikler();
+        return view('site',array('ust' => $veri,'sorgu' => $sorgu,'data'=>$data,'indirimliUrunler'=>$indirimliUrunler,'oneCikanUrunler'=>$oneCikanUrunler,'cokSatanUrunler'=>$cokSatanUrunler,'UsIltsmData' => $UsIltsmData,'haber'=>$haber,'icerikler'=>$icerikler));
     }
 
     public function gonder(){
@@ -96,5 +98,52 @@ class WelcomeController extends Controller {
      public function UstIletisim(){
         $UsIltsmData = DB::select("select * from ayarlar");
         return $UsIltsmData;
+    }
+public function haber()
+    {
+
+        /*Haberler*/
+        $haber=DB::select('select * from haberler order BY id DESC');
+
+        $string = "";
+        foreach($haber as $haberler){
+            $string = strip_tags($haberler->detay);
+
+            if (strlen($string) > 250) {
+
+                // truncate string
+                $stringCut = substr($string, 0, 250);
+
+                // make sure it ends in a word so assassinate doesn't become ass...
+                $kisaDetay = substr($stringCut, 0, strrpos($stringCut, ' ')).'... <a href="haberDetay/'.$haberler->id.'">Devamini Oku </a>';
+            }
+            $haberler->detay = $kisaDetay;
+        }
+
+
+
+        return $haber;
+
+
+
+
+    }
+    public function icerikler(){
+        $icerikler=DB::select('select * from icerikler order BY id DESC');
+        return $icerikler;
+    }
+
+    public function haberDetay($id)
+    {
+        $haberDetay=DB::select('select * from haberler where id = '.$id.'');
+        $icerikler = $this->icerikler();
+        $sorgu = $this->iletisimGetir();
+        return view('haberDetay',array('haberDetay'=>$haberDetay,'icerikler'=>$icerikler,'sorgu'=>$sorgu)) ;
+    }
+    public function icerikDetay($id){
+        $icerikDetay=DB::select('select * from icerikler WHERE id='.$id.'');
+        $icerikler = $this->icerikler();
+        $sorgu = $this->iletisimGetir();
+        return view('icerikDetay',array('icerikDetay'=>$icerikDetay,'icerikler'=>$icerikler,'sorgu'=>$sorgu)) ;
     }
 }

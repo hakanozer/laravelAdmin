@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE HTML>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 " lang="en"><![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 ie7" lang="en"><![endif]-->
@@ -601,120 +601,24 @@
                     <!-- /SP Slider -->
 
                     <div class="block lastestnews">
+                                                                          <div class='module-title'><h3><span>HABERLER </span></h3></div> <ul class="sdsblog-box-content">
+                                                    @if(isset($haber))
+                                                    @foreach( $haber as $haberler)
 
-                        <div class='module-title'><h3><span>New Blogs</span></h3></div>
+                                                    <li class="sds_blog_post" style="text-align: center " >
+                                                    <h4>{{ $haberler->haber_baslik }}</h4>
+                                                                            <span class="news_module_image_holder"><a href="{{url('haberDetay/'.$haberler->id)}}"><img style="border: double" float="left" src="{{asset("haberResimler/".$haberler->resimYolu)}}"/></a></span><br>
 
+                                                    <?php echo $haberler->detay ?>
+                                                                                           </li>
 
 
-                        <ul class="sdsblog-box-content">
 
+                                                    @endforeach
 
-
-                            <li class="sds_blog_post">
-
-                        <span class="news_module_image_holder">
-
-                             <a href="http://prestashop.magentech.com/sp_shoppystore/en/blog/35_Kiteemonstraverunt-lector-legere-legunt-saepi.html"><img alt="Kiteemonstraverunt lector legere" class="feat_img_small" src="/sp_shoppystore/modules/smartblog/images/35-home-small.jpg"></a>
-
-                        </span>
-
-
-
-                                <h3 class="sds_post_title"><a href="http://prestashop.magentech.com/sp_shoppystore/en/blog/35_Kiteemonstraverunt-lector-legere-legunt-saepi.html">Kiteemonstraverunt lector legere</a></h3>
-
-                                <p>
-
-                                    Morbi tempus, sem non ullamcorper euismod, erat odio suscipit purus, nec ornare lacus turpis ac purus. Mauris cursus in mi vel dignissim. Morbi...
-
-                                </p>
-
-
-
-                            </li>
-
-
-
-
-
-                            <li class="sds_blog_post">
-
-                        <span class="news_module_image_holder">
-
-                             <a href="http://prestashop.magentech.com/sp_shoppystore/en/blog/34_Nure-caten-raverunt-lector-legere-legunt-saep.html"><img alt="Nure caten raverunt lector legere" class="feat_img_small" src="/sp_shoppystore/modules/smartblog/images/34-home-small.jpg"></a>
-
-                        </span>
-
-
-
-                                <h3 class="sds_post_title"><a href="http://prestashop.magentech.com/sp_shoppystore/en/blog/34_Nure-caten-raverunt-lector-legere-legunt-saep.html">Nure caten raverunt lector legere</a></h3>
-
-                                <p>
-
-                                    Morbi tempus, sem non ullamcorper euismod, erat odio suscipit purus, nec ornare lacus turpis ac purus. Mauris cursus in mi vel dignissim. Morbi...
-
-                                </p>
-
-
-
-                            </li>
-
-
-
-
-
-                            <li class="sds_blog_post">
-
-                        <span class="news_module_image_holder">
-
-                             <a href="http://prestashop.magentech.com/sp_shoppystore/en/blog/33_Nire-tmas-kite-traverunt-lector-legere-legunt.html"><img alt="Nire tmas kite traverunt lector legere legunt" class="feat_img_small" src="/sp_shoppystore/modules/smartblog/images/33-home-small.jpg"></a>
-
-                        </span>
-
-
-
-                                <h3 class="sds_post_title"><a href="http://prestashop.magentech.com/sp_shoppystore/en/blog/33_Nire-tmas-kite-traverunt-lector-legere-legunt.html">Nire tmas kite traverunt lector legere legunt</a></h3>
-
-                                <p>
-
-                                    Morbi tempus, sem non ullamcorper euismod, erat odio suscipit purus, nec ornare lacus turpis ac purus. Mauris cursus in mi vel dignissim. Morbi...
-
-                                </p>
-
-
-
-                            </li>
-
-
-
-
-
-                            <li class="sds_blog_post">
-
-                        <span class="news_module_image_holder">
-
-                             <a href="http://prestashop.magentech.com/sp_shoppystore/en/blog/32_Xutan-mazte-pisa-emonstraverunt-lector-legere.html"><img alt="Xutan mazte pisa emonstraverunt lector legere" class="feat_img_small" src="/sp_shoppystore/modules/smartblog/images/32-home-small.jpg"></a>
-
-                        </span>
-
-
-
-                                <h3 class="sds_post_title"><a href="http://prestashop.magentech.com/sp_shoppystore/en/blog/32_Xutan-mazte-pisa-emonstraverunt-lector-legere.html">Xutan mazte pisa emonstraverunt lector legere</a></h3>
-
-                                <p>
-
-                                    Morbi tempus, sem non ullamcorper euismod, erat odio suscipit purus, nec ornare lacus turpis ac purus. Mauris cursus in mi vel dignissim. Morbi...
-
-                                </p>
-
-
-
-                            </li>
-
-
-
-                        </ul>
-
-                    </div>
+                                                    @endif
+                                                    </ul>
+                                                    </div></div>
 
 
 

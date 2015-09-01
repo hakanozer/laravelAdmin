@@ -14,7 +14,8 @@
 Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
-
+Route::get('/haberDetay/{id}', 'WelcomeController@haberDetay');
+Route::get('/icerikDetay/{id}', 'WelcomeController@icerikDetay');
 
 
 Route::get('sayfa', 'HomeController@sayfa');
